@@ -3,7 +3,7 @@
 #include "UBBSteamUtils.h"
 #include "CoreMinimal.h"
 #include "ThirdParty/Steamworks/Steamv151/sdk/public/steam/steam_api.h"
-
+#include "../BBHashThing.h"
 
 /*
 ///// WELCOME // PLEASE FUCKING READ ///////////////////////////////////////////////////////
@@ -23,7 +23,7 @@
 #
 #
 #
-# 11:06PM 06.09.2025 - NEVER FUCKING MIND WE DO NOT UPDATE ANYMORE THE GAME DOES NOT START.
+# --------------------------------------------------------------------- 11:06PM 06.09.2025 - NEVER FUCKING MIND WE DO NOT UPDATE ANYMORE THE GAME DOES NOT START.
 #
 #
 ////////////////////////////////////////////////////////////////////////////////////////////
@@ -139,4 +139,17 @@ void UBBSteamUtils::CheckSteamConnection(bool& IsConnected)
     else {
         UE_LOG(LogTemp, Warning, TEXT("[BUDGET STEAM NETWORKING] Steam API failed, why??"));
     }
+}
+
+
+// THANK YOU LORENZOHAPPY19 VERY DEMURE FOR THE GIT HASH THING THANK YOU VERY MUCH GRAZIE CAPAREZZA CALABRESE CARBONARA
+FString UBBSteamUtils::GetGitHash()
+{
+    return FString(PROJECT_GIT_HASH);
+}
+
+// THANK YOU LORENZOHAPPY19 VERY DEMURE FOR THE GIT HASH THING THANK YOU VERY MUCH GRAZIE CAPAREZZA CALABRESE CARBONARA
+FString UBBSteamUtils::GetGitHashLong()
+{
+    return FString(PROJECT_GIT_HASH_LONG);
 }

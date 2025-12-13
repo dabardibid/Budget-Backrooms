@@ -68,5 +68,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Steam (Budget Backrooms // Custom BP Expose)")
 	static void ClearSteamRichPresence();
     
-   
+    UFUNCTION(BlueprintPure, Category = "Budget Other Utils", meta = (CompactNodeTitle = "Git Hash"))
+    static FString GetGitHash();
+
+    UFUNCTION(BlueprintPure, Category = "Budget Other Utils", meta = (CompactNodeTitle = "Git Hash Long, Very Long"))
+    static FString GetGitHashLong();
 };

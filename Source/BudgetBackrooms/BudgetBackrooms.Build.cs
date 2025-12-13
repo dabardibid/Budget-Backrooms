@@ -1,9 +1,47 @@
 using UnrealBuildTool;
+using System;
+using System.Diagnostics;
+using System.IO;
+
+
+
 
 public class BudgetBackrooms : ModuleRules
 {
 	public BudgetBackrooms(ReadOnlyTargetRules Target) : base(Target)
     {
+
+
+        // THANK YOU LORENZOHAPPY19 VERY DEMURE FOR THE GIT HASH THING THANK YOU VERY MUCH GRAZIE CAPAREZZA CALABRESE CARBONARA PERFETTA MILLE GRAZIE 
+        var proc = new Process();
+        var procf = new Process();
+        proc.StartInfo.FileName = "git";
+        proc.StartInfo.Arguments = "rev-parse --short HEAD";
+        proc.StartInfo.RedirectStandardOutput = true;
+        proc.StartInfo.UseShellExecute = false;
+        proc.StartInfo.WorkingDirectory = Target.ProjectFile.Directory.FullName;
+        procf.StartInfo.FileName = "git";
+        procf.StartInfo.Arguments = "rev-parse HEAD";
+        procf.StartInfo.RedirectStandardOutput = true;
+        procf.StartInfo.UseShellExecute = false;
+        procf.StartInfo.WorkingDirectory = Target.ProjectFile.Directory.FullName;
+        proc.Start();
+        procf.Start();
+        string hash = proc.StandardOutput.ReadToEnd().Trim();
+        string hashf = procf.StandardOutput.ReadToEnd().Trim();
+        proc.WaitForExit();
+        procf.WaitForExit();
+        string header =
+            "#pragma once\n" +
+            "#define PROJECT_GIT_HASH \"" + hash + "\"\n" +
+            "#define PROJECT_GIT_HASH_LONG \"" + hashf + "\"\n";
+        string outPath = Path.Combine(ModuleDirectory, "BBHashThing.h");
+        File.WriteAllText(outPath, header);
+
+
+
+
+
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "UMG" });

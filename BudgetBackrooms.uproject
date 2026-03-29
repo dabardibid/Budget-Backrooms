@@ -182,7 +182,7 @@
 		},
 		{
 			"Name": "ImageResizUEr",
-			"Enabled": true,
+			"Enabled": false,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/670be04026664663875aadd4dea45b9d"
 		},
 		{
@@ -336,6 +336,11 @@
 			"Name": "GeoReferencing",
 			"Enabled": true
 		},
+		{
+			"Name": "ConsoleEnhanced",
+			"Enabled": false,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/86123c85a4474d609c5cef8a7fc5786b"
+		}
 	],
 	"TargetPlatforms": [
 		"WindowsNoEditor"

@@ -1,0 +1,29 @@
+{
+	"FileVersion": 3,
+	"Version": 3,
+	"VersionName": "1.2",
+	"FriendlyName": "Enhanced Output Log",
+	"Description": "This plugin provides a new Editor Output Log widget with awesome features and customization options",
+	"Category": "Editor",
+	"CreatedBy": "Cultrarius",
+	"CreatedByURL": "https://github.com/Cultrarius",
+	"DocsURL": "",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/86123c85a4474d609c5cef8a7fc5786b",
+	"SupportURL": "mailto:cultrarius@posteo.de",
+	"EngineVersion": "4.27.0",
+	"CanContainContent": false,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "ConsoleEnhanced",
+			"Type": "Editor",
+			"LoadingPhase": "Default",
+			"WhitelistPlatforms": [
+				"Linux",
+				"Win64",
+				"Win32",
+				"Mac"
+			]
+		}
+	]
+}

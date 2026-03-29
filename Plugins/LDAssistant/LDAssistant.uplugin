@@ -1,0 +1,35 @@
+{
+	"FileVersion": 3,
+	"Version": 3,
+	"VersionName": "1.2",
+	"FriendlyName": "LevelDesign Assistant",
+	"Description": "The LD Assistant plug-in adds two new windows to your editor. LDA window that allows you to speed up your level design work with many tools. Utility window that provides tools to manipulate actors position and rotation.",
+	"Category": "Editor",
+	"CreatedBy": "Corentin Guillaume",
+	"CreatedByURL": "https://www.unrealengine.com/marketplace/en-US/profile/Corentin+Guillaume",
+	"DocsURL": "https://docs.google.com/presentation/d/1sWd9EThs_9EpF7debu6B9UUH4RQStQCPMlBh3RYHQgo/edit?usp=sharing",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/51c5a9a0d5f84beba23aab69bed8d28c",
+	"SupportURL": "https://www.unrealengine.com/marketplace/en-US/profile/Corentin+Guillaume",
+	"EngineVersion": "4.27.0",
+	"CanContainContent": true,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "LDAssistant",
+			"Type": "Editor",
+			"LoadingPhase": "Default",
+			"WhitelistPlatforms": [
+				"Win64",
+				"Win32",
+				"Mac",
+				"Linux"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "EditorScriptingUtilities",
+			"Enabled": true
+		}
+	]
+}

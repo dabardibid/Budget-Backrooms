@@ -1,0 +1,27 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "TimeClock",
+	"Description": "Easily manage your time by setting alarms and checking how long you've been working in editor.",
+	"Category": "Productivity",
+	"CreatedBy": "LambdaWorks",
+	"CreatedByURL": "www.samuelmetters.co.uk/timeclock",
+	"DocsURL": "www.samuelmetters.co.uk/timeclock",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/6f6a4afb66af43deb946a48b78d8c80a",
+	"SupportURL": "www.lambdaworks.co.uk",
+	"EngineVersion": "4.27.0",
+	"CanContainContent": true,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "TimeClock",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit",
+			"WhitelistPlatforms": [
+				"Win64",
+				"Mac"
+			]
+		}
+	]
+}

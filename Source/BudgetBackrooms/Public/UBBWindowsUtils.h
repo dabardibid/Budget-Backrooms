@@ -1,6 +1,9 @@
 #pragma once
+#if PLATFORM_WINDOWS
 #include "Windows/WindowsPlatformMisc.h"
 #include "Windows/WindowsHWrapper.h"
+#endif
+
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "UBBWindowsUtils.generated.h"
 

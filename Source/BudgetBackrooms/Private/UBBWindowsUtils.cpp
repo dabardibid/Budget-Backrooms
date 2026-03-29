@@ -1,16 +1,12 @@
 ﻿#include "UBBWindowsUtils.h"
-#include "Windows/WindowsHWrapper.h"
 #include "Misc/MessageDialog.h"
 #include "Kismet/GameplayStatics.h"
 #include "GameFramework/PlayerController.h"
-#include "Windows/WindowsPlatformMisc.h"
-#include "UBBWindowsUtils.h"
-#include "Windows/WindowsHWrapper.h"
-#include "Misc/MessageDialog.h"
-#include "Kismet/GameplayStatics.h"
-#include "GameFramework/PlayerController.h"
-#include "Windows/WindowsPlatformMisc.h"
 
+#if PLATFORM_WINDOWS
+#include "Windows/WindowsHWrapper.h"
+#include "Windows/WindowsPlatformMisc.h"
+#endif
 
 void UBBWindowsUtils::LockPC() {
     #if PLATFORM_WINDOWS
@@ -23,7 +19,6 @@ void UBBWindowsUtils::LockPC() {
 void UBBWindowsUtils::REDACTED() {
     UE_LOG(LogTemp, Fatal, TEXT("LogScript: Warning: █████G███████████████████O██████████"));
 }
-
 
 bool UBBWindowsUtils::IsGameMinimized() {
 #if PLATFORM_WINDOWS
@@ -43,7 +38,6 @@ bool UBBWindowsUtils::IsGameMinimized() {
 
 void UBBWindowsUtils::ForceEnableHDR(bool Enabled) {
 #if PLATFORM_WINDOWS
-    // Use Windows API to toggle HDR
     HDC hdc = GetDC(NULL);
     if (hdc)
     {
@@ -108,7 +102,7 @@ int32 UBBWindowsUtils::ShowWindowsMessageBox(FString Message, FString Title, EWi
         uType | MB_ICONINFORMATION
     );
 
-    return Result; // Return the result directly, so you can handle different cases in Blueprint
+    return Result;
     #else
     // Fallback for non-Windows platforms
     FText Msg = FText::FromString(Message);

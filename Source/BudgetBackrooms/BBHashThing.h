@@ -1,3 +1,3 @@
 #pragma once
-#define PROJECT_GIT_HASH "d0a680c7"
-#define PROJECT_GIT_HASH_LONG "d0a680c7129485081b3f9aea78999b99a91d124b"
+#define PROJECT_GIT_HASH "3dd9bff9"
+#define PROJECT_GIT_HASH_LONG "3dd9bff9fcaaffe2ecbea7bcbadde679fde25180"

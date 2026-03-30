@@ -125,10 +125,6 @@
 			"Enabled": true
 		},
 		{
-			"Name": "RawInput",
-			"Enabled": true
-		},
-		{
 			"Name": "SoundCueTemplates",
 			"Enabled": true
 		},
@@ -310,10 +306,6 @@
 			"Enabled": false
 		},
 		{
-			"Name": "SteamController",
-			"Enabled": true
-		},
-		{
 			"Name": "LuminPlatformFeatures",
 			"Enabled": false,
 			"SupportedTargetPlatforms": [
@@ -340,6 +332,10 @@
 			"Name": "ConsoleEnhanced",
 			"Enabled": false,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/86123c85a4474d609c5cef8a7fc5786b"
+		},
+		{
+			"Name": "RawInput",
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [

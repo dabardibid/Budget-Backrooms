@@ -19,10 +19,10 @@ void UBBControllerUtils::SetControllerVibration(int32 ControllerId, float Intens
         APlayerController* PC = GEngine->GetFirstLocalPlayerController(GWorld);
         if (PC && PC->IsLocalController())
         {
-            // Set the vibration intensity
+            
             PC->PlayDynamicForceFeedback(Intensity, Duration, true, true, true, true);
 
-            // Optionally, you could use a timer to stop the vibration after the duration
+            
             FTimerHandle TimerHandle;
             PC->GetWorldTimerManager().SetTimer(TimerHandle, [PC]() {
                 PC->PlayDynamicForceFeedback(0.f, 0.f, false, false, false, false);

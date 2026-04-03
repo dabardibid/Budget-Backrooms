@@ -141,6 +141,67 @@ void UBBSteamUtils::CheckSteamConnection(bool& IsConnected)
     }
 }
 
+void UBBSteamUtils::UnlockSteamAchievement(const FString& AchievementID)
+{
+    if (SteamAPI_Init() && SteamUserStats() != nullptr)
+    {
+        SteamUserStats()->SetAchievement(TCHAR_TO_UTF8(*AchievementID));
+        // You MUST call StoreStats to push the unlock to the Steam Servers immediately
+        SteamUserStats()->StoreStats();
+    }
+    else
+    {
+        UE_LOG(LogTemp, Warning, TEXT("[BUDGET STEAM NETWORKING] Steam API failed or SteamUserStats is null, why??"));
+    }
+}
+
+void UBBSteamUtils::ClearSteamAchievement(const FString& AchievementID)
+{
+    if (SteamAPI_Init() && SteamUserStats() != nullptr)
+    {
+        SteamUserStats()->ClearAchievement(TCHAR_TO_UTF8(*AchievementID));
+        // Push the locked status back to the server
+        SteamUserStats()->StoreStats();
+    }
+    else
+    {
+        UE_LOG(LogTemp, Warning, TEXT("[BUDGET STEAM NETWORKING] Steam API failed or SteamUserStats is null, why??"));
+    }
+}
+
+void UBBSteamUtils::GetSteamAchievement(const FString& AchievementID, bool& bIsUnlocked)
+{
+    bIsUnlocked = false;
+
+    if (SteamAPI_Init() && SteamUserStats() != nullptr)
+    {
+        bool bAchieved = false;
+        if (SteamUserStats()->GetAchievement(TCHAR_TO_UTF8(*AchievementID), &bAchieved))
+        {
+            bIsUnlocked = bAchieved;
+        }
+    }
+    else
+    {
+        UE_LOG(LogTemp, Warning, TEXT("[BUDGET STEAM NETWORKING] Steam API failed or SteamUserStats is null, why??"));
+    }
+}
+
+void UBBSteamUtils::ResetAllSteamStatsAndAchievements()
+{
+    if (SteamAPI_Init() && SteamUserStats() != nullptr)
+    {
+        // passing 'true' tells Steam to reset achievements in addition to stats
+        SteamUserStats()->ResetAllStats(true);
+        // Push the wipe event to the server
+        SteamUserStats()->StoreStats();
+    }
+    else
+    {
+        UE_LOG(LogTemp, Warning, TEXT("[BUDGET STEAM NETWORKING] Steam API failed or SteamUserStats is null, why??"));
+    }
+}
+
 
 // THANK YOU LORENZOHAPPY19 VERY DEMURE FOR THE GIT HASH THING THANK YOU VERY MUCH GRAZIE CAPAREZZA CALABRESE CARBONARA
 FString UBBSteamUtils::GetGitHash()

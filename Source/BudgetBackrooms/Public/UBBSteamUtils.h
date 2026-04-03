@@ -68,6 +68,18 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Steam (Budget Backrooms // Custom BP Expose)")
 	static void ClearSteamRichPresence();
     
+    UFUNCTION(BlueprintCallable, Category = "Steam (Budget Backrooms // Custom BP Expose)", meta = (Keywords = "Achievement Unlock", ToolTip = "Unlocks a Steam Achievement using its API Name set in the Steamworks backend"))
+    static void UnlockSteamAchievement(const FString& AchievementID);
+
+    UFUNCTION(BlueprintCallable, Category = "Steam (Budget Backrooms // Custom BP Expose)", meta = (Keywords = "Achievement Clear", ToolTip = "Clears/Locks a Steam Achievement using its API Name. Mostly for debug purposes."))
+    static void ClearSteamAchievement(const FString& AchievementID);
+    
+    UFUNCTION(BlueprintPure, Category = "Steam (Budget Backrooms // Custom BP Expose)", meta = (Keywords = "Achievement Get Status", ToolTip = "Checks if a specific Steam Achievement is unlocked currently by the user."))
+    static void GetSteamAchievement(const FString& AchievementID, bool& bIsUnlocked);
+
+    UFUNCTION(BlueprintCallable, Category = "Steam (Budget Backrooms // Custom BP Expose)", meta = (Keywords = "Achievement Reset All Stats", ToolTip = "Resets ALL stats AND achievements. USE WITH EXTREME CAUTION! Primarily for testing."))
+    static void ResetAllSteamStatsAndAchievements();
+
     UFUNCTION(BlueprintPure, Category = "Budget Other Utils", meta = (CompactNodeTitle = "Git Hash"))
     static FString GetGitHash();
 

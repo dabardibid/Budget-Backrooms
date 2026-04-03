@@ -19,4 +19,4 @@ The development and sweaty update side of this game can be found on the [Discord
 **Enjoy ❣**
 
 # 🔧 Setting up the project
-**If you'd like to modify the project, the page was moved [here on the Wiki](https://davidjoacaro.github.io/Budget-Docs/docs/modding)**
+**If you'd like to modify the project, the page was moved [here on the Wiki](https://bdocs.dabar.dev/docs/modding)**

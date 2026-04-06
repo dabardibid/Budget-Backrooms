@@ -254,10 +254,6 @@
 			"Enabled": false
 		},
 		{
-			"Name": "SteamAudio",
-			"Enabled": true
-		},
-		{
 			"Name": "GooglePAD",
 			"Enabled": false
 		},

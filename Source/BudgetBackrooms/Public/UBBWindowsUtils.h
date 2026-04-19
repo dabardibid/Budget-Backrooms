@@ -42,4 +42,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Budget Windows Utils")
     static void REDACTED();
 
+    UFUNCTION(BlueprintCallable, Category = "Budget Windows Utils")
+    static void GetMonitorHDRSpecs(bool& bSupportsHDR, float& MaxLuminance, float& MinLuminance);
+
+    UFUNCTION(BlueprintCallable, Category = "Budget Windows Utils")
+    static void AutoConfigureUE4HDR();
 };

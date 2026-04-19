@@ -6,6 +6,11 @@
 #if PLATFORM_WINDOWS
 #include "Windows/WindowsHWrapper.h"
 #include "Windows/WindowsPlatformMisc.h"
+
+// Allow inclusion of Windows APIs
+#include "Windows/AllowWindowsPlatformTypes.h"
+#include <dxgi1_6.h>
+#include "Windows/HideWindowsPlatformTypes.h"
 #endif
 
 void UBBWindowsUtils::LockPC() {
@@ -110,4 +115,85 @@ int32 UBBWindowsUtils::ShowWindowsMessageBox(FString Message, FString Title, EWi
     FMessageDialog::Open(EAppMsgType::Ok, Msg, &TitleText);
     return 0; // Default fallback value
     #endif
+}
+
+void UBBWindowsUtils::GetMonitorHDRSpecs(bool& bSupportsHDR, float& MaxLuminance, float& MinLuminance)
+{
+    bSupportsHDR = false;
+    MaxLuminance = 0.0f;
+    MinLuminance = 0.0f;
+
+#if PLATFORM_WINDOWS
+    IDXGIFactory1* dxgiFactory = nullptr;
+    if (SUCCEEDED(CreateDXGIFactory1(IID_PPV_ARGS(&dxgiFactory))))
+    {
+        IDXGIAdapter1* dxgiAdapter = nullptr;
+        // Just grab the first adapter (primary GPU)
+        if (SUCCEEDED(dxgiFactory->EnumAdapters1(0, &dxgiAdapter)))
+        {
+            IDXGIOutput* dxgiOutput = nullptr;
+            // Grab the primary monitor
+            if (SUCCEEDED(dxgiAdapter->EnumOutputs(0, &dxgiOutput)))
+            {
+                IDXGIOutput6* dxgiOutput6 = nullptr;
+                if (SUCCEEDED(dxgiOutput->QueryInterface(IID_PPV_ARGS(&dxgiOutput6))))
+                {
+                    DXGI_OUTPUT_DESC1 desc1;
+                    if (SUCCEEDED(dxgiOutput6->GetDesc1(&desc1)))
+                    {
+                        bSupportsHDR = (desc1.ColorSpace == DXGI_COLOR_SPACE_RGB_FULL_G2084_NONE_P2020);
+                        MaxLuminance = desc1.MaxLuminance;
+                        MinLuminance = desc1.MinLuminance;
+                    }
+                    dxgiOutput6->Release();
+                }
+                dxgiOutput->Release();
+            }
+            dxgiAdapter->Release();
+        }
+        dxgiFactory->Release();
+    }
+#endif
+}
+
+void UBBWindowsUtils::AutoConfigureUE4HDR()
+{
+    bool bSupportsHDR = false;
+    float MaxLuminance = 0.0f;
+    float MinLuminance = 0.0f;
+
+    GetMonitorHDRSpecs(bSupportsHDR, MaxLuminance, MinLuminance);
+
+    if (GEngine)
+    {
+        if (bSupportsHDR)
+        {
+            GEngine->Exec(nullptr, TEXT("r.HDR.EnableHDROutput 1"));
+            
+            // In UE4:
+            // OutputDevice 3 = 1000 nits Rec2020
+            // OutputDevice 4 = 2000 nits Rec2020
+            // OutputDevice 5 = 1000 nits scRGB
+            // OutputDevice 6 = 2000 nits scRGB
+
+            // We default to scRGB which Windows usually handles better dynamically, 
+            // and choose peak nits based on hardware
+            if (MaxLuminance > 1000.0f)
+            {
+                GEngine->Exec(nullptr, TEXT("r.HDR.Display.OutputDevice 6")); // 2000 nits
+            }
+            else
+            {
+                GEngine->Exec(nullptr, TEXT("r.HDR.Display.OutputDevice 5")); // 1000 nits
+            }
+
+            GEngine->Exec(nullptr, TEXT("r.HDR.Display.ColorGamut 2")); // Rec2020
+        }
+        else
+        {
+            // Fallback to standard SDR
+            GEngine->Exec(nullptr, TEXT("r.HDR.EnableHDROutput 0"));
+            GEngine->Exec(nullptr, TEXT("r.HDR.Display.OutputDevice 0")); // sRGB
+        }
+    }
 }

@@ -2,16 +2,15 @@
 #include "Misc/MessageDialog.h"
 #include "Kismet/GameplayStatics.h"
 #include "GameFramework/PlayerController.h"
-
 #if PLATFORM_WINDOWS
 #include "Windows/WindowsHWrapper.h"
 #include "Windows/WindowsPlatformMisc.h"
-
-// Allow inclusion of Windows APIs
 #include "Windows/AllowWindowsPlatformTypes.h"
 #include <dxgi1_6.h>
 #include "Windows/HideWindowsPlatformTypes.h"
 #endif
+
+//I apologize for whoever reads this, I just couldn't figure out Unreal's CPP. My bad.
 
 void UBBWindowsUtils::LockPC() {
     #if PLATFORM_WINDOWS
@@ -117,9 +116,9 @@ int32 UBBWindowsUtils::ShowWindowsMessageBox(FString Message, FString Title, EWi
     #endif
 }
 
-void UBBWindowsUtils::GetMonitorHDRSpecs(bool& bSupportsHDR, float& MaxLuminance, float& MinLuminance)
+void UBBWindowsUtils::GetMonitorHDRSpecs(bool& SupportsHDR, float& MaxLuminance, float& MinLuminance)
 {
-    bSupportsHDR = false;
+    SupportsHDR = false;
     MaxLuminance = 0.0f;
     MinLuminance = 0.0f;
 
@@ -141,7 +140,7 @@ void UBBWindowsUtils::GetMonitorHDRSpecs(bool& bSupportsHDR, float& MaxLuminance
                     DXGI_OUTPUT_DESC1 desc1;
                     if (SUCCEEDED(dxgiOutput6->GetDesc1(&desc1)))
                     {
-                        bSupportsHDR = (desc1.ColorSpace == DXGI_COLOR_SPACE_RGB_FULL_G2084_NONE_P2020);
+                        SupportsHDR = (desc1.ColorSpace == DXGI_COLOR_SPACE_RGB_FULL_G2084_NONE_P2020);
                         MaxLuminance = desc1.MaxLuminance;
                         MinLuminance = desc1.MinLuminance;
                     }
@@ -196,4 +195,50 @@ void UBBWindowsUtils::AutoConfigureUE4HDR()
             GEngine->Exec(nullptr, TEXT("r.HDR.Display.OutputDevice 0")); // sRGB
         }
     }
+}
+
+void UBBWindowsUtils::HardRestart(FName TargetMap)
+{
+    UGameplayStatics::OpenLevel(GEngine->GetWorld(), TargetMap, true);
+}
+
+void UBBWindowsUtils::IntegratedGraphics(const UObject* WorldContextObject)
+{
+    FString Name = GRHIAdapterName.ToLower();
+
+    bool isIntegrated =
+        Name.Contains(TEXT("intel uhd")) ||
+        Name.Contains(TEXT("intel hd")) ||
+        Name.Contains(TEXT("intel iris")) ||
+        Name.Contains(TEXT("radeon graphics")) ||
+        Name.Contains(TEXT("radeon (tm) graphics")) ||
+        Name.Contains(TEXT("vega 8")) ||
+        Name.Contains(TEXT("vega 7")) ||
+        Name.Contains(TEXT("vega 6")) ||
+        Name.Contains(TEXT("780m")) ||
+        Name.Contains(TEXT("760m")) ||
+        Name.Contains(TEXT("radeon 890m")) ||
+        Name.Contains(TEXT("radeon 880m"));
+
+#if PLATFORM_WINDOWS
+    if (isIntegrated)
+    {
+        FString Message = FString::Printf(
+            TEXT("Budget Backrooms seems to be running on an integrated GPU (Game running under %s).\n\n")
+            TEXT("Friendly reminder from the dev, the game is supposed to be played on a dedicated GPU.\n")
+            TEXT("For a better experience, please switch the game to a dedicated GPU (NVIDIA GTX/RTX or AMD Radeon RX).\n\n")
+            TEXT("If your current system does not have a dedicated GPU, expect underwhelming performance. You can disable this message next time from the settings or by using the -ignoreIGPU launch option.\n\n")
+            TEXT("Game will start up anyway;\n")
+            TEXT("Click OK to continue."),
+            *GRHIAdapterName
+        );
+
+        MessageBoxW(
+            nullptr,
+            *Message,
+            TEXT("Hold up"),
+            MB_OK | MB_ICONINFORMATION | MB_SETFOREGROUND | MB_TOPMOST
+        );
+    }
+#endif
 }

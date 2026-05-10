@@ -43,8 +43,14 @@ public:
     static void REDACTED();
 
     UFUNCTION(BlueprintCallable, Category = "Budget Windows Utils")
-    static void GetMonitorHDRSpecs(bool& bSupportsHDR, float& MaxLuminance, float& MinLuminance);
+    static void GetMonitorHDRSpecs(bool& SupportsHDR, float& MaxLuminance, float& MinLuminance);
 
     UFUNCTION(BlueprintCallable, Category = "Budget Windows Utils")
     static void AutoConfigureUE4HDR();
+
+    UFUNCTION(BlueprintCallable, Category = "Budget Windows Utils", meta = (DisplayName = "Hard Restart"))
+    static void HardRestart(FName TargetMap);
+
+    UFUNCTION(BlueprintCallable, Category = "Budget Windows Utils", meta = (DisplayName = "IS THE USER RUNNING THIS PILE OF CRAP ON ANOTHER PILE OF CRAP?"))
+    static void IntegratedGraphics(const UObject* WorldContextObject);
 };

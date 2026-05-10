@@ -58,5 +58,10 @@ public class BudgetBackrooms : ModuleRules
         // To include OnlineSubsystemSteam, add it to the plugins section in your uproject file with the Enabled attribute set to true
 
         PublicDefinitions.Add("_CRT_SECURE_NO_WARNINGS"); // oh no unsafe code???
+
+        if (Target.Platform == UnrealTargetPlatform.Win64)
+        {
+            PublicSystemLibraries.Add("dxgi.lib");
+        }
     }
 }

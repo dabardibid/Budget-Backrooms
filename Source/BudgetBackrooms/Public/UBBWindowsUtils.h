@@ -49,8 +49,9 @@ public:
     static void AutoConfigureUE4HDR();
 
     UFUNCTION(BlueprintCallable, Category = "Budget Windows Utils", meta = (DisplayName = "Hard Restart"))
-    static void HardRestart(FName TargetMap);
+    static void HardRestart(const UObject* WorldContextObject, FString MapName);
 
     UFUNCTION(BlueprintCallable, Category = "Budget Windows Utils", meta = (DisplayName = "IS THE USER RUNNING THIS PILE OF CRAP ON ANOTHER PILE OF CRAP?"))
     static void IntegratedGraphics(const UObject* WorldContextObject);
+
 };

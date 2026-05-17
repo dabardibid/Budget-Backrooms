@@ -197,10 +197,39 @@ void UBBWindowsUtils::AutoConfigureUE4HDR()
     }
 }
 
-void UBBWindowsUtils::HardRestart(FName TargetMap)
+void UBBWindowsUtils::HardRestart(const UObject* WorldContextObject, FString MapName)
 {
-    UGameplayStatics::OpenLevel(GEngine->GetWorld(), TargetMap, true);
+#if WITH_EDITOR
+    // In the Editor, we cannot kill the OS process without closing the entire Unreal Engine.
+    // Therefore, we fall back to a standard level load for testing purposes.
+    UE_LOG(LogTemp, Warning, TEXT("Hard Restart bypassed in Editor to prevent closing UE4. Falling back to OpenLevel. GameInstance was NOT refreshed."));
+
+    if (WorldContextObject)
+    {
+        UGameplayStatics::OpenLevel(WorldContextObject, FName(*MapName));
+    }
+#else
+    FString AppPath = FPlatformProcess::ExecutablePath();
+
+    FString CmdArgs = MapName;
+    
+    FPlatformProcess::CreateProc(
+        *AppPath,
+        *CmdArgs,
+        true,    
+        false,   
+        false,   
+        nullptr, 
+        0,       
+        nullptr, 
+        nullptr  
+    );
+
+
+    FGenericPlatformMisc::RequestExit(false);
+#endif
 }
+
 
 void UBBWindowsUtils::IntegratedGraphics(const UObject* WorldContextObject)
 {

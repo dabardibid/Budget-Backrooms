@@ -1,109 +1,231 @@
+// UBBRebindStuff.cpp
+
 #include "UBBRebindStuff.h"
-#include "GameFramework/PlayerController.h"
+#include "GameFramework/InputSettings.h"
+#include "Misc/ConfigCacheIni.h"
+#include "Misc/Paths.h"
+#include "InputCoreTypes.h"
 
-void UBBRebindStuff::ResetInputsToDefault()
+FString UBBRebindStuff::GetDefaultInputIniPath()
 {
-    if (GEngine)
+    // FPaths::SourceConfigDir() points to <Project>/Config in editor,
+    // and to the staged Config folder in packaged builds. This is where
+    // DefaultInput.ini lives — NOT the Saved/Config folder, which holds
+    // user-modified overrides.
+    return FPaths::SourceConfigDir() / TEXT("DefaultInput.ini");
+}
+
+TArray<FInputActionKeyMapping> UBBRebindStuff::GetDefaultActionMappings()
+{
+    TArray<FInputActionKeyMapping> Result;
+
+    const FString IniPath = GetDefaultInputIniPath();
+
+    // Load the ini file into a standalone FConfigFile so we read the on-disk
+    // file directly, with no user overrides mixed in.
+    FConfigFile ConfigFile;
+    ConfigFile.Read(IniPath);
+
+    if (ConfigFile.Num() == 0)
     {
-        if (APlayerController* PC = GEngine->GetFirstLocalPlayerController(GWorld))
+        UE_LOG(LogTemp, Warning, TEXT("RebindHelper: Could not read DefaultInput.ini at %s"), *IniPath);
+        return Result;
+    }
+
+    // Action and axis mappings live under [/Script/Engine.InputSettings].
+    const FConfigSection* Section = ConfigFile.Find(TEXT("/Script/Engine.InputSettings"));
+    if (!Section)
+    {
+        UE_LOG(LogTemp, Warning, TEXT("RebindHelper: No [/Script/Engine.InputSettings] section found"));
+        return Result;
+    }
+
+    // Each "+ActionMappings=(...)" line is stored under the key "ActionMappings".
+    // MultiFind returns all values for that key, in declaration order.
+    TArray<FConfigValue> RawValues;
+    Section->MultiFind(TEXT("ActionMappings"), RawValues, /*bMaintainOrder=*/true);
+
+    for (const FConfigValue& RawValue : RawValues)
+    {
+        const FString& Line = RawValue.GetValue();
+
+        // FInputActionKeyMapping is a UStruct; ImportText handles parsing the
+        // "(ActionName=..., Key=..., bShift=..., ...)" string form natively.
+        FInputActionKeyMapping Mapping;
+        const TCHAR* ImportPtr = *Line;
+        if (FInputActionKeyMapping::StaticStruct()->ImportText(
+                ImportPtr, &Mapping, nullptr, PPF_None, GLog, TEXT("FInputActionKeyMapping")))
         {
-            TArray<FInputActionKeyMapping> DefaultActionMappings;
-            TArray<FInputAxisKeyMapping> DefaultAxisMappings;
-
-            SetupDefaultActionMappings(DefaultActionMappings);
-            SetupDefaultAxisMappings(DefaultAxisMappings);
-
-            ApplyMappingsToPlayerInput(PC, DefaultActionMappings, DefaultAxisMappings);
-
-            // Save the changes
-            PC->PlayerInput->SaveConfig();
+            Result.Add(Mapping);
         }
     }
+
+    return Result;
 }
 
-void UBBRebindStuff::SetupDefaultActionMappings(TArray<FInputActionKeyMapping>& ActionMappings)
+TArray<FInputAxisKeyMapping> UBBRebindStuff::GetDefaultAxisMappings()
 {
+    TArray<FInputAxisKeyMapping> Result;
 
-    ActionMappings.Add(FInputActionKeyMapping(FName("debug"), EKeys::Semicolon));
+    const FString IniPath = GetDefaultInputIniPath();
 
+    FConfigFile ConfigFile;
+    ConfigFile.Read(IniPath);
 
-    ActionMappings.Add(FInputActionKeyMapping(FName("Flashlight"), EKeys::F));
-    ActionMappings.Add(FInputActionKeyMapping(FName("Flashlight"), EKeys::Gamepad_RightTrigger));
-    ActionMappings.Add(FInputActionKeyMapping(FName("Flashlight"), EKeys::RightMouseButton));
+    if (ConfigFile.Num() == 0)
+    {
+        return Result;
+    }
 
+    const FConfigSection* Section = ConfigFile.Find(TEXT("/Script/Engine.InputSettings"));
+    if (!Section)
+    {
+        return Result;
+    }
 
-    ActionMappings.Add(FInputActionKeyMapping(FName("Interaction"), EKeys::E));
-    ActionMappings.Add(FInputActionKeyMapping(FName("Interaction"), EKeys::Gamepad_FaceButton_Left));
+    TArray<FConfigValue> RawValues;
+    Section->MultiFind(TEXT("AxisMappings"), RawValues, /*bMaintainOrder=*/true);
 
+    for (const FConfigValue& RawValue : RawValues)
+    {
+        const FString& Line = RawValue.GetValue();
 
-    ActionMappings.Add(FInputActionKeyMapping(FName("Jump"), EKeys::Gamepad_FaceButton_Bottom));
-    ActionMappings.Add(FInputActionKeyMapping(FName("Jump"), EKeys::SpaceBar));
+        FInputAxisKeyMapping Mapping;
+        const TCHAR* ImportPtr = *Line;
+        if (FInputAxisKeyMapping::StaticStruct()->ImportText(
+                ImportPtr, &Mapping, nullptr, PPF_None, GLog, TEXT("FInputAxisKeyMapping")))
+        {
+            Result.Add(Mapping);
+        }
+    }
 
-
-    ActionMappings.Add(FInputActionKeyMapping(FName("Pause Menu Key"), EKeys::Escape));
-    ActionMappings.Add(FInputActionKeyMapping(FName("Pause Menu Key"), EKeys::Gamepad_Special_Right));
-    ActionMappings.Add(FInputActionKeyMapping(FName("Pause Menu Key"), EKeys::P));
-
-
-    ActionMappings.Add(FInputActionKeyMapping(FName("Peek Behind Key"), EKeys::Gamepad_LeftShoulder));
-    ActionMappings.Add(FInputActionKeyMapping(FName("Peek Behind Key"), EKeys::V));
-
-
-    ActionMappings.Add(FInputActionKeyMapping(FName("Run"), EKeys::Gamepad_RightShoulder));
-    ActionMappings.Add(FInputActionKeyMapping(FName("Run"), EKeys::LeftShift));
-
-
-    ActionMappings.Add(FInputActionKeyMapping(FName("Zoom"), EKeys::C));
-    ActionMappings.Add(FInputActionKeyMapping(FName("Zoom"), EKeys::Gamepad_LeftTrigger));
+    return Result;
 }
 
-void UBBRebindStuff::SetupDefaultAxisMappings(TArray<FInputAxisKeyMapping>& AxisMappings)
+void UBBRebindStuff::ResetAllMappingsToProjectDefaults()
 {
-
-    AxisMappings.Add(FInputAxisKeyMapping(FName("FW/BW"), EKeys::Gamepad_LeftStick_Down, -1.0f));
-    AxisMappings.Add(FInputAxisKeyMapping(FName("FW/BW"), EKeys::Gamepad_LeftStick_Up, 1.0f));
-    AxisMappings.Add(FInputAxisKeyMapping(FName("FW/BW"), EKeys::S, -1.0f));
-    AxisMappings.Add(FInputAxisKeyMapping(FName("FW/BW"), EKeys::W, 1.0f));
-
-
-    AxisMappings.Add(FInputAxisKeyMapping(FName("LookUp"), EKeys::Gamepad_RightY, 1.0f));
-    AxisMappings.Add(FInputAxisKeyMapping(FName("LookUp"), EKeys::MouseY, -1.0f));
-
-
-    AxisMappings.Add(FInputAxisKeyMapping(FName("R/L"), EKeys::A, -1.0f));
-    AxisMappings.Add(FInputAxisKeyMapping(FName("R/L"), EKeys::D, 1.0f));
-    AxisMappings.Add(FInputAxisKeyMapping(FName("R/L"), EKeys::Gamepad_LeftStick_Left, -1.0f));
-    AxisMappings.Add(FInputAxisKeyMapping(FName("R/L"), EKeys::Gamepad_LeftStick_Right, 1.0f));
-
-
-    AxisMappings.Add(FInputAxisKeyMapping(FName("Turn"), EKeys::Gamepad_RightX, 1.0f));
-    AxisMappings.Add(FInputAxisKeyMapping(FName("Turn"), EKeys::MouseX, 1.0f));
-}
-
-void UBBRebindStuff::ApplyMappingsToPlayerInput(APlayerController* PlayerController,
-    const TArray<FInputActionKeyMapping>& ActionMappings,
-    const TArray<FInputAxisKeyMapping>& AxisMappings)
-{
-    if (!PlayerController || !PlayerController->PlayerInput)
+    UInputSettings* Settings = UInputSettings::GetInputSettings();
+    if (!Settings)
+    {
         return;
-
-    UPlayerInput* PlayerInput = PlayerController->PlayerInput;
-
-    // Clear existing mappings
-    PlayerInput->ActionMappings.Empty();
-    PlayerInput->AxisMappings.Empty();
-
-    // Apply new default mappings
-    for (const FInputActionKeyMapping& Mapping : ActionMappings)
-    {
-        PlayerInput->AddActionMapping(Mapping);
     }
 
-    for (const FInputAxisKeyMapping& Mapping : AxisMappings)
+    // Snapshot the defaults BEFORE we start mutating live settings.
+    const TArray<FInputActionKeyMapping> DefaultActions = GetDefaultActionMappings();
+    const TArray<FInputAxisKeyMapping> DefaultAxes = GetDefaultAxisMappings();
+
+    // Wipe current mappings. We copy the arrays first because Remove* mutates
+    // the underlying list as we iterate.
+    const TArray<FInputActionKeyMapping> CurrentActions = Settings->GetActionMappings();
+    for (const FInputActionKeyMapping& M : CurrentActions)
     {
-        PlayerInput->AddAxisMapping(Mapping);
+        Settings->RemoveActionMapping(M, /*bForceRebuildKeymaps=*/false);
     }
 
-    // Rebuild input mappings
-    PlayerInput->ForceRebuildingKeyMaps();
+    const TArray<FInputAxisKeyMapping> CurrentAxes = Settings->GetAxisMappings();
+    for (const FInputAxisKeyMapping& M : CurrentAxes)
+    {
+        Settings->RemoveAxisMapping(M, /*bForceRebuildKeymaps=*/false);
+    }
+
+    // Re-add defaults.
+    for (const FInputActionKeyMapping& M : DefaultActions)
+    {
+        Settings->AddActionMapping(M, /*bForceRebuildKeymaps=*/false);
+    }
+    for (const FInputAxisKeyMapping& M : DefaultAxes)
+    {
+        Settings->AddAxisMapping(M, /*bForceRebuildKeymaps=*/false);
+    }
+
+    // One rebuild at the end, not per-mapping.
+    Settings->ForceRebuildKeymaps();
+
+    // Persist to the user's Saved/Config Input.ini so it survives a restart.
+    Settings->SaveKeyMappings();
 }
+
+bool UBBRebindStuff::IsGamepadKey(FKey Key)
+{
+    return Key.IsGamepadKey();
+}
+
+void UBBRebindStuff::RebindKey(FName ActionName, FKey NewKey, FKey OldKey)
+{
+    UInputSettings* Settings = UInputSettings::GetInputSettings();
+    if (!Settings)
+    {
+        return;
+    }
+
+    // Skip remove step if OldKey isn't a real key (e.g. first-time binding).
+    // EKeys::Invalid is the "empty" FKey used when nothing was previously bound.
+    if (OldKey.IsValid())
+    {
+        FInputActionKeyMapping OldMapping;
+        OldMapping.ActionName = ActionName;
+        OldMapping.Key = OldKey;
+        // Modifier flags (Shift/Ctrl/Alt/Cmd) default to false on a fresh struct,
+        // which matches how Blueprint's Make InputActionKeyMapping behaves with
+        // unchecked modifier pins.
+
+        Settings->RemoveActionMapping(OldMapping, /*bForceRebuildKeymaps=*/false);
+    }
+
+    // Add the new mapping.
+    FInputActionKeyMapping NewMapping;
+    NewMapping.ActionName = ActionName;
+    NewMapping.Key = NewKey;
+    Settings->AddActionMapping(NewMapping, /*bForceRebuildKeymaps=*/false);
+
+    // One rebuild, one save at the end.
+    Settings->ForceRebuildKeymaps();
+    Settings->SaveKeyMappings();
+}
+
+void UBBRebindStuff::ClearActionMapping(FName ActionName, FKey KeyToClear)
+{
+    if (!KeyToClear.IsValid())
+    {
+        return;  // Nothing to clear.
+    }
+
+    UInputSettings* Settings = UInputSettings::GetInputSettings();
+    if (!Settings)
+    {
+        return;
+    }
+
+    FInputActionKeyMapping Mapping;
+    Mapping.ActionName = ActionName;
+    Mapping.Key = KeyToClear;
+
+    Settings->RemoveActionMapping(Mapping, /*bForceRebuildKeymaps=*/false);
+    Settings->ForceRebuildKeymaps();
+    Settings->SaveKeyMappings();
+}
+
+TArray<FInputActionKeyMapping> UBBRebindStuff::GetCurrentMappingsForAction(FName ActionName)
+{
+    TArray<FInputActionKeyMapping> Result;
+
+    const UInputSettings* Settings = UInputSettings::GetInputSettings();
+    if (!Settings)
+    {
+        return Result;
+    }
+
+    // GetActionMappings() returns the full live array. We filter here so the
+    // caller doesn't have to.
+    const TArray<FInputActionKeyMapping>& AllMappings = Settings->GetActionMappings();
+    for (const FInputActionKeyMapping& Mapping : AllMappings)
+    {
+        if (Mapping.ActionName == ActionName)
+        {
+            Result.Add(Mapping);
+        }
+    }
+
+    return Result;
+}
+

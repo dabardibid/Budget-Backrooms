@@ -86,6 +86,24 @@ public:
     UFUNCTION(BlueprintCallable, Category = "Budget Rebind|Mapping")
     static TArray<FInputActionKeyMapping> GetCurrentMappingsForAction(FName ActionName);
 
+    /**
+     * Resets a single action's bindings to its DefaultInput.ini values.
+     *
+     * Workflow:
+     * 1. Read DefaultInput.ini, filter for mappings matching ActionName.
+     * 2. If found, remove ALL current mappings for that action.
+     * 3. Add the default mappings back in.
+     * 4. Rebuild keymaps + save.
+     *
+     * If the action isn't in DefaultInput.ini (e.g. user typed a wrong name),
+     * the function aborts WITHOUT removing current mappings � safety guard,
+     * same philosophy as ResetAllMappingsToProjectDefaults.
+     *
+     * Use this for the per-row reset button on a rebind entry widget.
+     */
+    UFUNCTION(BlueprintCallable, Category = "Budget Rebind|Mapping")
+    static void ResetActionMappingToDefault(FName ActionName);
+
 private:
     /**
      * Resolves the absolute path to the project's DefaultInput.ini.

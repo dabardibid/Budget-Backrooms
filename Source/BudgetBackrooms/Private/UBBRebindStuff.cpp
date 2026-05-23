@@ -1,5 +1,3 @@
-// UBBRebindStuff.cpp
-
 #include "UBBRebindStuff.h"
 #include "GameFramework/InputSettings.h"
 #include "Misc/ConfigCacheIni.h"
@@ -54,7 +52,7 @@ TArray<FInputActionKeyMapping> UBBRebindStuff::GetDefaultActionMappings()
         FInputActionKeyMapping Mapping;
         const TCHAR* ImportPtr = *Line;
         if (FInputActionKeyMapping::StaticStruct()->ImportText(
-                ImportPtr, &Mapping, nullptr, PPF_None, GLog, TEXT("FInputActionKeyMapping")))
+            ImportPtr, &Mapping, nullptr, PPF_None, GLog, TEXT("FInputActionKeyMapping")))
         {
             Result.Add(Mapping);
         }
@@ -93,7 +91,7 @@ TArray<FInputAxisKeyMapping> UBBRebindStuff::GetDefaultAxisMappings()
         FInputAxisKeyMapping Mapping;
         const TCHAR* ImportPtr = *Line;
         if (FInputAxisKeyMapping::StaticStruct()->ImportText(
-                ImportPtr, &Mapping, nullptr, PPF_None, GLog, TEXT("FInputAxisKeyMapping")))
+            ImportPtr, &Mapping, nullptr, PPF_None, GLog, TEXT("FInputAxisKeyMapping")))
         {
             Result.Add(Mapping);
         }
@@ -113,6 +111,33 @@ void UBBRebindStuff::ResetAllMappingsToProjectDefaults()
     // Snapshot the defaults BEFORE we start mutating live settings.
     const TArray<FInputActionKeyMapping> DefaultActions = GetDefaultActionMappings();
     const TArray<FInputAxisKeyMapping> DefaultAxes = GetDefaultAxisMappings();
+
+    // SAFETY GUARD 1: Refuse to wipe if defaults read returned empty.
+    // Otherwise a failed DefaultInput.ini read would destroy all bindings with
+    // nothing to restore. This protects against bad paths, missing files,
+    // and parse failures.
+    if (DefaultActions.Num() == 0 && DefaultAxes.Num() == 0)
+    {
+        UE_LOG(LogTemp, Error,
+            TEXT("RebindHelper: Refusing to reset. GetDefaultActionMappings + GetDefaultAxisMappings both returned empty. ")
+            TEXT("Check that DefaultInput.ini exists at the expected path and contains valid mappings."));
+        return;
+    }
+
+    // SAFETY GUARD 2: In editor PIE, UInputSettings IS the project asset.
+    // Mutating it would empty Project Settings → Engine → Input. Refuse.
+    // In packaged builds GIsEditor is false, so the real reset proceeds.
+#if WITH_EDITOR
+    if (GIsEditor)
+    {
+        UE_LOG(LogTemp, Warning,
+            TEXT("RebindHelper: ResetAllMappingsToProjectDefaults called in editor. ")
+            TEXT("Refusing to mutate UInputSettings (this would wipe Project Settings). ")
+            TEXT("This function only does meaningful work in packaged builds. ")
+            TEXT("If you need to reset bindings in editor for testing, delete Saved/Config/WindowsEditor/Input.ini and restart the editor."));
+        return;
+    }
+#endif
 
     // Wipe current mappings. We copy the arrays first because Remove* mutates
     // the underlying list as we iterate.
@@ -229,3 +254,60 @@ TArray<FInputActionKeyMapping> UBBRebindStuff::GetCurrentMappingsForAction(FName
     return Result;
 }
 
+void UBBRebindStuff::ResetActionMappingToDefault(FName ActionName)
+{
+    UInputSettings* Settings = UInputSettings::GetInputSettings();
+    if (!Settings)
+    {
+        return;
+    }
+
+    // Read all defaults from disk, then filter to this action's defaults.
+    const TArray<FInputActionKeyMapping> AllDefaults = GetDefaultActionMappings();
+    TArray<FInputActionKeyMapping> ActionDefaults;
+    for (const FInputActionKeyMapping& M : AllDefaults)
+    {
+        if (M.ActionName == ActionName)
+        {
+            ActionDefaults.Add(M);
+        }
+    }
+
+    // SAFETY GUARD: if no defaults found for this action, abort.
+    // Don't wipe a real action's bindings just because someone misspelled
+    // the action name or DefaultInput.ini doesn't have it.
+    if (ActionDefaults.Num() == 0)
+    {
+        UE_LOG(LogTemp, Warning,
+            TEXT("RebindHelper: ResetActionMappingToDefault('%s') found no defaults for that action. ")
+            TEXT("Refusing to wipe current bindings. Check ActionName spelling and DefaultInput.ini contents."),
+            *ActionName.ToString());
+        return;
+    }
+
+    // Editor PIE guard, same reasoning as in ResetAllMappingsToProjectDefaults.
+#if WITH_EDITOR
+    if (GIsEditor)
+    {
+        UE_LOG(LogTemp, Warning,
+            TEXT("RebindHelper: ResetActionMappingToDefault called in editor. Refusing to mutate UInputSettings."));
+        return;
+    }
+#endif
+
+    // Remove all current mappings for this action.
+    const TArray<FInputActionKeyMapping> CurrentMappings = GetCurrentMappingsForAction(ActionName);
+    for (const FInputActionKeyMapping& M : CurrentMappings)
+    {
+        Settings->RemoveActionMapping(M, /*bForceRebuildKeymaps=*/false);
+    }
+
+    // Re-add the defaults for this action.
+    for (const FInputActionKeyMapping& M : ActionDefaults)
+    {
+        Settings->AddActionMapping(M, /*bForceRebuildKeymaps=*/false);
+    }
+
+    Settings->ForceRebuildKeymaps();
+    Settings->SaveKeyMappings();
+}

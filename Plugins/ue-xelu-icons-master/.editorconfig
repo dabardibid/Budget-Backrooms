@@ -1,7 +1,0 @@
-[*.{h,cpp}]
-
-indent_style = tab
-indent_size = 4
-
-# ReSharper properties
-resharper_cpp_wrap_lines = false

@@ -10,7 +10,11 @@
 #include "Windows/HideWindowsPlatformTypes.h"
 #endif
 
-//I apologize for whoever reads this, I just couldn't figure out Unreal's CPP. My bad.
+// I apologize for whoever reads this, I just couldn't figure out Unreal's CPP. My bad. Had to use a "tiny tad" of external LLM help.
+// Extends to the most .cpp / .h extensions for the game to Blueprints.
+// Sorry but Epic writes shit documentation. Or maybe I can't read.
+//
+// @grok remind me to compile 4.27.2-plus for the next project.
 
 void UBBWindowsUtils::LockPC() {
     #if PLATFORM_WINDOWS

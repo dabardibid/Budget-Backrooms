@@ -8,8 +8,6 @@
 #include "UBBWindowsUtils.generated.h"
 
 
-
-
 UENUM(BlueprintType)
 enum class EWindowsMessageBoxButtons : uint8
 {

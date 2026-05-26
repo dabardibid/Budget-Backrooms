@@ -3,12 +3,29 @@
 #include "Misc/ConfigCacheIni.h"
 #include "Misc/Paths.h"
 #include "InputCoreTypes.h"
+#include "Engine/DataTable.h"
+#include "Engine/Texture2D.h"
+#include "UObject/SoftObjectPath.h"
+
+
+// The DataTable holding all gamepad icons. Row struct must be FBBKeyIconRow.
+// Row names follow "<Style>.<KeyName>" convention (matches Xelu's CSV).
+static const FSoftObjectPath GBBIconDataTablePath(
+    TEXT("/Game/Widgets/DT_BBKeyIcons.DT_BBKeyIcons"));
+
+// Fallback texture shown when a row lookup fails (unknown key, broken soft ptr,
+// missing texture asset). Create this asset in /Game/Widgets/ before first run.
+// A 64x64 solid color or a "?" glyph is fine for placeholder;
+
+static const FSoftObjectPath GBBMissingIconTexturePath(
+    TEXT("/Game/Widgets/T_BBKeyIcon_Missing.T_BBKeyIcon_Missing"));
+
 
 FString UBBRebindStuff::GetDefaultInputIniPath()
 {
     // FPaths::SourceConfigDir() points to <Project>/Config in editor,
     // and to the staged Config folder in packaged builds. This is where
-    // DefaultInput.ini lives — NOT the Saved/Config folder, which holds
+    // DefaultInput.ini lives - NOT the Saved/Config folder, which holds
     // user-modified overrides.
     return FPaths::SourceConfigDir() / TEXT("DefaultInput.ini");
 }
@@ -19,8 +36,6 @@ TArray<FInputActionKeyMapping> UBBRebindStuff::GetDefaultActionMappings()
 
     const FString IniPath = GetDefaultInputIniPath();
 
-    // Load the ini file into a standalone FConfigFile so we read the on-disk
-    // file directly, with no user overrides mixed in.
     FConfigFile ConfigFile;
     ConfigFile.Read(IniPath);
 
@@ -30,7 +45,6 @@ TArray<FInputActionKeyMapping> UBBRebindStuff::GetDefaultActionMappings()
         return Result;
     }
 
-    // Action and axis mappings live under [/Script/Engine.InputSettings].
     const FConfigSection* Section = ConfigFile.Find(TEXT("/Script/Engine.InputSettings"));
     if (!Section)
     {
@@ -38,8 +52,6 @@ TArray<FInputActionKeyMapping> UBBRebindStuff::GetDefaultActionMappings()
         return Result;
     }
 
-    // Each "+ActionMappings=(...)" line is stored under the key "ActionMappings".
-    // MultiFind returns all values for that key, in declaration order.
     TArray<FConfigValue> RawValues;
     Section->MultiFind(TEXT("ActionMappings"), RawValues, /*bMaintainOrder=*/true);
 
@@ -47,8 +59,6 @@ TArray<FInputActionKeyMapping> UBBRebindStuff::GetDefaultActionMappings()
     {
         const FString& Line = RawValue.GetValue();
 
-        // FInputActionKeyMapping is a UStruct; ImportText handles parsing the
-        // "(ActionName=..., Key=..., bShift=..., ...)" string form natively.
         FInputActionKeyMapping Mapping;
         const TCHAR* ImportPtr = *Line;
         if (FInputActionKeyMapping::StaticStruct()->ImportText(
@@ -108,14 +118,9 @@ void UBBRebindStuff::ResetAllMappingsToProjectDefaults()
         return;
     }
 
-    // Snapshot the defaults BEFORE we start mutating live settings.
     const TArray<FInputActionKeyMapping> DefaultActions = GetDefaultActionMappings();
     const TArray<FInputAxisKeyMapping> DefaultAxes = GetDefaultAxisMappings();
 
-    // SAFETY GUARD 1: Refuse to wipe if defaults read returned empty.
-    // Otherwise a failed DefaultInput.ini read would destroy all bindings with
-    // nothing to restore. This protects against bad paths, missing files,
-    // and parse failures.
     if (DefaultActions.Num() == 0 && DefaultAxes.Num() == 0)
     {
         UE_LOG(LogTemp, Error,
@@ -124,9 +129,6 @@ void UBBRebindStuff::ResetAllMappingsToProjectDefaults()
         return;
     }
 
-    // SAFETY GUARD 2: In editor PIE, UInputSettings IS the project asset.
-    // Mutating it would empty Project Settings → Engine → Input. Refuse.
-    // In packaged builds GIsEditor is false, so the real reset proceeds.
 #if WITH_EDITOR
     if (GIsEditor)
     {
@@ -139,8 +141,6 @@ void UBBRebindStuff::ResetAllMappingsToProjectDefaults()
     }
 #endif
 
-    // Wipe current mappings. We copy the arrays first because Remove* mutates
-    // the underlying list as we iterate.
     const TArray<FInputActionKeyMapping> CurrentActions = Settings->GetActionMappings();
     for (const FInputActionKeyMapping& M : CurrentActions)
     {
@@ -153,7 +153,6 @@ void UBBRebindStuff::ResetAllMappingsToProjectDefaults()
         Settings->RemoveAxisMapping(M, /*bForceRebuildKeymaps=*/false);
     }
 
-    // Re-add defaults.
     for (const FInputActionKeyMapping& M : DefaultActions)
     {
         Settings->AddActionMapping(M, /*bForceRebuildKeymaps=*/false);
@@ -163,10 +162,7 @@ void UBBRebindStuff::ResetAllMappingsToProjectDefaults()
         Settings->AddAxisMapping(M, /*bForceRebuildKeymaps=*/false);
     }
 
-    // One rebuild at the end, not per-mapping.
     Settings->ForceRebuildKeymaps();
-
-    // Persist to the user's Saved/Config Input.ini so it survives a restart.
     Settings->SaveKeyMappings();
 }
 
@@ -183,27 +179,19 @@ void UBBRebindStuff::RebindKey(FName ActionName, FKey NewKey, FKey OldKey)
         return;
     }
 
-    // Skip remove step if OldKey isn't a real key (e.g. first-time binding).
-    // EKeys::Invalid is the "empty" FKey used when nothing was previously bound.
     if (OldKey.IsValid())
     {
         FInputActionKeyMapping OldMapping;
         OldMapping.ActionName = ActionName;
         OldMapping.Key = OldKey;
-        // Modifier flags (Shift/Ctrl/Alt/Cmd) default to false on a fresh struct,
-        // which matches how Blueprint's Make InputActionKeyMapping behaves with
-        // unchecked modifier pins.
-
         Settings->RemoveActionMapping(OldMapping, /*bForceRebuildKeymaps=*/false);
     }
 
-    // Add the new mapping.
     FInputActionKeyMapping NewMapping;
     NewMapping.ActionName = ActionName;
     NewMapping.Key = NewKey;
     Settings->AddActionMapping(NewMapping, /*bForceRebuildKeymaps=*/false);
 
-    // One rebuild, one save at the end.
     Settings->ForceRebuildKeymaps();
     Settings->SaveKeyMappings();
 }
@@ -212,7 +200,7 @@ void UBBRebindStuff::ClearActionMapping(FName ActionName, FKey KeyToClear)
 {
     if (!KeyToClear.IsValid())
     {
-        return;  // Nothing to clear.
+        return;
     }
 
     UInputSettings* Settings = UInputSettings::GetInputSettings();
@@ -240,8 +228,6 @@ TArray<FInputActionKeyMapping> UBBRebindStuff::GetCurrentMappingsForAction(FName
         return Result;
     }
 
-    // GetActionMappings() returns the full live array. We filter here so the
-    // caller doesn't have to.
     const TArray<FInputActionKeyMapping>& AllMappings = Settings->GetActionMappings();
     for (const FInputActionKeyMapping& Mapping : AllMappings)
     {
@@ -262,7 +248,6 @@ void UBBRebindStuff::ResetActionMappingToDefault(FName ActionName)
         return;
     }
 
-    // Read all defaults from disk, then filter to this action's defaults.
     const TArray<FInputActionKeyMapping> AllDefaults = GetDefaultActionMappings();
     TArray<FInputActionKeyMapping> ActionDefaults;
     for (const FInputActionKeyMapping& M : AllDefaults)
@@ -273,9 +258,6 @@ void UBBRebindStuff::ResetActionMappingToDefault(FName ActionName)
         }
     }
 
-    // SAFETY GUARD: if no defaults found for this action, abort.
-    // Don't wipe a real action's bindings just because someone misspelled
-    // the action name or DefaultInput.ini doesn't have it.
     if (ActionDefaults.Num() == 0)
     {
         UE_LOG(LogTemp, Warning,
@@ -285,7 +267,6 @@ void UBBRebindStuff::ResetActionMappingToDefault(FName ActionName)
         return;
     }
 
-    // Editor PIE guard, same reasoning as in ResetAllMappingsToProjectDefaults.
 #if WITH_EDITOR
     if (GIsEditor)
     {
@@ -295,14 +276,12 @@ void UBBRebindStuff::ResetActionMappingToDefault(FName ActionName)
     }
 #endif
 
-    // Remove all current mappings for this action.
     const TArray<FInputActionKeyMapping> CurrentMappings = GetCurrentMappingsForAction(ActionName);
     for (const FInputActionKeyMapping& M : CurrentMappings)
     {
         Settings->RemoveActionMapping(M, /*bForceRebuildKeymaps=*/false);
     }
 
-    // Re-add the defaults for this action.
     for (const FInputActionKeyMapping& M : ActionDefaults)
     {
         Settings->AddActionMapping(M, /*bForceRebuildKeymaps=*/false);
@@ -310,4 +289,127 @@ void UBBRebindStuff::ResetActionMappingToDefault(FName ActionName)
 
     Settings->ForceRebuildKeymaps();
     Settings->SaveKeyMappings();
+}
+
+// ============================================================================
+// == GAMEPAD ICON LOOKUP IMPLEMENTATIONS (new) ==
+// ============================================================================
+
+const UDataTable* UBBRebindStuff::GetIconDataTable()
+{
+    // Cache the loaded table across calls. Static local is thread-safe in C++11+,
+    // and this function is only called from the game thread in practice.
+    static TWeakObjectPtr<UDataTable> CachedTable = nullptr;
+
+    if (CachedTable.IsValid())
+    {
+        return CachedTable.Get();
+    }
+
+    UDataTable* Loaded = Cast<UDataTable>(GBBIconDataTablePath.TryLoad());
+    if (!Loaded)
+    {
+        UE_LOG(LogTemp, Warning,
+            TEXT("BBKeyIcons: Failed to load icon DataTable at path '%s'. ")
+            TEXT("Make sure the asset exists and the path matches GBBIconDataTablePath."),
+            *GBBIconDataTablePath.ToString());
+        return nullptr;
+    }
+
+    CachedTable = Loaded;
+    return Loaded;
+}
+
+FName UBBRebindStuff::BuildRowName(FKey Key, EBBGamepadIconStyle Style)
+{
+    // Convert the enum to a plain string matching the CSV convention.
+    // UEnum::GetValueAsString returns "EBBGamepadIconStyle::XboxOne" -> strip prefix.
+    const FString StyleStr = UEnum::GetValueAsString(Style)
+        .Replace(TEXT("EBBGamepadIconStyle::"), TEXT(""));
+
+    // Row name format: "<Style>.<KeyName>" e.g. "XboxOne.Gamepad_FaceButton_Bottom"
+    const FString RowNameStr = FString::Printf(TEXT("%s.%s"), *StyleStr, *Key.ToString());
+    return FName(*RowNameStr);
+}
+
+UTexture2D* UBBRebindStuff::GetMissingIconTexture()
+{
+    // Same caching pattern as the DataTable - load once, reuse forever.
+    static TWeakObjectPtr<UTexture2D> CachedMissing = nullptr;
+
+    if (CachedMissing.IsValid())
+    {
+        return CachedMissing.Get();
+    }
+
+    UTexture2D* Loaded = Cast<UTexture2D>(GBBMissingIconTexturePath.TryLoad());
+    if (!Loaded)
+    {
+        UE_LOG(LogTemp, Warning,
+            TEXT("BBKeyIcons: Failed to load missing-icon fallback at path '%s'. ")
+            TEXT("Create a placeholder texture at this path � the rebind UI may show ")
+            TEXT("nothing for unknown keys until then."),
+            *GBBMissingIconTexturePath.ToString());
+        return nullptr;
+    }
+
+    CachedMissing = Loaded;
+    return Loaded;
+}
+
+TSoftObjectPtr<UTexture2D> UBBRebindStuff::GetGamepadIconSoftPtrForKey(FKey Key, EBBGamepadIconStyle Style)
+{
+    // Quick rejection: non-gamepad keys never have an icon in this system.
+    if (!Key.IsGamepadKey())
+    {
+        return nullptr;
+    }
+
+    const UDataTable* IconTable = GetIconDataTable();
+    if (!IconTable)
+    {
+        // DataTable failed to load - return null soft ptr.
+        // Caller (GetGamepadIconForKey) will fall back to missing icon texture.
+        return nullptr;
+    }
+
+    const FName RowName = BuildRowName(Key, Style);
+
+    // FindRow with bWarnIfRowMissing=false so we don't spam logs when looking up
+    // keys that legitimately aren't in the table (e.g. obscure gamepad keys).
+    static const FString Context(TEXT("UBBRebindStuff::GetGamepadIconSoftPtrForKey"));
+    const FBBKeyIconRow* Row = IconTable->FindRow<FBBKeyIconRow>(RowName, Context, /*bWarnIfRowMissing=*/false);
+    if (!Row)
+    {
+        return nullptr;
+    }
+
+    return Row->Icon;
+}
+
+UTexture2D* UBBRebindStuff::GetGamepadIconForKey(FKey Key, EBBGamepadIconStyle Style)
+{
+    const TSoftObjectPtr<UTexture2D> SoftIcon = GetGamepadIconSoftPtrForKey(Key, Style);
+
+    // If the soft pointer is null, fall back to missing-icon texture.
+    if (SoftIcon.IsNull())
+    {
+        return GetMissingIconTexture();
+    }
+
+    // Force a synchronous load. For a rebind menu this is fine - the user is
+    // sitting in a settings screen, no frame-time pressure.
+    UTexture2D* Loaded = SoftIcon.LoadSynchronous();
+    if (!Loaded)
+    {
+        // Soft pointer pointed somewhere, but the asset failed to load.
+        // Likely a deleted/renamed texture the DataTable still references.
+        UE_LOG(LogTemp, Warning,
+            TEXT("BBKeyIcons: Row for key '%s' style %d has a broken Icon reference. ")
+            TEXT("Check the DataTable row and re-assign the texture."),
+            *Key.ToString(), (int32)Style);
+        return GetMissingIconTexture();
+    }
+
+    return Loaded;
 }

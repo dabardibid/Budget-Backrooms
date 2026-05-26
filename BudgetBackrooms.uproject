@@ -352,10 +352,6 @@
 		{
 			"Name": "MacGraphicsSwitching",
 			"Enabled": false
-		},
-		{
-			"Name": "XeluIcons",
-			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [

@@ -161,15 +161,15 @@ void UBBWindowsUtils::GetMonitorHDRSpecs(bool& SupportsHDR, float& MaxLuminance,
 
 void UBBWindowsUtils::AutoConfigureUE4HDR()
 {
-    bool bSupportsHDR = false;
+    bool SupportsHDR = false;
     float MaxLuminance = 0.0f;
     float MinLuminance = 0.0f;
 
-    GetMonitorHDRSpecs(bSupportsHDR, MaxLuminance, MinLuminance);
+    GetMonitorHDRSpecs(SupportsHDR, MaxLuminance, MinLuminance);
 
     if (GEngine)
     {
-        if (bSupportsHDR)
+        if (SupportsHDR)
         {
             GEngine->Exec(nullptr, TEXT("r.HDR.EnableHDROutput 1"));
             

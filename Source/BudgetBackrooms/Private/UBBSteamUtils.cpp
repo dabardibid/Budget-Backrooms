@@ -169,16 +169,16 @@ void UBBSteamUtils::ClearSteamAchievement(const FString& AchievementID)
     }
 }
 
-void UBBSteamUtils::GetSteamAchievement(const FString& AchievementID, bool& bIsUnlocked)
+void UBBSteamUtils::GetSteamAchievement(const FString& AchievementID, bool& IsUnlocked)
 {
-    bIsUnlocked = false;
+    IsUnlocked = false;
 
     if (SteamAPI_Init() && SteamUserStats() != nullptr)
     {
-        bool bAchieved = false;
-        if (SteamUserStats()->GetAchievement(TCHAR_TO_UTF8(*AchievementID), &bAchieved))
+        bool Achieved = false;
+        if (SteamUserStats()->GetAchievement(TCHAR_TO_UTF8(*AchievementID), &Achieved))
         {
-            bIsUnlocked = bAchieved;
+            IsUnlocked = Achieved;
         }
     }
     else

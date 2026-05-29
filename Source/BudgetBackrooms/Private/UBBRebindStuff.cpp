@@ -27,7 +27,7 @@ FString UBBRebindStuff::GetDefaultInputIniPath()
     // and to the staged Config folder in packaged builds. This is where
     // DefaultInput.ini lives - NOT the Saved/Config folder, which holds
     // user-modified overrides.
-    return FPaths::SourceConfigDir() / TEXT("DefaultInput.ini");
+    return FPaths::ProjectConfigDir() / TEXT("DefaultInput.ini");
 }
 
 TArray<FInputActionKeyMapping> UBBRebindStuff::GetDefaultActionMappings()

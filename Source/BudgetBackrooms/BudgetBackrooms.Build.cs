@@ -39,7 +39,10 @@ public class BudgetBackrooms : ModuleRules
         File.WriteAllText(outPath, header);
 
 
-
+        RuntimeDependencies.Add(
+            Path.Combine("$(ProjectDir)", "Config", "DefaultInput.ini"),
+            StagedFileType.NonUFS
+        );
 
 
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;

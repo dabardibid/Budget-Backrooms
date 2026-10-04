@@ -15,7 +15,15 @@ namespace
 	// array, so these win on same-named variables.
 	const TCHAR* const GCurrentGenSlots[] =
 	{
-		TEXT("BudgetBackrooms_Achievements"),
+		TEXT("AudioMaster"),
+		TEXT("AudioMusic"),
+		TEXT("BetterCallSaul"),
+		TEXT("DiscordRPC"),
+		TEXT("EarlyMPAcc"),
+		TEXT("Flashlight"),
+		TEXT("LVStatus"),
+		TEXT("Sensitivity"),
+		TEXT("Settings_DoF"),
 		TEXT("Settings_Audio"),
 		TEXT("Settings_AudioMusic"),
 		TEXT("Settings_DOF"),

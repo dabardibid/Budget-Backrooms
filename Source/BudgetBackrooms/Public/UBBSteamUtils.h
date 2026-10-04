@@ -74,11 +74,14 @@ public:
     UFUNCTION(BlueprintCallable, Category = "Steam (Budget Backrooms // Custom BP Expose)", meta = (Keywords = "Achievement Clear", ToolTip = "Clears/Locks a Steam Achievement using its API Name. Mostly for debug purposes."))
     static void ClearSteamAchievement(const FString& AchievementID);
     
-    UFUNCTION(BlueprintPure, Category = "Steam (Budget Backrooms // Custom BP Expose)", meta = (Keywords = "Achievement Get Status", ToolTip = "Checks if a specific Steam Achievement is unlocked currently by the user."))
-    static void GetSteamAchievement(const FString& AchievementID, bool& bIsUnlocked);
+	    UFUNCTION(BlueprintPure, Category = "Steam (Budget Backrooms // Custom BP Expose)", meta = (Keywords = "Achievement Get Status", ToolTip = "Checks if a specific Steam Achievement is unlocked currently by the user."))
+	    static void GetSteamAchievement(const FString& AchievementID, bool& bIsUnlocked);
 
-    UFUNCTION(BlueprintCallable, Category = "Steam (Budget Backrooms // Custom BP Expose)", meta = (Keywords = "Achievement Reset All Stats", ToolTip = "Resets ALL stats AND achievements. USE WITH EXTREME CAUTION! Primarily for testing."))
-    static void ResetAllSteamStatsAndAchievements();
+	    UFUNCTION(BlueprintCallable, Category = "Steam (Budget Backrooms // Custom BP Expose)", meta = (Keywords = "Achievement Progress Stat Increment Decrement", ToolTip = "Adds or removes progress from a Steam INT stat, stores it, and lets Steamworks unlock the linked achievement. Configure the Progress Stat and Unlock Value in Steamworks."))
+	    static void AddSteamAchievementProgress(const FString& AchievementID, const FString& ProgressStatID, int32 Delta, int32 ProgressMaxForToast, bool bShowProgressToast, int32& NewProgress, bool& bSuccess);
+	
+	    UFUNCTION(BlueprintCallable, Category = "Steam (Budget Backrooms // Custom BP Expose)", meta = (Keywords = "Achievement Reset All Stats", ToolTip = "Resets ALL stats AND achievements. USE WITH EXTREME CAUTION! Primarily for testing."))
+	    static void ResetAllSteamStatsAndAchievements();
 
     UFUNCTION(BlueprintPure, Category = "Budget Other Utils", meta = (CompactNodeTitle = "Git Hash"))
     static FString GetGitHash();

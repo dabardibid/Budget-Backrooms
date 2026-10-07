@@ -1,124 +1,135 @@
+// UBBBPHelpers.h
+// Merges the old per-feature save slots into Settings.sav and Game.sav (all slots are BB_SaveSys objects),
+// exposed as the async Blueprint node "Migrate Saves". Also has a reset helper, WipeAllSaves.
+//
+//   Settings_*                    -> Settings.sav
+//   State_* / OlderSlots entries  -> Game.sav
+//   AudioMaster, AudioMusic, BetterCallSaul, DiscordRPC, EarlyMPAcc, Flashlight, LVStatus,
+//   Sensitivity, ViewSkVal        -> discarded (reset to defaults)
+
 #pragma once
 
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "Kismet/BlueprintAsyncActionBase.h"
 #include "GameFramework/SaveGame.h"
-#include "UBBBPHelpers.generated.h" // must match THIS header's file name, and stay the LAST include
+#include "UBBBPHelpers.generated.h"
 
-// =============================================================================================
-// Everything for the Game.sav consolidation lives in this one header:
-//   FBBLegacySlot          - one old save slot name (+ optional variable prefix)
-//   UBBGameSave            - the merged save object (Saved/SaveGames/Game.sav)
-//   UUBB_BlueprintHelpers  - your function library, now with the migration functions
-//   UBBMigrateSavesAsync   - the "Migrate Saves" node with On Finished / On Failed pins
-// =============================================================================================
+class FProperty;
 
-/** One old save slot to look for. SlotName = file name without ".sav". */
+enum class EBBSlotTarget : uint8
+{
+	Game,     // Game.sav
+	Settings, // Settings.sav
+	Discard   // not migrated
+};
+
+// SlotName is the file name without ".sav"
 USTRUCT(BlueprintType)
 struct FBBLegacySlot
 {
 	GENERATED_BODY()
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BB|Save")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Budget Savings")
 	FString SlotName;
 
-	/** Optional: prepended to the OLD variable names to find them in UBBGameSave (only needed on name clashes). */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BB|Save")
+	// Optional prefix for the old variable names, for name clashes
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Budget Savings")
 	FString Prefix;
 };
 
-/**
- * One save object for everything that used to live in separate Settings_* / State_* slots (Game.sav).
- *
- * SaveGameToSlot writes all non-transient properties and does NOT check the SaveGame flag,
- * so a plain UPROPERTY is enough to get a variable written to disk.
- *
- * Give each variable the SAME NAME and SAME TYPE as in the old save class so the migration
- * can copy it. On a name clash between two old classes, rename one here and set the matching
- * Prefix on its FBBLegacySlot.
- */
-UCLASS(BlueprintType)
-class BUDGETBACKROOMS_API UBBGameSave : public USaveGame
+// Merge state, advanced one legacy slot at a time. Not reflected: the owner must keep Save / SettingsSave alive.
+struct FBBMigrationBuilder
 {
-	GENERATED_BODY()
+	TSubclassOf<USaveGame> SaveClass;
 
-public:
-	/** 0 = brand-new object. Bump GCurrentVersion in UBBBPHelpers.cpp when the layout changes. */
-	UPROPERTY()
-	int32 SaveVersion = 0;
+	USaveGame* Save = nullptr;
+	USaveGame* SettingsSave = nullptr;
 
-	// ---------------------------------------------------------------------------------------
-	// EXAMPLES ONLY - replace with your real variables (copy names/types from the old classes)
-	// ---------------------------------------------------------------------------------------
+	bool bBuildGame = true;
+	bool bBuildSettings = true;
 
-	UPROPERTY(BlueprintReadWrite, Category = "Settings|Audio")
-	float MasterVolume = 1.0f;
+	TArray<FBBLegacySlot> Slots;
+	int32 NextIndex = 0;
+	int32 SlotsRead = 0;
+	bool bListValues = false;
+	bool bDryRun = false;
+	bool bDeleteOldFiles = false;
 
-	UPROPERTY(BlueprintReadWrite, Category = "Settings|Audio")
-	float MusicVolume = 1.0f;
+	double StartSeconds = 0.0;
+	double WorkSeconds = 0.0;
 
-	UPROPERTY(BlueprintReadWrite, Category = "State|Flashlight")
-	bool bFlashlightOn = false;
+	// Variables that already received a non-default value from an earlier slot
+	TSet<const FProperty*> Assigned;
+	TSet<const FProperty*> AssignedSettings;
+
+	TArray<FString> Report;
 };
 
-/**
- *
- */
 UCLASS()
 class BUDGETBACKROOMS_API UUBB_BlueprintHelpers : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
 
 public:
-	// ---------------------------------------------------------------------------------------
-	// Save consolidation  ->  Saved/SaveGames/Game.sav
-	//
-	// "OlderSlots" = names of even older generations, OLDEST FIRST. They are applied before the
-	// built-in list of current slots (Settings_*, State_*, ...), and later slots win on clashes.
-	// ---------------------------------------------------------------------------------------
+	// OlderSlots: extra legacy slot names, oldest first. SaveClass: the Blueprint save class (BB_SaveSys).
 
-	static FString GetConsolidatedSlotName();
+	static FString GetConsolidatedSlotName(); // "Game"
+	static FString GetSettingsSlotName();     // "Settings"
 	static int32 GetUserIndex();
 
-	/** Loads Game.sav. Returns nullptr if it doesn't exist or isn't a UBBGameSave. */
-	static UBBGameSave* LoadConsolidated();
+	static USaveGame* LoadConsolidated(TSubclassOf<USaveGame> SaveClass);
 
-	/** Builds a save object from every legacy slot that exists. Does NOT write to disk. */
-	static UBBGameSave* BuildFromLegacySlots(const TArray<FBBLegacySlot>& OlderSlots);
+	static USaveGame* LoadSettingsSlot(TSubclassOf<USaveGame> SaveClass);
 
-	/** Synchronous: load Game.sav, or build + write it from the legacy slots. Never null. */
-	UFUNCTION(BlueprintCallable, Category = "BB|Save")
-	static UBBGameSave* LoadOrMigrate(const TArray<FBBLegacySlot>& OlderSlots);
+	static bool IsAllDefaults(USaveGame* Save);
 
-	UFUNCTION(BlueprintCallable, Category = "BB|Save")
-	static bool SaveConsolidated(UBBGameSave* Save);
+	static bool HasLegacyFiles(const TArray<FBBLegacySlot>& OlderSlots, EBBSlotTarget Target);
 
-	/** Deletes the legacy files, but only if Game.sav loads fine. Don't ship this call in the first release. */
-	UFUNCTION(BlueprintCallable, Category = "BB|Save")
-	static void DeleteLegacySlots(const TArray<FBBLegacySlot>& OlderSlots);
+	// A file needs building if it is missing, or all-default while old files for it still exist
+	// (e.g. the game created it empty before the migration ran). A file with real data is never touched.
+	static bool NeedsMigration(TSubclassOf<USaveGame> SaveClass, const TArray<FBBLegacySlot>& OlderSlots,
+		USaveGame*& OutGame, USaveGame*& OutSettings, bool& bOutBuildGame, bool& bOutBuildSettings, FString& OutReason);
+
+	static int32 DeleteLegacyFilesNow(const TArray<FBBLegacySlot>& OlderSlots, TArray<FString>& Report);
+
+	static void BeginBuild(FBBMigrationBuilder& B, TSubclassOf<USaveGame> SaveClass, const TArray<FBBLegacySlot>& OlderSlots,
+		bool bListValues, bool bDryRun, bool bDeleteOldFiles = false, bool bBuildGame = true, bool bBuildSettings = true);
+
+	// Processes one slot; returns true while more remain
+	static bool StepBuild(FBBMigrationBuilder& B, FString& OutSlotName);
+
+	static void FinishBuild(FBBMigrationBuilder& B);
+
+	// Logs the report; also shown on screen in the editor
+	static void PrintReportToScreen(const TArray<FString>& Report, float Duration = 30.f);
+
+	// Destructive: deletes all legacy save files (and Game.sav / Settings.sav if bAlsoDeleteGameSav) without checks
+	// bDryRun only reports. Returns the number of files deleted
+	UFUNCTION(BlueprintCallable, Category = "Budget Savings")
+	static int32 WipeAllSaves(const TArray<FBBLegacySlot>& OlderSlots, bool bAlsoDeleteGameSav = true, bool bDryRun = false);
 };
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FBBMigrationResult, UBBGameSave*, Save);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FBBMigrationResult, USaveGame*, Save, USaveGame*, Settings, const FString&, Report);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FBBMigrationProgress, float, Progress, const FString&, CurrentSlot);
 
-/**
- * Blueprint node "Migrate Saves" with two exec outputs:
- *   On Finished (Save) - Game.sav is loaded, or was built from the legacy slots and written to disk
- *   On Failed   (Save) - the write didn't go through; Save is still a usable in-memory object, legacy files are untouched
- *
- * Use it in an Event Graph (e.g. GameInstance Init), not inside a function.
- * All the logic lives in UUBB_BlueprintHelpers; this class only exists because
- * exec pins need their own UBlueprintAsyncActionBase subclass.
- */
+// "Migrate Saves" node (Save Class = BB_SaveSys). Reads one legacy slot per tick so a progress bar can update.
+//   On Finished: Game.sav / Settings.sav are in use (already present, or built, written and read back)
+//   On Failed:   a write failed or could not be verified; old files are untouched
+//   bDryRun: report only, nothing written or deleted
+//   bDeleteOldFiles: delete the old files after a verified write (never when nothing was merged)
+//   StepDelay: seconds between slots
 UCLASS()
 class BUDGETBACKROOMS_API UBBMigrateSavesAsync : public UBlueprintAsyncActionBase
 {
 	GENERATED_BODY()
 
 public:
-	/** OlderSlots: names of older save generations, OLDEST FIRST. The current Settings_* / State_* slots are built in. */
-	UFUNCTION(BlueprintCallable, meta = (BlueprintInternalUseOnly = "true", WorldContext = "WorldContextObject"), Category = "BB|Save")
-	static UBBMigrateSavesAsync* MigrateSaves(UObject* WorldContextObject, const TArray<FBBLegacySlot>& OlderSlots);
+	UFUNCTION(BlueprintCallable, meta = (BlueprintInternalUseOnly = "true", WorldContext = "WorldContextObject"), Category = "Budget Savings")
+	static UBBMigrateSavesAsync* MigrateSaves(UObject* WorldContextObject, TSubclassOf<USaveGame> SaveClass, const TArray<FBBLegacySlot>& OlderSlots, bool bDryRun = false, bool bDeleteOldFiles = false, float StepDelay = 0.0f);
+
+	UPROPERTY(BlueprintAssignable)
+	FBBMigrationProgress OnProgress;
 
 	UPROPERTY(BlueprintAssignable)
 	FBBMigrationResult OnFinished;
@@ -127,14 +138,37 @@ public:
 	FBBMigrationResult OnFailed;
 
 	virtual void Activate() override;
+	virtual void BeginDestroy() override;
 
 private:
+	bool TickStep(float DeltaTime);
+	void WriteNext();
+	void Finalize();
 	void HandleSaved(const FString& SlotName, const int32 UserIndex, bool bSuccess);
+
+	UPROPERTY()
+	TSubclassOf<USaveGame> PendingSaveClass;
 
 	UPROPERTY()
 	TArray<FBBLegacySlot> PendingOlderSlots;
 
-	/** Keeps the object alive (GC) while the async write is running. */
+	bool bPendingDryRun = false;
+	bool bPendingDeleteOld = false;
+	float PendingStepDelay = 0.0f;
+
+	bool bWritingGame = false;
+	bool bGameWritten = false;
+	bool bSettingsWritten = false;
+	bool bWriteFailed = false;
+
+	FString PendingReport;
+	FBBMigrationBuilder Builder;
+	FDelegateHandle TickHandle;
+
+	// Kept as UPROPERTYs so GC doesn't collect them mid-merge
 	UPROPERTY()
-	UBBGameSave* PendingSave = nullptr;
+	USaveGame* PendingSave = nullptr;
+
+	UPROPERTY()
+	USaveGame* PendingSettings = nullptr;
 };

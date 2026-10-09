@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: budget-backrooms\n"
 "POT-Creation-Date: 2026-10-09 21:53\n"
-"PO-Revision-Date: 2026-10-09 21:55\n"
+"PO-Revision-Date: 2026-10-09 23:13\n"
 "Language-Team: Italian\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -152,7 +152,8 @@ msgstr "E questo è praticamente tutto."
 msgctxt ",0B63AE0B4768A30314B307AB9675F418"
 msgid "Budget\r\n"
 "Backrooms"
-msgstr ""
+msgstr "Budget\r\n"
+"Backrooms"
 
 #. Key:	0BD182C64C09EB8D62ACA7921E2075A0
 #. SourceLocation:	/Game/Widgets/W_RebindKeys/W_RebindEntry.W_RebindEntry_C:WidgetTree.kbmbutton.NoKeySpecifiedText
@@ -354,7 +355,7 @@ msgstr "si, il gioco è in pausa"
 #: /Game/Widgets/W_SaveMigration/W_SaveMigrationNew.W_SaveMigrationNew_C:WidgetTree.TextBlock_63.Text
 msgctxt ",1FE59D4349C2427AF47827928F391E7A"
 msgid "Continue"
-msgstr ""
+msgstr "Continua"
 
 #. Key:	20BD3B9A402D94F89902CCBE479F5544
 #. SourceLocation:	/Game/Widgets/W_LevelSelector/W_LevelSelector.W_LevelSelector_C:WidgetTree.TextBlock_3.Text
@@ -468,7 +469,7 @@ msgstr "Ah, e a proposito della sala di relax..."
 #: /Game/Widgets/W_DelDiag/W_DelDiag.W_DelDiag_C:WidgetTree.TextBlock_2.Text
 msgctxt ",2B4B6E584CE52C960934C99609E07362"
 msgid "No"
-msgstr ""
+msgstr "No"
 
 #. Key:	2B6CB5D84F3109C152E8B89B74F94054
 #. SourceLocation:	/Game/Widgets/W_CrosshairHint.W_CrosshairHint_C:Get_keycardshit_Text_0 [Script Bytecode]
@@ -683,7 +684,7 @@ msgstr "Impostazioni\r\n"
 #: /Game/Widgets/W_TextTip.W_TextTip_C:WidgetTree.TextBlock_2.Text
 msgctxt ",3FC1E8E946BCA793F695C790222C2BD0"
 msgid "Translations for this language may be outdated due to the recency of your game version."
-msgstr ""
+msgstr "Traduzioni per questa lingua potrebbero essere datate per quanto e recente la tua versione di gioco."
 
 #. Key:	4088789F4F09A439F7AAE489952E8E1D
 #. SourceLocation:	/Game/Widgets/Warnings/W_Disclaimer.W_Disclaimer_C:WidgetTree.TextBlock_1.Text
@@ -923,7 +924,7 @@ msgstr "Aspetta ({1})"
 #: /Game/Widgets/W_Credits/W_Credits_Memerooms.W_Credits_Memerooms_C:WidgetTree.TextBlock_3.Text
 msgctxt ",56CC942F4E5CC98507254BA16A7C7979"
 msgid "Lory Games - Integrating Memerooms in Lory's Modpack [github.com/lorenzohappy19] before me"
-msgstr ""
+msgstr "Lory Games - Integrando le Memerooms nel modpack di Lory [github.com/lorenzohappy19] prima di me"
 
 #. Key:	574F69D44E9FC786CD40A29F92F48422
 #. SourceLocation:	/Game/Widgets/W_Restarting.W_Restarting_C:WidgetTree.TextBlock_0.Text
@@ -1373,7 +1374,7 @@ msgstr "Benvenuto nelle Nightly"
 #: /Game/Widgets/W_Interaction/W_InteractionHint.W_InteractionHint_C:WidgetTree.TextBlock_1.Text
 msgctxt ",86BCAF0245EDE47AD823FB83CF7A9BCF"
 msgid "Ok"
-msgstr ""
+msgstr "Ok"
 
 #. Key:	8769A0F840B1EF7D538F76AE89C9297D
 #. SourceLocation:	/Game/Widgets/Multiplayer/W_MPMenu.W_MPMenu_C:WidgetTree.b_host.ToolTipText
@@ -2111,7 +2112,9 @@ msgctxt ",CD68D39E4585B1B005DD54A2BF73B23E"
 msgid "Due to internal changes starting 0.0.18 Alpha and later, the older formats used in 0.0.17 and prior are no longer supported to further ease development of the game and compensate for past mistakes made by the developer while making this game.\r\n"
 "\r\n"
 "Your existing savedata has been automatically migrated to the new format. Not everything might have been moved over due to internal restructuring. Achievements are not migrated. Should you have issues in game, please try proceeding with a save reset under Settings -> General Settings"
-msgstr ""
+msgstr "Per colpa di cambiamenti interni dall'Alpha 0.0.18 e oltre, i vecchi formati usati in 0.0.17 e gli aggiornamenti precedenti non sono più supportati per facilitare lo sviluppo del gioco di più e compensare per errori passati commessi dallo sviluppatore durante la creazione del gioco.\r\n"
+"\r\n"
+"I tuoi salvataggi preesistenti sono stati automaticamente migrati al nuovo formato. Non tutto potrebbe essere stato trasferito per colpa di una ristrutturazione interna. Gli achievement non sono migrati. Se hai problemi in gioco, per favore prova a eliminare il tuo salvataggio in Impostazioni -> Impostazioni generali"
 
 #. Key:	CDE46AA4452AAD65BCC94785448BD1CA
 #. SourceLocation:	/Game/Widgets/Multiplayer/W_UnstableMP.W_UnstableMP_C:WidgetTree.TextBlock.Text
@@ -2266,7 +2269,7 @@ msgstr "Hai ricevuto"
 #: /Game/Widgets/W_DelDiag/W_DelAnim.W_DelAnim_C:ExecuteUbergraph_W_DelAnim [Script Bytecode]
 msgctxt ",D9D4C9574FB744E4D86DA8B44BBF4E01"
 msgid "OK!"
-msgstr ""
+msgstr "OK!"
 
 #. Key:	DD26AED649779CC50B49C5B58A0558BB
 #. SourceLocation:	/Game/Widgets/Multiplayer/W_JoinSession.W_JoinSession_C:WidgetTree.TextBlock_46.Text
@@ -2659,7 +2662,7 @@ msgstr "Impostazioni salvate!"
 #: /Game/Widgets/W_SaveMigration/W_SaveMigrationNew.W_SaveMigrationNew_C:WidgetTree.TextBlock_132.Text
 msgctxt ",FF6DBE79492B600645EB2EBDE736A6DF"
 msgid "Savedata Migration"
-msgstr ""
+msgstr "Migrazione dei salvataggi"
 
 #. Key:	FF8568A14666BA939243EBBE23CBE269
 #. SourceLocation:	/Game/Widgets/W_DelDiag/W_DelAnim.W_DelAnim_C:WidgetTree.TextBlock_0.Text
@@ -2809,7 +2812,7 @@ msgstr "Premi F per accendere la tua torcia"
 #: /Game/Widgets/W_PauseMenu/W_ConfirmLeave.W_ConfirmLeave_C:WidgetTree.TextBlock_1.Text
 msgctxt "Game,2B4B6E584CE52C960934C99609E07362"
 msgid "No"
-msgstr ""
+msgstr "No"
 
 #. Key:	2DBEBE9742B8C6B7219AC998615667F3
 #. SourceLocation:	/Game/Widgets/Multiplayer/W_MPMenu.W_MPMenu_C:WidgetTree.TextBlock_5.Text
@@ -2995,7 +2998,7 @@ msgstr "Modalità Classica"
 #: /Game/Widgets/W_GMSelect/W_GMSelect.W_GMSelect_C:WidgetTree.TextBlock_18.Text
 msgctxt "Game,8D9233084B8FE552469A8C819491A4D3"
 msgid "Enter Level 4 at least once to unlock this."
-msgstr ""
+msgstr "Accedi a Livello 4 almeno una volta per sbloccare."
 
 #. Key:	8EF3511743B8A34842C79EBD1E11349F
 #. SourceLocation:	/Game/Widgets/Settings/W_GeneralSettings.W_GeneralSettings_C:WidgetTree.TextBlock_7.Text
@@ -3124,7 +3127,8 @@ msgstr "Le Memeroom"
 msgctxt "Game,D535479940C75A7CDD9589A29B3DDC1F"
 msgid "Budget\r\n"
 "Multiplayer"
-msgstr ""
+msgstr "Budget\r\n"
+"Multiplayer"
 
 #. Key:	DBAF3F647996966C7B8E5BDBDDC097C
 #. SourceLocation:	/Game/Widgets/W_Respawn/W_Respawn_LV2.W_Respawn_LV2_C:WidgetTree.TextBlock.Text

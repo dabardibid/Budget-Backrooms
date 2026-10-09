@@ -1,17 +1,22 @@
-﻿# Game Polish (Poland) translation.
+# Game English translation.
 # Copyright Epic Games, Inc. All Rights Reserved.
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Game\n"
-"POT-Creation-Date: 2023-12-16 12:23\n"
-"PO-Revision-Date: 2023-12-16 12:23\n"
-"Language-Team: \n"
-"Language: pl-PL\n"
+"Project-Id-Version: budget-backrooms\n"
+"POT-Creation-Date: 2023-12-16 12:24\n"
+"PO-Revision-Date: 2026-10-09 19:05\n"
+"Language-Team: Polish\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+"X-Crowdin-Project: budget-backrooms\n"
+"X-Crowdin-Project-ID: 936921\n"
+"X-Crowdin-Language: pl\n"
+"X-Crowdin-File: /dev/Content/Localization/Game/en/Game.po\n"
+"X-Crowdin-File-ID: 23\n"
 
 #. Key:	0403F8384DD243BA5DFA23A34DF7291E
 #. SourceLocation:	/Game/Widgets/W_DelDiag/W_DelDiag.W_DelDiag_C:ExecuteUbergraph_W_DelDiag [Script Bytecode]
@@ -38,7 +43,8 @@ msgstr ""
 #. SourceLocation:	/Game/Widgets/W_MainMenu/W_MainMenu.W_MainMenu_C:WidgetTree.TextBlock_1.Text
 #: /Game/Widgets/W_MainMenu/W_MainMenu.W_MainMenu_C:WidgetTree.TextBlock_1.Text
 msgctxt ",0B63AE0B4768A30314B307AB9675F418"
-msgid "Budget\r\nBackrooms"
+msgid "Budget\r\n"
+"Backrooms"
 msgstr ""
 
 #. Key:	0CC0EA584CE4691B97BD4B81C5A6EEE8
@@ -108,7 +114,8 @@ msgstr ""
 #. SourceLocation:	/Game/Widgets/W_Settings_Selection/W_Settings_Selection.W_Settings_Selection_C:WidgetTree.TextBlock_1.Text
 #: /Game/Widgets/W_Settings_Selection/W_Settings_Selection.W_Settings_Selection_C:WidgetTree.TextBlock_1.Text
 msgctxt ",1B06C0A4487BC5E56FEDA5AC4C1F499B"
-msgid "Video\r\nSettings"
+msgid "Video\r\n"
+"Settings"
 msgstr ""
 
 #. Key:	1D7C9D3144D722EB7C783BB328182A4F
@@ -129,7 +136,8 @@ msgstr ""
 #. SourceLocation:	/Game/Widgets/W_Tooltips/W_TT_UnavGM.W_TT_UnavGM_C:WidgetTree.TextBlock_0.Text
 #: /Game/Widgets/W_Tooltips/W_TT_UnavGM.W_TT_UnavGM_C:WidgetTree.TextBlock_0.Text
 msgctxt ",20F3970145DD796217DD6296535FAC1F"
-msgid "Gamemode unavailable yet.\r\n:("
+msgid "Gamemode unavailable yet.\r\n"
+":("
 msgstr ""
 
 #. Key:	22421B744A7B577C3C6BC0856297430A
@@ -276,7 +284,8 @@ msgstr ""
 #. SourceLocation:	/Game/Widgets/W_Settings_Selection/W_Settings_Selection.W_Settings_Selection_C:WidgetTree.TextBlock.Text
 #: /Game/Widgets/W_Settings_Selection/W_Settings_Selection.W_Settings_Selection_C:WidgetTree.TextBlock.Text
 msgctxt ",3F60C01D4F018D823832059D48173F0B"
-msgid "Miscellaneous\r\nSettings"
+msgid "Miscellaneous\r\n"
+"Settings"
 msgstr ""
 
 #. Key:	408D53B240A142C80EA98BA1D3DB02C6
@@ -416,7 +425,8 @@ msgstr ""
 #. SourceLocation:	/Game/Widgets/W_CornerReminder/W_CornerReminder.W_CornerReminder_C:WidgetTree.TextBlock_0.Text
 #: /Game/Widgets/W_CornerReminder/W_CornerReminder.W_CornerReminder_C:WidgetTree.TextBlock_0.Text
 msgctxt ",7938DC2040A75C61A2A55A845D39B377"
-msgid "Press F to turn on\r\nyour flashlight"
+msgid "Press F to turn on\r\n"
+"your flashlight"
 msgstr ""
 
 #. Key:	7E1ADCD548C9324BC2CA69BD1476F3AE
@@ -444,7 +454,8 @@ msgstr ""
 #. SourceLocation:	/Game/Widgets/W_Tooltips/W_TT_External.W_TT_External_C:WidgetTree.TextBlock_1.Text
 #: /Game/Widgets/W_Tooltips/W_TT_External.W_TT_External_C:WidgetTree.TextBlock_1.Text
 msgctxt ",88484C8D444A7F816590F6AB2E582FA8"
-msgid "This will open a link\r\nin your default browser."
+msgid "This will open a link\r\n"
+"in your default browser."
 msgstr ""
 
 #. Key:	892CF167411347302BB99F8D36BD93A1
@@ -479,7 +490,10 @@ msgstr ""
 #. SourceLocation:	/Game/Widgets/W_DelDiag/W_DelDiag.W_DelDiag_C:WidgetTree.TextBlock_3.Text
 #: /Game/Widgets/W_DelDiag/W_DelDiag.W_DelDiag_C:WidgetTree.TextBlock_3.Text
 msgctxt ",8FEC782641353F9F6310FBAE59B1CF40"
-msgid "> Map & Gamemode Progress\r\n> Achievements\r\n> Player Data\r\n> Settings"
+msgid "> Map & Gamemode Progress\r\n"
+"> Achievements\r\n"
+"> Player Data\r\n"
+"> Settings"
 msgstr ""
 
 #. Key:	90D2E00443A2DCA4DDB88082A4F8A4E6
@@ -493,7 +507,9 @@ msgstr ""
 #. SourceLocation:	/Game/Widgets/W_Tooltips/W_TT_VideoSett.W_TT_VideoSett_C:WidgetTree.TextBlock_0.Text
 #: /Game/Widgets/W_Tooltips/W_TT_VideoSett.W_TT_VideoSett_C:WidgetTree.TextBlock_0.Text
 msgctxt ",92E9BF4846193CB072D4CC86C6522B14"
-msgid "When leaving this page,\r\nyour changes are saved \r\nautomatically."
+msgid "When leaving this page,\r\n"
+"your changes are saved \r\n"
+"automatically."
 msgstr ""
 
 #. Key:	93D998194175AAF9C989EA904ED51F1C
@@ -584,7 +600,8 @@ msgstr ""
 #. SourceLocation:	/Game/Widgets/W_InteractionHint/W_InteractionHint.W_InteractionHint_C:WidgetTree.TextBlock_0.Text
 #: /Game/Widgets/W_InteractionHint/W_InteractionHint.W_InteractionHint_C:WidgetTree.TextBlock_0.Text
 msgctxt ",AE5CCB4242DCF6F2767D4FB1AF8BA62E"
-msgid "You can pick up the \r\nflashlight by pressing E"
+msgid "You can pick up the \r\n"
+"flashlight by pressing E"
 msgstr ""
 
 #. Key:	B2CBA6D141EF64E6397E959470FEEEF1
@@ -633,14 +650,44 @@ msgstr ""
 #. SourceLocation:	/Game/Widgets/W_Settings_Selection/W_Settings_Selection.W_Settings_Selection_C:WidgetTree.TextBlock_0.Text
 #: /Game/Widgets/W_Settings_Selection/W_Settings_Selection.W_Settings_Selection_C:WidgetTree.TextBlock_0.Text
 msgctxt ",BCEA7DCC4F92FF08105115B93B36C548"
-msgid "Audio\r\nSettings"
+msgid "Audio\r\n"
+"Settings"
 msgstr ""
 
 #. Key:	BF6A87AC4EB2C857DFA02FB4B74B9AA4
 #. SourceLocation:	/Game/Widgets/W_Credits/W_Credits_Memerooms.W_Credits_Memerooms_C:WidgetTree.TextBlock.Text
 #: /Game/Widgets/W_Credits/W_Credits_Memerooms.W_Credits_Memerooms_C:WidgetTree.TextBlock.Text
 msgctxt ",BF6A87AC4EB2C857DFA02FB4B74B9AA4"
-msgid "[Please note that some credits may be missing; All the song's credit goes to their original Artist and not me]\r\n[SOME SONGS ARE DISABLED OR MUTED TO PREVENT COPYRIGHT PROBLEMS, WILL FIX!!!]\r\n\r\nSCP 3008 - Monday [Uglyburger0]\r\nSCP 3008 - Tuesday [Uglyburger0]\r\nSCP 3008 - Wednesday [Uglyburger0]\r\nSCP 3008 - Thursday [Uglyburger0]\r\nSCP 3008 - Friday [Uglyburger0]\r\nSCP 3008 - Saturday [Uglyburger0]\r\nSCP 3008 - Sunday [Uglyburger0]\r\nohio music [Spongebob Squarepants Production Music - Comic Walk]\r\nDifferent Heaven - Nekozilla [NCS RELEASE]\r\nLensko - Circles [NCS RELEASE]\r\nLensko - Let's Go [NCS RELEASE]\r\nLensko - Cetus [NCS RELEASE]\r\n\r\nDisabled soundtracks due to legal issues :(\r\nBreaking Bad Main Title Theme [Extended]\r\n\r\nFortnite Classic Lobby Music\r\n\r\nKahoot! - Main Theme\r\nKahoot! - The 20 Second Answer Medley\r\nKahoot! 20 Second Countdown #3 Music [Couldn't find the original name sorry :( ]\r\n\r\nPortal 1 - Still Alive [Radio]\r\nPortal 1 - Still Alive [Radio, but compressed]\r\n\r\n\r\nBad Style - Time Back"
+msgid "[Please note that some credits may be missing; All the song's credit goes to their original Artist and not me]\r\n"
+"[SOME SONGS ARE DISABLED OR MUTED TO PREVENT COPYRIGHT PROBLEMS, WILL FIX!!!]\r\n"
+"\r\n"
+"SCP 3008 - Monday [Uglyburger0]\r\n"
+"SCP 3008 - Tuesday [Uglyburger0]\r\n"
+"SCP 3008 - Wednesday [Uglyburger0]\r\n"
+"SCP 3008 - Thursday [Uglyburger0]\r\n"
+"SCP 3008 - Friday [Uglyburger0]\r\n"
+"SCP 3008 - Saturday [Uglyburger0]\r\n"
+"SCP 3008 - Sunday [Uglyburger0]\r\n"
+"ohio music [Spongebob Squarepants Production Music - Comic Walk]\r\n"
+"Different Heaven - Nekozilla [NCS RELEASE]\r\n"
+"Lensko - Circles [NCS RELEASE]\r\n"
+"Lensko - Let's Go [NCS RELEASE]\r\n"
+"Lensko - Cetus [NCS RELEASE]\r\n"
+"\r\n"
+"Disabled soundtracks due to legal issues :(\r\n"
+"Breaking Bad Main Title Theme [Extended]\r\n"
+"\r\n"
+"Fortnite Classic Lobby Music\r\n"
+"\r\n"
+"Kahoot! - Main Theme\r\n"
+"Kahoot! - The 20 Second Answer Medley\r\n"
+"Kahoot! 20 Second Countdown #3 Music [Couldn't find the original name sorry :( ]\r\n"
+"\r\n"
+"Portal 1 - Still Alive [Radio]\r\n"
+"Portal 1 - Still Alive [Radio, but compressed]\r\n"
+"\r\n"
+"\r\n"
+"Bad Style - Time Back"
 msgstr ""
 
 #. Key:	C0137CB74F75BA0C00B82A9743127E43
@@ -710,7 +757,9 @@ msgstr ""
 #. SourceLocation:	/Game/Widgets/W_Tooltips/W_TT_DelConfirm.W_TT_DelConfirm_C:WidgetTree.TextBlock_0.Text
 #: /Game/Widgets/W_Tooltips/W_TT_DelConfirm.W_TT_DelConfirm_C:WidgetTree.TextBlock_0.Text
 msgctxt ",D1D674104F4C21689620668BCFE3B644"
-msgid "After resetting, \r\nyou're going to be sent back\r\nin Level 0"
+msgid "After resetting, \r\n"
+"you're going to be sent back\r\n"
+"in Level 0"
 msgstr ""
 
 #. Key:	D951832E46845B92530ACCAF201E97AF
@@ -773,14 +822,16 @@ msgstr ""
 #. SourceLocation:	/Game/Widgets/W_SprintOff/W_DisabledSprint.W_DisabledSprint_C:WidgetTree.TextBlock_0.Text
 #: /Game/Widgets/W_SprintOff/W_DisabledSprint.W_DisabledSprint_C:WidgetTree.TextBlock_0.Text
 msgctxt ",ED4912F443969BC63B8E05A1BB01BBEE"
-msgid "Sprinting is disabled\r\nhere."
+msgid "Sprinting is disabled\r\n"
+"here."
 msgstr ""
 
 #. Key:	EE5F29BF4EBC230821B511A0D7089D30
 #. SourceLocation:	/Game/Widgets/W_Tooltips/W_TT_DelConfirm.W_TT_DelConfirm_C:ExecuteUbergraph_W_TT_DelConfirm [Script Bytecode]
 #: /Game/Widgets/W_Tooltips/W_TT_DelConfirm.W_TT_DelConfirm_C:ExecuteUbergraph_W_TT_DelConfirm [Script Bytecode]
 msgctxt ",EE5F29BF4EBC230821B511A0D7089D30"
-msgid "After resetting,\r\nthe game will reload."
+msgid "After resetting,\r\n"
+"the game will reload."
 msgstr ""
 
 #. Key:	EF3FC092451EFD4AAD440B9F56E9355C
@@ -815,14 +866,21 @@ msgstr ""
 #. SourceLocation:	/Game/Widgets/W_VersionHighlights/W_VersionHighlights.W_VersionHighlights_C:WidgetTree.TextBlock.Text
 #: /Game/Widgets/W_VersionHighlights/W_VersionHighlights.W_VersionHighlights_C:WidgetTree.TextBlock.Text
 msgctxt ",F59CB47648D9C48ACB674BA8CE27352F"
-msgid "> 2 New Entities\r\n> 3 New Levels\r\n> The Memerooms\r\n> Refined UI\r\n\r\n(this is a shortened version of the changelog, please check Steam or GitHub for a more in-depth changelog)"
+msgid "> 2 New Entities\r\n"
+"> 3 New Levels\r\n"
+"> The Memerooms\r\n"
+"> Refined UI\r\n"
+"\r\n"
+"(this is a shortened version of the changelog, please check Steam or GitHub for a more in-depth changelog)"
 msgstr ""
 
 #. Key:	F64B0AE84B3F7AE51702F4BD80D1622B
 #. SourceLocation:	/Game/Widgets/W_Prohibited/W_PhbitedMemerooms.W_PhbitedMemerooms_C:WidgetTree.TextBlock.Text
 #: /Game/Widgets/W_Prohibited/W_PhbitedMemerooms.W_PhbitedMemerooms_C:WidgetTree.TextBlock.Text
 msgctxt ",F64B0AE84B3F7AE51702F4BD80D1622B"
-msgid "I just caught you in 4K trying to bypass The Memerooms, I don't want to be mean to you but you have to play how it was intended.\r\n\r\nLooks like your save says you didn't finish the Classic Gamemode yet. Please come back when you finish the game at least once! (Classic Gamemode)"
+msgid "I just caught you in 4K trying to bypass The Memerooms, I don't want to be mean to you but you have to play how it was intended.\r\n"
+"\r\n"
+"Looks like your save says you didn't finish the Classic Gamemode yet. Please come back when you finish the game at least once! (Classic Gamemode)"
 msgstr ""
 
 #. Key:	F912874C4BF4F8E305532C8245A2F95D
@@ -871,7 +929,8 @@ msgstr ""
 #. SourceLocation:	/Game/Widgets/W_MapFinished/W_OptionalSurvey.W_OptionalSurvey_C:WidgetTree.TextBlock_0.Text
 #: /Game/Widgets/W_MapFinished/W_OptionalSurvey.W_OptionalSurvey_C:WidgetTree.TextBlock_0.Text
 msgctxt "Game,03EDA3DD4B9F6D070C0A4B9FD328A778"
-msgid "Screw you,\r\nnext page please!"
+msgid "Screw you,\r\n"
+"next page please!"
 msgstr ""
 
 #. Key:	0654F931446D23D278D621B308E0B793
@@ -920,7 +979,10 @@ msgstr ""
 #. SourceLocation:	/Game/Widgets/W_MapFinished/W_FinishMap_Alpha.W_FinishMap_Alpha_C:WidgetTree.TextBlock_1.Text
 #: /Game/Widgets/W_MapFinished/W_FinishMap_Alpha.W_FinishMap_Alpha_C:WidgetTree.TextBlock_1.Text
 msgctxt "Game,256064344289478637DF8AA0DA120257"
-msgid "Well.. I guess that's it for now.\r\nYou've reached the end of this version, feel free to explore more, quit, or do whatever you want.\r\n\r\nThank you for playing the game, and perhaps fill out that survey form because apparently, your opinion matters."
+msgid "Well.. I guess that's it for now.\r\n"
+"You've reached the end of this version, feel free to explore more, quit, or do whatever you want.\r\n"
+"\r\n"
+"Thank you for playing the game, and perhaps fill out that survey form because apparently, your opinion matters."
 msgstr ""
 
 #. Key:	2A1B5DED49C6C258E7F3AC81A0B422F1
@@ -934,14 +996,16 @@ msgstr ""
 #. SourceLocation:	/Game/Widgets/W_MapFinished/W_FinishMap_Alpha.W_FinishMap_Alpha_C:WidgetTree.TextBlock_3.Text
 #: /Game/Widgets/W_MapFinished/W_FinishMap_Alpha.W_FinishMap_Alpha_C:WidgetTree.TextBlock_3.Text
 msgctxt "Game,2A92293E4560C3EE6AD404AB625FAA4E"
-msgid "Restart\r\nlevel"
+msgid "Restart\r\n"
+"level"
 msgstr ""
 
 #. Key:	3E949C5E491BA028AAC881ADBA81C6FF
 #. SourceLocation:	/Game/Widgets/FadeOut.FadeOut_C:WidgetTree.TextBlock_2.Text
 #: /Game/Widgets/FadeOut.FadeOut_C:WidgetTree.TextBlock_2.Text
 msgctxt "Game,3E949C5E491BA028AAC881ADBA81C6FF"
-msgid "Press F to turn on\r\nyour flashlight"
+msgid "Press F to turn on\r\n"
+"your flashlight"
 msgstr ""
 
 #. Key:	46EAC7E347E087B36E30A8B2E18E5F74
@@ -969,7 +1033,11 @@ msgstr ""
 #. SourceLocation:	/Game/Widgets/W_GMSelect/W_GMSelect.W_GMSelect_C:WidgetTree.TextBlock_8.Text
 #: /Game/Widgets/W_GMSelect/W_GMSelect.W_GMSelect_C:WidgetTree.TextBlock_8.Text
 msgctxt "Game,4C8AA8F349D731711BF25ABAB9A3F1AB"
-msgid "'Unused Levels' are a part of this game's big ass size. Here you find a list of playable, unused levels, that didn't made it into the Classic Gamemode or any gamemode at all.\r\n\r\nList may change :)\r\n\r\nNote: Discord RPC *may* not be visible because I'm too lazy or I didn't want to add it into the level"
+msgid "'Unused Levels' are a part of this game's big ass size. Here you find a list of playable, unused levels, that didn't made it into the Classic Gamemode or any gamemode at all.\r\n"
+"\r\n"
+"List may change :)\r\n"
+"\r\n"
+"Note: Discord RPC *may* not be visible because I'm too lazy or I didn't want to add it into the level"
 msgstr ""
 
 #. Key:	53AAD8B342A5E68B7751B6AEEDE9FE65
@@ -983,7 +1051,16 @@ msgstr ""
 #. SourceLocation:	/Game/Widgets/W_GMSelect/W_GMSelect.W_GMSelect_C:WidgetTree.TextBlock_11.Text
 #: /Game/Widgets/W_GMSelect/W_GMSelect.W_GMSelect_C:WidgetTree.TextBlock_11.Text
 msgctxt "Game,54EB8E24458BB63DB97315A74E25F00A"
-msgid "Even though I had no place to put Gamemode in title, this is The Memerooms™. A goofy ahh refined experience of Budget Backrooms.\r\n\r\nI've inserted 21st century humor (probably unfunny) into the game, finally, after one year in development I've finally wanted to release *ONE* gamemode. \r\n\r\nModifiers:\r\n- Howlers? Out, replaced with NextBots chasing you like they're after a rare NFT.\r\n- Stamina endless like the queue for toilet paper in the early days of the pandemic.\r\n- Player Speed faster than my dad going for milk.\r\n\r\n[UNFUNNY WARNING, PROCEED WITH CAUTION! SOME CONTENT MAY BE UNFINISHED]"
+msgid "Even though I had no place to put Gamemode in title, this is The Memerooms™. A goofy ahh refined experience of Budget Backrooms.\r\n"
+"\r\n"
+"I've inserted 21st century humor (probably unfunny) into the game, finally, after one year in development I've finally wanted to release *ONE* gamemode. \r\n"
+"\r\n"
+"Modifiers:\r\n"
+"- Howlers? Out, replaced with NextBots chasing you like they're after a rare NFT.\r\n"
+"- Stamina endless like the queue for toilet paper in the early days of the pandemic.\r\n"
+"- Player Speed faster than my dad going for milk.\r\n"
+"\r\n"
+"[UNFUNNY WARNING, PROCEED WITH CAUTION! SOME CONTENT MAY BE UNFINISHED]"
 msgstr ""
 
 #. Key:	559AA7AF406F7FF3D67C5497BE1AEC61
@@ -1053,7 +1130,8 @@ msgstr ""
 #. SourceLocation:	/Game/Widgets/W_MapFinished/W_FinishMap_Alpha.W_FinishMap_Alpha_C:WidgetTree.TextBlock_2.Text
 #: /Game/Widgets/W_MapFinished/W_FinishMap_Alpha.W_FinishMap_Alpha_C:WidgetTree.TextBlock_2.Text
 msgctxt "Game,929408BC45B96F3CC78507BD87C307DF"
-msgid "Back to \r\nsurvey page"
+msgid "Back to \r\n"
+"survey page"
 msgstr ""
 
 #. Key:	940CA13E452B66BA51291D884AE0A4AF
@@ -1067,7 +1145,8 @@ msgstr ""
 #. SourceLocation:	/Game/Widgets/W_MapFinished/W_FinishMap_Alpha.W_FinishMap_Alpha_C:WidgetTree.TextBlock.Text
 #: /Game/Widgets/W_MapFinished/W_FinishMap_Alpha.W_FinishMap_Alpha_C:WidgetTree.TextBlock.Text
 msgctxt "Game,95B266604DD6E813949537AC5B0EC1FC"
-msgid "Exit to \r\nmain menu"
+msgid "Exit to \r\n"
+"main menu"
 msgstr ""
 
 #. Key:	9F37AAB9470E6328A8C6478546C51F74
@@ -1092,8 +1171,8 @@ msgid "The Memerooms™"
 msgstr ""
 
 #. Key:	AD7DBA0043B70D71BC2B6083CD00F0DE
-#. SourceLocation:	/Game/Widgets/W_GeneralSettings/W_GeneralSettings.W_GeneralSettings_C:WidgetTree.TextBlock_192.Text
-#: /Game/Widgets/W_GeneralSettings/W_GeneralSettings.W_GeneralSettings_C:WidgetTree.TextBlock_192.Text
+#. SourceLocation:	/Game/Widgets/W_DelDiag/W_DelDiag.W_DelDiag_C:WidgetTree.TextBlock_0.Text
+#: /Game/Widgets/W_DelDiag/W_DelDiag.W_DelDiag_C:WidgetTree.TextBlock_0.Text
 msgctxt "Game,AD7DBA0043B70D71BC2B6083CD00F0DE"
 msgid "Delete Saved Data"
 msgstr ""
@@ -1162,8 +1241,8 @@ msgid "Respawn"
 msgstr ""
 
 #. Key:	E98CC95C4741BD618971C5ACD6D3E040
-#. SourceLocation:	/Game/Widgets/W_Respawn/W_Respawn_LV0.W_Respawn_LV0_C:WidgetTree.TextBlock_0.Text
-#: /Game/Widgets/W_Respawn/W_Respawn_LV0.W_Respawn_LV0_C:WidgetTree.TextBlock_0.Text
+#. SourceLocation:	/Game/Widgets/W_Respawn/W_Respawn_LV2.W_Respawn_LV2_C:WidgetTree.TextBlock_0.Text
+#: /Game/Widgets/W_Respawn/W_Respawn_LV2.W_Respawn_LV2_C:WidgetTree.TextBlock_0.Text
 msgctxt "Game,E98CC95C4741BD618971C5ACD6D3E040"
 msgid "Go to main menu"
 msgstr ""

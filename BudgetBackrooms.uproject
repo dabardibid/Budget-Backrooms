@@ -320,10 +320,6 @@
 			"Enabled": false
 		},
 		{
-			"Name": "GeoReferencing",
-			"Enabled": true
-		},
-		{
 			"Name": "ConsoleEnhanced",
 			"Enabled": false,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/86123c85a4474d609c5cef8a7fc5786b"

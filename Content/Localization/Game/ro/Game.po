@@ -1,22 +1,17 @@
-# Game English translation.
+﻿# Game Romanian translation.
 # Copyright Epic Games, Inc. All Rights Reserved.
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: budget-backrooms\n"
-"POT-Creation-Date: 2026-10-09 19:08\n"
-"PO-Revision-Date: 2026-10-09 19:34\n"
-"Language-Team: Romanian\n"
+"Project-Id-Version: Game\n"
+"POT-Creation-Date: 2026-10-09 21:53\n"
+"PO-Revision-Date: 2026-10-09 21:53\n"
+"Language-Team: \n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100>0 && n%100<20)) ? 1 : 2);\n"
-"X-Crowdin-Project: budget-backrooms\n"
-"X-Crowdin-Project-ID: 936921\n"
-"X-Crowdin-Language: ro\n"
-"X-Crowdin-File: /dev/Content/Localization/Game/en/Game.po\n"
-"X-Crowdin-File-ID: 23\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
 
 #. Key:	015116CF4E1DD8C07D5E21856B5ABD48
 #. SourceLocation:	/Game/Audio/jake_lele.jake_lele.Subtitles(22).Subtitles.Text
@@ -31,13 +26,6 @@ msgstr "\"Uite\""
 msgctxt ",01B8AF6545F702B056BCB78B8DC51999"
 msgid "Merry Christmas!!!"
 msgstr "Crăciun fericit!!!"
-
-#. Key:	01F05D4F4F9CE77E4EFF1788C69EC417
-#. SourceLocation:	/Game/Audio/sfx_memerooms/tiktok_sfx.tiktok_sfx.Subtitles(0).Subtitles.Text
-#: /Game/Audio/sfx_memerooms/tiktok_sfx.tiktok_sfx.Subtitles(0).Subtitles.Text
-msgctxt ",01F05D4F4F9CE77E4EFF1788C69EC417"
-msgid "[gen z sound effect]"
-msgstr "[efect sunet gen z]"
 
 #. Key:	02D654DA4768E747A50431BDAB324CDE
 #. SourceLocation:	/Game/Audio/jake_lele.jake_lele.Subtitles(12).Subtitles.Text
@@ -120,10 +108,8 @@ msgstr "FUGI!"
 #. SourceLocation:	/Game/Widgets/cmOS/W_CamBoot.W_CamBoot_C:ExecuteUbergraph_W_CamBoot [Script Bytecode]
 #: /Game/Widgets/cmOS/W_CamBoot.W_CamBoot_C:ExecuteUbergraph_W_CamBoot [Script Bytecode]
 msgctxt ",07128F89424800253FEB0F97123FD7F0"
-msgid "Checking devices... OK!\r\n"
-"Restoring session... "
-msgstr "Dispozitivele sunt în curs de verificare... OK!\r\n"
-"Se restaurează sesiunea..."
+msgid "Checking devices... OK!\r\nRestoring session... "
+msgstr "Dispozitivele sunt în curs de verificare... OK!\r\nSe restaurează sesiunea..."
 
 #. Key:	0780830B417DAC423AD1668B75BCE576
 #. SourceLocation:	/Game/Widgets/W_PauseMenu/W_ConfirmLeave.W_ConfirmLeave_C:ExecuteUbergraph_W_ConfirmLeave [Script Bytecode]
@@ -157,10 +143,8 @@ msgstr "Și cam atat a fost..."
 #. SourceLocation:	/Game/Widgets/W_MainMenu/W_MainMenu.W_MainMenu_C:WidgetTree.TextBlock_1.Text
 #: /Game/Widgets/W_MainMenu/W_MainMenu.W_MainMenu_C:WidgetTree.TextBlock_1.Text
 msgctxt ",0B63AE0B4768A30314B307AB9675F418"
-msgid "Budget\r\n"
-"Backrooms"
-msgstr "Budget\r\n"
-"Backrooms"
+msgid "Budget\r\nBackrooms"
+msgstr "Budget\r\nBackrooms"
 
 #. Key:	0BD182C64C09EB8D62ACA7921E2075A0
 #. SourceLocation:	/Game/Widgets/W_RebindKeys/W_RebindEntry.W_RebindEntry_C:WidgetTree.kbmbutton.NoKeySpecifiedText
@@ -197,13 +181,6 @@ msgctxt ",0EDA056F4EFE3914DBFCF29C3636C17B"
 msgid "Selecting this language will only set the language locale in the game file, but translations will not be applied as they are incomplete."
 msgstr ""
 
-#. Key:	0F7EAB864B5045A9D906D2BFECB33255
-#. SourceLocation:	/Game/Audio/sfx_memerooms/nerd_warning.nerd_warning.Subtitles(0).Subtitles.Text
-#: /Game/Audio/sfx_memerooms/nerd_warning.nerd_warning.Subtitles(0).Subtitles.Text
-msgctxt ",0F7EAB864B5045A9D906D2BFECB33255"
-msgid "[NERD]"
-msgstr "[TOCILAR]"
-
 #. Key:	103FC79D4420074F4D9EB88997EB5674
 #. SourceLocation:	/Game/Widgets/Warnings/W_GraphicsConflict.W_GraphicsConflict_C:WidgetTree.TextBlock.Text
 #: /Game/Widgets/Warnings/W_GraphicsConflict.W_GraphicsConflict_C:WidgetTree.TextBlock.Text
@@ -212,8 +189,8 @@ msgid "Looks like you've disabled Anti-Aliasing and having FidelityFX enabled at
 msgstr "Se pare că ai dezactivat Anti-Aliasing și ai FidelityFX activat în același timp. Nu vreau să te stresez prietene, dar graficile vor arăta oribil deci iți recomand să ai Anti-Aliasing activat MĂCAR pe low. Doar spun! ¯\\_(ツ)_/¯"
 
 #. Key:	10B56E324DD535C86DE171AA03A1DD95
-#. SourceLocation:	/Game/Widgets/Warnings/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock.Text
-#: /Game/Widgets/Warnings/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock.Text
+#. SourceLocation:	/Game/Widgets/Animations/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock.Text
+#: /Game/Widgets/Animations/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock.Text
 msgctxt ",10B56E324DD535C86DE171AA03A1DD95"
 msgid "The game is experiencing slow performance. To improve, adjust graphical settings in the Pause Menu."
 msgstr "Jocul are o performanță slabă. Pentru a o îmbunătăți, ajustează setările grafice din meniul de pauză."
@@ -223,7 +200,7 @@ msgstr "Jocul are o performanță slabă. Pentru a o îmbunătăți, ajustează 
 #: /Game/Widgets/Settings/W_GeneralSettings.W_GeneralSettings_C:WidgetTree.TextBlock_1.Text
 msgctxt ",1116724D44253BA23F575586773C02A3"
 msgid "Ignore integrated GPU warning at startup."
-msgstr ""
+msgstr "Ignoră avertismentul despre placa video la pornirea jocului."
 
 #. Key:	11725C93458C388566C2158F453178A4
 #. SourceLocation:	/Game/Widgets/W_LoadingScreen/W_Memerooms_Loading.W_Memerooms_Loading_C:WidgetTree.small_text.Text
@@ -292,12 +269,8 @@ msgstr "\"Nu e nevoie să--\""
 #. SourceLocation:	/Game/Widgets/W_PauseMenu/W_ConfirmLeave.W_ConfirmLeave_C:WidgetTree.TextBlock.Text
 #: /Game/Widgets/W_PauseMenu/W_ConfirmLeave.W_ConfirmLeave_C:WidgetTree.TextBlock.Text
 msgctxt ",19F8EA6E47751DD0CC07AFB15F038B7B"
-msgid "Are you sure you want to go back to the Main Menu?\r\n"
-"\r\n"
-"You will be able to start from this level at any time using the Level Selector in the Main Menu."
-msgstr "Ești sigur că vrei să te reîntorci la meniul principal?\r\n"
-"\r\n"
-"Vei putea să începi de la acest nivel oricând folosind selectorul de nivel din meniul principal."
+msgid "Are you sure you want to go back to the Main Menu?\r\n\r\nYou will be able to start from this level at any time using the Level Selector in the Main Menu."
+msgstr "Ești sigur că vrei să te reîntorci la meniul principal?\r\n\r\nVei putea să începi de la acest nivel oricând folosind selectorul de nivel din meniul principal."
 
 #. Key:	1A8C72D646BF429E378787BD0809460E
 #. SourceLocation:	/Game/Widgets/W_MainMenu/W_MainMenu.W_MainMenu_C:WidgetTree.TextBlock_0.Text
@@ -317,10 +290,8 @@ msgstr "Sfârșit de mesaje."
 #. SourceLocation:	/Game/Widgets/Settings/W_Settings_Selection.W_Settings_Selection_C:WidgetTree.TextBlock_1.Text
 #: /Game/Widgets/Settings/W_Settings_Selection.W_Settings_Selection_C:WidgetTree.TextBlock_1.Text
 msgctxt ",1B06C0A4487BC5E56FEDA5AC4C1F499B"
-msgid "Video\r\n"
-"Settings"
-msgstr "Setări\r\n"
-"video"
+msgid "Video\r\nSettings"
+msgstr "Setări\r\nvideo"
 
 #. Key:	1BE787BB47590C7B230A0B822C8A32C7
 #. SourceLocation:	/Game/Widgets/W_Errors/W_ConnDrivErr.W_ConnDrivErr_C:WidgetTree.TextBlock_1.Text
@@ -369,7 +340,7 @@ msgstr "da, jocul chiar este pus pe pauză"
 #: /Game/Widgets/W_SaveMigration/W_SaveMigrationNew.W_SaveMigrationNew_C:WidgetTree.TextBlock_63.Text
 msgctxt ",1FE59D4349C2427AF47827928F391E7A"
 msgid "Continue"
-msgstr ""
+msgstr "Continuă"
 
 #. Key:	20BD3B9A402D94F89902CCBE479F5544
 #. SourceLocation:	/Game/Widgets/W_LevelSelector/W_LevelSelector.W_LevelSelector_C:WidgetTree.TextBlock_3.Text
@@ -382,8 +353,7 @@ msgstr "Sub-Nivelul \"!\""
 #. SourceLocation:	/Game/Widgets/W_Tooltips/W_TT_UnavGM.W_TT_UnavGM_C:WidgetTree.TextBlock_0.Text
 #: /Game/Widgets/W_Tooltips/W_TT_UnavGM.W_TT_UnavGM_C:WidgetTree.TextBlock_0.Text
 msgctxt ",20F3970145DD796217DD6296535FAC1F"
-msgid "Gamemode unavailable yet.\r\n"
-":("
+msgid "Gamemode unavailable yet.\r\n:("
 msgstr "Acest mod de joc nu este valabil încă. :("
 
 #. Key:	20FC75D54C68A45BC09B1BA0ABF2B0A7
@@ -412,7 +382,7 @@ msgstr "Setări audio"
 #: /Game/Widgets/W_TelemetryDialogue.W_TelemetryDialogue_C:WidgetTree.TextBlock_132.Text
 msgctxt ",2264D1C64B491B76F5C815AA5B6CBA21"
 msgid "Would you like to contribute?"
-msgstr ""
+msgstr "Vrei să contribui?"
 
 #. Key:	24783675495A29482773CA8614B460EA
 #. SourceLocation:	/Game/Widgets/Settings/W_GeneralSettings.W_GeneralSettings_C:WidgetTree.TextBlock_3.Text
@@ -523,8 +493,7 @@ msgstr "Modul economizor ecran va ascunde meniul principal și va face scenele v
 #. SourceLocation:	/Game/Widgets/W_MainMenu/W_MainMenu.W_MainMenu_C:Set MOTD [Script Bytecode]
 #: /Game/Widgets/W_MainMenu/W_MainMenu.W_MainMenu_C:Set MOTD [Script Bytecode]
 msgctxt ",2C6F04E64FE815956A96A985A97E6874"
-msgid "wait the dev has birthday today?\r\n"
-"maybe say happy birthday i guess??????"
+msgid "wait the dev has birthday today?\r\nmaybe say happy birthday i guess??????"
 msgstr "este ziua dezvoltatorului!! hai să spunem toți la mulți ani!!"
 
 #. Key:	2CDA71264A1C4CF068AEE58874AB441C
@@ -547,20 +516,6 @@ msgstr "Ești pe cale să ștergi date în legătură cu următoarele:"
 msgctxt ",2DB0BA86444A796C5EDDFE802EDBEE5A"
 msgid "Sessions List"
 msgstr "Listă sesiuni"
-
-#. Key:	2DF6AD924184F85E56A818A776EDD993
-#. SourceLocation:	/Game/Audio/sfx_memerooms/goofy_running.goofy_running.Subtitles(0).Subtitles.Text
-#: /Game/Audio/sfx_memerooms/goofy_running.goofy_running.Subtitles(0).Subtitles.Text
-msgctxt ",2DF6AD924184F85E56A818A776EDD993"
-msgid "[GOOFY]"
-msgstr "[GUFI]"
-
-#. Key:	2DFFE9E44E6526F84BB1759BF85A3A33
-#. SourceLocation:	/Game/Audio/sfx_memerooms/baby2_2.baby2_2.Subtitles(0).Subtitles.Text
-#: /Game/Audio/sfx_memerooms/baby2_2.baby2_2.Subtitles(0).Subtitles.Text
-msgctxt ",2DFFE9E44E6526F84BB1759BF85A3A33"
-msgid "[ueehehehah]"
-msgstr "[iiihihihihihi]"
 
 #. Key:	2F1C9FEB4EB96B6D38E6C8B3077A4C29
 #. SourceLocation:	/Game/Audio/jake_lele2.jake_lele2.Subtitles(12).Subtitles.Text
@@ -597,13 +552,6 @@ msgctxt ",347E1C8F4664E08C76956695B4D0D7E2"
 msgid "Join session"
 msgstr "Alătură-te sesiunii"
 
-#. Key:	34BEDEA04B7F4CC065CBEB8D1776D227
-#. SourceLocation:	/Game/Audio/sfx_memerooms/taco_bell.taco_bell.Subtitles(0).Subtitles.Text
-#: /Game/Audio/sfx_memerooms/taco_bell.taco_bell.Subtitles(0).Subtitles.Text
-msgctxt ",34BEDEA04B7F4CC065CBEB8D1776D227"
-msgid "[HORNY BONK]"
-msgstr "[BONK HORNY]"
-
 #. Key:	34CF8B3946D39E4BF4D31283A09C40FC
 #. SourceLocation:	/Game/Widgets/Warnings/W_PowerWarn.W_PowerWarn_C:ExecuteUbergraph_W_PowerWarn [Script Bytecode]
 #: /Game/Widgets/Warnings/W_PowerWarn.W_PowerWarn_C:ExecuteUbergraph_W_PowerWarn [Script Bytecode]
@@ -638,13 +586,6 @@ msgstr "Arată riscant..."
 msgctxt ",36335B3C4AFCC0CB276416831F247574"
 msgid "one"
 msgstr "un"
-
-#. Key:	363BB13E4D567F65E94C7AAD1B275C1B
-#. SourceLocation:	/Game/Audio/sfx_memerooms/baby2.baby2.Subtitles(0).Subtitles.Text
-#: /Game/Audio/sfx_memerooms/baby2.baby2.Subtitles(0).Subtitles.Text
-msgctxt ",363BB13E4D567F65E94C7AAD1B275C1B"
-msgid "[ueehehehah]"
-msgstr "[hehhehehehe]"
 
 #. Key:	364430A246D29C64E1C04396E88C340C
 #. SourceLocation:	/Game/Widgets/W_Errors/W_ConnDrivErr.W_ConnDrivErr_C:WidgetTree.TextBlock_63.Text
@@ -681,13 +622,6 @@ msgctxt ",3B5A90074A15DE71471B8993DF217DBC"
 msgid "I don't have a good feeling, perhaps I should head the other way."
 msgstr "Nu am un presentiment bun... Poate ar trebui să mă duc în direcția opusă."
 
-#. Key:	3BC8DEE24957EEFED4C93CB318F7C1EF
-#. SourceLocation:	/Game/Audio/sfx_memerooms/burenyuu_2.burenyuu_2.Subtitles(0).Subtitles.Text
-#: /Game/Audio/sfx_memerooms/burenyuu_2.burenyuu_2.Subtitles(0).Subtitles.Text
-msgctxt ",3BC8DEE24957EEFED4C93CB318F7C1EF"
-msgid "burenyuuu~"
-msgstr ""
-
 #. Key:	3CD57F374BF1D50078E5C8BDA6A31D21
 #. SourceLocation:	/Game/Widgets/W_Graphic_Menu/W_GraphicMenu.W_GraphicMenu_C:WidgetTree.TextBlock_0.Text
 #: /Game/Widgets/W_Graphic_Menu/W_GraphicMenu.W_GraphicMenu_C:WidgetTree.TextBlock_0.Text
@@ -706,8 +640,7 @@ msgstr "Mai întâi ar trebui să restabilesc curentul electric."
 #. SourceLocation:	/Game/Widgets/Warnings/W_Disclaimer.W_Disclaimer_C:WidgetTree.tip.Text
 #: /Game/Widgets/Warnings/W_Disclaimer.W_Disclaimer_C:WidgetTree.tip.Text
 msgctxt ",3DBF285142ACF63F17A052A7DEBA2FBD"
-msgid "Did you know?\r\n"
-"This game was made in Unreal Engine 4"
+msgid "Did you know?\r\nThis game was made in Unreal Engine 4"
 msgstr "Știai că? Acest joc a fost făcut cu Unreal Engine 4"
 
 #. Key:	3F43F82C44FEAEC5C700589CBF034E2A
@@ -721,10 +654,8 @@ msgstr "Nu am un presentiment bun... Poate ar trebui să mă duc în direcția o
 #. SourceLocation:	/Game/Widgets/Settings/W_Settings_Selection.W_Settings_Selection_C:WidgetTree.TextBlock.Text
 #: /Game/Widgets/Settings/W_Settings_Selection.W_Settings_Selection_C:WidgetTree.TextBlock.Text
 msgctxt ",3F60C01D4F018D823832059D48173F0B"
-msgid "Miscellaneous\r\n"
-"Settings"
-msgstr "Setări\r\n"
-"diverse"
+msgid "Miscellaneous\r\nSettings"
+msgstr "Setări\r\ndiverse"
 
 #. Key:	3FC1E8E946BCA793F695C790222C2BD0
 #. SourceLocation:	/Game/Widgets/W_TextTip.W_TextTip_C:WidgetTree.TextBlock_2.Text
@@ -758,16 +689,8 @@ msgstr "FUGI!"
 #. SourceLocation:	/Game/Widgets/W_TelemetryDialogue.W_TelemetryDialogue_C:WidgetTree.TextBlock.Text
 #: /Game/Widgets/W_TelemetryDialogue.W_TelemetryDialogue_C:WidgetTree.TextBlock.Text
 msgctxt ",41596F554AC689A4223BC2A3BC17DDDD"
-msgid "Budget Backrooms is now able to collect anonymized telemetry data of your in-game position on the levels you explore. This data is used to generate a heatmap of the most frequently walked areas or paths of the map.\r\n"
-"\r\n"
-"What the game sends:\r\n"
-"- Your SteamID to generate a hashed session token. Your SteamID is NOT stored anywhere. The session token cannot be traced back to you so you cannot be identified from the positions sent.\r\n"
-"- In-world position samples are sent every 60s.\r\n"
-"\r\n"
-"A new session token is generated when this option is enabled and at game startup.\r\n"
-"\r\n"
-"For any concerns or questions, contact me at dabardev@dabar.dev or dabardibid@proton.me"
-msgstr ""
+msgid "Budget Backrooms is now able to collect anonymized telemetry data of your in-game position on the levels you explore. This data is used to generate a heatmap of the most frequently walked areas or paths of the map.\r\n\r\nWhat the game sends:\r\n- Your SteamID to generate a hashed session token. Your SteamID is NOT stored anywhere. The session token cannot be traced back to you so you cannot be identified from the positions sent.\r\n- In-world position samples are sent every 60s.\r\n\r\nA new session token is generated when this option is enabled and at game startup.\r\n\r\nFor any concerns or questions, contact me at dabardev@dabar.dev or dabardibid@proton.me"
+msgstr "Budget Backrooms este acum capabil de a colecta telemetrie anonimizată în legătura cu poziția ta în joc în nivelele care le explorezi. Datele sunt folosite pentru a genera o harta cu cele mai frecventate locuri și căi pe respectiva hartă.\r\n\r\nCe date sunt trimise:\r\n- SteamID-ul tău este folosit pentru a genera un token de sesiune. SteamID-ul tau NU este stocat nicăieri. Token-ul de sesiune nu poate fi identificat înapoi spre tine deci nu poți fi identificat din pozițiile trimise.\r\n- Datele adunate în nivel sunt trimise o dată la 60s.\r\n\r\nUn token de sesiune este generat de fiecare dată când opțiunea asta este activă și la pornirea jocului.\r\n\r\nPentru nelămuriri, contactează-mă la dabardev@dabar.dev sau dabardibid@proton.me"
 
 #. Key:	4162F7AF43EB38C10CDA7F95FF187490
 #. SourceLocation:	/Game/Audio/dave_2.dave_2.Subtitles(9).Subtitles.Text
@@ -872,7 +795,7 @@ msgstr "A cui a fost ideea de a tăia electricitatea?!"
 #: /Game/Widgets/W_TelemetryDialogue.W_TelemetryDialogue_C:WidgetTree.TextBlock_2.Text
 msgctxt ",4D0891E547E63B9C5ED4878B8DCFBB7F"
 msgid "Close"
-msgstr ""
+msgstr "Închide"
 
 #. Key:	4D718B7349E824069285A79540459CD6
 #. SourceLocation:	/Game/Audio/jake_lele.jake_lele.Subtitles(0).Subtitles.Text
@@ -970,7 +893,7 @@ msgstr "Lory Games - Pentru integrarea Memerooms în Lory's Modpack [github.com/
 #: /Game/Widgets/W_Restarting.W_Restarting_C:WidgetTree.TextBlock_0.Text
 msgctxt ",574F69D44E9FC786CD40A29F92F48422"
 msgid "Restarting executable..."
-msgstr ""
+msgstr "Se repornește executabilul..."
 
 #. Key:	578DE48D4D1E84691D32E5A1032CD6EF
 #. SourceLocation:	/Game/Widgets/W_DelDiag/W_DelAnim.W_DelAnim_C:ExecuteUbergraph_W_DelAnim [Script Bytecode]
@@ -985,13 +908,6 @@ msgstr "Se re-blochează realizările..."
 msgctxt ",58D677054E565B5130AC62B63822753E"
 msgid "Press any key?"
 msgstr "Apasă orice tastă?"
-
-#. Key:	59310BFA48FF9BA967D633887B690C43
-#. SourceLocation:	/Game/Audio/sfx_memerooms/ive_just_saved_myself__150_bucks.ive_just_saved_myself__150_bucks.Subtitles(0).Subtitles.Text
-#: /Game/Audio/sfx_memerooms/ive_just_saved_myself__150_bucks.ive_just_saved_myself__150_bucks.Subtitles(0).Subtitles.Text
-msgctxt ",59310BFA48FF9BA967D633887B690C43"
-msgid "Wow! I've just saved myself, 150 bucks."
-msgstr "Wow! Tocmai am economit... 150 de dolari!"
 
 #. Key:	59789EC64D703F1AD2F041B85FE193B4
 #. SourceLocation:	/Game/Audio/jake_lele.jake_lele.Subtitles(16).Subtitles.Text
@@ -1046,10 +962,8 @@ msgstr "Înțeleg, și tot vreau să joc acest mod de joc, în ciuda circumstan�
 #. SourceLocation:	/Game/Widgets/Warnings/W_Disclaimer.W_Disclaimer_C:Get_tip_Text_0 [Script Bytecode]
 #: /Game/Widgets/Warnings/W_Disclaimer.W_Disclaimer_C:Get_tip_Text_0 [Script Bytecode]
 msgctxt ",5F28DDE1471B402C037A10B341E9CFF9"
-msgid "Did you know?\r\n"
-"{1}"
-msgstr "Știai că?\r\n"
-"{1}"
+msgid "Did you know?\r\n{1}"
+msgstr "Știai că?\r\n{1}"
 
 #. Key:	5F5289C645CF4F7681762B814A116420
 #. SourceLocation:	/Game/Widgets/W_Graphic_Menu/W_HDRMenu.W_HDRMenu_C:WidgetTree.TextBlock_2.Text
@@ -1062,10 +976,8 @@ msgstr "Gama de culori de ieșire"
 #. SourceLocation:	/Game/Widgets/W_HUDRun.W_HUDRun_C:GetText_0 [Script Bytecode]
 #: /Game/Widgets/W_HUDRun.W_HUDRun_C:GetText_0 [Script Bytecode]
 msgctxt ",5FF47DD84FFB12FE1CD2C991B3A7BF62"
-msgid "{sec}s Grace time\r\n"
-"Run with Shift"
-msgstr "{sec}s Perioadă de grație\r\n"
-"Aleargă cu Shift"
+msgid "{sec}s Grace time\r\nRun with Shift"
+msgstr "{sec}s Perioadă de grație\r\nAleargă cu Shift"
 
 #. Key:	6092D65B44718B2AF96A1A8C295D5C5E
 #. SourceLocation:	/Game/Audio/jammed.jammed.Subtitles(0).Subtitles.Text
@@ -1114,7 +1026,7 @@ msgstr "Nah, altă dată"
 #: /Game/Widgets/W_Banner.W_Banner_C:ExecuteUbergraph_W_Banner [Script Bytecode]
 msgctxt ",66CA23354EB16F549F90CCA7B5468772"
 msgid "Restart pending to apply some changed settings;"
-msgstr ""
+msgstr "Se așteaptă repornirea jocului pentru a aplica setările schimbate;"
 
 #. Key:	687BDE734B3294204F6EB994F858501B
 #. SourceLocation:	/Game/Widgets/Warnings/W_NightlyWarn.W_NightlyWarn_C:ExecuteUbergraph_W_NightlyWarn [Script Bytecode]
@@ -1156,7 +1068,7 @@ msgstr "Sănătate"
 #: /Game/Widgets/W_Banner.W_Banner_C:WidgetTree.TextBlock_83.Text
 msgctxt ",6DADD71043D15F4EE6D321B8E20EBF96"
 msgid "Restart here"
-msgstr ""
+msgstr "Repornește aici"
 
 #. Key:	6DBAF3F647996966C7B8E5BDBDDC097C
 #. SourceLocation:	/Game/Widgets/W_Respawn/W_Respawn.W_Respawn_C:WidgetTree.TextBlock.Text
@@ -1190,17 +1102,15 @@ msgstr "[Este încuiat.]"
 #. SourceLocation:	/Game/Widgets/cmOS/W_CamBoot.W_CamBoot_C:ExecuteUbergraph_W_CamBoot [Script Bytecode]
 #: /Game/Widgets/cmOS/W_CamBoot.W_CamBoot_C:ExecuteUbergraph_W_CamBoot [Script Bytecode]
 msgctxt ",7407BED84FAEBD67F6915E8C537807B5"
-msgid "Checking devices... OK!\r\n"
-"Restoring session... INITIALIZING..."
-msgstr "Dispozitivele sunt în curs de verificare... OK!\r\n"
-"Se restaurează sesiunea... INIȚIALIZARE..."
+msgid "Checking devices... OK!\r\nRestoring session... INITIALIZING..."
+msgstr "Dispozitivele sunt în curs de verificare... OK!\r\nSe restaurează sesiunea... INIȚIALIZARE..."
 
 #. Key:	74E49D71451A5748AABAC985FDCC1476
 #. SourceLocation:	/Game/Widgets/W_RebindKeys/W_RebindKeys.W_RebindKeys_C:WidgetTree.W_RebindEntry_2.ActionLabel
 #: /Game/Widgets/W_RebindKeys/W_RebindKeys.W_RebindKeys_C:WidgetTree.W_RebindEntry_2.ActionLabel
 msgctxt ",74E49D71451A5748AABAC985FDCC1476"
 msgid "Flashlight"
-msgstr ""
+msgstr "Lanternă"
 
 #. Key:	7684BEE242A019D532DECEB57328FC3F
 #. SourceLocation:	/Game/Audio/dave_2.dave_2.Subtitles(1).Subtitles.Text
@@ -1220,10 +1130,8 @@ msgstr "Client învechit. Verifică clientul Steam pentru actualizări posibile 
 #. SourceLocation:	/Game/Widgets/W_BBNetInfo.W_BBNetInfo_C:WidgetTree.TextBlock_0.Text
 #: /Game/Widgets/W_BBNetInfo.W_BBNetInfo_C:WidgetTree.TextBlock_0.Text
 msgctxt ",77D4F8C940763200D2D66487E2AF044B"
-msgid "Netstats unavailable.\r\n"
-"You're most likely a host."
-msgstr "Statistici indisponibile.\r\n"
-"Cel mai probabil ești gazdă."
+msgid "Netstats unavailable.\r\nYou're most likely a host."
+msgstr "Statistici indisponibile.\r\nCel mai probabil ești gazdă."
 
 #. Key:	7807521646256AFEFF78D098D8CB4091
 #. SourceLocation:	/Game/Audio/jake_lele2.jake_lele2.Subtitles(1).Subtitles.Text
@@ -1250,8 +1158,7 @@ msgstr "Stilul reticulului"
 #. SourceLocation:	/Game/Widgets/W_CornerReminder/W_CornerReminder.W_CornerReminder_C:WidgetTree.TextBlock_0.Text
 #: /Game/Widgets/W_CornerReminder/W_CornerReminder.W_CornerReminder_C:WidgetTree.TextBlock_0.Text
 msgctxt ",7938DC2040A75C61A2A55A845D39B377"
-msgid "Press F to turn on\r\n"
-"your flashlight"
+msgid "Press F to turn on\r\nyour flashlight"
 msgstr "Apasă F pentru a-ți porni lanterna"
 
 #. Key:	79B9E61145CA1C5337F8199089CB2728
@@ -1259,7 +1166,7 @@ msgstr "Apasă F pentru a-ți porni lanterna"
 #: /Game/Widgets/W_RebindKeys/W_RebindKeys.W_RebindKeys_C:WidgetTree.W_RebindEntry.ActionLabel
 msgctxt ",79B9E61145CA1C5337F8199089CB2728"
 msgid "Interact"
-msgstr ""
+msgstr "Interacționează"
 
 #. Key:	79CC8E664296C5DF88766BA5C7CF48C0
 #. SourceLocation:	/Game/Widgets/W_Graphic_Menu/W_GraphicMenu.W_GraphicMenu_C:WidgetTree.res_text.Text
@@ -1329,7 +1236,7 @@ msgstr "\"Marchează ce e al vostru.\""
 #: /Game/Widgets/Settings/W_GeneralSettings.W_GeneralSettings_C:WidgetTree.TextBlock_10.Text
 msgctxt ",7F809B8545A418DD1740D88828585408"
 msgid "Disable level-based Main Menu background"
-msgstr ""
+msgstr "Dezactivează fundalul dinamic al meniului principal"
 
 #. Key:	7F82BC2843D806C1CC2135BEAC3100CD
 #. SourceLocation:	/Game/Audio/jake_lele2.jake_lele2.Subtitles(26).Subtitles.Text
@@ -1350,7 +1257,7 @@ msgstr "De ce fac asta?"
 #: /Game/Widgets/W_RebindKeys/W_RebindKeys.W_RebindKeys_C:WidgetTree.W_RebindEntry_5.ActionLabel
 msgctxt ",812BB0274F32C6D9DDE4639EE480CE6A"
 msgid "Sprint"
-msgstr ""
+msgstr "Alergare"
 
 #. Key:	815EAC784AB5B266046AED8E4F8933E6
 #. SourceLocation:	/Game/Widgets/W_CrosshairHint.W_CrosshairHint_C:Get_keycardshit_Text_0 [Script Bytecode]
@@ -1365,13 +1272,6 @@ msgstr "A cui a fost ideea de a tăia electricitatea?!"
 msgctxt ",81A2334B45FA460FDF54339C876318D9"
 msgid "It's like our tech has developed a mind of its own somehow."
 msgstr "E ca și cum dispozitivele noastre au căpătat conștiință cumva."
-
-#. Key:	834A1AB94A1688C081FDD8A3D7C2BFC0
-#. SourceLocation:	/Game/Audio/sfx_memerooms/burenyuu.burenyuu.Subtitles(0).Subtitles.Text
-#: /Game/Audio/sfx_memerooms/burenyuu.burenyuu.Subtitles(0).Subtitles.Text
-msgctxt ",834A1AB94A1688C081FDD8A3D7C2BFC0"
-msgid "burenyuuu~"
-msgstr "burenyuuu~"
 
 #. Key:	8474C42A48D65BED8892FEBD6571C3A6
 #. SourceLocation:	/Game/Audio/jake_lele2.jake_lele2.Subtitles(30).Subtitles.Text
@@ -1433,26 +1333,21 @@ msgstr "Ok"
 #. SourceLocation:	/Game/Widgets/Multiplayer/W_MPMenu.W_MPMenu_C:WidgetTree.b_host.ToolTipText
 #: /Game/Widgets/Multiplayer/W_MPMenu.W_MPMenu_C:WidgetTree.b_host.ToolTipText
 msgctxt ",8769A0F840B1EF7D538F76AE89C9297D"
-msgid "FOR TESTERS\r\n"
-"\r\n"
-"Clicking will host a online session with max to 4 players, for testing the replication."
-msgstr "PENTRU TESTERI\r\n"
-"\r\n"
-"Apăsând aici vei găzdui o sesiune online cu maxim 4 jucători, pentru a testa replicarea."
+msgid "FOR TESTERS\r\n\r\nClicking will host a online session with max to 4 players, for testing the replication."
+msgstr "PENTRU TESTERI\r\n\r\nApăsând aici vei găzdui o sesiune online cu maxim 4 jucători, pentru a testa replicarea."
 
 #. Key:	87A4B6F74F63C260834A2A8AC3EF1058
 #. SourceLocation:	/Game/Widgets/W_MainMenu/W_MainMenu.W_MainMenu_C:OutdatedBuild [Script Bytecode]
 #: /Game/Widgets/W_MainMenu/W_MainMenu.W_MainMenu_C:OutdatedBuild [Script Bytecode]
 msgctxt ",87A4B6F74F63C260834A2A8AC3EF1058"
 msgid "running on commit [{0}]"
-msgstr ""
+msgstr "se rulează pe commit-ul [{0}]"
 
 #. Key:	88484C8D444A7F816590F6AB2E582FA8
 #. SourceLocation:	/Game/Widgets/W_Tooltips/W_TT_External.W_TT_External_C:WidgetTree.TextBlock_1.Text
 #: /Game/Widgets/W_Tooltips/W_TT_External.W_TT_External_C:WidgetTree.TextBlock_1.Text
 msgctxt ",88484C8D444A7F816590F6AB2E582FA8"
-msgid "This will open a link\r\n"
-"in your default browser."
+msgid "This will open a link\r\nin your default browser."
 msgstr "Asta va deschide linkul în browserul tău prestabilit."
 
 #. Key:	88C24F834803C9160210F5A24072D42C
@@ -1529,12 +1424,8 @@ msgstr "Se pare că ai un controller conectat (sau poate doar un bug), suportul 
 #. SourceLocation:	/Game/Widgets/W_DelDiag/W_DelDiag.W_DelDiag_C:WidgetTree.TextBlock_3.Text
 #: /Game/Widgets/W_DelDiag/W_DelDiag.W_DelDiag_C:WidgetTree.TextBlock_3.Text
 msgctxt ",8FEC782641353F9F6310FBAE59B1CF40"
-msgid "> Map & Gamemode Progress\r\n"
-"> Player Data\r\n"
-"> Settings and other saved variables"
-msgstr "> Progres hartă și mod de joc\r\n"
-"> Date jucător\r\n"
-"> Setări și alte variabile salvate"
+msgid "> Map & Gamemode Progress\r\n> Player Data\r\n> Settings and other saved variables"
+msgstr "> Progres hartă și mod de joc\r\n> Date jucător\r\n> Setări și alte variabile salvate"
 
 #. Key:	905364A14453589E21DC52B3AE6A2C49
 #. SourceLocation:	/Game/Audio/dave_2.dave_2.Subtitles(26).Subtitles.Text
@@ -1554,9 +1445,7 @@ msgstr "Poți ieși din modul economizor ecran apăsând click stânga după ace
 #. SourceLocation:	/Game/Widgets/W_Tooltips/W_TT_VideoSett.W_TT_VideoSett_C:WidgetTree.TextBlock_0.Text
 #: /Game/Widgets/W_Tooltips/W_TT_VideoSett.W_TT_VideoSett_C:WidgetTree.TextBlock_0.Text
 msgctxt ",92E9BF4846193CB072D4CC86C6522B14"
-msgid "When leaving this page,\r\n"
-"your changes are saved \r\n"
-"automatically."
+msgid "When leaving this page,\r\nyour changes are saved \r\nautomatically."
 msgstr "Când părăsești această pagină, schimbările tale sunt salvate."
 
 #. Key:	9389636A4B4E62A8D2397797F2DCB850
@@ -1697,7 +1586,7 @@ msgstr "\"Doar spune-mi și--\""
 #: /Game/Widgets/W_TelemetryDialogue.W_TelemetryDialogue_C:WidgetTree.TextBlock_1.Text
 msgctxt ",A204ECEA4CE16E43C70A4C93E825E4CE"
 msgid "Yes, I would like to contribute."
-msgstr ""
+msgstr "Da, aș dori să contribui."
 
 #. Key:	A23891DA48D9221824463AB5473A7708
 #. SourceLocation:	/Game/Audio/dave_2.dave_2.Subtitles(16).Subtitles.Text
@@ -1762,13 +1651,6 @@ msgctxt ",AA07791B47002C74719FFC9B5666A5E3"
 msgid "Output Color Gamut"
 msgstr "Gama de culori de ieșire"
 
-#. Key:	AB4E7EF7400D3173DBB1A5B6FAD4BDCB
-#. SourceLocation:	/Game/Audio/sfx_memerooms/vine_boom.vine_boom.Subtitles(0).Subtitles.Text
-#: /Game/Audio/sfx_memerooms/vine_boom.vine_boom.Subtitles(0).Subtitles.Text
-msgctxt ",AB4E7EF7400D3173DBB1A5B6FAD4BDCB"
-msgid "[VINE BOOM]"
-msgstr "[VINE BOOM]"
-
 #. Key:	ACE7A09943384A3ED43C87B14F331C7C
 #. SourceLocation:	/Game/Widgets/W_CornerReminder/W_CornerReminder.W_CornerReminder_C:WidgetTree.TextBlock_1.Text
 #: /Game/Widgets/W_CornerReminder/W_CornerReminder.W_CornerReminder_C:WidgetTree.TextBlock_1.Text
@@ -1801,8 +1683,7 @@ msgstr "\"începeți o agenție de detectivi sau ceva doar..\""
 #. SourceLocation:	/Game/Widgets/W_Interaction/W_InteractionHint.W_InteractionHint_C:WidgetTree.TextBlock_0.Text
 #: /Game/Widgets/W_Interaction/W_InteractionHint.W_InteractionHint_C:WidgetTree.TextBlock_0.Text
 msgctxt ",AE5CCB4242DCF6F2767D4FB1AF8BA62E"
-msgid "You can pick up the \r\n"
-"flashlight by pressing E"
+msgid "You can pick up the \r\nflashlight by pressing E"
 msgstr "Poți lua lanterna apăsând pe E"
 
 #. Key:	AF2E218149AFCCBF3C080699D62D22A1
@@ -1882,13 +1763,6 @@ msgctxt ",B8DBA6F942BE216F4D3214893BEABABA"
 msgid "This game might not meet your expectations."
 msgstr "Acest joc ar putea să nu fie ceea ce te aștepți."
 
-#. Key:	B991F85845940C1E1F4A5EBEA8A6910C
-#. SourceLocation:	/Game/Audio/sfx_memerooms/baby1.baby1.Subtitles(0).Subtitles.Text
-#: /Game/Audio/sfx_memerooms/baby1.baby1.Subtitles(0).Subtitles.Text
-msgctxt ",B991F85845940C1E1F4A5EBEA8A6910C"
-msgid "[ueehehehah]"
-msgstr "[( ͡° ͜ʖ ͡°)]"
-
 #. Key:	BA255D7F4A9D01961D5BDAB4916E56EF
 #. SourceLocation:	/Game/Widgets/W_Screeensaver/W_Screensaver_InitDIal.W_Screensaver_InitDIal_C:WidgetTree.TextBlock_1.Text
 #: /Game/Widgets/W_Screeensaver/W_Screensaver_InitDIal.W_Screensaver_InitDIal_C:WidgetTree.TextBlock_1.Text
@@ -1949,10 +1823,8 @@ msgstr "Sari peste ecranul de avertisment"
 #. SourceLocation:	/Game/Widgets/Settings/W_Settings_Selection.W_Settings_Selection_C:WidgetTree.TextBlock_0.Text
 #: /Game/Widgets/Settings/W_Settings_Selection.W_Settings_Selection_C:WidgetTree.TextBlock_0.Text
 msgctxt ",BCEA7DCC4F92FF08105115B93B36C548"
-msgid "Audio\r\n"
-"Settings"
-msgstr "Setări\r\n"
-"audio"
+msgid "Audio\r\nSettings"
+msgstr "Setări\r\naudio"
 
 #. Key:	BD09C2214882692122BFD793442C866D
 #. SourceLocation:	/Game/Widgets/Animations/W_FakeAccountSave.W_FakeAccountSave_C:ExecuteUbergraph_W_FakeAccountSave [Script Bytecode]
@@ -2000,77 +1872,15 @@ msgstr "\"figuri sau sacadează in ceva fel--\""
 #. SourceLocation:	/Game/Widgets/W_Credits/W_Credits_Memerooms.W_Credits_Memerooms_C:WidgetTree.TextBlock.Text
 #: /Game/Widgets/W_Credits/W_Credits_Memerooms.W_Credits_Memerooms_C:WidgetTree.TextBlock.Text
 msgctxt ",BF6A87AC4EB2C857DFA02FB4B74B9AA4"
-msgid "[Please note that some credits may be missing; All the song's credit goes to their original Artist and not me]\r\n"
-"[SOME SONGS ARE DISABLED OR MUTED TO PREVENT COPYRIGHT PROBLEMS, WILL FIX!!!]\r\n"
-"\r\n"
-"SCP 3008 - Monday [Uglyburger0]\r\n"
-"SCP 3008 - Tuesday [Uglyburger0]\r\n"
-"SCP 3008 - Wednesday [Uglyburger0]\r\n"
-"SCP 3008 - Thursday [Uglyburger0]\r\n"
-"SCP 3008 - Friday [Uglyburger0]\r\n"
-"SCP 3008 - Saturday [Uglyburger0]\r\n"
-"SCP 3008 - Sunday [Uglyburger0]\r\n"
-"ohio music [Spongebob Squarepants Production Music - Comic Walk]\r\n"
-"Different Heaven - Nekozilla [NCS RELEASE]\r\n"
-"Lensko - Circles [NCS RELEASE]\r\n"
-"Lensko - Let's Go [NCS RELEASE]\r\n"
-"Lensko - Cetus [NCS RELEASE]\r\n"
-"\r\n"
-"Disabled soundtracks due to legal issues :(\r\n"
-"Breaking Bad Main Title Theme [Extended]\r\n"
-"\r\n"
-"Fortnite Classic Lobby Music\r\n"
-"\r\n"
-"Kahoot! - Main Theme\r\n"
-"Kahoot! - The 20 Second Answer Medley\r\n"
-"Kahoot! 20 Second Countdown #3 Music [Couldn't find the original name sorry :( ]\r\n"
-"\r\n"
-"Portal 1 - Still Alive [Radio]\r\n"
-"Portal 1 - Still Alive [Radio, but compressed]\r\n"
-"\r\n"
-"\r\n"
-"Bad Style - Time Back"
-msgstr "[Unele credite ar putea lipsi; Toate drepturile melodiilor revin artiștilor originali și nu mie]\r\n"
-"[UNELE MELODII AU FOST DEZACTIVATE PENTRU A PREVENI PROBLEME CU DREPTURILE DE AUTOR, SE VA REPARA!!!]\r\n"
-"\r\n"
-"SCP 3008 - Monday [Uglyburger0]\r\n"
-"SCP 3008 - Tuesday [Uglyburger0]\r\n"
-"SCP 3008 - Wednesday [Uglyburger0]\r\n"
-"SCP 3008 - Thursday [Uglyburger0]\r\n"
-"SCP 3008 - Friday [Uglyburger0]\r\n"
-"SCP 3008 - Saturday [Uglyburger0]\r\n"
-"SCP 3008 - Sunday [Uglyburger0]\r\n"
-"ohio music [Spongebob Squarepants Production Music - Comic Walk]\r\n"
-"Different Heaven - Nekozilla [NCS RELEASE]\r\n"
-"Lensko - Circles [NCS RELEASE]\r\n"
-"Lensko - Let's Go [NCS RELEASE]\r\n"
-"Lensko - Cetus [NCS RELEASE]\r\n"
-"\r\n"
-"Melodii dezactivate datorită problemelor legale :(\r\n"
-"Breaking Bad Main Title Theme [Extended]\r\n"
-"\r\n"
-"Fortnite Classic Lobby Music\r\n"
-"\r\n"
-"Kahoot! - Main Theme\r\n"
-"Kahoot! - The 20 Second Answer Medley\r\n"
-"Kahoot! 20 Second Countdown #3 Music [Nu pot găsi numele original, scuze :( ]\r\n"
-"\r\n"
-"Portal 1 - Still Alive [Radio]\r\n"
-"Portal 1 - Still Alive [Radio, but compressed]\r\n"
-"\r\n"
-"\r\n"
-"Bad Style - Time Back"
+msgid "[Please note that some credits may be missing; All the song's credit goes to their original Artist and not me]\r\n[SOME SONGS ARE DISABLED OR MUTED TO PREVENT COPYRIGHT PROBLEMS, WILL FIX!!!]\r\n\r\nSCP 3008 - Monday [Uglyburger0]\r\nSCP 3008 - Tuesday [Uglyburger0]\r\nSCP 3008 - Wednesday [Uglyburger0]\r\nSCP 3008 - Thursday [Uglyburger0]\r\nSCP 3008 - Friday [Uglyburger0]\r\nSCP 3008 - Saturday [Uglyburger0]\r\nSCP 3008 - Sunday [Uglyburger0]\r\nohio music [Spongebob Squarepants Production Music - Comic Walk]\r\nDifferent Heaven - Nekozilla [NCS RELEASE]\r\nLensko - Circles [NCS RELEASE]\r\nLensko - Let's Go [NCS RELEASE]\r\nLensko - Cetus [NCS RELEASE]\r\n\r\nDisabled soundtracks due to legal issues :(\r\nBreaking Bad Main Title Theme [Extended]\r\n\r\nFortnite Classic Lobby Music\r\n\r\nKahoot! - Main Theme\r\nKahoot! - The 20 Second Answer Medley\r\nKahoot! 20 Second Countdown #3 Music [Couldn't find the original name sorry :( ]\r\n\r\nPortal 1 - Still Alive [Radio]\r\nPortal 1 - Still Alive [Radio, but compressed]\r\n\r\n\r\nBad Style - Time Back"
+msgstr "[Unele credite ar putea lipsi; Toate drepturile melodiilor revin artiștilor originali și nu mie]\r\n[UNELE MELODII AU FOST DEZACTIVATE PENTRU A PREVENI PROBLEME CU DREPTURILE DE AUTOR, SE VA REPARA!!!]\r\n\r\nSCP 3008 - Monday [Uglyburger0]\r\nSCP 3008 - Tuesday [Uglyburger0]\r\nSCP 3008 - Wednesday [Uglyburger0]\r\nSCP 3008 - Thursday [Uglyburger0]\r\nSCP 3008 - Friday [Uglyburger0]\r\nSCP 3008 - Saturday [Uglyburger0]\r\nSCP 3008 - Sunday [Uglyburger0]\r\nohio music [Spongebob Squarepants Production Music - Comic Walk]\r\nDifferent Heaven - Nekozilla [NCS RELEASE]\r\nLensko - Circles [NCS RELEASE]\r\nLensko - Let's Go [NCS RELEASE]\r\nLensko - Cetus [NCS RELEASE]\r\n\r\nMelodii dezactivate datorită problemelor legale :(\r\nBreaking Bad Main Title Theme [Extended]\r\n\r\nFortnite Classic Lobby Music\r\n\r\nKahoot! - Main Theme\r\nKahoot! - The 20 Second Answer Medley\r\nKahoot! 20 Second Countdown #3 Music [Nu pot găsi numele original, scuze :( ]\r\n\r\nPortal 1 - Still Alive [Radio]\r\nPortal 1 - Still Alive [Radio, but compressed]\r\n\r\n\r\nBad Style - Time Back"
 
 #. Key:	C00DF14941A15EBB05B7149B55068D78
 #. SourceLocation:	/Game/Widgets/Multiplayer/W_JoinSession.W_JoinSession_C:WidgetTree.create_but.ToolTipText
 #: /Game/Widgets/Multiplayer/W_JoinSession.W_JoinSession_C:WidgetTree.create_but.ToolTipText
 msgctxt ",C00DF14941A15EBB05B7149B55068D78"
-msgid "FOR TESTERS:\r\n"
-"\r\n"
-"Clicking will create a LAN session for testing me myself and I, and or multiple instances of the game if I'm alone :("
-msgstr "PENTRU TESTERI:\r\n"
-"\r\n"
-"Apăsând aici vei crea o sesiune LAN pentru a te testa pe tine însuți, sau mai multe instanțe de joc dacă ești singur. :( (Părere de rău)"
+msgid "FOR TESTERS:\r\n\r\nClicking will create a LAN session for testing me myself and I, and or multiple instances of the game if I'm alone :("
+msgstr "PENTRU TESTERI:\r\n\r\nApăsând aici vei crea o sesiune LAN pentru a te testa pe tine însuți, sau mai multe instanțe de joc dacă ești singur. :( (Părere de rău)"
 
 #. Key:	C08377274F042124625A1B8DFFC029D4
 #. SourceLocation:	/Game/Widgets/W_CrosshairHint.W_CrosshairHint_C:Get_keycardshit_Text_0 [Script Bytecode]
@@ -2147,7 +1957,7 @@ msgstr "Folosing rețeaua rafinată a Budget Backrooms, acum te poți alătura s
 #: /Game/Widgets/Settings/W_GeneralSettings.W_GeneralSettings_C:WidgetTree.TextBlock_9.Text
 msgctxt ",C8FDFB4E47929EB174675D8F9623C62E"
 msgid "Heatmap Telemetry Opt-in"
-msgstr ""
+msgstr "Acord asupra trimiterii de date telemetrice"
 
 #. Key:	C98AE9394ABD2A03FCCFCBBCDFE85292
 #. SourceLocation:	/Game/Widgets/W_RebindKeys/W_RebindEntry.W_RebindEntry_C:WidgetTree.label_text.Text
@@ -2181,25 +1991,15 @@ msgstr "Te joci versiune veche de Budget Backrooms comparativ cu gazda și o con
 #. SourceLocation:	/Game/Widgets/W_SaveMigration/W_SaveMigrationNew.W_SaveMigrationNew_C:WidgetTree.TextBlock.Text
 #: /Game/Widgets/W_SaveMigration/W_SaveMigrationNew.W_SaveMigrationNew_C:WidgetTree.TextBlock.Text
 msgctxt ",CD68D39E4585B1B005DD54A2BF73B23E"
-msgid "Due to internal changes starting 0.0.18 Alpha and later, the older formats used in 0.0.17 and prior are no longer supported to further ease development of the game and compensate for past mistakes made by the developer while making this game.\r\n"
-"\r\n"
-"Your existing savedata has been automatically migrated to the new format. Not everything might have been moved over due to internal restructuring. Achievements are not migrated. Should you have issues in game, please try proceeding with a save reset under Settings -> General Settings"
-msgstr ""
+msgid "Due to internal changes starting 0.0.18 Alpha and later, the older formats used in 0.0.17 and prior are no longer supported to further ease development of the game and compensate for past mistakes made by the developer while making this game.\r\n\r\nYour existing savedata has been automatically migrated to the new format. Not everything might have been moved over due to internal restructuring. Achievements are not migrated. Should you have issues in game, please try proceeding with a save reset under Settings -> General Settings"
+msgstr "Din cauza schimbărilor începând cu 0.0.18 Alpha și după, formatele vechi folosite în 0.0.17 și mai devreme nu mai sunt suportate pentru a facilita dezvoltarea jocului și pentru a compensa greșelilor făcute de dezvoltator cât jocul ăsta a fost sub dezvoltare.\r\n\r\nDatele salvate existente au fost migrate la formatul nou. Nu totul a fost transferat din cauza restructurărilor interne. Realizările nu au fost migrate. Să fie cazul să ai probleme în joc, te rog să încerci o resetare a jocului din Setări -> Setări Generale"
 
 #. Key:	CDE46AA4452AAD65BCC94785448BD1CA
 #. SourceLocation:	/Game/Widgets/Multiplayer/W_UnstableMP.W_UnstableMP_C:WidgetTree.TextBlock.Text
 #: /Game/Widgets/Multiplayer/W_UnstableMP.W_UnstableMP_C:WidgetTree.TextBlock.Text
 msgctxt ",CDE46AA4452AAD65BCC94785448BD1CA"
-msgid "This version of Multiplayer is temporarily not meant for consumer use, in a nutshell, it is not finished, just like this game.\r\n"
-"\r\n"
-"You are able to invite friends but what you're getting is just the barebones of Multiplayer without any sugar-coating. Many bugs to be expected.\r\n"
-"\r\n"
-"I am not responsible for any hacking, doxxing, IP Leaks and so on, I am trying my best."
-msgstr "Acestă versiune de multiplayer nu este recomandată pentru jucatorul de rând. Pe scurt, nu este terminată, precum restul jocului.\r\n"
-"\r\n"
-"Vei putea invita prieteni dar tot ce vei primi este o experiență de bază fără alte dotări. Bugurile sunt de așteptat.\r\n"
-"\r\n"
-"Nu sunt responsabil pentru orice tentativă de hacking, doxxing, aflarea adresei IP și așa mai departe, încerc tot ce pot."
+msgid "This version of Multiplayer is temporarily not meant for consumer use, in a nutshell, it is not finished, just like this game.\r\n\r\nYou are able to invite friends but what you're getting is just the barebones of Multiplayer without any sugar-coating. Many bugs to be expected.\r\n\r\nI am not responsible for any hacking, doxxing, IP Leaks and so on, I am trying my best."
+msgstr "Acestă versiune de multiplayer nu este recomandată pentru jucatorul de rând. Pe scurt, nu este terminată, precum restul jocului.\r\n\r\nVei putea invita prieteni dar tot ce vei primi este o experiență de bază fără alte dotări. Bugurile sunt de așteptat.\r\n\r\nNu sunt responsabil pentru orice tentativă de hacking, doxxing, aflarea adresei IP și așa mai departe, încerc tot ce pot."
 
 #. Key:	CE1C6C3D46989FC7360AE2A1265F0755
 #. SourceLocation:	/Game/Widgets/Warnings/W_Disclaimer.W_Disclaimer_C:WidgetTree.TextBlock_0.Text
@@ -2425,25 +2225,12 @@ msgctxt ",E16A0B814454E3D6B0014DA5BC6C73A8"
 msgid "FUCK YOU FUCK YOU FUCK YOU FUCK YOU FUCK YOU FUCK YOU FUCK YOU FUCK YOU FUCK YOU FUCK YOU "
 msgstr "DU-TE NAIBII DU-TE NAIBII DU-TE NAIBII DU-TE NAIBII DU-TE NAIBII DU-TE NAIBII DU-TE NAIBII DU-TE NAIBII DU-TE NAIBII DU-TE NAIBII "
 
-#. Key:	E189071E42CF7530EA2A8AA1ADD1605D
-#. SourceLocation:	/Game/Audio/sfx_memerooms/bluetooth_connect.bluetooth_connect.Subtitles(0).Subtitles.Text
-#: /Game/Audio/sfx_memerooms/bluetooth_connect.bluetooth_connect.Subtitles(0).Subtitles.Text
-msgctxt ",E189071E42CF7530EA2A8AA1ADD1605D"
-msgid "THE BLUETOOTH DEVICE, IS CONNECTED UHHHH SUCCESSFULLY"
-msgstr "DĂ BLUTUF DIVAIS IZ CONECTIDĂ UH SUCSESFULEI"
-
 #. Key:	E18F82134B6517874DE03CA632AFBC9C
 #. SourceLocation:	/Game/Widgets/Multiplayer/W_MPMenu.W_MPMenu_C:ExecuteUbergraph_W_MPMenu [Script Bytecode]
 #: /Game/Widgets/Multiplayer/W_MPMenu.W_MPMenu_C:ExecuteUbergraph_W_MPMenu [Script Bytecode]
 msgctxt ",E18F82134B6517874DE03CA632AFBC9C"
-msgid "Your Budget Backrooms installation is outdated. Check your Steam client for any possible updates to Budget Backrooms, or the selected branch.\r\n"
-"\r\n"
-"Latest version: v0.{0}\r\n"
-"Currently installed version: v0.{1}"
-msgstr "Versiunea ta de Budget Backrooms este învechită. Verifică clientul Steam pentru orice update posibil, sau ramura selectată.\r\n"
-"\r\n"
-"Ultima versiune: v0.{0}\r\n"
-"Versiunea instalată: v0.{1}"
+msgid "Your Budget Backrooms installation is outdated. Check your Steam client for any possible updates to Budget Backrooms, or the selected branch.\r\n\r\nLatest version: v0.{0}\r\nCurrently installed version: v0.{1}"
+msgstr "Versiunea ta de Budget Backrooms este învechită. Verifică clientul Steam pentru orice update posibil, sau ramura selectată.\r\n\r\nUltima versiune: v0.{0}\r\nVersiunea instalată: v0.{1}"
 
 #. Key:	E4F9AC6E432644862F8BD59A3F65CF36
 #. SourceLocation:	/Game/Widgets/W_RebindKeys/W_RebindKeys.W_RebindKeys_C:WidgetTree.TextBlock_123.Text
@@ -2516,8 +2303,8 @@ msgid "PS4"
 msgstr ""
 
 #. Key:	EC1EEF89400FD7017791B9A576C40873
-#. SourceLocation:	/Game/Widgets/Warnings/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock_7.Text
-#: /Game/Widgets/Warnings/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock_7.Text
+#. SourceLocation:	/Game/Widgets/Animations/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock_7.Text
+#: /Game/Widgets/Animations/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock_7.Text
 msgctxt ",EC1EEF89400FD7017791B9A576C40873"
 msgid "Slow Performance"
 msgstr "Performanță slabă"
@@ -2526,8 +2313,7 @@ msgstr "Performanță slabă"
 #. SourceLocation:	/Game/Widgets/W_SprintOff/W_DisabledSprint.W_DisabledSprint_C:WidgetTree.TextBlock_0.Text
 #: /Game/Widgets/W_SprintOff/W_DisabledSprint.W_DisabledSprint_C:WidgetTree.TextBlock_0.Text
 msgctxt ",ED4912F443969BC63B8E05A1BB01BBEE"
-msgid "Sprinting is disabled\r\n"
-"here."
+msgid "Sprinting is disabled\r\nhere."
 msgstr "Alergatul este dezactivat aici."
 
 #. Key:	EDB08C4A48EB7724169598971ACC5681
@@ -2541,8 +2327,7 @@ msgstr "\"Am avut câteva rapoarte recent despre\""
 #. SourceLocation:	/Game/Widgets/W_Tooltips/W_TT_DelConfirm.W_TT_DelConfirm_C:ExecuteUbergraph_W_TT_DelConfirm [Script Bytecode]
 #: /Game/Widgets/W_Tooltips/W_TT_DelConfirm.W_TT_DelConfirm_C:ExecuteUbergraph_W_TT_DelConfirm [Script Bytecode]
 msgctxt ",EE5F29BF4EBC230821B511A0D7089D30"
-msgid "After resetting,\r\n"
-"the game will reload."
+msgid "After resetting,\r\nthe game will reload."
 msgstr "După resetare, jocul se va reîncărca."
 
 #. Key:	EF4C37954E647F6D6485A995B9000AAF
@@ -2622,13 +2407,6 @@ msgctxt ",F3BF734D4A5C25E80BE9589F30998527"
 msgid "Interactions"
 msgstr "Interacțiuni"
 
-#. Key:	F3C52DD1410DC09502BF139B7068C828
-#. SourceLocation:	/Game/Audio/sfx_memerooms/hell_naaaah.hell_naaaah.Subtitles(0).Subtitles.Text
-#: /Game/Audio/sfx_memerooms/hell_naaaah.hell_naaaah.Subtitles(0).Subtitles.Text
-msgctxt ",F3C52DD1410DC09502BF139B7068C828"
-msgid "what da hell, OHHH MA GAAD NOO WAYYYYYYYYYYYY"
-msgstr "linganguliguli linganguli lingangu lingangu"
-
 #. Key:	F4267D64462BBD64FC6F4EAD3784F0A7
 #. SourceLocation:	/Game/Audio/jake_lele2.jake_lele2.Subtitles(11).Subtitles.Text
 #: /Game/Audio/jake_lele2.jake_lele2.Subtitles(11).Subtitles.Text
@@ -2662,7 +2440,7 @@ msgstr "Alătură-te sesiunii"
 #: /Game/Widgets/W_TelemetryDialogue.W_TelemetryDialogue_C:WidgetTree.TextBlock_3.Text
 msgctxt ",F758D4064FBFF4E24AE5BA90DF82DCEB"
 msgid "You can opt-out / opt-in at any time in the Settings."
-msgstr ""
+msgstr "Poți revoca / reactiva opțiunea din setări."
 
 #. Key:	F7AA6C614B57DB81F1DDA39BE40687A9
 #. SourceLocation:	/Game/Widgets/Multiplayer/W_MPInit.W_MPInit_C:ExecuteUbergraph_W_MPInit [Script Bytecode]
@@ -2746,7 +2524,7 @@ msgstr "Setări pentru grafici salvate!"
 #: /Game/Widgets/W_SaveMigration/W_SaveMigrationNew.W_SaveMigrationNew_C:WidgetTree.TextBlock_132.Text
 msgctxt ",FF6DBE79492B600645EB2EBDE736A6DF"
 msgid "Savedata Migration"
-msgstr ""
+msgstr "Migrare de date"
 
 #. Key:	FF8568A14666BA939243EBBE23CBE269
 #. SourceLocation:	/Game/Widgets/W_DelDiag/W_DelAnim.W_DelAnim_C:WidgetTree.TextBlock_0.Text
@@ -2773,10 +2551,8 @@ msgstr "Moduri de joc"
 #. SourceLocation:	/Game/Widgets/W_MapFinished/W_OptionalSurvey.W_OptionalSurvey_C:WidgetTree.TextBlock_0.Text
 #: /Game/Widgets/W_MapFinished/W_OptionalSurvey.W_OptionalSurvey_C:WidgetTree.TextBlock_0.Text
 msgctxt "Game,03EDA3DD4B9F6D070C0A4B9FD328A778"
-msgid "Screw you,\r\n"
-"next page please!"
-msgstr "Du-te naibii,\r\n"
-"pagina următoare, te rog!"
+msgid "Screw you,\r\nnext page please!"
+msgstr "Du-te naibii,\r\npagina următoare, te rog!"
 
 #. Key:	0403F8384DD243BA5DFA23A34DF7291E
 #. SourceLocation:	/Game/Widgets/W_PauseMenu/W_ConfirmLeave.W_ConfirmLeave_C:WidgetTree.TextBlock_63.Text
@@ -2828,8 +2604,8 @@ msgid "Quit to main menu"
 msgstr "Ieși la ecranul principal"
 
 #. Key:	155F7E6C488B71EF11190F9715134915
-#. SourceLocation:	/Game/Widgets/Animations/FadeIn.FadeIn_C:WidgetTree.TextBlock_0.Text
-#: /Game/Widgets/Animations/FadeIn.FadeIn_C:WidgetTree.TextBlock_0.Text
+#. SourceLocation:	/Game/Widgets/Animations/FadeOut.FadeOut_C:WidgetTree.TextBlock_0.Text
+#: /Game/Widgets/Animations/FadeOut.FadeOut_C:WidgetTree.TextBlock_0.Text
 msgctxt "Game,155F7E6C488B71EF11190F9715134915"
 msgid "Loading..."
 msgstr "Se încarcă..."
@@ -2859,14 +2635,8 @@ msgstr "Schimbă limba"
 #. SourceLocation:	/Game/Widgets/W_MapFinished/W_FinishMap_Alpha.W_FinishMap_Alpha_C:WidgetTree.TextBlock_1.Text
 #: /Game/Widgets/W_MapFinished/W_FinishMap_Alpha.W_FinishMap_Alpha_C:WidgetTree.TextBlock_1.Text
 msgctxt "Game,256064344289478637DF8AA0DA120257"
-msgid "Well.. I guess that's it for now.\r\n"
-"You've reached the end of this version, feel free to explore more, quit, or do whatever you want.\r\n"
-"\r\n"
-"Thank you for playing the game, and perhaps fill out that survey form because apparently, your opinion matters."
-msgstr "Ei bine... Cred că asta e tot pentru acum.\r\n"
-"Ai ajuns la sfârșitul acestei versiuni, simte-te liber să explorezi mai mult, să ieși, sau să faci ce vrei.\r\n"
-"\r\n"
-"Îți mulțumesc că te-ai jucat, și poate să fi completat chestionarul deoarce, aparent, opinia ta contează."
+msgid "Well.. I guess that's it for now.\r\nYou've reached the end of this version, feel free to explore more, quit, or do whatever you want.\r\n\r\nThank you for playing the game, and perhaps fill out that survey form because apparently, your opinion matters."
+msgstr "Ei bine... Cred că asta e tot pentru acum.\r\nAi ajuns la sfârșitul acestei versiuni, simte-te liber să explorezi mai mult, să ieși, sau să faci ce vrei.\r\n\r\nÎți mulțumesc că te-ai jucat, și poate să fi completat chestionarul deoarce, aparent, opinia ta contează."
 
 #. Key:	2A1B5DED49C6C258E7F3AC81A0B422F1
 #. SourceLocation:	/Game/Widgets/W_GMSelect/W_GMSelect.W_GMSelect_C:WidgetTree.TextBlock_9.Text
@@ -2879,10 +2649,8 @@ msgstr "Clasic"
 #. SourceLocation:	/Game/Widgets/W_MapFinished/W_FinishMap_Alpha.W_FinishMap_Alpha_C:WidgetTree.TextBlock_3.Text
 #: /Game/Widgets/W_MapFinished/W_FinishMap_Alpha.W_FinishMap_Alpha_C:WidgetTree.TextBlock_3.Text
 msgctxt "Game,2A92293E4560C3EE6AD404AB625FAA4E"
-msgid "Restart\r\n"
-"level"
-msgstr "Reîncepe\r\n"
-"nivelul"
+msgid "Restart\r\nlevel"
+msgstr "Reîncepe\r\nnivelul"
 
 #. Key:	2ADBE2A342395C576AAA349214958440
 #. SourceLocation:	/Game/Widgets/Animations/FadeOut.FadeOut_C:WidgetTree.TextBlock_2.Text
@@ -2909,10 +2677,8 @@ msgstr "Întrebări frecvente"
 #. SourceLocation:	/Game/Widgets/Animations/FadeIn_Edited.FadeIn_Edited_C:WidgetTree.TextBlock_2.Text
 #: /Game/Widgets/Animations/FadeIn_Edited.FadeIn_Edited_C:WidgetTree.TextBlock_2.Text
 msgctxt "Game,3143F271489310E79B1B6FB73A685A98"
-msgid "Press F to turn on\r\n"
-"your flashlight"
-msgstr "Apasă F pentru a-ți\r\n"
-"aprinde lanterna"
+msgid "Press F to turn on\r\nyour flashlight"
+msgstr "Apasă F pentru a-ți\r\naprinde lanterna"
 
 #. Key:	3E949C5E491BA028AAC881ADBA81C6FF
 #. SourceLocation:	/Game/Widgets/Animations/FadeIn.FadeIn_C:WidgetTree.TextBlock_2.Text
@@ -2946,20 +2712,8 @@ msgstr "Ține apăsat V să privești înapoi."
 #. SourceLocation:	/Game/Widgets/W_GMSelect/W_GMSelect.W_GMSelect_C:WidgetTree.TextBlock_8.Text
 #: /Game/Widgets/W_GMSelect/W_GMSelect.W_GMSelect_C:WidgetTree.TextBlock_8.Text
 msgctxt "Game,4C8AA8F349D731711BF25ABAB9A3F1AB"
-msgid "'Unused Levels' are a part of this game's big ass size. Here you find a list of playable, unused levels, that didn't made it into the Classic Gamemode or any gamemode at all. Developer stuff is also included if you're lazy to use the in-game console.\r\n"
-"\r\n"
-"List may change :)\r\n"
-"\r\n"
-"Levels may restart the game at unexpected times, have patience.\r\n"
-"\r\n"
-"Note: Discord RPC *may* not be visible because I'm too lazy or I didn't want to add it into the level"
-msgstr "Nivele nefolosite constituie o mare parte din mărimea acestui joc. Aici vei găsi o listă cu nivelele nefolosite ce pot fi jucate, care nu au reușit să intre în modul de joc clasic sau oricare mod de joc. Chestii pentru dezvoltare sunt incluse dacă îți este prea lene să folosești consola din joc.\r\n"
-"\r\n"
-"Lista se poate modifica :)\r\n"
-"\r\n"
-"Nivele pot reporni jocul când te aștepți mai puțin, ai răbdare.\r\n"
-"\r\n"
-"Notă: Discord RPC *s-ar* putea să nu fie vizibil deoarece îmi este lene sau nu am vrut să-l adaug în nivel."
+msgid "'Unused Levels' are a part of this game's big ass size. Here you find a list of playable, unused levels, that didn't made it into the Classic Gamemode or any gamemode at all. Developer stuff is also included if you're lazy to use the in-game console.\r\n\r\nList may change :)\r\n\r\nLevels may restart the game at unexpected times, have patience.\r\n\r\nNote: Discord RPC *may* not be visible because I'm too lazy or I didn't want to add it into the level"
+msgstr "Nivele nefolosite constituie o mare parte din mărimea acestui joc. Aici vei găsi o listă cu nivelele nefolosite ce pot fi jucate, care nu au reușit să intre în modul de joc clasic sau oricare mod de joc. Chestii pentru dezvoltare sunt incluse dacă îți este prea lene să folosești consola din joc.\r\n\r\nLista se poate modifica :)\r\n\r\nNivele pot reporni jocul când te aștepți mai puțin, ai răbdare.\r\n\r\nNotă: Discord RPC *s-ar* putea să nu fie vizibil deoarece îmi este lene sau nu am vrut să-l adaug în nivel."
 
 #. Key:	51F2AD76410263E048696CA2B46E768B
 #. SourceLocation:	/Game/Widgets/Multiplayer/W_MPInit.W_MPInit_C:WidgetTree.TextBlock_1.Text
@@ -2972,26 +2726,8 @@ msgstr "Aruncă conexiunea"
 #. SourceLocation:	/Game/Widgets/W_GMSelect/W_GMSelect.W_GMSelect_C:WidgetTree.TextBlock_11.Text
 #: /Game/Widgets/W_GMSelect/W_GMSelect.W_GMSelect_C:WidgetTree.TextBlock_11.Text
 msgctxt "Game,54EB8E24458BB63DB97315A74E25F00A"
-msgid "Even though I had no place to put Gamemode in title, this is The Memerooms™. A goofy ahh refined experience of Budget Backrooms.\r\n"
-"\r\n"
-"I've inserted 21st century humor (probably unfunny) into the game, what's the worst that could happen?\r\n"
-"\r\n"
-"Modifiers:\r\n"
-"- Howlers? Out, replaced with NextBots chasing you like they're after a rare NFT.\r\n"
-"- Stamina endless like the queue for toilet paper in the early days of the pandemic.\r\n"
-"- Player Speed faster than my dad going for milk.\r\n"
-"\r\n"
-"[UNFUNNY WARNING, PROCEED WITH CAUTION! SOME CONTENT IS UNFINISHED]"
-msgstr "Chiar dacă nu am avut spațiu să pun „mod de joc” în titlu, acesta este The Memerooms™. O experiență nemaivăzută în Budget Backrooms.\r\n"
-"\r\n"
-"Am introdus umor al secolului 21, ce s-ar putea întampla?\r\n"
-"\r\n"
-"Modificări:\r\n"
-"- Howleri? Afară, schimbați cu NextBots care te urmăresc de parcă ești un NFT rar.\r\n"
-"- Ai energie fără sfârșit precum coada la ghișeele din instituțiile românești.\r\n"
-"- Viteza jucătorului este mai rapidă decât tatăl meu mergând după lapte.\r\n"
-"\r\n"
-"[UNELE LUCRURI NU SUNT TERMINATE, ATENȚIE!]"
+msgid "Even though I had no place to put Gamemode in title, this is The Memerooms™. A goofy ahh refined experience of Budget Backrooms.\r\n\r\nI've inserted 21st century humor (probably unfunny) into the game, what's the worst that could happen?\r\n\r\nModifiers:\r\n- Howlers? Out, replaced with NextBots chasing you like they're after a rare NFT.\r\n- Stamina endless like the queue for toilet paper in the early days of the pandemic.\r\n- Player Speed faster than my dad going for milk.\r\n\r\n[UNFUNNY WARNING, PROCEED WITH CAUTION! SOME CONTENT IS UNFINISHED]"
+msgstr "Chiar dacă nu am avut spațiu să pun „mod de joc” în titlu, acesta este The Memerooms™. O experiență nemaivăzută în Budget Backrooms.\r\n\r\nAm introdus umor al secolului 21, ce s-ar putea întampla?\r\n\r\nModificări:\r\n- Howleri? Afară, schimbați cu NextBots care te urmăresc de parcă ești un NFT rar.\r\n- Ai energie fără sfârșit precum coada la ghișeele din instituțiile românești.\r\n- Viteza jucătorului este mai rapidă decât tatăl meu mergând după lapte.\r\n\r\n[UNELE LUCRURI NU SUNT TERMINATE, ATENȚIE!]"
 
 #. Key:	559AA7AF406F7FF3D67C5497BE1AEC61
 #. SourceLocation:	/Game/Widgets/W_GMSelect/W_GMSelect.W_GMSelect_C:WidgetTree.TextBlock_193.Text
@@ -2999,19 +2735,6 @@ msgstr "Chiar dacă nu am avut spațiu să pun „mod de joc” în titlu, acest
 msgctxt "Game,559AA7AF406F7FF3D67C5497BE1AEC61"
 msgid "Play Gamemode"
 msgstr "Joacă"
-
-#. Key:	58AAFA3D462BA2DE0D8000A631328B81
-#. SourceLocation:	/Game/Widgets/W_GMSelect/W_GMSelect.W_GMSelect_C:WidgetTree.TextBlock_20.Text
-#: /Game/Widgets/W_GMSelect/W_GMSelect.W_GMSelect_C:WidgetTree.TextBlock_20.Text
-msgctxt "Game,58AAFA3D462BA2DE0D8000A631328B81"
-msgid "Feeling fancy, innit? Welcome to Hardcore Mode. Quit? Rage? Alt+F4? Say goodbye to your save file, mate. No take-backs, no second chances—just you, the game, and the sweet sound of regret if you mess up. Buckle up since I will NOT make it easy for you.\r\n"
-"\r\n"
-"Modifiers: (luckily I wrote this out)\r\n"
-"- Sanity does NOT regenerate. ('cause pessi machines are disabled duh)\r\n"
-"- Sanity drain rate is tripled (from 0,00025% to 0,00075% per ms)\r\n"
-"- Level 0's exit has now been relocated, and the map has been extended.\r\n"
-"- Savedata gets deleted upon game crash/exit/ALT+F4"
-msgstr ""
 
 #. Key:	5B01E0A64686673A6F12F6A6F25814B9
 #. SourceLocation:	/Game/Widgets/W_MapFinished/W_FinishMap_Alpha.W_FinishMap_Alpha_C:WidgetTree.TextBlock_4.Text
@@ -3053,7 +2776,7 @@ msgstr "Sensibilitatea camerei"
 #: /Game/Widgets/W_Respawn/W_Respawn_LV0.W_Respawn_LV0_C:WidgetTree.TextBlock.Text
 msgctxt "Game,6DBAF3F647996966C7B8E5BDBDDC097C"
 msgid "Respawn"
-msgstr ""
+msgstr "Reînvie"
 
 #. Key:	70777739430B6F2B780BA4BD11FE2205
 #. SourceLocation:	/Game/Widgets/W_PauseMenu/PauseMenuWidget.PauseMenuWidget_C:WidgetTree.title_1.Text
@@ -3094,8 +2817,8 @@ msgstr "Clasic"
 #. SourceLocation:	/Game/Widgets/W_GMSelect/W_GMSelect.W_GMSelect_C:WidgetTree.TextBlock_18.Text
 #: /Game/Widgets/W_GMSelect/W_GMSelect.W_GMSelect_C:WidgetTree.TextBlock_18.Text
 msgctxt "Game,8D9233084B8FE552469A8C819491A4D3"
-msgid "Requires the achievement 'Cringe Alert'"
-msgstr "Îți trebuie realizarea „Alertă Cringe”"
+msgid "Enter Level 4 at least once to unlock this."
+msgstr ""
 
 #. Key:	8EF3511743B8A34842C79EBD1E11349F
 #. SourceLocation:	/Game/Widgets/Settings/W_GeneralSettings.W_GeneralSettings_C:WidgetTree.TextBlock_7.Text
@@ -3115,10 +2838,8 @@ msgstr "Hei, stai așa!"
 #. SourceLocation:	/Game/Widgets/W_MapFinished/W_FinishMap_Alpha.W_FinishMap_Alpha_C:WidgetTree.TextBlock_2.Text
 #: /Game/Widgets/W_MapFinished/W_FinishMap_Alpha.W_FinishMap_Alpha_C:WidgetTree.TextBlock_2.Text
 msgctxt "Game,929408BC45B96F3CC78507BD87C307DF"
-msgid "Back to \r\n"
-"survey page"
-msgstr "Înapoi la\r\n"
-"sondaj"
+msgid "Back to \r\nsurvey page"
+msgstr "Înapoi la\r\nsondaj"
 
 #. Key:	940CA13E452B66BA51291D884AE0A4AF
 #. SourceLocation:	/Game/Widgets/W_Tooltips/W_TT_Screensaver.W_TT_Screensaver_C:WidgetTree.TextBlock_1.Text
@@ -3218,28 +2939,19 @@ msgctxt "Game,D02790D3455C59CF228013A881859793"
 msgid "The Memerooms"
 msgstr "The Memerooms"
 
-#. Key:	D444C89949B606874A163E930A95A35E
-#. SourceLocation:	/Game/Widgets/W_GMSelect/W_GMSelect.W_GMSelect_C:WidgetTree.TextBlock_1.Text
-#: /Game/Widgets/W_GMSelect/W_GMSelect.W_GMSelect_C:WidgetTree.TextBlock_1.Text
-msgctxt "Game,D444C89949B606874A163E930A95A35E"
-msgid "Hardcore Gamemode"
-msgstr ""
-
 #. Key:	D535479940C75A7CDD9589A29B3DDC1F
 #. SourceLocation:	/Game/Widgets/Multiplayer/W_MPMenu.W_MPMenu_C:WidgetTree.TextBlock_1.Text
 #: /Game/Widgets/Multiplayer/W_MPMenu.W_MPMenu_C:WidgetTree.TextBlock_1.Text
 msgctxt "Game,D535479940C75A7CDD9589A29B3DDC1F"
-msgid "Budget\r\n"
-"Multiplayer"
-msgstr "Budget\r\n"
-"Multiplayer"
+msgid "Budget\r\nMultiplayer"
+msgstr "Budget\r\nMultiplayer"
 
 #. Key:	DBAF3F647996966C7B8E5BDBDDC097C
 #. SourceLocation:	/Game/Widgets/W_Respawn/W_Respawn_LV2.W_Respawn_LV2_C:WidgetTree.TextBlock.Text
 #: /Game/Widgets/W_Respawn/W_Respawn_LV2.W_Respawn_LV2_C:WidgetTree.TextBlock.Text
 msgctxt "Game,DBAF3F647996966C7B8E5BDBDDC097C"
 msgid "Respawn"
-msgstr ""
+msgstr "Reînvie"
 
 #. Key:	E24B64224B720DC14EDC46A887F2D5CE
 #. SourceLocation:	/Game/Widgets/Animations/FadeOut.FadeOut_C:WidgetTree.TextBlock.Text
@@ -3266,13 +2978,8 @@ msgstr "Se încarcă..."
 #. SourceLocation:	/Game/Widgets/W_Prohibited/W_LockedMemerooms.W_LockedMemerooms_C:WidgetTree.TextBlock.Text
 #: /Game/Widgets/W_Prohibited/W_LockedMemerooms.W_LockedMemerooms_C:WidgetTree.TextBlock.Text
 msgctxt "Game,F64B0AE84B3F7AE51702F4BD80D1622B"
-msgid "I just caught you in 4K trying to bypass The Memerooms, I don't want to be mean to you but you have to play how it was intended.\r\n"
-"\r\n"
-"Looks like your save says you didn't finish the Classic Gamemode yet. Please come back when you finish the game at least once! (Classic Gamemode)"
-msgstr "Tocmai te-am prins în 4K încercând să treci de Memerooms. Nu vreau să fiu rău cu tine, dar va trebui să te joci cum a fost proiectat acesta.\r\n"
-"\r\n"
-"Se pare că salvarea ta spune că nu ai terminat modul de joc clasic încă. Revino când ai terminat tot jocul măcar o dată!\r\n"
-"(Modul de joc clasic)"
+msgid "I just caught you in 4K trying to bypass The Memerooms, I don't want to be mean to you but you have to play how it was intended.\r\n\r\nLooks like your save says you didn't finish the Classic Gamemode yet. Please come back when you finish the game at least once! (Classic Gamemode)"
+msgstr "Tocmai te-am prins în 4K încercând să treci de Memerooms. Nu vreau să fiu rău cu tine, dar va trebui să te joci cum a fost proiectat acesta.\r\n\r\nSe pare că salvarea ta spune că nu ai terminat modul de joc clasic încă. Revino când ai terminat tot jocul măcar o dată!\r\n(Modul de joc clasic)"
 
 #. Key:	FE1B6E874FA303D513285488670CD5A2
 #. SourceLocation:	/Game/Widgets/W_GMSelect/W_GMSelect.W_GMSelect_C:WidgetTree.TextBlock_7.Text

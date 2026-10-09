@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Game\n"
-"POT-Creation-Date: 2026-10-09 19:08\n"
-"PO-Revision-Date: 2026-10-09 19:08\n"
+"POT-Creation-Date: 2026-10-09 21:53\n"
+"PO-Revision-Date: 2026-10-09 21:53\n"
 "Language-Team: \n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
@@ -26,13 +26,6 @@ msgstr "\"Look\""
 msgctxt ",01B8AF6545F702B056BCB78B8DC51999"
 msgid "Merry Christmas!!!"
 msgstr "Merry Christmas!!!"
-
-#. Key:	01F05D4F4F9CE77E4EFF1788C69EC417
-#. SourceLocation:	/Game/Audio/sfx_memerooms/tiktok_sfx.tiktok_sfx.Subtitles(0).Subtitles.Text
-#: /Game/Audio/sfx_memerooms/tiktok_sfx.tiktok_sfx.Subtitles(0).Subtitles.Text
-msgctxt ",01F05D4F4F9CE77E4EFF1788C69EC417"
-msgid "[gen z sound effect]"
-msgstr "[gen z sound effect]"
 
 #. Key:	02D654DA4768E747A50431BDAB324CDE
 #. SourceLocation:	/Game/Audio/jake_lele.jake_lele.Subtitles(12).Subtitles.Text
@@ -188,13 +181,6 @@ msgctxt ",0EDA056F4EFE3914DBFCF29C3636C17B"
 msgid "Selecting this language will only set the language locale in the game file, but translations will not be applied as they are incomplete."
 msgstr "Selecting this language will only set the language locale in the game file, but translations will not be applied as they are incomplete."
 
-#. Key:	0F7EAB864B5045A9D906D2BFECB33255
-#. SourceLocation:	/Game/Audio/sfx_memerooms/nerd_warning.nerd_warning.Subtitles(0).Subtitles.Text
-#: /Game/Audio/sfx_memerooms/nerd_warning.nerd_warning.Subtitles(0).Subtitles.Text
-msgctxt ",0F7EAB864B5045A9D906D2BFECB33255"
-msgid "[NERD]"
-msgstr "[NERD]"
-
 #. Key:	103FC79D4420074F4D9EB88997EB5674
 #. SourceLocation:	/Game/Widgets/Warnings/W_GraphicsConflict.W_GraphicsConflict_C:WidgetTree.TextBlock.Text
 #: /Game/Widgets/Warnings/W_GraphicsConflict.W_GraphicsConflict_C:WidgetTree.TextBlock.Text
@@ -203,8 +189,8 @@ msgid "Looks like you've disabled Anti-Aliasing and having FidelityFX enabled at
 msgstr "Looks like you've disabled Anti-Aliasing and having FidelityFX enabled at the same time. I don't wanna stress you bud but the quality is gonna look worse so I'd recommend you atleast try to keep Anti-Aliasing on low. Just sayin'"
 
 #. Key:	10B56E324DD535C86DE171AA03A1DD95
-#. SourceLocation:	/Game/Widgets/Warnings/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock.Text
-#: /Game/Widgets/Warnings/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock.Text
+#. SourceLocation:	/Game/Widgets/Animations/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock.Text
+#: /Game/Widgets/Animations/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock.Text
 msgctxt ",10B56E324DD535C86DE171AA03A1DD95"
 msgid "The game is experiencing slow performance. To improve, adjust graphical settings in the Pause Menu."
 msgstr "The game is experiencing slow performance. To improve, adjust graphical settings in the Pause Menu."
@@ -531,20 +517,6 @@ msgctxt ",2DB0BA86444A796C5EDDFE802EDBEE5A"
 msgid "Sessions List"
 msgstr "Sessions List"
 
-#. Key:	2DF6AD924184F85E56A818A776EDD993
-#. SourceLocation:	/Game/Audio/sfx_memerooms/goofy_running.goofy_running.Subtitles(0).Subtitles.Text
-#: /Game/Audio/sfx_memerooms/goofy_running.goofy_running.Subtitles(0).Subtitles.Text
-msgctxt ",2DF6AD924184F85E56A818A776EDD993"
-msgid "[GOOFY]"
-msgstr "[GOOFY]"
-
-#. Key:	2DFFE9E44E6526F84BB1759BF85A3A33
-#. SourceLocation:	/Game/Audio/sfx_memerooms/baby2_2.baby2_2.Subtitles(0).Subtitles.Text
-#: /Game/Audio/sfx_memerooms/baby2_2.baby2_2.Subtitles(0).Subtitles.Text
-msgctxt ",2DFFE9E44E6526F84BB1759BF85A3A33"
-msgid "[ueehehehah]"
-msgstr "[ueehehehah]"
-
 #. Key:	2F1C9FEB4EB96B6D38E6C8B3077A4C29
 #. SourceLocation:	/Game/Audio/jake_lele2.jake_lele2.Subtitles(12).Subtitles.Text
 #: /Game/Audio/jake_lele2.jake_lele2.Subtitles(12).Subtitles.Text
@@ -579,13 +551,6 @@ msgstr "Nightly builds have been technically disabled, new update coming soon, p
 msgctxt ",347E1C8F4664E08C76956695B4D0D7E2"
 msgid "Join session"
 msgstr "Join session"
-
-#. Key:	34BEDEA04B7F4CC065CBEB8D1776D227
-#. SourceLocation:	/Game/Audio/sfx_memerooms/taco_bell.taco_bell.Subtitles(0).Subtitles.Text
-#: /Game/Audio/sfx_memerooms/taco_bell.taco_bell.Subtitles(0).Subtitles.Text
-msgctxt ",34BEDEA04B7F4CC065CBEB8D1776D227"
-msgid "[HORNY BONK]"
-msgstr "[HORNY BONK]"
 
 #. Key:	34CF8B3946D39E4BF4D31283A09C40FC
 #. SourceLocation:	/Game/Widgets/Warnings/W_PowerWarn.W_PowerWarn_C:ExecuteUbergraph_W_PowerWarn [Script Bytecode]
@@ -622,13 +587,6 @@ msgctxt ",36335B3C4AFCC0CB276416831F247574"
 msgid "one"
 msgstr "one"
 
-#. Key:	363BB13E4D567F65E94C7AAD1B275C1B
-#. SourceLocation:	/Game/Audio/sfx_memerooms/baby2.baby2.Subtitles(0).Subtitles.Text
-#: /Game/Audio/sfx_memerooms/baby2.baby2.Subtitles(0).Subtitles.Text
-msgctxt ",363BB13E4D567F65E94C7AAD1B275C1B"
-msgid "[ueehehehah]"
-msgstr "[ueehehehah]"
-
 #. Key:	364430A246D29C64E1C04396E88C340C
 #. SourceLocation:	/Game/Widgets/W_Errors/W_ConnDrivErr.W_ConnDrivErr_C:WidgetTree.TextBlock_63.Text
 #: /Game/Widgets/W_Errors/W_ConnDrivErr.W_ConnDrivErr_C:WidgetTree.TextBlock_63.Text
@@ -663,13 +621,6 @@ msgstr "\"Also...\""
 msgctxt ",3B5A90074A15DE71471B8993DF217DBC"
 msgid "I don't have a good feeling, perhaps I should head the other way."
 msgstr "I don't have a good feeling, perhaps I should head the other way."
-
-#. Key:	3BC8DEE24957EEFED4C93CB318F7C1EF
-#. SourceLocation:	/Game/Audio/sfx_memerooms/burenyuu_2.burenyuu_2.Subtitles(0).Subtitles.Text
-#: /Game/Audio/sfx_memerooms/burenyuu_2.burenyuu_2.Subtitles(0).Subtitles.Text
-msgctxt ",3BC8DEE24957EEFED4C93CB318F7C1EF"
-msgid "burenyuuu~"
-msgstr "burenyuuu~"
 
 #. Key:	3CD57F374BF1D50078E5C8BDA6A31D21
 #. SourceLocation:	/Game/Widgets/W_Graphic_Menu/W_GraphicMenu.W_GraphicMenu_C:WidgetTree.TextBlock_0.Text
@@ -957,13 +908,6 @@ msgstr "Re-locking achievements..."
 msgctxt ",58D677054E565B5130AC62B63822753E"
 msgid "Press any key?"
 msgstr "Press any key?"
-
-#. Key:	59310BFA48FF9BA967D633887B690C43
-#. SourceLocation:	/Game/Audio/sfx_memerooms/ive_just_saved_myself__150_bucks.ive_just_saved_myself__150_bucks.Subtitles(0).Subtitles.Text
-#: /Game/Audio/sfx_memerooms/ive_just_saved_myself__150_bucks.ive_just_saved_myself__150_bucks.Subtitles(0).Subtitles.Text
-msgctxt ",59310BFA48FF9BA967D633887B690C43"
-msgid "Wow! I've just saved myself, 150 bucks."
-msgstr "Wow! I've just saved myself, 150 bucks."
 
 #. Key:	59789EC64D703F1AD2F041B85FE193B4
 #. SourceLocation:	/Game/Audio/jake_lele.jake_lele.Subtitles(16).Subtitles.Text
@@ -1328,13 +1272,6 @@ msgstr "Whose idea was it to cut off the power?"
 msgctxt ",81A2334B45FA460FDF54339C876318D9"
 msgid "It's like our tech has developed a mind of its own somehow."
 msgstr "It's like our tech has developed a mind of its own somehow."
-
-#. Key:	834A1AB94A1688C081FDD8A3D7C2BFC0
-#. SourceLocation:	/Game/Audio/sfx_memerooms/burenyuu.burenyuu.Subtitles(0).Subtitles.Text
-#: /Game/Audio/sfx_memerooms/burenyuu.burenyuu.Subtitles(0).Subtitles.Text
-msgctxt ",834A1AB94A1688C081FDD8A3D7C2BFC0"
-msgid "burenyuuu~"
-msgstr "burenyuuu~"
 
 #. Key:	8474C42A48D65BED8892FEBD6571C3A6
 #. SourceLocation:	/Game/Audio/jake_lele2.jake_lele2.Subtitles(30).Subtitles.Text
@@ -1714,13 +1651,6 @@ msgctxt ",AA07791B47002C74719FFC9B5666A5E3"
 msgid "Output Color Gamut"
 msgstr "Output Color Gamut"
 
-#. Key:	AB4E7EF7400D3173DBB1A5B6FAD4BDCB
-#. SourceLocation:	/Game/Audio/sfx_memerooms/vine_boom.vine_boom.Subtitles(0).Subtitles.Text
-#: /Game/Audio/sfx_memerooms/vine_boom.vine_boom.Subtitles(0).Subtitles.Text
-msgctxt ",AB4E7EF7400D3173DBB1A5B6FAD4BDCB"
-msgid "[VINE BOOM]"
-msgstr "[VINE BOOM]"
-
 #. Key:	ACE7A09943384A3ED43C87B14F331C7C
 #. SourceLocation:	/Game/Widgets/W_CornerReminder/W_CornerReminder.W_CornerReminder_C:WidgetTree.TextBlock_1.Text
 #: /Game/Widgets/W_CornerReminder/W_CornerReminder.W_CornerReminder_C:WidgetTree.TextBlock_1.Text
@@ -1832,13 +1762,6 @@ msgstr "Browse through the camera feed, see if there is anything peculiar."
 msgctxt ",B8DBA6F942BE216F4D3214893BEABABA"
 msgid "This game might not meet your expectations."
 msgstr "This game might not meet your expectations."
-
-#. Key:	B991F85845940C1E1F4A5EBEA8A6910C
-#. SourceLocation:	/Game/Audio/sfx_memerooms/baby1.baby1.Subtitles(0).Subtitles.Text
-#: /Game/Audio/sfx_memerooms/baby1.baby1.Subtitles(0).Subtitles.Text
-msgctxt ",B991F85845940C1E1F4A5EBEA8A6910C"
-msgid "[ueehehehah]"
-msgstr "[ueehehehah]"
 
 #. Key:	BA255D7F4A9D01961D5BDAB4916E56EF
 #. SourceLocation:	/Game/Widgets/W_Screeensaver/W_Screensaver_InitDIal.W_Screensaver_InitDIal_C:WidgetTree.TextBlock_1.Text
@@ -2302,13 +2225,6 @@ msgctxt ",E16A0B814454E3D6B0014DA5BC6C73A8"
 msgid "FUCK YOU FUCK YOU FUCK YOU FUCK YOU FUCK YOU FUCK YOU FUCK YOU FUCK YOU FUCK YOU FUCK YOU "
 msgstr "FUCK YOU FUCK YOU FUCK YOU FUCK YOU FUCK YOU FUCK YOU FUCK YOU FUCK YOU FUCK YOU FUCK YOU "
 
-#. Key:	E189071E42CF7530EA2A8AA1ADD1605D
-#. SourceLocation:	/Game/Audio/sfx_memerooms/bluetooth_connect.bluetooth_connect.Subtitles(0).Subtitles.Text
-#: /Game/Audio/sfx_memerooms/bluetooth_connect.bluetooth_connect.Subtitles(0).Subtitles.Text
-msgctxt ",E189071E42CF7530EA2A8AA1ADD1605D"
-msgid "THE BLUETOOTH DEVICE, IS CONNECTED UHHHH SUCCESSFULLY"
-msgstr "THE BLUETOOTH DEVICE, IS CONNECTED UHHHH SUCCESSFULLY"
-
 #. Key:	E18F82134B6517874DE03CA632AFBC9C
 #. SourceLocation:	/Game/Widgets/Multiplayer/W_MPMenu.W_MPMenu_C:ExecuteUbergraph_W_MPMenu [Script Bytecode]
 #: /Game/Widgets/Multiplayer/W_MPMenu.W_MPMenu_C:ExecuteUbergraph_W_MPMenu [Script Bytecode]
@@ -2387,8 +2303,8 @@ msgid "PS4"
 msgstr "PS4"
 
 #. Key:	EC1EEF89400FD7017791B9A576C40873
-#. SourceLocation:	/Game/Widgets/Warnings/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock_7.Text
-#: /Game/Widgets/Warnings/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock_7.Text
+#. SourceLocation:	/Game/Widgets/Animations/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock_7.Text
+#: /Game/Widgets/Animations/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock_7.Text
 msgctxt ",EC1EEF89400FD7017791B9A576C40873"
 msgid "Slow Performance"
 msgstr "Slow Performance"
@@ -2490,13 +2406,6 @@ msgstr "I'd rather wait"
 msgctxt ",F3BF734D4A5C25E80BE9589F30998527"
 msgid "Interactions"
 msgstr "Interactions"
-
-#. Key:	F3C52DD1410DC09502BF139B7068C828
-#. SourceLocation:	/Game/Audio/sfx_memerooms/hell_naaaah.hell_naaaah.Subtitles(0).Subtitles.Text
-#: /Game/Audio/sfx_memerooms/hell_naaaah.hell_naaaah.Subtitles(0).Subtitles.Text
-msgctxt ",F3C52DD1410DC09502BF139B7068C828"
-msgid "what da hell, OHHH MA GAAD NOO WAYYYYYYYYYYYY"
-msgstr "what da hell, OHHH MA GAAD NOO WAYYYYYYYYYYYY"
 
 #. Key:	F4267D64462BBD64FC6F4EAD3784F0A7
 #. SourceLocation:	/Game/Audio/jake_lele2.jake_lele2.Subtitles(11).Subtitles.Text
@@ -2695,8 +2604,8 @@ msgid "Quit to main menu"
 msgstr "Quit to main menu"
 
 #. Key:	155F7E6C488B71EF11190F9715134915
-#. SourceLocation:	/Game/Widgets/Animations/FadeIn.FadeIn_C:WidgetTree.TextBlock_0.Text
-#: /Game/Widgets/Animations/FadeIn.FadeIn_C:WidgetTree.TextBlock_0.Text
+#. SourceLocation:	/Game/Widgets/Animations/FadeOut.FadeOut_C:WidgetTree.TextBlock_0.Text
+#: /Game/Widgets/Animations/FadeOut.FadeOut_C:WidgetTree.TextBlock_0.Text
 msgctxt "Game,155F7E6C488B71EF11190F9715134915"
 msgid "Loading..."
 msgstr "Loading..."
@@ -2827,13 +2736,6 @@ msgctxt "Game,559AA7AF406F7FF3D67C5497BE1AEC61"
 msgid "Play Gamemode"
 msgstr "Play Gamemode"
 
-#. Key:	58AAFA3D462BA2DE0D8000A631328B81
-#. SourceLocation:	/Game/Widgets/W_GMSelect/W_GMSelect.W_GMSelect_C:WidgetTree.TextBlock_20.Text
-#: /Game/Widgets/W_GMSelect/W_GMSelect.W_GMSelect_C:WidgetTree.TextBlock_20.Text
-msgctxt "Game,58AAFA3D462BA2DE0D8000A631328B81"
-msgid "Feeling fancy, innit? Welcome to Hardcore Mode. Quit? Rage? Alt+F4? Say goodbye to your save file, mate. No take-backs, no second chances—just you, the game, and the sweet sound of regret if you mess up. Buckle up since I will NOT make it easy for you.\r\n\r\nModifiers: (luckily I wrote this out)\r\n- Sanity does NOT regenerate. ('cause pessi machines are disabled duh)\r\n- Sanity drain rate is tripled (from 0,00025% to 0,00075% per ms)\r\n- Level 0's exit has now been relocated, and the map has been extended.\r\n- Savedata gets deleted upon game crash/exit/ALT+F4"
-msgstr "Feeling fancy, innit? Welcome to Hardcore Mode. Quit? Rage? Alt+F4? Say goodbye to your save file, mate. No take-backs, no second chances—just you, the game, and the sweet sound of regret if you mess up. Buckle up since I will NOT make it easy for you.\r\n\r\nModifiers: (luckily I wrote this out)\r\n- Sanity does NOT regenerate. ('cause pessi machines are disabled duh)\r\n- Sanity drain rate is tripled (from 0,00025% to 0,00075% per ms)\r\n- Level 0's exit has now been relocated, and the map has been extended.\r\n- Savedata gets deleted upon game crash/exit/ALT+F4"
-
 #. Key:	5B01E0A64686673A6F12F6A6F25814B9
 #. SourceLocation:	/Game/Widgets/W_MapFinished/W_FinishMap_Alpha.W_FinishMap_Alpha_C:WidgetTree.TextBlock_4.Text
 #: /Game/Widgets/W_MapFinished/W_FinishMap_Alpha.W_FinishMap_Alpha_C:WidgetTree.TextBlock_4.Text
@@ -2915,8 +2817,8 @@ msgstr "Classic Gamemode"
 #. SourceLocation:	/Game/Widgets/W_GMSelect/W_GMSelect.W_GMSelect_C:WidgetTree.TextBlock_18.Text
 #: /Game/Widgets/W_GMSelect/W_GMSelect.W_GMSelect_C:WidgetTree.TextBlock_18.Text
 msgctxt "Game,8D9233084B8FE552469A8C819491A4D3"
-msgid "Requires the achievement 'Cringe Alert'"
-msgstr "Requires the achievement 'Cringe Alert'"
+msgid "Enter Level 4 at least once to unlock this."
+msgstr "Enter Level 4 at least once to unlock this."
 
 #. Key:	8EF3511743B8A34842C79EBD1E11349F
 #. SourceLocation:	/Game/Widgets/Settings/W_GeneralSettings.W_GeneralSettings_C:WidgetTree.TextBlock_7.Text
@@ -3036,13 +2938,6 @@ msgstr "Stamina regenerates once you stop walking."
 msgctxt "Game,D02790D3455C59CF228013A881859793"
 msgid "The Memerooms"
 msgstr "The Memerooms"
-
-#. Key:	D444C89949B606874A163E930A95A35E
-#. SourceLocation:	/Game/Widgets/W_GMSelect/W_GMSelect.W_GMSelect_C:WidgetTree.TextBlock_1.Text
-#: /Game/Widgets/W_GMSelect/W_GMSelect.W_GMSelect_C:WidgetTree.TextBlock_1.Text
-msgctxt "Game,D444C89949B606874A163E930A95A35E"
-msgid "Hardcore Gamemode"
-msgstr "Hardcore Gamemode"
 
 #. Key:	D535479940C75A7CDD9589A29B3DDC1F
 #. SourceLocation:	/Game/Widgets/Multiplayer/W_MPMenu.W_MPMenu_C:WidgetTree.TextBlock_1.Text

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: budget-backrooms\n"
 "POT-Creation-Date: 2026-10-09 19:08\n"
-"PO-Revision-Date: 2026-10-09 20:39\n"
+"PO-Revision-Date: 2026-10-09 21:52\n"
 "Language-Team: Romanian\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
@@ -1122,7 +1122,7 @@ msgstr "Nah, altă dată"
 #: /Game/Widgets/W_Banner.W_Banner_C:ExecuteUbergraph_W_Banner [Script Bytecode]
 msgctxt ",66CA23354EB16F549F90CCA7B5468772"
 msgid "Restart pending to apply some changed settings;"
-msgstr ""
+msgstr "Se așteaptă repornirea jocului pentru a aplica setările schimbate;"
 
 #. Key:	687BDE734B3294204F6EB994F858501B
 #. SourceLocation:	/Game/Widgets/Warnings/W_NightlyWarn.W_NightlyWarn_C:ExecuteUbergraph_W_NightlyWarn [Script Bytecode]
@@ -1164,7 +1164,7 @@ msgstr "Sănătate"
 #: /Game/Widgets/W_Banner.W_Banner_C:WidgetTree.TextBlock_83.Text
 msgctxt ",6DADD71043D15F4EE6D321B8E20EBF96"
 msgid "Restart here"
-msgstr ""
+msgstr "Repornește aici"
 
 #. Key:	6DBAF3F647996966C7B8E5BDBDDC097C
 #. SourceLocation:	/Game/Widgets/W_Respawn/W_Respawn.W_Respawn_C:WidgetTree.TextBlock.Text
@@ -1208,7 +1208,7 @@ msgstr "Dispozitivele sunt în curs de verificare... OK!\r\n"
 #: /Game/Widgets/W_RebindKeys/W_RebindKeys.W_RebindKeys_C:WidgetTree.W_RebindEntry_2.ActionLabel
 msgctxt ",74E49D71451A5748AABAC985FDCC1476"
 msgid "Flashlight"
-msgstr ""
+msgstr "Lanternă"
 
 #. Key:	7684BEE242A019D532DECEB57328FC3F
 #. SourceLocation:	/Game/Audio/dave_2.dave_2.Subtitles(1).Subtitles.Text
@@ -1267,7 +1267,7 @@ msgstr "Apasă F pentru a-ți porni lanterna"
 #: /Game/Widgets/W_RebindKeys/W_RebindKeys.W_RebindKeys_C:WidgetTree.W_RebindEntry.ActionLabel
 msgctxt ",79B9E61145CA1C5337F8199089CB2728"
 msgid "Interact"
-msgstr ""
+msgstr "Interacționează"
 
 #. Key:	79CC8E664296C5DF88766BA5C7CF48C0
 #. SourceLocation:	/Game/Widgets/W_Graphic_Menu/W_GraphicMenu.W_GraphicMenu_C:WidgetTree.res_text.Text
@@ -1337,7 +1337,7 @@ msgstr "\"Marchează ce e al vostru.\""
 #: /Game/Widgets/Settings/W_GeneralSettings.W_GeneralSettings_C:WidgetTree.TextBlock_10.Text
 msgctxt ",7F809B8545A418DD1740D88828585408"
 msgid "Disable level-based Main Menu background"
-msgstr ""
+msgstr "Dezactivează fundalul dinamic al meniului principal"
 
 #. Key:	7F82BC2843D806C1CC2135BEAC3100CD
 #. SourceLocation:	/Game/Audio/jake_lele2.jake_lele2.Subtitles(26).Subtitles.Text
@@ -1358,7 +1358,7 @@ msgstr "De ce fac asta?"
 #: /Game/Widgets/W_RebindKeys/W_RebindKeys.W_RebindKeys_C:WidgetTree.W_RebindEntry_5.ActionLabel
 msgctxt ",812BB0274F32C6D9DDE4639EE480CE6A"
 msgid "Sprint"
-msgstr ""
+msgstr "Alergare"
 
 #. Key:	815EAC784AB5B266046AED8E4F8933E6
 #. SourceLocation:	/Game/Widgets/W_CrosshairHint.W_CrosshairHint_C:Get_keycardshit_Text_0 [Script Bytecode]
@@ -1453,7 +1453,7 @@ msgstr "PENTRU TESTERI\r\n"
 #: /Game/Widgets/W_MainMenu/W_MainMenu.W_MainMenu_C:OutdatedBuild [Script Bytecode]
 msgctxt ",87A4B6F74F63C260834A2A8AC3EF1058"
 msgid "running on commit [{0}]"
-msgstr ""
+msgstr "se rulează pe commit-ul [{0}]"
 
 #. Key:	88484C8D444A7F816590F6AB2E582FA8
 #. SourceLocation:	/Game/Widgets/W_Tooltips/W_TT_External.W_TT_External_C:WidgetTree.TextBlock_1.Text
@@ -1705,7 +1705,7 @@ msgstr "\"Doar spune-mi și--\""
 #: /Game/Widgets/W_TelemetryDialogue.W_TelemetryDialogue_C:WidgetTree.TextBlock_1.Text
 msgctxt ",A204ECEA4CE16E43C70A4C93E825E4CE"
 msgid "Yes, I would like to contribute."
-msgstr ""
+msgstr "Da, aș dori să contribui."
 
 #. Key:	A23891DA48D9221824463AB5473A7708
 #. SourceLocation:	/Game/Audio/dave_2.dave_2.Subtitles(16).Subtitles.Text
@@ -2155,7 +2155,7 @@ msgstr "Folosing rețeaua rafinată a Budget Backrooms, acum te poți alătura s
 #: /Game/Widgets/Settings/W_GeneralSettings.W_GeneralSettings_C:WidgetTree.TextBlock_9.Text
 msgctxt ",C8FDFB4E47929EB174675D8F9623C62E"
 msgid "Heatmap Telemetry Opt-in"
-msgstr ""
+msgstr "Acord asupra trimiterii de date telemetrice"
 
 #. Key:	C98AE9394ABD2A03FCCFCBBCDFE85292
 #. SourceLocation:	/Game/Widgets/W_RebindKeys/W_RebindEntry.W_RebindEntry_C:WidgetTree.label_text.Text
@@ -2192,7 +2192,9 @@ msgctxt ",CD68D39E4585B1B005DD54A2BF73B23E"
 msgid "Due to internal changes starting 0.0.18 Alpha and later, the older formats used in 0.0.17 and prior are no longer supported to further ease development of the game and compensate for past mistakes made by the developer while making this game.\r\n"
 "\r\n"
 "Your existing savedata has been automatically migrated to the new format. Not everything might have been moved over due to internal restructuring. Achievements are not migrated. Should you have issues in game, please try proceeding with a save reset under Settings -> General Settings"
-msgstr ""
+msgstr "Din cauza schimbărilor începând cu 0.0.18 Alpha și după, formatele vechi folosite în 0.0.17 și mai devreme nu mai sunt suportate pentru a facilita dezvoltarea jocului și pentru a compensa greșelilor făcute de dezvoltator cât jocul ăsta a fost sub dezvoltare.\r\n"
+"\r\n"
+"Datele salvate existente au fost migrate la formatul nou. Nu totul a fost transferat din cauza restructurărilor interne. Realizările nu au fost migrate. Să fie cazul să ai probleme în joc, te rog să încerci o resetare a jocului din Setări -> Setări Generale"
 
 #. Key:	CDE46AA4452AAD65BCC94785448BD1CA
 #. SourceLocation:	/Game/Widgets/Multiplayer/W_UnstableMP.W_UnstableMP_C:WidgetTree.TextBlock.Text
@@ -2670,7 +2672,7 @@ msgstr "Alătură-te sesiunii"
 #: /Game/Widgets/W_TelemetryDialogue.W_TelemetryDialogue_C:WidgetTree.TextBlock_3.Text
 msgctxt ",F758D4064FBFF4E24AE5BA90DF82DCEB"
 msgid "You can opt-out / opt-in at any time in the Settings."
-msgstr ""
+msgstr "Poți revoca / reactiva opțiunea din setări."
 
 #. Key:	F7AA6C614B57DB81F1DDA39BE40687A9
 #. SourceLocation:	/Game/Widgets/Multiplayer/W_MPInit.W_MPInit_C:ExecuteUbergraph_W_MPInit [Script Bytecode]
@@ -2754,7 +2756,7 @@ msgstr "Setări pentru grafici salvate!"
 #: /Game/Widgets/W_SaveMigration/W_SaveMigrationNew.W_SaveMigrationNew_C:WidgetTree.TextBlock_132.Text
 msgctxt ",FF6DBE79492B600645EB2EBDE736A6DF"
 msgid "Savedata Migration"
-msgstr ""
+msgstr "Migrare de date"
 
 #. Key:	FF8568A14666BA939243EBBE23CBE269
 #. SourceLocation:	/Game/Widgets/W_DelDiag/W_DelAnim.W_DelAnim_C:WidgetTree.TextBlock_0.Text
@@ -3061,7 +3063,7 @@ msgstr "Sensibilitatea camerei"
 #: /Game/Widgets/W_Respawn/W_Respawn_LV0.W_Respawn_LV0_C:WidgetTree.TextBlock.Text
 msgctxt "Game,6DBAF3F647996966C7B8E5BDBDDC097C"
 msgid "Respawn"
-msgstr ""
+msgstr "Reînvie"
 
 #. Key:	70777739430B6F2B780BA4BD11FE2205
 #. SourceLocation:	/Game/Widgets/W_PauseMenu/PauseMenuWidget.PauseMenuWidget_C:WidgetTree.title_1.Text
@@ -3247,7 +3249,7 @@ msgstr "Budget\r\n"
 #: /Game/Widgets/W_Respawn/W_Respawn_LV2.W_Respawn_LV2_C:WidgetTree.TextBlock.Text
 msgctxt "Game,DBAF3F647996966C7B8E5BDBDDC097C"
 msgid "Respawn"
-msgstr ""
+msgstr "Reînvie"
 
 #. Key:	E24B64224B720DC14EDC46A887F2D5CE
 #. SourceLocation:	/Game/Widgets/Animations/FadeOut.FadeOut_C:WidgetTree.TextBlock.Text

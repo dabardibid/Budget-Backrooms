@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: budget-backrooms\n"
 "POT-Creation-Date: 2026-10-09 19:08\n"
-"PO-Revision-Date: 2026-10-09 19:34\n"
+"PO-Revision-Date: 2026-10-09 20:39\n"
 "Language-Team: Romanian\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
@@ -223,7 +223,7 @@ msgstr "Jocul are o performanță slabă. Pentru a o îmbunătăți, ajustează 
 #: /Game/Widgets/Settings/W_GeneralSettings.W_GeneralSettings_C:WidgetTree.TextBlock_1.Text
 msgctxt ",1116724D44253BA23F575586773C02A3"
 msgid "Ignore integrated GPU warning at startup."
-msgstr ""
+msgstr "Ignoră avertismentul despre placa video la pornirea jocului."
 
 #. Key:	11725C93458C388566C2158F453178A4
 #. SourceLocation:	/Game/Widgets/W_LoadingScreen/W_Memerooms_Loading.W_Memerooms_Loading_C:WidgetTree.small_text.Text
@@ -369,7 +369,7 @@ msgstr "da, jocul chiar este pus pe pauză"
 #: /Game/Widgets/W_SaveMigration/W_SaveMigrationNew.W_SaveMigrationNew_C:WidgetTree.TextBlock_63.Text
 msgctxt ",1FE59D4349C2427AF47827928F391E7A"
 msgid "Continue"
-msgstr ""
+msgstr "Continuă"
 
 #. Key:	20BD3B9A402D94F89902CCBE479F5544
 #. SourceLocation:	/Game/Widgets/W_LevelSelector/W_LevelSelector.W_LevelSelector_C:WidgetTree.TextBlock_3.Text
@@ -412,7 +412,7 @@ msgstr "Setări audio"
 #: /Game/Widgets/W_TelemetryDialogue.W_TelemetryDialogue_C:WidgetTree.TextBlock_132.Text
 msgctxt ",2264D1C64B491B76F5C815AA5B6CBA21"
 msgid "Would you like to contribute?"
-msgstr ""
+msgstr "Vrei să contribui?"
 
 #. Key:	24783675495A29482773CA8614B460EA
 #. SourceLocation:	/Game/Widgets/Settings/W_GeneralSettings.W_GeneralSettings_C:WidgetTree.TextBlock_3.Text
@@ -767,7 +767,15 @@ msgid "Budget Backrooms is now able to collect anonymized telemetry data of your
 "A new session token is generated when this option is enabled and at game startup.\r\n"
 "\r\n"
 "For any concerns or questions, contact me at dabardev@dabar.dev or dabardibid@proton.me"
-msgstr ""
+msgstr "Budget Backrooms este acum capabil de a colecta telemetrie anonimizată în legătura cu poziția ta în joc în nivelele care le explorezi. Datele sunt folosite pentru a genera o harta cu cele mai frecventate locuri și căi pe respectiva hartă.\r\n"
+"\r\n"
+"Ce date sunt trimise:\r\n"
+"- SteamID-ul tău este folosit pentru a genera un token de sesiune. SteamID-ul tau NU este stocat nicăieri. Token-ul de sesiune nu poate fi identificat înapoi spre tine deci nu poți fi identificat din pozițiile trimise.\r\n"
+"- Datele adunate în nivel sunt trimise o dată la 60s.\r\n"
+"\r\n"
+"Un token de sesiune este generat de fiecare dată când opțiunea asta este activă și la pornirea jocului.\r\n"
+"\r\n"
+"Pentru nelămuriri, contactează-mă la dabardev@dabar.dev sau dabardibid@proton.me"
 
 #. Key:	4162F7AF43EB38C10CDA7F95FF187490
 #. SourceLocation:	/Game/Audio/dave_2.dave_2.Subtitles(9).Subtitles.Text
@@ -872,7 +880,7 @@ msgstr "A cui a fost ideea de a tăia electricitatea?!"
 #: /Game/Widgets/W_TelemetryDialogue.W_TelemetryDialogue_C:WidgetTree.TextBlock_2.Text
 msgctxt ",4D0891E547E63B9C5ED4878B8DCFBB7F"
 msgid "Close"
-msgstr ""
+msgstr "Închide"
 
 #. Key:	4D718B7349E824069285A79540459CD6
 #. SourceLocation:	/Game/Audio/jake_lele.jake_lele.Subtitles(0).Subtitles.Text
@@ -970,7 +978,7 @@ msgstr "Lory Games - Pentru integrarea Memerooms în Lory's Modpack [github.com/
 #: /Game/Widgets/W_Restarting.W_Restarting_C:WidgetTree.TextBlock_0.Text
 msgctxt ",574F69D44E9FC786CD40A29F92F48422"
 msgid "Restarting executable..."
-msgstr ""
+msgstr "Se repornește executabilul..."
 
 #. Key:	578DE48D4D1E84691D32E5A1032CD6EF
 #. SourceLocation:	/Game/Widgets/W_DelDiag/W_DelAnim.W_DelAnim_C:ExecuteUbergraph_W_DelAnim [Script Bytecode]

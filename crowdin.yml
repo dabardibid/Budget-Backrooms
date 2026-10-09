@@ -1,0 +1,22 @@
+# Crowdin configuration for Budget Backrooms.
+# Source text is the English PO exported by UE4's Localization Dashboard
+# (target "Game"); translations are written back to the same per-culture folders.
+#
+# Credentials are read from environment variables so no secrets live in the repo:
+#   CROWDIN_PROJECT_ID, CROWDIN_PERSONAL_TOKEN
+# (Not needed when syncing through the Crowdin GitHub integration.)
+project_id_env: CROWDIN_PROJECT_ID
+api_token_env: CROWDIN_PERSONAL_TOKEN
+base_path: "."
+
+files:
+  - source: /Content/Localization/Game/en/Game.po
+    translation: /Content/Localization/Game/%two_letters_code%/Game.po
+
+    # UE culture folders are "de", "ro", "ru", "it" but "ja-JP", "pl-PL", "tr-TR".
+    # %two_letters_code% gives de/ro/ru/it/ja/pl/tr, so map the three that need a region.
+    languages_mapping:
+      two_letters_code:
+        ja: ja-JP
+        pl: pl-PL
+        tr: tr-TR

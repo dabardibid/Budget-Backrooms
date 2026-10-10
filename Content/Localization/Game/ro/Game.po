@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: budget-backrooms\n"
 "POT-Creation-Date: 2026-10-10 01:00\n"
-"PO-Revision-Date: 2026-10-10 09:07\n"
+"PO-Revision-Date: 2026-10-10 17:41\n"
 "Language-Team: Romanian\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
@@ -51,7 +51,7 @@ msgstr "Se încarcă...?"
 #: /Game/Widgets/Enum_InputDevice.Enum_InputDevice.DisplayNameMap(2 - Value).DisplayNameMap
 msgctxt ",043CF175484A53E5E11AA4AD58345EE8"
 msgid "Xbox One"
-msgstr ""
+msgstr "Xbox One"
 
 #. Key:	0457A0024D4DBC14FC9E18A7A61819CC
 #. SourceLocation:	/Game/Widgets/Warnings/W_NightlyWarn.W_NightlyWarn_C:WidgetTree.warn.Text
@@ -1127,8 +1127,7 @@ msgid "You are about to reset your game. This includes unlocked levels, settings
 "\r\n"
 "\r\n"
 "Are you sure?"
-msgstr "Ești pe cale de a-ți reseta jocul. Inclusiv nivelele deblocate, setări și câteva stagii salvate în nivele. Realizările de pe Steam nu vor fi blocate din nou.\n"
-"\r\n"
+msgstr "Ești pe cale de a-ți reseta jocul. Inclusiv nivelele deblocate, setări și câteva stagii salvate în nivele. Realizările de pe Steam nu vor fi blocate din nou.\r\n"
 "\r\n"
 "\r\n"
 "Ești sigur?"
@@ -1723,7 +1722,7 @@ msgstr "Ruleazi în modul offline, poți doar găzdui sau joca sesiuni locale pe
 #: /Game/Widgets/Enum_InputDevice.Enum_InputDevice.DisplayNameMap(3 - Value).DisplayNameMap
 msgctxt ",B0AF2D6645AEAC0EAD5285893E190D69"
 msgid "Xbox Series"
-msgstr ""
+msgstr "Xbox Series"
 
 #. Key:	B1D300AB40019134BF7E4DBA937A9F59
 #. SourceLocation:	/Game/Widgets/W_CrosshairHint.W_CrosshairHint_C:Get_keycardshit_Text_0 [Script Bytecode]
@@ -2060,7 +2059,7 @@ msgstr "Revino"
 #: /Game/Widgets/W_RebindKeys/W_RebindKeys.W_RebindKeys_C:WidgetTree.W_RebindEntry_4.ActionLabel
 msgctxt ",CA49F6324931543B25ADD5BF5F1B6039"
 msgid "Look Behind"
-msgstr ""
+msgstr "Uită-te în spate"
 
 #. Key:	CB89494C411C53F299689D86AAE86C31
 #. SourceLocation:	/Game/Widgets/W_Errors/W_ClientBadver.W_ClientBadVer_C:WidgetTree.TextBlock.Text
@@ -2177,7 +2176,7 @@ msgstr "O sa ajungem înapoi sa sortăm situația cu calculatoarele, pentru că 
 #: /Game/Widgets/W_TelemetryDialogue.W_TelemetryDialogue_C:WidgetTree.TextBlock_63.Text
 msgctxt ",D49D2A30423FB0B6B955BB9E8A48D4D5"
 msgid "No, thanks."
-msgstr ""
+msgstr "Nu, mulțumesc."
 
 #. Key:	D652CB3446A3CF36EC224999F8BAA722
 #. SourceLocation:	/Game/Widgets/cmOS/W_CamBoot.W_CamBoot_C:ExecuteUbergraph_W_CamBoot [Script Bytecode]
@@ -2330,7 +2329,7 @@ msgstr "Mișcare"
 #: /Game/Widgets/W_RebindKeys/W_RebindKeys.W_RebindKeys_C:WidgetTree.W_RebindEntry_3.ActionLabel
 msgctxt ",E5A2E135440927DD63E86A901C23C014"
 msgid "Zoom"
-msgstr ""
+msgstr "Mărește"
 
 #. Key:	E6601E154D8C507FD08F22B0ED7E3BD1
 #. SourceLocation:	/Game/Widgets/Multiplayer/W_MPInit.W_MPInit_C:WidgetTree.status.Text
@@ -2386,7 +2385,7 @@ msgstr "la naiba"
 #: /Game/Widgets/Enum_InputDevice.Enum_InputDevice.DisplayNameMap(0 - Value).DisplayNameMap
 msgctxt ",EC0AEB154E74817C3DC8F2A416DCE931"
 msgid "PS4"
-msgstr ""
+msgstr "PS4"
 
 #. Key:	EC1EEF89400FD7017791B9A576C40873
 #. SourceLocation:	/Game/Widgets/Animations/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock_7.Text
@@ -2479,7 +2478,7 @@ msgstr "Codul sursă al acestui joc este public și poți contribui chiar acum!"
 #: /Game/Widgets/Enum_InputDevice.Enum_InputDevice.DisplayNameMap(1 - Value).DisplayNameMap
 msgctxt ",F2CB3F594C37C8424B58DA90BCDF95EC"
 msgid "PS5"
-msgstr ""
+msgstr "PS5"
 
 #. Key:	F3B36254424B8D6715CF0BBCC3F237DB
 #. SourceLocation:	/Game/Widgets/Warnings/W_ExperLevel.W_ExperLevel_C:WidgetTree.TextBlock_63.Text
@@ -2542,7 +2541,7 @@ msgstr "Nu s-au putut lua informații despre profilul Steam. Se reîncearcă..."
 #: /Game/Widgets/W_Saves/W_SaveWipe.W_SaveWipe_C:WidgetTree.TextBlock_63.Text
 msgctxt ",F804923B4DB5303B0F60E5A856CD204C"
 msgid "Cancel"
-msgstr ""
+msgstr "Anulează"
 
 #. Key:	F80D901F427C81C4CF268EBD49A5099B
 #. SourceLocation:	/Game/Widgets/Multiplayer/W_UnstableMP.W_UnstableMP_C:WidgetTree.TextBlock_63.Text
@@ -2670,7 +2669,7 @@ msgstr "În lucru; Unele lucruri ar putea fi stricate, altele ar putea merge."
 #: /Game/Widgets/Multiplayer/W_MPMenu.W_MPMenu_C:WidgetTree.TextBlock_8.Text
 msgctxt "Game,0AD67C534C035798769D67BB032E04AF"
 msgid "Singleplayer"
-msgstr ""
+msgstr "Singleplayer"
 
 #. Key:	0B43218A46B8D314BD98588656340D03
 #. SourceLocation:	/Game/Widgets/W_GMSelect/W_GMSelect.W_GMSelect_C:WidgetTree.TextBlock_12.Text

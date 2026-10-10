@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: budget-backrooms\n"
 "POT-Creation-Date: 2026-10-10 01:00\n"
-"PO-Revision-Date: 2026-10-10 13:26\n"
+"PO-Revision-Date: 2026-10-10 15:01\n"
 "Language-Team: Polish\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -1111,7 +1111,10 @@ msgid "You are about to reset your game. This includes unlocked levels, settings
 "\r\n"
 "\r\n"
 "Are you sure?"
-msgstr ""
+msgstr "Zamierzasz zresetować grę. Zostaną zresetowane odblokowane poziomy, ustawienia oraz część elementów świata gry. Zdobyte osiągnięcia Steam pozostaną odblokowane.\r\n"
+"\r\n"
+"\r\n"
+"Czy na pewno chcesz kontynuować?"
 
 #. Key:	7684BEE242A019D532DECEB57328FC3F
 #. SourceLocation:	/Game/Audio/dave_2.dave_2.Subtitles(1).Subtitles.Text
@@ -1531,7 +1534,7 @@ msgstr ""
 #: /Game/Widgets/W_Saves/W_SaveWipe.W_SaveWipe_C:WidgetTree.TextBlock_1.Text
 msgctxt ",9C7F59594CCC4A46ED3CE8B6DE1123FA"
 msgid "Yes, I want to wipe my savedata"
-msgstr ""
+msgstr "Tak, chcę usunąć zapis gry"
 
 #. Key:	9C8084274E887FD1F2556E97CF7511A1
 #. SourceLocation:	/Game/Widgets/W_LevelSelector/W_LevelSelector.W_LevelSelector_C:WidgetTree.TextBlock_2.Text
@@ -1552,7 +1555,7 @@ msgstr ""
 #: /Game/Widgets/W_Saves/W_SaveWipe.W_SaveWipe_C:WidgetTree.TextBlock_132.Text
 msgctxt ",9CDD7A4449A833FFCEC97CB46EFC6FDF"
 msgid "Reset"
-msgstr ""
+msgstr "Reset"
 
 #. Key:	9D88668D46BEC5D8D58B5CA0356176D4
 #. SourceLocation:	/Game/Widgets/Warnings/W_Disclaimer.W_Disclaimer_C:WidgetTree.TextBlock_6.Text
@@ -1984,7 +1987,7 @@ msgstr ""
 #: /Game/Widgets/Settings/W_GeneralSettings.W_GeneralSettings_C:WidgetTree.TextBlock_9.Text
 msgctxt ",C8FDFB4E47929EB174675D8F9623C62E"
 msgid "Heatmap Telemetry Opt-in"
-msgstr ""
+msgstr "Zezwól na zbieranie danych telemetrycznych"
 
 #. Key:	C98AE9394ABD2A03FCCFCBBCDFE85292
 #. SourceLocation:	/Game/Widgets/W_RebindKeys/W_RebindEntry.W_RebindEntry_C:WidgetTree.label_text.Text
@@ -2499,7 +2502,7 @@ msgstr ""
 #: /Game/Widgets/W_Screeensaver/W_Screensaver_InitDIal.W_Screensaver_InitDIal_C:WidgetTree.TextBlock_2.Text
 msgctxt ",F912874C4BF4F8E305532C8245A2F95D"
 msgid "Cancel"
-msgstr ""
+msgstr "Anuluj"
 
 #. Key:	FAE1BEF94F6C34B6AAB4C38805088177
 #. SourceLocation:	/Game/Audio/jake_lele2.jake_lele2.Subtitles(14).Subtitles.Text
@@ -2654,7 +2657,7 @@ msgstr ""
 #: /Game/Widgets/Settings/W_GeneralSettings.W_GeneralSettings_C:WidgetTree.TextBlock_8.Text
 msgctxt "Game,1ECA116643D504C48C56D4903CA1567D"
 msgid "Change language"
-msgstr ""
+msgstr "Zmień język"
 
 #. Key:	256064344289478637DF8AA0DA120257
 #. SourceLocation:	/Game/Widgets/W_MapFinished/W_FinishMap_Alpha.W_FinishMap_Alpha_C:WidgetTree.TextBlock_1.Text

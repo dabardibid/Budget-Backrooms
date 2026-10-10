@@ -156,12 +156,29 @@ namespace
 	{
 		int32 Copied = 0;
 		int32 SkippedDefault = 0;
+		int32 Kept = 0;
 	};
+
+	// Variables that differ from the class default
+	void CollectNonDefault(UObject* Obj, TSet<const FProperty*>& Out)
+	{
+		UObject* Defaults = Obj->GetClass()->GetDefaultObject();
+		for (TFieldIterator<FProperty> It(Obj->GetClass()); It; ++It)
+		{
+			FProperty* Prop = *It;
+			if (!Prop->HasAnyPropertyFlags(CPF_Transient)
+				&& !Prop->Identical(Prop->ContainerPtrToValuePtr<void>(Obj), Prop->ContainerPtrToValuePtr<void>(Defaults), 0))
+			{
+				Out.Add(Prop);
+			}
+		}
+	}
 
 	// Copies same-named, same-typed properties from Src to Dst. Every old slot contains every variable of the
 	// class, so a default value never overwrites one that an earlier slot already set.
+	// Protected: variables the destination file already holds real data for, never overwritten.
 	FCopyResult CopyMatchingProperties(UObject* Src, UObject* Dst, const FString& Prefix, const FString& SlotName,
-		TSet<const FProperty*>& Assigned, TArray<FString>* Report, bool bListValues)
+		TSet<const FProperty*>& Assigned, const TSet<const FProperty*>& Protected, TArray<FString>* Report, bool bListValues)
 	{
 		FCopyResult Result;
 		UObject* SrcDefaults = Src->GetClass()->GetDefaultObject();
@@ -205,6 +222,12 @@ namespace
 					Report->Add(FString::Printf(TEXT("[WARN] %s.%s: changed value, but type differs from %s (would be lost)"),
 						*SlotName, *SrcProp->GetName(), *DstProp->GetName()));
 				}
+				continue;
+			}
+
+			if (Protected.Contains(DstProp))
+			{
+				++Result.Kept;
 				continue;
 			}
 
@@ -313,36 +336,42 @@ bool UUBB_BlueprintHelpers::NeedsMigration(TSubclassOf<USaveGame> SaveClass, con
 {
 	OutGame = LoadConsolidated(SaveClass);
 	OutSettings = LoadSettingsSlot(SaveClass);
-	bOutBuildGame = false;
-	bOutBuildSettings = false;
+
+	const bool bGameLegacy = HasLegacyFiles(OlderSlots, EBBSlotTarget::Game);
+	const bool bSettingsLegacy = HasLegacyFiles(OlderSlots, EBBSlotTarget::Settings);
+	const bool bDiscardLegacy = HasLegacyFiles(OlderSlots, EBBSlotTarget::Discard);
+
+	bOutBuildGame = !OutGame || bGameLegacy;
+	bOutBuildSettings = !OutSettings || bSettingsLegacy;
 
 	TArray<FString> Why;
 
 	if (!OutGame)
 	{
-		bOutBuildGame = true;
 		Why.Add(FString::Printf(TEXT("%s.sav does not exist (or is not a %s)"), GNewSlot, SaveClass ? *SaveClass->GetName() : TEXT("?")));
 	}
-	else if (IsAllDefaults(OutGame) && HasLegacyFiles(OlderSlots, EBBSlotTarget::Game))
+	else if (bGameLegacy)
 	{
-		bOutBuildGame = true;
-		Why.Add(FString::Printf(TEXT("%s.sav holds only default values while old State_ files are still there (probably created empty before the migration ran)"), GNewSlot));
+		Why.Add(FString::Printf(TEXT("old save files found for %s.sav (existing values are kept)"), GNewSlot));
 	}
 
 	if (!OutSettings)
 	{
-		bOutBuildSettings = true;
 		Why.Add(FString::Printf(TEXT("%s.sav does not exist (or is not a %s)"), GSettingsSlot, SaveClass ? *SaveClass->GetName() : TEXT("?")));
 	}
-	else if (IsAllDefaults(OutSettings) && HasLegacyFiles(OlderSlots, EBBSlotTarget::Settings))
+	else if (bSettingsLegacy)
 	{
-		bOutBuildSettings = true;
-		Why.Add(FString::Printf(TEXT("%s.sav holds only default values while old Settings_ files are still there (probably created empty before the migration ran)"), GSettingsSlot));
+		Why.Add(FString::Printf(TEXT("old Settings_ files found for %s.sav (existing values are kept)"), GSettingsSlot));
+	}
+
+	if (bDiscardLegacy)
+	{
+		Why.Add(TEXT("discarded old files found (not migrated, only removed)"));
 	}
 
 	if (Why.Num() == 0)
 	{
-		OutReason = FString::Printf(TEXT("%s.sav and %s.sav already hold data"), GNewSlot, GSettingsSlot);
+		OutReason = FString::Printf(TEXT("%s.sav and %s.sav exist and no old save files are left"), GNewSlot, GSettingsSlot);
 		return false;
 	}
 
@@ -421,6 +450,24 @@ void UUBB_BlueprintHelpers::BeginBuild(FBBMigrationBuilder& B, TSubclassOf<USave
 			B.Report.Add(FString::Printf(TEXT("[DRY RUN] %s - a normal run would just load them and skip all of this (this is only a preview)"), *Reason));
 		}
 	}
+
+	// An existing file is the base: its values win, old slots only fill variables still at default
+	if (B.bBuildGame)
+	{
+		if (USaveGame* Existing = LoadConsolidated(SaveClass))
+		{
+			B.Save = Existing;
+			CollectNonDefault(Existing, B.Protected);
+		}
+	}
+	if (B.bBuildSettings)
+	{
+		if (USaveGame* Existing = LoadSettingsSlot(SaveClass))
+		{
+			B.SettingsSave = Existing;
+			CollectNonDefault(Existing, B.ProtectedSettings);
+		}
+	}
 }
 
 bool UUBB_BlueprintHelpers::StepBuild(FBBMigrationBuilder& B, FString& OutSlotName)
@@ -463,11 +510,11 @@ bool UUBB_BlueprintHelpers::StepBuild(FBBMigrationBuilder& B, FString& OutSlotNa
 			{
 				const bool bToGame = (Target == EBBSlotTarget::Game);
 				const FCopyResult Result = CopyMatchingProperties(Old, bToGame ? B.Save : B.SettingsSave, Legacy.Prefix, Legacy.SlotName,
-					bToGame ? B.Assigned : B.AssignedSettings, &B.Report, B.bListValues);
-				UE_LOG(LogBBSaveMigration, Log, TEXT("Migrated %s -> %s.sav (%s): %d copied, %d skipped (still default)"),
-					*Legacy.SlotName, bToGame ? GNewSlot : GSettingsSlot, *Old->GetClass()->GetName(), Result.Copied, Result.SkippedDefault);
-				B.Report.Add(FString::Printf(TEXT("[OK]  %s -> %s.sav (%s): %d copied, %d skipped (untouched default)"),
-					*Legacy.SlotName, bToGame ? GNewSlot : GSettingsSlot, *Old->GetClass()->GetName(), Result.Copied, Result.SkippedDefault));
+					bToGame ? B.Assigned : B.AssignedSettings, bToGame ? B.Protected : B.ProtectedSettings, &B.Report, B.bListValues);
+				UE_LOG(LogBBSaveMigration, Log, TEXT("Migrated %s -> %s.sav (%s): %d copied, %d skipped (still default), %d kept (already set)"),
+					*Legacy.SlotName, bToGame ? GNewSlot : GSettingsSlot, *Old->GetClass()->GetName(), Result.Copied, Result.SkippedDefault, Result.Kept);
+				B.Report.Add(FString::Printf(TEXT("[OK]  %s -> %s.sav (%s): %d copied, %d skipped (untouched default), %d kept (already set)"),
+					*Legacy.SlotName, bToGame ? GNewSlot : GSettingsSlot, *Old->GetClass()->GetName(), Result.Copied, Result.SkippedDefault, Result.Kept));
 				++B.SlotsRead;
 			}
 		}
@@ -612,7 +659,13 @@ bool UUBB_BlueprintHelpers::IsMigrationNeeded(TSubclassOf<USaveGame> SaveClass, 
 	bool bBuildGame = false;
 	bool bBuildSettings = false;
 	FString Reason;
-	return HasLegacySaves(OlderSlots) && NeedsMigration(SaveClass, OlderSlots, Game, Settings, bBuildGame, bBuildSettings, Reason);
+
+	const TArray<FString> Found = ExistingLegacyNames(BuildSlotList(OlderSlots));
+	const bool bNeeded = Found.Num() > 0 && NeedsMigration(SaveClass, OlderSlots, Game, Settings, bBuildGame, bBuildSettings, Reason);
+
+	UE_LOG(LogBBSaveMigration, Display, TEXT("Is Migration Needed: %s - %d old file(s) found: %s%s%s"),
+		bNeeded ? TEXT("YES") : TEXT("NO"), Found.Num(), *FString::Join(Found, TEXT(", ")), Reason.IsEmpty() ? TEXT("") : TEXT(" | "), *Reason);
+	return bNeeded;
 }
 
 int32 UUBB_BlueprintHelpers::DeleteLegacySaves(const TArray<FBBLegacySlot>& OlderSlots, bool bDryRun)

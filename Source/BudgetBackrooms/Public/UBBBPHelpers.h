@@ -63,6 +63,10 @@ struct FBBMigrationBuilder
 	TSet<const FProperty*> Assigned;
 	TSet<const FProperty*> AssignedSettings;
 
+	// Variables the existing Game.sav / Settings.sav already hold real data for: old slots never overwrite these
+	TSet<const FProperty*> Protected;
+	TSet<const FProperty*> ProtectedSettings;
+
 	TArray<FString> Report;
 };
 
@@ -86,8 +90,9 @@ public:
 
 	static bool HasLegacyFiles(const TArray<FBBLegacySlot>& OlderSlots, EBBSlotTarget Target);
 
-	// A file needs building if it is missing, or all-default while old files for it still exist
-	// (e.g. the game created it empty before the migration ran). A file with real data is never touched.
+	// A file needs building if it is missing or any old file for it exists (Settings_* -> Settings.sav, the rest -> Game.sav).
+	// Existing values in the new file win, old slots only fill variables still at default.
+	// Discard-only old files also count, so they get removed.
 	static bool NeedsMigration(TSubclassOf<USaveGame> SaveClass, const TArray<FBBLegacySlot>& OlderSlots,
 		USaveGame*& OutGame, USaveGame*& OutSettings, bool& bOutBuildGame, bool& bOutBuildSettings, FString& OutReason);
 
@@ -112,7 +117,7 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Budget Savings")
 	static TArray<FString> GetLegacySaveNames(const TArray<FBBLegacySlot>& OlderSlots);
 
-	// True if there are legacy files and Migrate Saves would build Game.sav and/or Settings.sav from them
+	// True if any old save file exists, i.e. Migrate Saves has something to merge and/or remove
 	UFUNCTION(BlueprintCallable, Category = "Budget Savings")
 	static bool IsMigrationNeeded(TSubclassOf<USaveGame> SaveClass, const TArray<FBBLegacySlot>& OlderSlots);
 
@@ -131,7 +136,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FBBMigrationResult, USaveGame*, S
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FBBMigrationProgress, float, Progress, const FString&, CurrentSlot);
 
 // "Migrate Saves" node (Save Class = BB_SaveSys). Reads one legacy slot per tick so a progress bar can update.
-//   On Finished: Game.sav / Settings.sav are in use (already present, or built, written and read back)
+//   On Finished: Game.sav / Settings.sav are in use (merged, written and read back; or nothing old was left)
 //   On Failed:   a write failed or could not be verified; old files are untouched
 //   bDryRun: report only, nothing written or deleted
 //   bDeleteOldFiles: delete the old files after a verified write (never when nothing was merged)

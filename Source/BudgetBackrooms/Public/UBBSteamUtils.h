@@ -42,6 +42,20 @@ enum class ESteamNotificationPosition : uint8 {
     BottomRight UMETA(DisplayName = "Bottom Right")
 };
 
+// Maps to the dialog names accepted by ISteamFriends::ActivateGameOverlayToUser
+UENUM(BlueprintType)
+enum class ESteamUserOverlayDialog : uint8 {
+    Achievements UMETA(DisplayName = "Achievements"),
+    Stats UMETA(DisplayName = "Stats"),
+    Profile UMETA(DisplayName = "Profile (SteamID)"),
+    Chat UMETA(DisplayName = "Chat"),
+    JoinTrade UMETA(DisplayName = "Join Trade"),
+    FriendAdd UMETA(DisplayName = "Friend Add"),
+    FriendRemove UMETA(DisplayName = "Friend Remove"),
+    FriendRequestAccept UMETA(DisplayName = "Friend Request Accept"),
+    FriendRequestIgnore UMETA(DisplayName = "Friend Request Ignore")
+};
+
 UCLASS()
 class BUDGETBACKROOMS_API UBBSteamUtils : public UBlueprintFunctionLibrary
 {
@@ -50,34 +64,40 @@ class BUDGETBACKROOMS_API UBBSteamUtils : public UBlueprintFunctionLibrary
 public:
     UBBSteamUtils();
 
-    UFUNCTION(BlueprintCallable, Category = "Steam (Budget Backrooms // Custom BP Expose)", meta = (Keywords = "Set Steam Rich Presence", ToolTip = "Sets Steam Rich Presence with the desired args. It can be seen from the Friends List or other menus in the Steam Community.")) 
+    UFUNCTION(BlueprintCallable, Category = "Budget Steam // Custom BP Expose", meta = (Keywords = "Set Steam Rich Presence", ToolTip = "Sets Steam Rich Presence with the desired args. It can be seen from the Friends List or other menus in the Steam Community.")) 
     static void SetSteamRichPresence(const FString& Key, const FString& Value);
 
-    UFUNCTION(BlueprintCallable, Category = "Steam (Budget Backrooms // Custom BP Expose)", meta = (Keywords = "Steam Overlay Position", ToolTip = "Changes in which corner to show Steam Overlay notifications"))
+    UFUNCTION(BlueprintCallable, Category = "Budget Steam // Custom BP Expose", meta = (Keywords = "Steam Overlay Position", ToolTip = "Changes in which corner to show Steam Overlay notifications"))
     static void SetSteamOverlayNotificationPosition(ESteamNotificationPosition Position);
 
-    UFUNCTION(BlueprintCallable, Category = "Steam (Budget Backrooms // Custom BP Expose)", meta = (ToolTip = "Self-explanatory, toggles the Steam Overlay as if the user pressed SHIFT + TAB"))
+    UFUNCTION(BlueprintCallable, Category = "Budget Steam // Custom BP Expose", meta = (ToolTip = "Self-explanatory, toggles the Steam Overlay as if the user pressed SHIFT + TAB"))
     static void ToggleSteamOverlay();
 
-    UFUNCTION(BlueprintCallable, Category = "Steam (Budget Backrooms // Custom BP Expose)", meta = (Keywords = "Steam Connection", ToolTip = "Checks whether the player has Steam active, and if the game can do a handshake with the Steam API (aka Initialization)"))
+    UFUNCTION(BlueprintCallable, Category = "Budget Steam // Custom BP Expose", meta = (Keywords = "Steam Connection", ToolTip = "Checks whether the player has Steam active, and if the game can do a handshake with the Steam API (aka Initialization)"))
     static void CheckSteamConnection(bool& IsConnected);
 
-    UFUNCTION(BlueprintCallable, Category = "Steam (Budget Backrooms // Custom BP Expose)", meta = (Keywords = "Steam Overlay", ToolTip = "Self-explanatory; Opens the user's Steam Overlay with a defined target link."))
+    UFUNCTION(BlueprintCallable, Category = "Budget Steam // Custom BP Expose", meta = (Keywords = "Steam Overlay", ToolTip = "Self-explanatory; Opens the user's Steam Overlay with a defined target link."))
     static void OpenSteamOverlayWithURL(const FString& URL);
 
-	UFUNCTION(BlueprintCallable, Category = "Steam (Budget Backrooms // Custom BP Expose)")
+    UFUNCTION(BlueprintCallable, Category = "Budget Steam // Custom BP Expose", meta = (AdvancedDisplay = "SteamID64", Keywords = "Steam Overlay User Dialog Achievements Stats Open", ToolTip = "Opens a Steam Overlay dialog (Achievements, Stats, Chat, etc.) for the local user, or for another user if their SteamID64 is given. No Unique Net Id needed. Success is false if Steam/overlay is unavailable."))
+    static void OpenSteamUserOverlay(ESteamUserOverlayDialog DialogType, bool& bSuccess, const FString& SteamID64 = TEXT(""));
+
+	UFUNCTION(BlueprintCallable, Category = "Budget Steam // Custom BP Expose")
 	static void ClearSteamRichPresence();
     
-    UFUNCTION(BlueprintCallable, Category = "Steam (Budget Backrooms // Custom BP Expose)", meta = (Keywords = "Achievement Unlock", ToolTip = "Unlocks a Steam Achievement using its API Name set in the Steamworks backend"))
+    UFUNCTION(BlueprintCallable, Category = "Budget Steam // Custom BP Expose", meta = (Keywords = "Achievement Unlock", ToolTip = "Unlocks a Steam Achievement using its API Name set in the Steamworks backend"))
     static void UnlockSteamAchievement(const FString& AchievementID);
 
-    UFUNCTION(BlueprintCallable, Category = "Steam (Budget Backrooms // Custom BP Expose)", meta = (Keywords = "Achievement Clear", ToolTip = "Clears/Locks a Steam Achievement using its API Name. Mostly for debug purposes."))
+    UFUNCTION(BlueprintCallable, Category = "Budget Steam // Custom BP Expose", meta = (Keywords = "Achievement Clear", ToolTip = "Clears/Locks a Steam Achievement using its API Name. Mostly for debug purposes."))
     static void ClearSteamAchievement(const FString& AchievementID);
     
-    UFUNCTION(BlueprintPure, Category = "Steam (Budget Backrooms // Custom BP Expose)", meta = (Keywords = "Achievement Get Status", ToolTip = "Checks if a specific Steam Achievement is unlocked currently by the user."))
+    UFUNCTION(BlueprintPure, Category = "Budget Steam // Custom BP Expose", meta = (Keywords = "Achievement Get Status", ToolTip = "Checks if a specific Steam Achievement is unlocked currently by the user."))
     static void GetSteamAchievement(const FString& AchievementID, bool& bIsUnlocked);
 
-    UFUNCTION(BlueprintCallable, Category = "Steam (Budget Backrooms // Custom BP Expose)", meta = (Keywords = "Achievement Reset All Stats", ToolTip = "Resets ALL stats AND achievements. USE WITH EXTREME CAUTION! Primarily for testing."))
+    UFUNCTION(BlueprintCallable, Category = "Budget Steam // Custom BP Expose", meta = (Keywords = "Achievement Progress Stat Increment Decrement", ToolTip = "Adds or removes progress from a Steam INT stat, stores it, and lets Steamworks unlock the linked achievement. Configure the Progress Stat and Unlock Value in Steamworks."))
+    static void AddSteamAchievementProgress(const FString& AchievementID, const FString& ProgressStatID, int32 Delta, int32 ProgressMaxForToast, bool bShowProgressToast, int32& NewProgress, bool& bSuccess);
+	
+    UFUNCTION(BlueprintCallable, Category = "Budget Steam // Custom BP Expose", meta = (Keywords = "Achievement Reset All Stats", ToolTip = "Resets ALL stats AND achievements. USE WITH EXTREME CAUTION! Primarily for testing."))
     static void ResetAllSteamStatsAndAchievements();
 
     UFUNCTION(BlueprintPure, Category = "Budget Other Utils", meta = (CompactNodeTitle = "Git Hash"))

@@ -8,8 +8,6 @@
 #include "UBBWindowsUtils.generated.h"
 
 
-
-
 UENUM(BlueprintType)
 enum class EWindowsMessageBoxButtons : uint8
 {
@@ -41,5 +39,17 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Budget Windows Utils")
     static void REDACTED();
+
+    UFUNCTION(BlueprintCallable, Category = "Budget Windows Utils")
+    static void GetMonitorHDRSpecs(bool& SupportsHDR, float& MaxLuminance, float& MinLuminance);
+
+    UFUNCTION(BlueprintCallable, Category = "Budget Windows Utils")
+    static void AutoConfigureUE4HDR();
+
+    UFUNCTION(BlueprintCallable, Category = "Budget Windows Utils", meta = (DisplayName = "Hard Restart"))
+    static void HardRestart(const UObject* WorldContextObject, FString MapName);
+
+    UFUNCTION(BlueprintCallable, Category = "Budget Windows Utils", meta = (DisplayName = "IS THE USER RUNNING THIS PILE OF CRAP ON ANOTHER PILE OF CRAP?"))
+    static void IntegratedGraphics(const UObject* WorldContextObject);
 
 };

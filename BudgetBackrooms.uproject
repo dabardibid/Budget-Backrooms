@@ -7,7 +7,10 @@
 		{
 			"Name": "BudgetBackrooms",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
 		}
 	],
 	"Plugins": [
@@ -31,10 +34,6 @@
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/6f6a4afb66af43deb946a48b78d8c80a"
 		},
 		{
-			"Name": "DisasterRecoveryClient",
-			"Enabled": true
-		},
-		{
 			"Name": "ActorPalette",
 			"Enabled": true
 		},
@@ -49,11 +48,6 @@
 		{
 			"Name": "BlueprintFileUtils",
 			"Enabled": true
-		},
-		{
-			"Name": "AchievementSystem",
-			"Enabled": true,
-			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/d9f6e0a8c92f47db9e2fde6080bed630"
 		},
 		{
 			"Name": "LDAssistant",
@@ -254,10 +248,6 @@
 			"Enabled": false
 		},
 		{
-			"Name": "SteamAudio",
-			"Enabled": true
-		},
-		{
 			"Name": "GooglePAD",
 			"Enabled": false
 		},
@@ -325,10 +315,6 @@
 			"Enabled": false
 		},
 		{
-			"Name": "GeoReferencing",
-			"Enabled": true
-		},
-		{
 			"Name": "ConsoleEnhanced",
 			"Enabled": false,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/86123c85a4474d609c5cef8a7fc5786b"
@@ -336,6 +322,26 @@
 		{
 			"Name": "RawInput",
 			"Enabled": true
+		},
+		{
+			"Name": "PhysXVehicles",
+			"Enabled": false
+		},
+		{
+			"Name": "WindowsMoviePlayer",
+			"Enabled": false
+		},
+		{
+			"Name": "FacialAnimation",
+			"Enabled": false
+		},
+		{
+			"Name": "LocationServicesBPLibrary",
+			"Enabled": false
+		},
+		{
+			"Name": "MacGraphicsSwitching",
+			"Enabled": false
 		}
 	],
 	"TargetPlatforms": [

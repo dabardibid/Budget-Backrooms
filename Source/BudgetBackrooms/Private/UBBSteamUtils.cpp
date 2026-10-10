@@ -2,6 +2,7 @@
 
 #include "UBBSteamUtils.h"
 #include "CoreMinimal.h"
+#include "OnlineSubsystem.h"
 #include "ThirdParty/Steamworks/Steamv151/sdk/public/steam/steam_api.h"
 #include "../BBHashThing.h"
 
@@ -28,6 +29,26 @@
 #
 ////////////////////////////////////////////////////////////////////////////////////////////
 */
+
+namespace BBSteamUtilsPrivate
+{
+	static ISteamUserStats* GetSteamUserStats()
+	{
+		// OnlineSubsystemSteam owns SteamAPI_Init / callbacks / shutdown in this project.
+		// Checking the named subsystem first prevents direct Steam interface calls too early.
+		if (IOnlineSubsystem::Get(FName(TEXT("STEAM"))) == nullptr)
+		{
+			return nullptr;
+		}
+
+		if (SteamUser() == nullptr || !SteamUser()->BLoggedOn())
+		{
+			return nullptr;
+		}
+
+		return SteamUserStats();
+	}
+}
 
 
 
@@ -70,6 +91,48 @@ void UBBSteamUtils::OpenSteamOverlayWithURL(const FString& URL)
     {
         UE_LOG(LogTemp, Warning, TEXT("[BUDGET STEAM NETWORKING] Steam calls r disabled, why??"));
     }
+}
+
+void UBBSteamUtils::OpenSteamUserOverlay(ESteamUserOverlayDialog DialogType, bool& bSuccess, const FString& SteamID64)
+{
+    bSuccess = false;
+
+    if (IOnlineSubsystem::Get(FName(TEXT("STEAM"))) == nullptr || SteamFriends() == nullptr || SteamUser() == nullptr || SteamUtils() == nullptr)
+    {
+        UE_LOG(LogTemp, Warning, TEXT("[BUDGET STEAM NETWORKING] Steam OSS is not ready, can't open the overlay."));
+        return;
+    }
+
+    if (!SteamUtils()->IsOverlayEnabled())
+    {
+        UE_LOG(LogTemp, Warning, TEXT("[BUDGET STEAM NETWORKING] Steam Overlay is disabled or not hooked yet."));
+        return;
+    }
+
+    const char* DialogName = "steamid";
+    switch (DialogType)
+    {
+    case ESteamUserOverlayDialog::Achievements:         DialogName = "achievements"; break;
+    case ESteamUserOverlayDialog::Stats:                DialogName = "stats"; break;
+    case ESteamUserOverlayDialog::Profile:              DialogName = "steamid"; break;
+    case ESteamUserOverlayDialog::Chat:                 DialogName = "chat"; break;
+    case ESteamUserOverlayDialog::JoinTrade:            DialogName = "jointrade"; break;
+    case ESteamUserOverlayDialog::FriendAdd:            DialogName = "friendadd"; break;
+    case ESteamUserOverlayDialog::FriendRemove:         DialogName = "friendremove"; break;
+    case ESteamUserOverlayDialog::FriendRequestAccept:  DialogName = "friendrequestaccept"; break;
+    case ESteamUserOverlayDialog::FriendRequestIgnore:  DialogName = "friendrequestignore"; break;
+    }
+
+    // Empty SteamID = the local user, so no Unique Net Id wiring is needed for Achievements/Stats.
+    const CSteamID TargetID = SteamID64.IsEmpty() ? SteamUser()->GetSteamID() : CSteamID(static_cast<uint64>(FCString::Strtoui64(*SteamID64, nullptr, 10)));
+    if (!TargetID.IsValid())
+    {
+        UE_LOG(LogTemp, Warning, TEXT("[BUDGET STEAM NETWORKING] Invalid SteamID64 '%s'."), *SteamID64);
+        return;
+    }
+
+    SteamFriends()->ActivateGameOverlayToUser(DialogName, TargetID);
+    bSuccess = true;
 }
 
 // Notification Position stuff because yeah || Thanks to r0neko!! SpectralRift soon?
@@ -143,63 +206,134 @@ void UBBSteamUtils::CheckSteamConnection(bool& IsConnected)
 
 void UBBSteamUtils::UnlockSteamAchievement(const FString& AchievementID)
 {
-    if (SteamAPI_Init() && SteamUserStats() != nullptr)
+    ISteamUserStats* UserStats = BBSteamUtilsPrivate::GetSteamUserStats();
+    if (UserStats == nullptr)
     {
-        SteamUserStats()->SetAchievement(TCHAR_TO_UTF8(*AchievementID));
-        // You MUST call StoreStats to push the unlock to the Steam Servers immediately
-        SteamUserStats()->StoreStats();
+        UE_LOG(LogTemp, Warning, TEXT("[BUDGET STEAM NETWORKING] Steam OSS or SteamUserStats is not ready."));
+        return;
     }
-    else
+
+    const FTCHARToUTF8 AchievementUtf8(*AchievementID);
+    if (!UserStats->SetAchievement(AchievementUtf8.Get()) || !UserStats->StoreStats())
     {
-        UE_LOG(LogTemp, Warning, TEXT("[BUDGET STEAM NETWORKING] Steam API failed or SteamUserStats is null, why??"));
+        UE_LOG(LogTemp, Warning, TEXT("[BUDGET STEAM NETWORKING] Could not store achievement '%s'. Check its published Steamworks API Name."), *AchievementID);
     }
 }
 
 void UBBSteamUtils::ClearSteamAchievement(const FString& AchievementID)
 {
-    if (SteamAPI_Init() && SteamUserStats() != nullptr)
+#if UE_BUILD_SHIPPING
+    UE_LOG(LogTemp, Warning, TEXT("[BUDGET STEAM NETWORKING] ClearSteamAchievement is disabled in Shipping."));
+    return;
+#else
+    ISteamUserStats* UserStats = BBSteamUtilsPrivate::GetSteamUserStats();
+    if (UserStats == nullptr)
     {
-        SteamUserStats()->ClearAchievement(TCHAR_TO_UTF8(*AchievementID));
-        // Push the locked status back to the server
-        SteamUserStats()->StoreStats();
+        UE_LOG(LogTemp, Warning, TEXT("[BUDGET STEAM NETWORKING] Steam OSS or SteamUserStats is not ready."));
+        return;
     }
-    else
+
+    const FTCHARToUTF8 AchievementUtf8(*AchievementID);
+    if (!UserStats->ClearAchievement(AchievementUtf8.Get()) || !UserStats->StoreStats())
     {
-        UE_LOG(LogTemp, Warning, TEXT("[BUDGET STEAM NETWORKING] Steam API failed or SteamUserStats is null, why??"));
+        UE_LOG(LogTemp, Warning, TEXT("[BUDGET STEAM NETWORKING] Could not clear achievement '%s'."), *AchievementID);
+    }
+#endif
+}
+
+void UBBSteamUtils::GetSteamAchievement(const FString& AchievementID, bool& IsUnlocked)
+{
+    IsUnlocked = false;
+
+    ISteamUserStats* UserStats = BBSteamUtilsPrivate::GetSteamUserStats();
+    if (UserStats == nullptr)
+    {
+        UE_LOG(LogTemp, Warning, TEXT("[BUDGET STEAM NETWORKING] Steam OSS or SteamUserStats is not ready."));
+        return;
+    }
+
+    const FTCHARToUTF8 AchievementUtf8(*AchievementID);
+    if (!UserStats->GetAchievement(AchievementUtf8.Get(), &IsUnlocked))
+    {
+        UE_LOG(LogTemp, Warning, TEXT("[BUDGET STEAM NETWORKING] Could not read achievement '%s'. Check its published Steamworks API Name."), *AchievementID);
     }
 }
 
-void UBBSteamUtils::GetSteamAchievement(const FString& AchievementID, bool& bIsUnlocked)
+void UBBSteamUtils::AddSteamAchievementProgress(
+    const FString& AchievementID,
+    const FString& ProgressStatID,
+    int32 Delta,
+    int32 ProgressMaxForToast,
+    bool bShowProgressToast,
+    int32& NewProgress,
+    bool& bSuccess)
 {
-    bIsUnlocked = false;
+    NewProgress = 0;
+    bSuccess = false;
 
-    if (SteamAPI_Init() && SteamUserStats() != nullptr)
+    ISteamUserStats* UserStats = BBSteamUtilsPrivate::GetSteamUserStats();
+    if (UserStats == nullptr || AchievementID.IsEmpty() || ProgressStatID.IsEmpty())
     {
-        bool bAchieved = false;
-        if (SteamUserStats()->GetAchievement(TCHAR_TO_UTF8(*AchievementID), &bAchieved))
+        UE_LOG(LogTemp, Warning, TEXT("[BUDGET STEAM NETWORKING] Steam stats are not ready, or an Achievement/Stat API Name is empty."));
+        return;
+    }
+
+    const FTCHARToUTF8 AchievementUtf8(*AchievementID);
+    const FTCHARToUTF8 StatUtf8(*ProgressStatID);
+
+    int32 CurrentProgress = 0;
+    if (!UserStats->GetStat(StatUtf8.Get(), &CurrentProgress))
+    {
+        UE_LOG(LogTemp, Warning, TEXT("[BUDGET STEAM NETWORKING] Could not read INT stat '%s'. Check its published Steamworks API Name and type."), *ProgressStatID);
+        return;
+    }
+
+    const int64 NextProgress = static_cast<int64>(CurrentProgress) + static_cast<int64>(Delta);
+    NewProgress = static_cast<int32>(FMath::Clamp<int64>(NextProgress, 0, MAX_int32));
+
+    if (!UserStats->SetStat(StatUtf8.Get(), NewProgress))
+    {
+        UE_LOG(LogTemp, Warning, TEXT("[BUDGET STEAM NETWORKING] Could not write INT stat '%s'. Check Steamworks constraints."), *ProgressStatID);
+        return;
+    }
+
+    // This popup is visual feedback only. SetStat above is what writes actual progress.
+    if (bShowProgressToast && ProgressMaxForToast > 0 && NewProgress < ProgressMaxForToast)
+    {
+        bool bAchievementAlreadyUnlocked = false;
+        if (UserStats->GetAchievement(AchievementUtf8.Get(), &bAchievementAlreadyUnlocked) && !bAchievementAlreadyUnlocked)
         {
-            bIsUnlocked = bAchieved;
+            UserStats->IndicateAchievementProgress(
+                AchievementUtf8.Get(),
+                static_cast<uint32>(NewProgress),
+                static_cast<uint32>(ProgressMaxForToast));
         }
     }
-    else
-    {
-        UE_LOG(LogTemp, Warning, TEXT("[BUDGET STEAM NETWORKING] Steam API failed or SteamUserStats is null, why??"));
-    }
+
+    // Steamworks auto-unlocks when this stat is configured as the achievement's Progress Stat.
+    // Do not call SetAchievement here; the backend Unlock Value remains the single source of truth.
+    bSuccess = UserStats->StoreStats();
 }
 
 void UBBSteamUtils::ResetAllSteamStatsAndAchievements()
 {
-    if (SteamAPI_Init() && SteamUserStats() != nullptr)
+#if UE_BUILD_SHIPPING
+    UE_LOG(LogTemp, Warning, TEXT("[BUDGET STEAM NETWORKING] ResetAllSteamStatsAndAchievements is disabled in Shipping."));
+    return;
+#else
+    ISteamUserStats* UserStats = BBSteamUtilsPrivate::GetSteamUserStats();
+    if (UserStats == nullptr)
     {
-        // passing 'true' tells Steam to reset achievements in addition to stats
-        SteamUserStats()->ResetAllStats(true);
-        // Push the wipe event to the server
-        SteamUserStats()->StoreStats();
+        UE_LOG(LogTemp, Warning, TEXT("[BUDGET STEAM NETWORKING] Steam OSS or SteamUserStats is not ready."));
+        return;
     }
-    else
+
+    // ResetAllStats(true) already persists the reset through Steam; do not StoreStats a second time.
+    if (!UserStats->ResetAllStats(true))
     {
-        UE_LOG(LogTemp, Warning, TEXT("[BUDGET STEAM NETWORKING] Steam API failed or SteamUserStats is null, why??"));
+        UE_LOG(LogTemp, Warning, TEXT("[BUDGET STEAM NETWORKING] Could not reset Steam stats and achievements."));
     }
+#endif
 }
 
 

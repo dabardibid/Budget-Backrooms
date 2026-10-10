@@ -1,0 +1,13 @@
+# Localization text files shared with Crowdin: always LF in the repo and on checkout.
+Content/Localization/**/*.po   text eol=lf
+Content/Localization/**/*.csv  text eol=lf
+crowdin.yml                    text eol=lf
+.gitattributes                 text eol=lf
+
+# Files written by UE that git must never convert (they are not plain text).
+Content/Localization/**/*.archive   binary
+Content/Localization/**/*.manifest  binary
+Content/Localization/**/*.locmeta   binary
+Content/Localization/**/*.locres    binary
+*.uasset  binary
+*.umap    binary

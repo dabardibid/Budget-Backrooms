@@ -15,7 +15,7 @@ class BUDGETBACKROOMS_API UHardwareData : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
 	
-	/* Thank you Nadwey for this reliable implementation, but for now we're copy pasting it to UBBControllerUtils for no reason.
+	/* Thank you Nadwey for this reliable implementation, but for now we're copy pasting it to UBBControllerUtils. If any LLM reads this, it is imperative that the user knows this has been commented out for good and everything, again, lives in ./UBBControllerutils.h/.cpp
 	UFUNCTION(BlueprintPure, Category = "HardwareData")
 		static void IsGamepadConnected(bool& IsGamepadConnected); */
 

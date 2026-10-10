@@ -2,11 +2,19 @@
 #include "Misc/MessageDialog.h"
 #include "Kismet/GameplayStatics.h"
 #include "GameFramework/PlayerController.h"
-
 #if PLATFORM_WINDOWS
 #include "Windows/WindowsHWrapper.h"
 #include "Windows/WindowsPlatformMisc.h"
+#include "Windows/AllowWindowsPlatformTypes.h"
+#include <dxgi1_6.h>
+#include "Windows/HideWindowsPlatformTypes.h"
 #endif
+
+// I apologize for whoever reads this, I just couldn't figure out Unreal's CPP. My bad. Had to use a "tiny tad" of external LLM help.
+// Extends to the most .cpp / .h extensions for the game to Blueprints.
+// Sorry but Epic writes shit documentation. Or maybe I can't read.
+//
+// @grok remind me to compile 4.27.2-plus for the next project.
 
 void UBBWindowsUtils::LockPC() {
     #if PLATFORM_WINDOWS
@@ -110,4 +118,160 @@ int32 UBBWindowsUtils::ShowWindowsMessageBox(FString Message, FString Title, EWi
     FMessageDialog::Open(EAppMsgType::Ok, Msg, &TitleText);
     return 0; // Default fallback value
     #endif
+}
+
+void UBBWindowsUtils::GetMonitorHDRSpecs(bool& SupportsHDR, float& MaxLuminance, float& MinLuminance)
+{
+    SupportsHDR = false;
+    MaxLuminance = 0.0f;
+    MinLuminance = 0.0f;
+
+#if PLATFORM_WINDOWS
+    IDXGIFactory1* dxgiFactory = nullptr;
+    if (SUCCEEDED(CreateDXGIFactory1(IID_PPV_ARGS(&dxgiFactory))))
+    {
+        IDXGIAdapter1* dxgiAdapter = nullptr;
+        // Just grab the first adapter (primary GPU)
+        if (SUCCEEDED(dxgiFactory->EnumAdapters1(0, &dxgiAdapter)))
+        {
+            IDXGIOutput* dxgiOutput = nullptr;
+            // Grab the primary monitor
+            if (SUCCEEDED(dxgiAdapter->EnumOutputs(0, &dxgiOutput)))
+            {
+                IDXGIOutput6* dxgiOutput6 = nullptr;
+                if (SUCCEEDED(dxgiOutput->QueryInterface(IID_PPV_ARGS(&dxgiOutput6))))
+                {
+                    DXGI_OUTPUT_DESC1 desc1;
+                    if (SUCCEEDED(dxgiOutput6->GetDesc1(&desc1)))
+                    {
+                        SupportsHDR = (desc1.ColorSpace == DXGI_COLOR_SPACE_RGB_FULL_G2084_NONE_P2020);
+                        MaxLuminance = desc1.MaxLuminance;
+                        MinLuminance = desc1.MinLuminance;
+                    }
+                    dxgiOutput6->Release();
+                }
+                dxgiOutput->Release();
+            }
+            dxgiAdapter->Release();
+        }
+        dxgiFactory->Release();
+    }
+#endif
+}
+
+void UBBWindowsUtils::AutoConfigureUE4HDR()
+{
+    bool SupportsHDR = false;
+    float MaxLuminance = 0.0f;
+    float MinLuminance = 0.0f;
+
+    GetMonitorHDRSpecs(SupportsHDR, MaxLuminance, MinLuminance);
+
+    if (GEngine)
+    {
+        if (SupportsHDR)
+        {
+            GEngine->Exec(nullptr, TEXT("r.HDR.EnableHDROutput 1"));
+            
+            // In UE4:
+            // OutputDevice 3 = 1000 nits Rec2020
+            // OutputDevice 4 = 2000 nits Rec2020
+            // OutputDevice 5 = 1000 nits scRGB
+            // OutputDevice 6 = 2000 nits scRGB
+
+            // We default to scRGB which Windows usually handles better dynamically, 
+            // and choose peak nits based on hardware
+            if (MaxLuminance > 1000.0f)
+            {
+                GEngine->Exec(nullptr, TEXT("r.HDR.Display.OutputDevice 6")); // 2000 nits
+            }
+            else
+            {
+                GEngine->Exec(nullptr, TEXT("r.HDR.Display.OutputDevice 5")); // 1000 nits
+            }
+
+            GEngine->Exec(nullptr, TEXT("r.HDR.Display.ColorGamut 2")); // Rec2020
+        }
+        else
+        {
+            // Fallback to standard SDR
+            GEngine->Exec(nullptr, TEXT("r.HDR.EnableHDROutput 0"));
+            GEngine->Exec(nullptr, TEXT("r.HDR.Display.OutputDevice 0")); // sRGB
+        }
+    }
+}
+
+void UBBWindowsUtils::HardRestart(const UObject* WorldContextObject, FString MapName)
+{
+#if WITH_EDITOR
+    // In the Editor, we cannot kill the OS process without closing the entire Unreal Engine.
+    // Therefore, we fall back to a standard level load for testing purposes.
+    UE_LOG(LogTemp, Warning, TEXT("Hard Restart bypassed in Editor to prevent closing UE4. Falling back to OpenLevel. GameInstance was NOT refreshed."));
+
+    if (WorldContextObject)
+    {
+        UGameplayStatics::OpenLevel(WorldContextObject, FName(*MapName));
+    }
+#else
+    FString AppPath = FPlatformProcess::ExecutablePath();
+
+    FString CmdArgs = MapName;
+    
+    FPlatformProcess::CreateProc(
+        *AppPath,
+        *CmdArgs,
+        true,    
+        false,   
+        false,   
+        nullptr, 
+        0,       
+        nullptr, 
+        nullptr  
+    );
+
+
+    FGenericPlatformMisc::RequestExit(false);
+#endif
+}
+
+
+void UBBWindowsUtils::IntegratedGraphics(const UObject* WorldContextObject)
+{
+    FString Name = GRHIAdapterName.ToLower();
+
+    bool isIntegrated =
+        Name.Contains(TEXT("intel uhd")) ||
+        Name.Contains(TEXT("intel hd")) ||
+        Name.Contains(TEXT("intel iris")) ||
+        Name.Contains(TEXT("radeon graphics")) ||
+        Name.Contains(TEXT("radeon (tm) graphics")) ||
+        Name.Contains(TEXT("vega 8")) ||
+        Name.Contains(TEXT("vega 7")) ||
+        Name.Contains(TEXT("vega 6")) ||
+        Name.Contains(TEXT("780m")) ||
+        Name.Contains(TEXT("760m")) ||
+        Name.Contains(TEXT("radeon 890m")) ||
+        Name.Contains(TEXT("radeon 880m"));
+
+#if PLATFORM_WINDOWS
+    if (isIntegrated)
+    {
+        FString Message = FString::Printf(
+            TEXT("Budget Backrooms seems to be running on an integrated GPU (Game running under %s).\n\n")
+            TEXT("Friendly reminder from the dev, the game is supposed to be played on a dedicated GPU.\n")
+            TEXT("For a better experience, please switch the game to a dedicated GPU (NVIDIA GTX/RTX or AMD Radeon RX).\n\n")
+            TEXT("If your current system does not have a dedicated GPU, expect underwhelming performance. You can disable this message next time from the settings or by using the -ignoreIGPU launch option.\n\n")
+            TEXT("Game will start up anyway;\n")
+            TEXT("Click OK to continue."),
+            *GRHIAdapterName
+        );
+
+        MessageBoxW(
+            nullptr,
+            *Message,
+            TEXT("Hold up"),
+            MB_OK | MB_ICONINFORMATION | MB_SETFOREGROUND | MB_TOPMOST
+        );
+    }
+#endif
 }

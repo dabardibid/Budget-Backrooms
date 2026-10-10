@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: budget-backrooms\n"
 "POT-Creation-Date: 2026-10-10 17:47\n"
-"PO-Revision-Date: 2026-10-10 17:51\n"
+"PO-Revision-Date: 2026-10-10 18:58\n"
 "Language-Team: Romanian\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
@@ -1708,7 +1708,7 @@ msgstr "okay"
 #: /Game/Widgets/W_Respawn/W_Respawn.W_Respawn_C:ExecuteUbergraph_W_Respawn [Script Bytecode]
 msgctxt ",B4FBA8D94D28B0306D449EA6C5B8AE88"
 msgid "Skill Issue"
-msgstr ""
+msgstr "Skill Issue"
 
 #. Key:	B4FBD559491E45565B8590A8A74387D4
 #. SourceLocation:	/Game/Widgets/W_LevelSelector/W_LevelSelector.W_LevelSelector_C:WidgetTree.TextBlock_1.Text

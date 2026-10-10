@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: budget-backrooms\n"
-"POT-Creation-Date: 2026-10-09 21:53\n"
-"PO-Revision-Date: 2026-10-09 21:55\n"
+"POT-Creation-Date: 2026-10-10 01:00\n"
+"PO-Revision-Date: 2026-10-10 01:04\n"
 "Language-Team: Polish\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -44,13 +44,6 @@ msgstr ""
 #: /Game/Widgets/Multiplayer/W_MPInit.W_MPInit_C:ExecuteUbergraph_W_MPInit [Script Bytecode]
 msgctxt ",0301D76E4F2A4E4849C05B8858D1090E"
 msgid "Loading...?"
-msgstr ""
-
-#. Key:	0403F8384DD243BA5DFA23A34DF7291E
-#. SourceLocation:	/Game/Widgets/W_DelDiag/W_DelDiag.W_DelDiag_C:ExecuteUbergraph_W_DelDiag [Script Bytecode]
-#: /Game/Widgets/W_DelDiag/W_DelDiag.W_DelDiag_C:ExecuteUbergraph_W_DelDiag [Script Bytecode]
-msgctxt ",0403F8384DD243BA5DFA23A34DF7291E"
-msgid "Yes"
 msgstr ""
 
 #. Key:	043CF175484A53E5E11AA4AD58345EE8
@@ -346,8 +339,8 @@ msgid "yes, the game is paused indeed"
 msgstr ""
 
 #. Key:	1FE59D4349C2427AF47827928F391E7A
-#. SourceLocation:	/Game/Widgets/W_SaveMigration/W_SaveMigrationNew.W_SaveMigrationNew_C:WidgetTree.TextBlock_63.Text
-#: /Game/Widgets/W_SaveMigration/W_SaveMigrationNew.W_SaveMigrationNew_C:WidgetTree.TextBlock_63.Text
+#. SourceLocation:	/Game/Widgets/W_Saves/W_SaveMigrationNew.W_SaveMigrationNew_C:WidgetTree.TextBlock_63.Text
+#: /Game/Widgets/W_Saves/W_SaveMigrationNew.W_SaveMigrationNew_C:WidgetTree.TextBlock_63.Text
 msgctxt ",1FE59D4349C2427AF47827928F391E7A"
 msgid "Continue"
 msgstr ""
@@ -444,25 +437,11 @@ msgctxt ",28D27CD447CAD830C098EEB458CAD332"
 msgid "we'd have to try it out potato potatoe-- Listen."
 msgstr ""
 
-#. Key:	2A667FE6424C23DC22B3E782EB5B54FF
-#. SourceLocation:	/Game/Widgets/W_DelDiag/W_DelDiag.W_DelDiag_C:WidgetTree.TextBlock_1.Text
-#: /Game/Widgets/W_DelDiag/W_DelDiag.W_DelDiag_C:WidgetTree.TextBlock_1.Text
-msgctxt ",2A667FE6424C23DC22B3E782EB5B54FF"
-msgid "Yes"
-msgstr ""
-
 #. Key:	2B1098E743BFBEC7B25A9D8E7F6F1ED5
 #. SourceLocation:	/Game/Audio/jake_lele2.jake_lele2.Subtitles(23).Subtitles.Text
 #: /Game/Audio/jake_lele2.jake_lele2.Subtitles(23).Subtitles.Text
 msgctxt ",2B1098E743BFBEC7B25A9D8E7F6F1ED5"
 msgid "Oh, and about the break room again..."
-msgstr ""
-
-#. Key:	2B4B6E584CE52C960934C99609E07362
-#. SourceLocation:	/Game/Widgets/W_DelDiag/W_DelDiag.W_DelDiag_C:WidgetTree.TextBlock_2.Text
-#: /Game/Widgets/W_DelDiag/W_DelDiag.W_DelDiag_C:WidgetTree.TextBlock_2.Text
-msgctxt ",2B4B6E584CE52C960934C99609E07362"
-msgid "No"
 msgstr ""
 
 #. Key:	2B6CB5D84F3109C152E8B89B74F94054
@@ -513,13 +492,6 @@ msgstr ""
 #: /Game/Widgets/Settings/W_AudioSettings.W_AudioSettings_C:WidgetTree.TextBlock_0.Text
 msgctxt ",2CDA71264A1C4CF068AEE58874AB441C"
 msgid "Master Volume"
-msgstr ""
-
-#. Key:	2CFCBAB74BC8CAE59F7F29BFDA2D55AD
-#. SourceLocation:	/Game/Widgets/W_DelDiag/W_DelDiag.W_DelDiag_C:WidgetTree.TextBlock.Text
-#: /Game/Widgets/W_DelDiag/W_DelDiag.W_DelDiag_C:WidgetTree.TextBlock.Text
-msgctxt ",2CFCBAB74BC8CAE59F7F29BFDA2D55AD"
-msgid "You're about to delete data related to the following:"
 msgstr ""
 
 #. Key:	2DB0BA86444A796C5EDDFE802EDBEE5A
@@ -917,13 +889,6 @@ msgctxt ",574F69D44E9FC786CD40A29F92F48422"
 msgid "Restarting executable..."
 msgstr ""
 
-#. Key:	578DE48D4D1E84691D32E5A1032CD6EF
-#. SourceLocation:	/Game/Widgets/W_DelDiag/W_DelAnim.W_DelAnim_C:ExecuteUbergraph_W_DelAnim [Script Bytecode]
-#: /Game/Widgets/W_DelDiag/W_DelAnim.W_DelAnim_C:ExecuteUbergraph_W_DelAnim [Script Bytecode]
-msgctxt ",578DE48D4D1E84691D32E5A1032CD6EF"
-msgid "Re-locking achievements..."
-msgstr ""
-
 #. Key:	58D677054E565B5130AC62B63822753E
 #. SourceLocation:	/Game/Widgets/W_RebindKeys/W_RebindEntry.W_RebindEntry_C:WidgetTree.kbmbutton.KeySelectionText
 #: /Game/Widgets/W_RebindKeys/W_RebindEntry.W_RebindEntry_C:WidgetTree.kbmbutton.KeySelectionText
@@ -1137,6 +1102,16 @@ msgctxt ",74E49D71451A5748AABAC985FDCC1476"
 msgid "Flashlight"
 msgstr ""
 
+#. Key:	7538550F4344618750E7468D3E0CCB58
+#. SourceLocation:	/Game/Widgets/W_Saves/W_SaveWipe.W_SaveWipe_C:WidgetTree.TextBlock.Text
+#: /Game/Widgets/W_Saves/W_SaveWipe.W_SaveWipe_C:WidgetTree.TextBlock.Text
+msgctxt ",7538550F4344618750E7468D3E0CCB58"
+msgid "You are about to reset your game. This includes unlocked levels, settings and some in-world states. Steam Achievements won't be re-locked.\r\n"
+"\r\n"
+"\r\n"
+"Are you sure?"
+msgstr ""
+
 #. Key:	7684BEE242A019D532DECEB57328FC3F
 #. SourceLocation:	/Game/Audio/dave_2.dave_2.Subtitles(1).Subtitles.Text
 #: /Game/Audio/dave_2.dave_2.Subtitles(1).Subtitles.Text
@@ -1314,13 +1289,6 @@ msgctxt ",847639D14B332C465DEC4CAB8A2FA544"
 msgid "Contributor to game's source code"
 msgstr ""
 
-#. Key:	848AFCC7488D72A0C92456BD62C0DB8D
-#. SourceLocation:	/Game/Widgets/W_DelDiag/W_DelDiag.W_DelDiag_C:WidgetTree.TextBlock_202.Text
-#: /Game/Widgets/W_DelDiag/W_DelDiag.W_DelDiag_C:WidgetTree.TextBlock_202.Text
-msgctxt ",848AFCC7488D72A0C92456BD62C0DB8D"
-msgid "Also reset Achievements with this save deletion"
-msgstr ""
-
 #. Key:	84DBC7384AA7AAC2F2C1D0B48ECBEDAF
 #. SourceLocation:	/Game/Widgets/W_LoadingScreen/W_Memerooms_Loading.W_Memerooms_Loading_C:WidgetTree.title.Text
 #: /Game/Widgets/W_LoadingScreen/W_Memerooms_Loading.W_Memerooms_Loading_C:WidgetTree.title.Text
@@ -1450,15 +1418,6 @@ msgctxt ",8E5797074539148476C001B7AC88E791"
 msgid "Looks like you have a controller conencted (or probably just a bug), the support is halfway done, some UI Elements may not work / be bugged. Sensitivity is still WIP so it's gonna be slow to turn the camera."
 msgstr ""
 
-#. Key:	8FEC782641353F9F6310FBAE59B1CF40
-#. SourceLocation:	/Game/Widgets/W_DelDiag/W_DelDiag.W_DelDiag_C:WidgetTree.TextBlock_3.Text
-#: /Game/Widgets/W_DelDiag/W_DelDiag.W_DelDiag_C:WidgetTree.TextBlock_3.Text
-msgctxt ",8FEC782641353F9F6310FBAE59B1CF40"
-msgid "> Map & Gamemode Progress\r\n"
-"> Player Data\r\n"
-"> Settings and other saved variables"
-msgstr ""
-
 #. Key:	905364A14453589E21DC52B3AE6A2C49
 #. SourceLocation:	/Game/Audio/dave_2.dave_2.Subtitles(26).Subtitles.Text
 #: /Game/Audio/dave_2.dave_2.Subtitles(26).Subtitles.Text
@@ -1566,6 +1525,13 @@ msgctxt ",9C10BFE74F385110FD3AA5ADD0BFFF1E"
 msgid "Connection terminated"
 msgstr ""
 
+#. Key:	9C7F59594CCC4A46ED3CE8B6DE1123FA
+#. SourceLocation:	/Game/Widgets/W_Saves/W_SaveWipe.W_SaveWipe_C:WidgetTree.TextBlock_1.Text
+#: /Game/Widgets/W_Saves/W_SaveWipe.W_SaveWipe_C:WidgetTree.TextBlock_1.Text
+msgctxt ",9C7F59594CCC4A46ED3CE8B6DE1123FA"
+msgid "Yes, I want to wipe my savedata"
+msgstr ""
+
 #. Key:	9C8084274E887FD1F2556E97CF7511A1
 #. SourceLocation:	/Game/Widgets/W_LevelSelector/W_LevelSelector.W_LevelSelector_C:WidgetTree.TextBlock_2.Text
 #: /Game/Widgets/W_LevelSelector/W_LevelSelector.W_LevelSelector_C:WidgetTree.TextBlock_2.Text
@@ -1578,6 +1544,13 @@ msgstr ""
 #: /Game/Widgets/W_Graphic_Menu/W_HDRMenu.W_HDRMenu_C:WidgetTree.TextBlock_4.Text
 msgctxt ",9CB931314DB294873FBCB089BA943056"
 msgid "Defines the color gamut for the output display, allowing selection between standard and wide color ranges for different display standards."
+msgstr ""
+
+#. Key:	9CDD7A4449A833FFCEC97CB46EFC6FDF
+#. SourceLocation:	/Game/Widgets/W_Saves/W_SaveWipe.W_SaveWipe_C:WidgetTree.TextBlock_132.Text
+#: /Game/Widgets/W_Saves/W_SaveWipe.W_SaveWipe_C:WidgetTree.TextBlock_132.Text
+msgctxt ",9CDD7A4449A833FFCEC97CB46EFC6FDF"
+msgid "Reset"
 msgstr ""
 
 #. Key:	9D88668D46BEC5D8D58B5CA0356176D4
@@ -1671,13 +1644,6 @@ msgctxt ",A989F67944BEA18B4D05E38A4204D50F"
 msgid "Discord RPC Status"
 msgstr ""
 
-#. Key:	AA03904542D8FABE5300E8946C87FF94
-#. SourceLocation:	/Game/Widgets/W_DelDiag/W_DelAnim.W_DelAnim_C:ExecuteUbergraph_W_DelAnim [Script Bytecode]
-#: /Game/Widgets/W_DelDiag/W_DelAnim.W_DelAnim_C:ExecuteUbergraph_W_DelAnim [Script Bytecode]
-msgctxt ",AA03904542D8FABE5300E8946C87FF94"
-msgid "Waiting for game..."
-msgstr ""
-
 #. Key:	AA07791B47002C74719FFC9B5666A5E3
 #. SourceLocation:	/Game/Widgets/W_Graphic_Menu/W_HDRMenu.W_HDRMenu_C:WidgetTree.TextBlock_5.Text
 #: /Game/Widgets/W_Graphic_Menu/W_HDRMenu.W_HDRMenu_C:WidgetTree.TextBlock_5.Text
@@ -1719,13 +1685,6 @@ msgstr ""
 msgctxt ",AE5CCB4242DCF6F2767D4FB1AF8BA62E"
 msgid "You can pick up the \r\n"
 "flashlight by pressing E"
-msgstr ""
-
-#. Key:	AF2E218149AFCCBF3C080699D62D22A1
-#. SourceLocation:	/Game/Widgets/W_DelDiag/W_DelAnim.W_DelAnim_C:ExecuteUbergraph_W_DelAnim [Script Bytecode]
-#: /Game/Widgets/W_DelDiag/W_DelAnim.W_DelAnim_C:ExecuteUbergraph_W_DelAnim [Script Bytecode]
-msgctxt ",AF2E218149AFCCBF3C080699D62D22A1"
-msgid "Wiping save data..."
 msgstr ""
 
 #. Key:	AFDDD1E64D3A7F5B5AFF47B18BAC5CFE
@@ -2055,8 +2014,8 @@ msgid "You are running an older build of Budget Backrooms compared to the host a
 msgstr ""
 
 #. Key:	CD68D39E4585B1B005DD54A2BF73B23E
-#. SourceLocation:	/Game/Widgets/W_SaveMigration/W_SaveMigrationNew.W_SaveMigrationNew_C:WidgetTree.TextBlock.Text
-#: /Game/Widgets/W_SaveMigration/W_SaveMigrationNew.W_SaveMigrationNew_C:WidgetTree.TextBlock.Text
+#. SourceLocation:	/Game/Widgets/W_Saves/W_SaveMigrationNew.W_SaveMigrationNew_C:WidgetTree.TextBlock.Text
+#: /Game/Widgets/W_Saves/W_SaveMigrationNew.W_SaveMigrationNew_C:WidgetTree.TextBlock.Text
 msgctxt ",CD68D39E4585B1B005DD54A2BF73B23E"
 msgid "Due to internal changes starting 0.0.18 Alpha and later, the older formats used in 0.0.17 and prior are no longer supported to further ease development of the game and compensate for past mistakes made by the developer while making this game.\r\n"
 "\r\n"
@@ -2107,13 +2066,6 @@ msgstr ""
 #: /Game/Widgets/Multiplayer/W_Badges.W_Badges_C:ExecuteUbergraph_W_Badges [Script Bytecode]
 msgctxt ",D12610E44B9281594DAB4AA3A56BD18B"
 msgid "Had Early Access to Multiplayer while it was in the works"
-msgstr ""
-
-#. Key:	D15B597D4058002533DF31ADCF412E1E
-#. SourceLocation:	/Game/Widgets/W_DelDiag/W_DelDiag.W_DelDiag_C:ExecuteUbergraph_W_DelDiag [Script Bytecode]
-#: /Game/Widgets/W_DelDiag/W_DelDiag.W_DelDiag_C:ExecuteUbergraph_W_DelDiag [Script Bytecode]
-msgctxt ",D15B597D4058002533DF31ADCF412E1E"
-msgid "(hold & release)"
 msgstr ""
 
 #. Key:	D198A3D24DB814EC86FA02ABEFD81F0B
@@ -2205,13 +2157,6 @@ msgstr ""
 #: /Game/Audio/jake_lele2.jake_lele2.Subtitles(0).Subtitles.Text
 msgctxt ",D9CE7CDB472FCCCA4B87DE9C87C05978"
 msgid "You have"
-msgstr ""
-
-#. Key:	D9D4C9574FB744E4D86DA8B44BBF4E01
-#. SourceLocation:	/Game/Widgets/W_DelDiag/W_DelAnim.W_DelAnim_C:ExecuteUbergraph_W_DelAnim [Script Bytecode]
-#: /Game/Widgets/W_DelDiag/W_DelAnim.W_DelAnim_C:ExecuteUbergraph_W_DelAnim [Script Bytecode]
-msgctxt ",D9D4C9574FB744E4D86DA8B44BBF4E01"
-msgid "OK!"
 msgstr ""
 
 #. Key:	DD26AED649779CC50B49C5B58A0558BB
@@ -2527,6 +2472,13 @@ msgctxt ",F7AA6C614B57DB81F1DDA39BE40687A9"
 msgid "Couldn't get Steam profile information. Returning to Main Menu..."
 msgstr ""
 
+#. Key:	F804923B4DB5303B0F60E5A856CD204C
+#. SourceLocation:	/Game/Widgets/W_Saves/W_SaveWipe.W_SaveWipe_C:WidgetTree.TextBlock_63.Text
+#: /Game/Widgets/W_Saves/W_SaveWipe.W_SaveWipe_C:WidgetTree.TextBlock_63.Text
+msgctxt ",F804923B4DB5303B0F60E5A856CD204C"
+msgid "Cancel"
+msgstr ""
+
 #. Key:	F80D901F427C81C4CF268EBD49A5099B
 #. SourceLocation:	/Game/Widgets/Multiplayer/W_UnstableMP.W_UnstableMP_C:WidgetTree.TextBlock_63.Text
 #: /Game/Widgets/Multiplayer/W_UnstableMP.W_UnstableMP_C:WidgetTree.TextBlock_63.Text
@@ -2598,17 +2550,10 @@ msgid "Graphic settings saved!"
 msgstr ""
 
 #. Key:	FF6DBE79492B600645EB2EBDE736A6DF
-#. SourceLocation:	/Game/Widgets/W_SaveMigration/W_SaveMigrationNew.W_SaveMigrationNew_C:WidgetTree.TextBlock_132.Text
-#: /Game/Widgets/W_SaveMigration/W_SaveMigrationNew.W_SaveMigrationNew_C:WidgetTree.TextBlock_132.Text
+#. SourceLocation:	/Game/Widgets/W_Saves/W_SaveMigrationNew.W_SaveMigrationNew_C:WidgetTree.TextBlock_132.Text
+#: /Game/Widgets/W_Saves/W_SaveMigrationNew.W_SaveMigrationNew_C:WidgetTree.TextBlock_132.Text
 msgctxt ",FF6DBE79492B600645EB2EBDE736A6DF"
 msgid "Savedata Migration"
-msgstr ""
-
-#. Key:	FF8568A14666BA939243EBBE23CBE269
-#. SourceLocation:	/Game/Widgets/W_DelDiag/W_DelAnim.W_DelAnim_C:WidgetTree.TextBlock_0.Text
-#: /Game/Widgets/W_DelDiag/W_DelAnim.W_DelAnim_C:WidgetTree.TextBlock_0.Text
-msgctxt ",FF8568A14666BA939243EBBE23CBE269"
-msgid "Give me a sec..."
 msgstr ""
 
 #. Key:	FFFFE92A42D0732790FB13A5A7E752EF
@@ -3062,8 +3007,8 @@ msgid "Hold C to zoom."
 msgstr ""
 
 #. Key:	E98CC95C4741BD618971C5ACD6D3E040
-#. SourceLocation:	/Game/Widgets/W_Respawn/W_Respawn_LV2.W_Respawn_LV2_C:WidgetTree.TextBlock_0.Text
-#: /Game/Widgets/W_Respawn/W_Respawn_LV2.W_Respawn_LV2_C:WidgetTree.TextBlock_0.Text
+#. SourceLocation:	/Game/Widgets/W_Respawn/W_Respawn_LV0.W_Respawn_LV0_C:WidgetTree.TextBlock_0.Text
+#: /Game/Widgets/W_Respawn/W_Respawn_LV0.W_Respawn_LV0_C:WidgetTree.TextBlock_0.Text
 msgctxt "Game,E98CC95C4741BD618971C5ACD6D3E040"
 msgid "Go to main menu"
 msgstr ""

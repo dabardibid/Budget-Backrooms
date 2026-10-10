@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: budget-backrooms\n"
 "POT-Creation-Date: 2026-10-10 01:00\n"
-"PO-Revision-Date: 2026-10-10 08:54\n"
+"PO-Revision-Date: 2026-10-10 10:05\n"
 "Language-Team: Polish\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -144,7 +144,8 @@ msgstr ""
 msgctxt ",0B63AE0B4768A30314B307AB9675F418"
 msgid "Budget\r\n"
 "Backrooms"
-msgstr ""
+msgstr "Budget\r\n"
+"Backrooms"
 
 #. Key:	0BD182C64C09EB8D62ACA7921E2075A0
 #. SourceLocation:	/Game/Widgets/W_RebindKeys/W_RebindEntry.W_RebindEntry_C:WidgetTree.kbmbutton.NoKeySpecifiedText
@@ -279,7 +280,7 @@ msgstr ""
 #: /Game/Widgets/W_MainMenu/W_MainMenu.W_MainMenu_C:WidgetTree.TextBlock_0.Text
 msgctxt ",1A8C72D646BF429E378787BD0809460E"
 msgid "Play"
-msgstr ""
+msgstr "Graj"
 
 #. Key:	1AB6487D4FF3967CB4BE0E9CB37177E9
 #. SourceLocation:	/Game/Audio/jake_lele2.jake_lele2.Subtitles(31).Subtitles.Text
@@ -400,7 +401,7 @@ msgstr ""
 #: /Game/Widgets/Warnings/W_NightlyWarn.W_NightlyWarn_C:WidgetTree.desc.Text
 msgctxt ",25FD63FB480627D2A7454C826FC83F4E"
 msgid "Considering you've played the base game, you are now running a development branch of the game, meaning that you're going to see unfinished content, and spoilers of the upcoming features. Optionally report any critical bugs on the Discord Server. Enjoy :D"
-msgstr ""
+msgstr "Testujesz teraz wersję deweloperską gry. Zważając na to, że grałeś już w podstawową wersję gry, mogą znajdować się tu spoilery, które niekoniecznie chcesz zobaczyć, możesz również natrafić na niedokończoną treść. Krytyczne błędy prosimy zgłaszać na serwerze Discord. Miłej zabawy :D"
 
 #. Key:	26996A5E4A32E19E39F6D68E2DDADBC2
 #. SourceLocation:	/Game/Widgets/W_Graphic_Menu/W_GraphicMenu.W_GraphicMenu_C:WidgetTree.TextBlock_13.Text
@@ -456,7 +457,7 @@ msgstr ""
 #: /Game/Widgets/W_MainMenu/W_MainMenu.W_MainMenu_C:WidgetTree.TextBlock_5.Text
 msgctxt ",2B9D8614416432891BBEC9A7AC2F68C3"
 msgid "Changelog"
-msgstr ""
+msgstr "Dziennik Zmian"
 
 #. Key:	2BC16CBE4BF434AD53A4D09B75D02873
 #. SourceLocation:	/Game/Widgets/W_Graphic_Menu/W_HDRMenu.W_HDRMenu_C:WidgetTree.TextBlock_3.Text
@@ -719,7 +720,7 @@ msgstr ""
 #: /Game/Widgets/W_MainMenu/W_MainMenu.W_MainMenu_C:WidgetTree.b_mp_text.Text
 msgctxt ",471A60DE41367DBE6A3E0CB811AE38F1"
 msgid "Multiplayer"
-msgstr ""
+msgstr "Multiplayer"
 
 #. Key:	4893565141F7BA406D963D864F812BBF
 #. SourceLocation:	/Game/Widgets/Warnings/W_Disclaimer.W_Disclaimer_C:Get_tip_Text_0 [Script Bytecode]
@@ -761,7 +762,7 @@ msgstr ""
 #: /Game/Widgets/W_MainMenu/W_MainMenu.W_MainMenu_C:WidgetTree.TextBlock.Text
 msgctxt ",4A685E724120F27E5D75E28584F8E8AD"
 msgid "Achievements"
-msgstr ""
+msgstr "Osiągnięcia"
 
 #. Key:	4A8D30B644AFEA682B9FFEA4C760C3C1
 #. SourceLocation:	/Game/Audio/ammo_pickup.ammo_pickup.Subtitles(0).Subtitles.Text
@@ -852,7 +853,7 @@ msgstr ""
 #: /Game/Widgets/Warnings/W_NightlyWarn.W_NightlyWarn_C:ExecuteUbergraph_W_NightlyWarn [Script Bytecode]
 msgctxt ",5447BA0F492F744FE7E235A02123CD2A"
 msgid "Got it"
-msgstr ""
+msgstr "Zrozumiano"
 
 #. Key:	55AEF1CA46A68982A2C68CB5A66E8E4B
 #. SourceLocation:	/Game/Widgets/Multiplayer/W_Badges.W_Badges_C:ExecuteUbergraph_W_Badges [Script Bytecode]
@@ -1315,7 +1316,7 @@ msgstr ""
 #: /Game/Widgets/Warnings/W_NightlyWarn.W_NightlyWarn_C:WidgetTree.title.Text
 msgctxt ",85FE9D2F40485A2BC3F503A305F7DFEA"
 msgid "Welcome to Nightly"
-msgstr ""
+msgstr "Witamy w wersji nightly"
 
 #. Key:	86BCAF0245EDE47AD823FB83CF7A9BCF
 #. SourceLocation:	/Game/Widgets/W_Interaction/W_InteractionHint.W_InteractionHint_C:WidgetTree.TextBlock_1.Text

@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: budget-backrooms\n"
-"POT-Creation-Date: 2026-10-10 01:00\n"
-"PO-Revision-Date: 2026-10-10 15:01\n"
+"POT-Creation-Date: 2026-10-10 17:47\n"
+"PO-Revision-Date: 2026-10-10 18:58\n"
 "Language-Team: Polish\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -46,19 +46,12 @@ msgctxt ",0301D76E4F2A4E4849C05B8858D1090E"
 msgid "Loading...?"
 msgstr "Ładowanie...?"
 
-#. Key:	043CF175484A53E5E11AA4AD58345EE8
-#. SourceLocation:	/Game/Widgets/Enum_InputDevice.Enum_InputDevice.DisplayNameMap(2 - Value).DisplayNameMap
-#: /Game/Widgets/Enum_InputDevice.Enum_InputDevice.DisplayNameMap(2 - Value).DisplayNameMap
-msgctxt ",043CF175484A53E5E11AA4AD58345EE8"
-msgid "Xbox One"
-msgstr "Xbox One"
-
 #. Key:	0457A0024D4DBC14FC9E18A7A61819CC
 #. SourceLocation:	/Game/Widgets/Warnings/W_NightlyWarn.W_NightlyWarn_C:WidgetTree.warn.Text
 #: /Game/Widgets/Warnings/W_NightlyWarn.W_NightlyWarn_C:WidgetTree.warn.Text
 msgctxt ",0457A0024D4DBC14FC9E18A7A61819CC"
 msgid "you better mark my words, next boot will disable light mode"
-msgstr ""
+msgstr "czytaj uważnie, przy następnym uruchomieniu tryb jasny zostanie wyłączony"
 
 #. Key:	0549CDDF4ABC01C9B2C64B94029E1717
 #. SourceLocation:	/Game/Audio/jake_lele.jake_lele.Subtitles(14).Subtitles.Text
@@ -72,14 +65,14 @@ msgstr "\"KONIECZNIE je podpisz.\""
 #: /Game/Widgets/W_Graphic_Menu/W_GraphicMenu.W_GraphicMenu_C:WidgetTree.hdr_text.Text
 msgctxt ",05627DDD4A2CF3CACFCD42BF63AEC342"
 msgid "Options"
-msgstr ""
+msgstr "Opcje"
 
 #. Key:	05E828A4455E38C6444CFEA78FDA32A8
 #. SourceLocation:	/Game/Audio/dave_2.dave_2.Subtitles(23).Subtitles.Text
 #: /Game/Audio/dave_2.dave_2.Subtitles(23).Subtitles.Text
 msgctxt ",05E828A4455E38C6444CFEA78FDA32A8"
 msgid "Browse cameras.. unlock. That's it."
-msgstr ""
+msgstr "Przejrzyj kamery.. odblokuj dzwi. I tyle."
 
 #. Key:	066AAD0F432400DE433D138705B00951
 #. SourceLocation:	/Game/Widgets/Warnings/W_ControllerWarn.W_ControllerWarn_C:WidgetTree.TextBlock_63.Text
@@ -147,13 +140,6 @@ msgid "Budget\r\n"
 msgstr "Budget\r\n"
 "Backrooms"
 
-#. Key:	0BD182C64C09EB8D62ACA7921E2075A0
-#. SourceLocation:	/Game/Widgets/W_RebindKeys/W_RebindEntry.W_RebindEntry_C:WidgetTree.kbmbutton.NoKeySpecifiedText
-#: /Game/Widgets/W_RebindKeys/W_RebindEntry.W_RebindEntry_C:WidgetTree.kbmbutton.NoKeySpecifiedText
-msgctxt ",0BD182C64C09EB8D62ACA7921E2075A0"
-msgid "Unbound"
-msgstr "Brak"
-
 #. Key:	0BD5C3AA400CA31F93B89480456EA200
 #. SourceLocation:	/Game/Widgets/W_TextTip.Default__W_TextTip_C.PerLangContributedTextThing
 #: /Game/Widgets/W_TextTip.Default__W_TextTip_C.PerLangContributedTextThing
@@ -175,13 +161,6 @@ msgctxt ",0E5DE39F4FCB453AC020AAA0E32D0A9E"
 msgid "Couldn't get Steam profile information. Retrying..."
 msgstr "Nie udało się uzyskać informacji o profilu Steam. Probuję ponownie..."
 
-#. Key:	0EDA056F4EFE3914DBFCF29C3636C17B
-#. SourceLocation:	/Game/Widgets/W_TextTip.W_TextTip_C:WidgetTree.TextBlock_1.Text
-#: /Game/Widgets/W_TextTip.W_TextTip_C:WidgetTree.TextBlock_1.Text
-msgctxt ",0EDA056F4EFE3914DBFCF29C3636C17B"
-msgid "Selecting this language will only set the language locale in the game file, but translations will not be applied as they are incomplete."
-msgstr "Wybranie tego języka zmieni jedynie ustawienia językowe zapisane w pliku gry. Tłumaczenie nie zostanie zastosowane, ponieważ jest niekompletne."
-
 #. Key:	103FC79D4420074F4D9EB88997EB5674
 #. SourceLocation:	/Game/Widgets/Warnings/W_GraphicsConflict.W_GraphicsConflict_C:WidgetTree.TextBlock.Text
 #: /Game/Widgets/Warnings/W_GraphicsConflict.W_GraphicsConflict_C:WidgetTree.TextBlock.Text
@@ -190,8 +169,8 @@ msgid "Looks like you've disabled Anti-Aliasing and having FidelityFX enabled at
 msgstr "Wygląda na to, że wyłączono wygładzanie krawędzi, a jednocześnie włączono FidelityFX. Nie chcę cię martwić, ale obraz będzie przez to wyglądał gorzej. Radziłbym przynajmniej ustawić wygładzanie krawędzi na niskie. Tak tylko mówię..."
 
 #. Key:	10B56E324DD535C86DE171AA03A1DD95
-#. SourceLocation:	/Game/Widgets/Animations/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock.Text
-#: /Game/Widgets/Animations/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock.Text
+#. SourceLocation:	/Game/Widgets/Warnings/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock.Text
+#: /Game/Widgets/Warnings/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock.Text
 msgctxt ",10B56E324DD535C86DE171AA03A1DD95"
 msgid "The game is experiencing slow performance. To improve, adjust graphical settings in the Pause Menu."
 msgstr ""
@@ -309,7 +288,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(6).Subtitles.Text
 msgctxt ",1BE89557478F40A65EC9B6A1BDD6413A"
 msgid "Yes, hello, it's Dave from The Singularity. Now listen up,"
-msgstr ""
+msgstr "Halo, tu Dave z The Singularity. A teraz słuchaj,"
 
 #. Key:	1D3B4527451B7EFA194BA08E49122F86
 #. SourceLocation:	/Game/Widgets/Warnings/W_Disclaimer.W_Disclaimer_C:Get_tip_Text_0 [Script Bytecode]
@@ -415,7 +394,7 @@ msgstr "Jakość Cieni"
 #: /Game/Audio/dave_2.dave_2.Subtitles(0).Subtitles.Text
 msgctxt ",2784FC72442FA17E4E75328B10D55010"
 msgid "You have"
-msgstr ""
+msgstr "Masz"
 
 #. Key:	2797205C48DBDE95D152BAB7EF46D7A5
 #. SourceLocation:	/Game/Widgets/W_Errors/W_ConnDrivErr.W_ConnDrivErr_C:WidgetTree.TextBlock_132.Text
@@ -436,7 +415,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(12).Subtitles.Text
 msgctxt ",28D27CD447CAD830C098EEB458CAD332"
 msgid "we'd have to try it out potato potatoe-- Listen."
-msgstr ""
+msgstr "że trzeba to przetestować, bla bla bla-- Słuchaj."
 
 #. Key:	2B1098E743BFBEC7B25A9D8E7F6F1ED5
 #. SourceLocation:	/Game/Audio/jake_lele2.jake_lele2.Subtitles(23).Subtitles.Text
@@ -584,7 +563,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(24).Subtitles.Text
 msgctxt ",38AF16154C99E7B73DE3F3BDB93AE8AF"
 msgid "Alright?"
-msgstr ""
+msgstr "Tak?"
 
 #. Key:	39935905454494977EC65AB83FC09BDF
 #. SourceLocation:	/Game/Audio/jake_lele.jake_lele.Subtitles(23).Subtitles.Text
@@ -644,13 +623,6 @@ msgid "Miscellaneous\r\n"
 "Settings"
 msgstr ""
 
-#. Key:	3FC1E8E946BCA793F695C790222C2BD0
-#. SourceLocation:	/Game/Widgets/W_TextTip.W_TextTip_C:WidgetTree.TextBlock_2.Text
-#: /Game/Widgets/W_TextTip.W_TextTip_C:WidgetTree.TextBlock_2.Text
-msgctxt ",3FC1E8E946BCA793F695C790222C2BD0"
-msgid "Translations for this language may be outdated due to the recency of your game version."
-msgstr ""
-
 #. Key:	4088789F4F09A439F7AAE489952E8E1D
 #. SourceLocation:	/Game/Widgets/Warnings/W_Disclaimer.W_Disclaimer_C:WidgetTree.TextBlock_1.Text
 #: /Game/Widgets/Warnings/W_Disclaimer.W_Disclaimer_C:WidgetTree.TextBlock_1.Text
@@ -692,7 +664,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(9).Subtitles.Text
 msgctxt ",4162F7AF43EB38C10CDA7F95FF187490"
 msgid "basically the whole hotel."
-msgstr ""
+msgstr "no, właściwie gdzieś w całym hotelu."
 
 #. Key:	4458A33747AD473356797A8DDB61AE95
 #. SourceLocation:	/Game/Widgets/W_LevelSelector/W_LevelSelector.W_LevelSelector_C:WidgetTree.TextBlock_7.Text
@@ -841,13 +813,6 @@ msgctxt ",52E157914CE8B0F1AFA61E95E1CB0970"
 msgid "Apply & exit"
 msgstr "Zapisz i wyjdź"
 
-#. Key:	539E48624D1E986B9D6C68BB1113AC80
-#. SourceLocation:	/Game/Widgets/W_Achievement/W_AchTotal.W_AchTotal_C:WidgetTree.Title.Text
-#: /Game/Widgets/W_Achievement/W_AchTotal.W_AchTotal_C:WidgetTree.Title.Text
-msgctxt ",539E48624D1E986B9D6C68BB1113AC80"
-msgid "Total Achievement Completion"
-msgstr ""
-
 #. Key:	5447BA0F492F744FE7E235A02123CD2A
 #. SourceLocation:	/Game/Widgets/Warnings/W_NightlyWarn.W_NightlyWarn_C:ExecuteUbergraph_W_NightlyWarn [Script Bytecode]
 #: /Game/Widgets/Warnings/W_NightlyWarn.W_NightlyWarn_C:ExecuteUbergraph_W_NightlyWarn [Script Bytecode]
@@ -909,7 +874,7 @@ msgstr "\"tajemniczo znika jedzenie.\""
 #: /Game/Audio/dave_2.dave_2.Subtitles(19).Subtitles.Text
 msgctxt ",5ABAE032431D6FAEEA8477B61905E51A"
 msgid "Thanks."
-msgstr ""
+msgstr "Dzięki."
 
 #. Key:	5AF6FE0244DBDA8C4254F49E06FCC48C
 #. SourceLocation:	/Game/Audio/jake_lele.jake_lele.Subtitles(9).Subtitles.Text
@@ -923,7 +888,7 @@ msgstr "\"Bez paniki, maszyny też potrzebują trochę snu.\""
 #: /Game/Audio/dave_2.dave_2.Subtitles(25).Subtitles.Text
 msgctxt ",5B0CFB614AAE57D557E54B9AF90AE2FC"
 msgid "And we'll be paying you extra if needed."
-msgstr ""
+msgstr "Jeśli będzie trzeba, zapłacimy ci ekstra."
 
 #. Key:	5D636B944CFE6074F271A0BF5DD8053E
 #. SourceLocation:	/Game/Widgets/W_LevelSelector/W_LevelSelector.W_LevelSelector_C:WidgetTree.TextBlock_9.Text
@@ -995,7 +960,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(7).Subtitles.Text
 msgctxt ",63233EF042AA0A196BF745B5CA6DFC10"
 msgid "I've left my keycard in one of those rooms..."
-msgstr ""
+msgstr "Zostawiłem swoją kartę dostępu w jednym z tych pokoi..."
 
 #. Key:	63295C394479C9CC0CD2C8A12C76B1E3
 #. SourceLocation:	/Game/Widgets/Warnings/W_Disclaimer.W_Disclaimer_C:WidgetTree.TextBlock_5.Text
@@ -1121,7 +1086,7 @@ msgstr "Zamierzasz zresetować grę. Zostaną zresetowane odblokowane poziomy, u
 #: /Game/Audio/dave_2.dave_2.Subtitles(1).Subtitles.Text
 msgctxt ",7684BEE242A019D532DECEB57328FC3F"
 msgid "one"
-msgstr ""
+msgstr "jedną"
 
 #. Key:	776CCCB9468E9C4AD3026A9C40A7C341
 #. SourceLocation:	/Game/Widgets/Multiplayer/W_MPMenu.W_MPMenu_C:WidgetTree.download_text.Text
@@ -1413,7 +1378,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(18).Subtitles.Text
 msgctxt ",8E1D8A7645278ACCE3A7CA995CC04B00"
 msgid "Alright."
-msgstr ""
+msgstr "Super."
 
 #. Key:	8E5797074539148476C001B7AC88E791
 #. SourceLocation:	/Game/Widgets/Warnings/W_ControllerWarn.W_ControllerWarn_C:WidgetTree.TextBlock.Text
@@ -1427,7 +1392,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(26).Subtitles.Text
 msgctxt ",905364A14453589E21DC52B3AE6A2C49"
 msgid "See ya."
-msgstr ""
+msgstr "Trzymaj się."
 
 #. Key:	90D2E00443A2DCA4DDB88082A4F8A4E6
 #. SourceLocation:	/Game/Widgets/W_Screeensaver/W_Screensaver_InitDIal.W_Screensaver_InitDIal_C:WidgetTree.TextBlock_3.Text
@@ -1499,7 +1464,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(20).Subtitles.Text
 msgctxt ",96FDF24242737C5C9777F1AD9E6C021D"
 msgid "Look-- it's not gonna take much time."
-msgstr ""
+msgstr "Nie powinno zająć Ci to dużo czasu to dużo czasu."
 
 #. Key:	97494E14468916A014D0CAA273B40A35
 #. SourceLocation:	/Game/Widgets/Warnings/W_ControllerWarn.W_ControllerWarn_C:WidgetTree.TextBlock_132.Text
@@ -1604,7 +1569,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(16).Subtitles.Text
 msgctxt ",A23891DA48D9221824463AB5473A7708"
 msgid "And... then maybe unlock that door, because we have not tested the new remote unlock system."
-msgstr ""
+msgstr "A potem może otwórz te drzwi, bo nadal nie przetestowaliśmy tego nowego systemu ochrony."
 
 #. Key:	A3AEDF9D4CE4CA889ED08795364C2D47
 #. SourceLocation:	/Game/Widgets/W_LevelSelector/W_LevelSelector.W_LevelSelector_C:WidgetTree.TextBlock.Text
@@ -1632,7 +1597,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(4).Subtitles.Text
 msgctxt ",A82BA4564863A802463BB3A8DDFD1A7A"
 msgid "First message."
-msgstr ""
+msgstr "Wiadomość pierwsza."
 
 #. Key:	A8DF3B32415DB3B4CB2342B271C89551
 #. SourceLocation:	/Game/Widgets/W_Graphic_Menu/W_HDRMenu.W_HDRMenu_C:WidgetTree.TextBlock.Text
@@ -1698,13 +1663,6 @@ msgctxt ",AFDDD1E64D3A7F5B5AFF47B18BAC5CFE"
 msgid "Running in Offline Mode, you can only play and host local sessions on the same (local) network as yours. A proper Steam connection could not be made, and you've been switched to this mode as a fallback."
 msgstr ""
 
-#. Key:	B0AF2D6645AEAC0EAD5285893E190D69
-#. SourceLocation:	/Game/Widgets/Enum_InputDevice.Enum_InputDevice.DisplayNameMap(3 - Value).DisplayNameMap
-#: /Game/Widgets/Enum_InputDevice.Enum_InputDevice.DisplayNameMap(3 - Value).DisplayNameMap
-msgctxt ",B0AF2D6645AEAC0EAD5285893E190D69"
-msgid "Xbox Series"
-msgstr ""
-
 #. Key:	B1D300AB40019134BF7E4DBA937A9F59
 #. SourceLocation:	/Game/Widgets/W_CrosshairHint.W_CrosshairHint_C:Get_keycardshit_Text_0 [Script Bytecode]
 #: /Game/Widgets/W_CrosshairHint.W_CrosshairHint_C:Get_keycardshit_Text_0 [Script Bytecode]
@@ -1752,7 +1710,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(15).Subtitles.Text
 msgctxt ",B86A83AC4E4C28AB09ED7A91454C4705"
 msgid "Browse through the camera feed, see if there is anything peculiar."
-msgstr ""
+msgstr "Przejrzyj obraz z kamer i sprawdź, czy nie ma na nim czegoś podejrzanego."
 
 #. Key:	B8DBA6F942BE216F4D3214893BEABABA
 #. SourceLocation:	/Game/Widgets/Warnings/W_Disclaimer.W_Disclaimer_C:Get_tip_Text_0 [Script Bytecode]
@@ -1931,7 +1889,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(17).Subtitles.Text
 msgctxt ",C2F8C9874EF16151BAE43DB6043D90C1"
 msgid "Alright?"
-msgstr ""
+msgstr "Tak?"
 
 #. Key:	C3E31F8A477DC630D3DACF8B38E6F78F
 #. SourceLocation:	/Game/Audio/jake_lele.jake_lele.Subtitles(25).Subtitles.Text
@@ -1973,7 +1931,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(14).Subtitles.Text
 msgctxt ",C7475304420FE7A93DF9309E1251BD87"
 msgid "Just..."
-msgstr ""
+msgstr "Po prostu..."
 
 #. Key:	C74A162A46CE94F54CD3F48867E393A5
 #. SourceLocation:	/Game/Widgets/Multiplayer/W_JoinSession.W_JoinSession_C:WidgetTree.TextBlock.Text
@@ -1988,13 +1946,6 @@ msgstr ""
 msgctxt ",C8FDFB4E47929EB174675D8F9623C62E"
 msgid "Heatmap Telemetry Opt-in"
 msgstr "Zezwól na zbieranie danych telemetrycznych"
-
-#. Key:	C98AE9394ABD2A03FCCFCBBCDFE85292
-#. SourceLocation:	/Game/Widgets/W_RebindKeys/W_RebindEntry.W_RebindEntry_C:WidgetTree.label_text.Text
-#: /Game/Widgets/W_RebindKeys/W_RebindEntry.W_RebindEntry_C:WidgetTree.label_text.Text
-msgctxt ",C98AE9394ABD2A03FCCFCBBCDFE85292"
-msgid "ActionLabel"
-msgstr ""
 
 #. Key:	CA1F132B41B4C69B739112B6E56BEF96
 #. SourceLocation:	/Game/Widgets/W_Graphic_Menu/W_HDRMenu.W_HDRMenu_C:WidgetTree.TextBlock_0.Text
@@ -2049,7 +2000,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(11).Subtitles.Text
 msgctxt ",CF5990CF4F7D73D699AA5FB9CEF6F794"
 msgid "What I'd want you to do would be to take the keycard, go into the security room, boot cmOS up, because people from Bloom said..."
-msgstr ""
+msgstr "Chciałbym, żebyś wziął kartę, poszedł do pokoju ochrony i uruchomił cmOS. Ludzie z Bloom mówili"
 
 #. Key:	CFA6B9244F09782E6EECE588D2693779
 #. SourceLocation:	/Game/Widgets/W_CrosshairHint.W_CrosshairHint_C:Get_keycardshit_Text_0 [Script Bytecode]
@@ -2320,16 +2271,9 @@ msgctxt ",EBA2280649DE145149C473A155CB5DCA"
 msgid "fucking hell"
 msgstr ""
 
-#. Key:	EC0AEB154E74817C3DC8F2A416DCE931
-#. SourceLocation:	/Game/Widgets/Enum_InputDevice.Enum_InputDevice.DisplayNameMap(0 - Value).DisplayNameMap
-#: /Game/Widgets/Enum_InputDevice.Enum_InputDevice.DisplayNameMap(0 - Value).DisplayNameMap
-msgctxt ",EC0AEB154E74817C3DC8F2A416DCE931"
-msgid "PS4"
-msgstr ""
-
 #. Key:	EC1EEF89400FD7017791B9A576C40873
-#. SourceLocation:	/Game/Widgets/Animations/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock_7.Text
-#: /Game/Widgets/Animations/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock_7.Text
+#. SourceLocation:	/Game/Widgets/Warnings/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock_7.Text
+#: /Game/Widgets/Warnings/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock_7.Text
 msgctxt ",EC1EEF89400FD7017791B9A576C40873"
 msgid "Slow Performance"
 msgstr ""
@@ -2369,7 +2313,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(2).Subtitles.Text
 msgctxt ",EFA5511C4EEFEC0E17217381EFEBF25F"
 msgid "new message."
-msgstr ""
+msgstr "nową wiadomość."
 
 #. Key:	F068C21641BE5946E6CD23824FF744F1
 #. SourceLocation:	/Game/Audio/jake_lele.jake_lele.Subtitles(4).Subtitles.Text
@@ -2413,13 +2357,6 @@ msgctxt ",F295717741467DA02764AB867E6B814B"
 msgid "This game is open-source, and you can contribute right away!"
 msgstr ""
 
-#. Key:	F2CB3F594C37C8424B58DA90BCDF95EC
-#. SourceLocation:	/Game/Widgets/Enum_InputDevice.Enum_InputDevice.DisplayNameMap(1 - Value).DisplayNameMap
-#: /Game/Widgets/Enum_InputDevice.Enum_InputDevice.DisplayNameMap(1 - Value).DisplayNameMap
-msgctxt ",F2CB3F594C37C8424B58DA90BCDF95EC"
-msgid "PS5"
-msgstr ""
-
 #. Key:	F3B36254424B8D6715CF0BBCC3F237DB
 #. SourceLocation:	/Game/Widgets/Warnings/W_ExperLevel.W_ExperLevel_C:WidgetTree.TextBlock_63.Text
 #: /Game/Widgets/Warnings/W_ExperLevel.W_ExperLevel_C:WidgetTree.TextBlock_63.Text
@@ -2453,7 +2390,7 @@ msgstr "Post-Processing"
 #: /Game/Audio/dave_2.dave_2.Subtitles(28).Subtitles.Text
 msgctxt ",F52E9A794E0F87FC2AD9539282507B9B"
 msgid "End of messages."
-msgstr ""
+msgstr "Brak kolejnych wiadomości."
 
 #. Key:	F5B9B92441455482E5C3F0BF57A40FFA
 #. SourceLocation:	/Game/Widgets/Multiplayer/W_Badges.W_Badges_C:WidgetTree.kofi.ToolTipText
@@ -2495,7 +2432,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(22).Subtitles.Text
 msgctxt ",F850B59D49C11521BEB658983BB4971C"
 msgid "Take keycard, get in the room..."
-msgstr ""
+msgstr "Weź kartę, znajdź pokój ochrony..."
 
 #. Key:	F912874C4BF4F8E305532C8245A2F95D
 #. SourceLocation:	/Game/Widgets/W_Screeensaver/W_Screensaver_InitDIal.W_Screensaver_InitDIal_C:WidgetTree.TextBlock_2.Text
@@ -2632,8 +2569,8 @@ msgid "Quit to main menu"
 msgstr ""
 
 #. Key:	155F7E6C488B71EF11190F9715134915
-#. SourceLocation:	/Game/Widgets/Animations/FadeOut.FadeOut_C:WidgetTree.TextBlock_0.Text
-#: /Game/Widgets/Animations/FadeOut.FadeOut_C:WidgetTree.TextBlock_0.Text
+#. SourceLocation:	/Game/Widgets/Animations/FadeIn.FadeIn_C:WidgetTree.TextBlock_0.Text
+#: /Game/Widgets/Animations/FadeIn.FadeIn_C:WidgetTree.TextBlock_0.Text
 msgctxt "Game,155F7E6C488B71EF11190F9715134915"
 msgid "Loading..."
 msgstr ""
@@ -2725,13 +2662,6 @@ msgstr ""
 #: /Game/Widgets/W_MapFinished/W_OptionalSurvey.W_OptionalSurvey_C:WidgetTree.TextBlock_1.Text
 msgctxt "Game,46EAC7E347E087B36E30A8B2E18E5F74"
 msgid "Looks like you're done here. Would you like to contribute to the game & answer to a 5-minute survey? Come on, it's not gonna hurt, be honest as possible if you want :)"
-msgstr ""
-
-#. Key:	4921502945E5079A0867B59BBCB1C063
-#. SourceLocation:	/Game/Widgets/W_Achievement/W_AchPage.W_AchPage_C:WidgetTree.TextBlock_50.Text
-#: /Game/Widgets/W_Achievement/W_AchPage.W_AchPage_C:WidgetTree.TextBlock_50.Text
-msgctxt "Game,4921502945E5079A0867B59BBCB1C063"
-msgid "<< Back to Main Menu"
 msgstr ""
 
 #. Key:	4A7E3B4543B1E90E0F55B7B8C9EF6864
@@ -3011,8 +2941,8 @@ msgid "Hold C to zoom."
 msgstr ""
 
 #. Key:	E98CC95C4741BD618971C5ACD6D3E040
-#. SourceLocation:	/Game/Widgets/W_Respawn/W_Respawn_LV0.W_Respawn_LV0_C:WidgetTree.TextBlock_0.Text
-#: /Game/Widgets/W_Respawn/W_Respawn_LV0.W_Respawn_LV0_C:WidgetTree.TextBlock_0.Text
+#. SourceLocation:	/Game/Widgets/W_Respawn/W_Respawn_LV2.W_Respawn_LV2_C:WidgetTree.TextBlock_0.Text
+#: /Game/Widgets/W_Respawn/W_Respawn_LV2.W_Respawn_LV2_C:WidgetTree.TextBlock_0.Text
 msgctxt "Game,E98CC95C4741BD618971C5ACD6D3E040"
 msgid "Go to main menu"
 msgstr ""

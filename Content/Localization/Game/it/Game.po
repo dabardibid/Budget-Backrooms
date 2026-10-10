@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: budget-backrooms\n"
-"POT-Creation-Date: 2026-10-10 01:00\n"
-"PO-Revision-Date: 2026-10-10 08:54\n"
+"POT-Creation-Date: 2026-10-10 17:47\n"
+"PO-Revision-Date: 2026-10-10 19:55\n"
 "Language-Team: Italian\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -45,13 +45,6 @@ msgstr "\"un piccolo promemoria...\""
 msgctxt ",0301D76E4F2A4E4849C05B8858D1090E"
 msgid "Loading...?"
 msgstr "Caricamento...?"
-
-#. Key:	043CF175484A53E5E11AA4AD58345EE8
-#. SourceLocation:	/Game/Widgets/Enum_InputDevice.Enum_InputDevice.DisplayNameMap(2 - Value).DisplayNameMap
-#: /Game/Widgets/Enum_InputDevice.Enum_InputDevice.DisplayNameMap(2 - Value).DisplayNameMap
-msgctxt ",043CF175484A53E5E11AA4AD58345EE8"
-msgid "Xbox One"
-msgstr ""
 
 #. Key:	0457A0024D4DBC14FC9E18A7A61819CC
 #. SourceLocation:	/Game/Widgets/Warnings/W_NightlyWarn.W_NightlyWarn_C:WidgetTree.warn.Text
@@ -148,13 +141,6 @@ msgid "Budget\r\n"
 msgstr "Budget\r\n"
 "Backrooms"
 
-#. Key:	0BD182C64C09EB8D62ACA7921E2075A0
-#. SourceLocation:	/Game/Widgets/W_RebindKeys/W_RebindEntry.W_RebindEntry_C:WidgetTree.kbmbutton.NoKeySpecifiedText
-#: /Game/Widgets/W_RebindKeys/W_RebindEntry.W_RebindEntry_C:WidgetTree.kbmbutton.NoKeySpecifiedText
-msgctxt ",0BD182C64C09EB8D62ACA7921E2075A0"
-msgid "Unbound"
-msgstr "Non impostato"
-
 #. Key:	0BD5C3AA400CA31F93B89480456EA200
 #. SourceLocation:	/Game/Widgets/W_TextTip.Default__W_TextTip_C.PerLangContributedTextThing
 #: /Game/Widgets/W_TextTip.Default__W_TextTip_C.PerLangContributedTextThing
@@ -176,13 +162,6 @@ msgctxt ",0E5DE39F4FCB453AC020AAA0E32D0A9E"
 msgid "Couldn't get Steam profile information. Retrying..."
 msgstr "Impossibile caricare il profilo Steam, riprovo..."
 
-#. Key:	0EDA056F4EFE3914DBFCF29C3636C17B
-#. SourceLocation:	/Game/Widgets/W_TextTip.W_TextTip_C:WidgetTree.TextBlock_1.Text
-#: /Game/Widgets/W_TextTip.W_TextTip_C:WidgetTree.TextBlock_1.Text
-msgctxt ",0EDA056F4EFE3914DBFCF29C3636C17B"
-msgid "Selecting this language will only set the language locale in the game file, but translations will not be applied as they are incomplete."
-msgstr "Selezionando questa lingua, imposterai solo la lingua, ma le traduzioni non verranno applicate poichè incomplete."
-
 #. Key:	103FC79D4420074F4D9EB88997EB5674
 #. SourceLocation:	/Game/Widgets/Warnings/W_GraphicsConflict.W_GraphicsConflict_C:WidgetTree.TextBlock.Text
 #: /Game/Widgets/Warnings/W_GraphicsConflict.W_GraphicsConflict_C:WidgetTree.TextBlock.Text
@@ -191,8 +170,8 @@ msgid "Looks like you've disabled Anti-Aliasing and having FidelityFX enabled at
 msgstr "Sembra che hai disattivato l'Anti-Aliasing e hai attivato FidelityFX allo stesso tempo. Non voglio stressarti fra ma la qualità sarà peggiore quindi ti consiglio di lasciare Anti-Aliasing attivo."
 
 #. Key:	10B56E324DD535C86DE171AA03A1DD95
-#. SourceLocation:	/Game/Widgets/Animations/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock.Text
-#: /Game/Widgets/Animations/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock.Text
+#. SourceLocation:	/Game/Widgets/Warnings/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock.Text
+#: /Game/Widgets/Warnings/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock.Text
 msgctxt ",10B56E324DD535C86DE171AA03A1DD95"
 msgid "The game is experiencing slow performance. To improve, adjust graphical settings in the Pause Menu."
 msgstr "Le prestazioni di gioco sono pessime. Per migliorarle, cambia le impostazioni grafiche nel menu di pausa."
@@ -651,13 +630,6 @@ msgid "Miscellaneous\r\n"
 msgstr "Impostazioni\r\n"
 "Generali"
 
-#. Key:	3FC1E8E946BCA793F695C790222C2BD0
-#. SourceLocation:	/Game/Widgets/W_TextTip.W_TextTip_C:WidgetTree.TextBlock_2.Text
-#: /Game/Widgets/W_TextTip.W_TextTip_C:WidgetTree.TextBlock_2.Text
-msgctxt ",3FC1E8E946BCA793F695C790222C2BD0"
-msgid "Translations for this language may be outdated due to the recency of your game version."
-msgstr "Traduzioni per questa lingua potrebbero essere datate per quanto e recente la tua versione di gioco."
-
 #. Key:	4088789F4F09A439F7AAE489952E8E1D
 #. SourceLocation:	/Game/Widgets/Warnings/W_Disclaimer.W_Disclaimer_C:WidgetTree.TextBlock_1.Text
 #: /Game/Widgets/Warnings/W_Disclaimer.W_Disclaimer_C:WidgetTree.TextBlock_1.Text
@@ -749,7 +721,7 @@ msgstr "Puoi cambiare al branch 'nightly-dev' per un'esperienza piu in-dev!"
 #: /Game/Widgets/Warnings/W_NightlyLocked.W_NightlyLocked_C:ExecuteUbergraph_W_NightlyLocked [Script Bytecode]
 msgctxt ",4899D7684FEBC4D531D376B5C0F554F4"
 msgid "Cringe"
-msgstr ""
+msgstr "Cringe"
 
 #. Key:	48C844644A16D45A8BBD65995C133D37
 #. SourceLocation:	/Game/Widgets/W_Tooltips/W_TT_Streamer.W_TT_Streamer_C:WidgetTree.te.Text
@@ -855,13 +827,6 @@ msgstr "VELOCE"
 msgctxt ",52E157914CE8B0F1AFA61E95E1CB0970"
 msgid "Apply & exit"
 msgstr "Applica ed esci"
-
-#. Key:	539E48624D1E986B9D6C68BB1113AC80
-#. SourceLocation:	/Game/Widgets/W_Achievement/W_AchTotal.W_AchTotal_C:WidgetTree.Title.Text
-#: /Game/Widgets/W_Achievement/W_AchTotal.W_AchTotal_C:WidgetTree.Title.Text
-msgctxt ",539E48624D1E986B9D6C68BB1113AC80"
-msgid "Total Achievement Completion"
-msgstr "Percentuale di completamento totale"
 
 #. Key:	5447BA0F492F744FE7E235A02123CD2A
 #. SourceLocation:	/Game/Widgets/Warnings/W_NightlyWarn.W_NightlyWarn_C:ExecuteUbergraph_W_NightlyWarn [Script Bytecode]
@@ -1129,7 +1094,10 @@ msgid "You are about to reset your game. This includes unlocked levels, settings
 "\r\n"
 "\r\n"
 "Are you sure?"
-msgstr ""
+msgstr "Stai per resettare i tuoi progressi. Questo include livelli sbloccati, impostazioni e alcuni stati del mondo. Achievement sbloccati su Steam non verranno rimossi.\r\n"
+"\r\n"
+"\r\n"
+"Sei sicuro?"
 
 #. Key:	7684BEE242A019D532DECEB57328FC3F
 #. SourceLocation:	/Game/Audio/dave_2.dave_2.Subtitles(1).Subtitles.Text
@@ -1351,14 +1319,16 @@ msgctxt ",8769A0F840B1EF7D538F76AE89C9297D"
 msgid "FOR TESTERS\r\n"
 "\r\n"
 "Clicking will host a online session with max to 4 players, for testing the replication."
-msgstr ""
+msgstr "FOR TESTERS\r\n"
+"\r\n"
+"Clicking will host a online session with max to 4 players, for testing the replication."
 
 #. Key:	87A4B6F74F63C260834A2A8AC3EF1058
 #. SourceLocation:	/Game/Widgets/W_MainMenu/W_MainMenu.W_MainMenu_C:OutdatedBuild [Script Bytecode]
 #: /Game/Widgets/W_MainMenu/W_MainMenu.W_MainMenu_C:OutdatedBuild [Script Bytecode]
 msgctxt ",87A4B6F74F63C260834A2A8AC3EF1058"
 msgid "running on commit [{0}]"
-msgstr ""
+msgstr "running on commit [{0}]"
 
 #. Key:	88484C8D444A7F816590F6AB2E582FA8
 #. SourceLocation:	/Game/Widgets/W_Tooltips/W_TT_External.W_TT_External_C:WidgetTree.TextBlock_1.Text
@@ -1522,7 +1492,7 @@ msgstr "Senti-- non ci metterai molto."
 #: /Game/Widgets/Warnings/W_ControllerWarn.W_ControllerWarn_C:WidgetTree.TextBlock_132.Text
 msgctxt ",97494E14468916A014D0CAA273B40A35"
 msgid "Nuh-uh"
-msgstr ""
+msgstr "Nuh-uh"
 
 #. Key:	9828611049827FEB20CB07812F6DD7A2
 #. SourceLocation:	/Game/Widgets/Multiplayer/W_Badges.W_Badges_C:ExecuteUbergraph_W_Badges [Script Bytecode]
@@ -1550,7 +1520,7 @@ msgstr "Connessione Terminata"
 #: /Game/Widgets/W_Saves/W_SaveWipe.W_SaveWipe_C:WidgetTree.TextBlock_1.Text
 msgctxt ",9C7F59594CCC4A46ED3CE8B6DE1123FA"
 msgid "Yes, I want to wipe my savedata"
-msgstr ""
+msgstr "Si, voglio eliminare il mio salvataggio"
 
 #. Key:	9C8084274E887FD1F2556E97CF7511A1
 #. SourceLocation:	/Game/Widgets/W_LevelSelector/W_LevelSelector.W_LevelSelector_C:WidgetTree.TextBlock_2.Text
@@ -1571,7 +1541,7 @@ msgstr "Definisce lo spazio colore per il display di output, consentendo la sele
 #: /Game/Widgets/W_Saves/W_SaveWipe.W_SaveWipe_C:WidgetTree.TextBlock_132.Text
 msgctxt ",9CDD7A4449A833FFCEC97CB46EFC6FDF"
 msgid "Reset"
-msgstr ""
+msgstr "Azzera"
 
 #. Key:	9D88668D46BEC5D8D58B5CA0356176D4
 #. SourceLocation:	/Game/Widgets/Warnings/W_Disclaimer.W_Disclaimer_C:WidgetTree.TextBlock_6.Text
@@ -1714,13 +1684,6 @@ msgctxt ",AFDDD1E64D3A7F5B5AFF47B18BAC5CFE"
 msgid "Running in Offline Mode, you can only play and host local sessions on the same (local) network as yours. A proper Steam connection could not be made, and you've been switched to this mode as a fallback."
 msgstr "Modalità Offline attiva, puoi solo giocare e ospitare sessioni locali sulla stessa rete tua. La connessione a Steam non è riuscita, e sei stato spostato in questa modalità."
 
-#. Key:	B0AF2D6645AEAC0EAD5285893E190D69
-#. SourceLocation:	/Game/Widgets/Enum_InputDevice.Enum_InputDevice.DisplayNameMap(3 - Value).DisplayNameMap
-#: /Game/Widgets/Enum_InputDevice.Enum_InputDevice.DisplayNameMap(3 - Value).DisplayNameMap
-msgctxt ",B0AF2D6645AEAC0EAD5285893E190D69"
-msgid "Xbox Series"
-msgstr ""
-
 #. Key:	B1D300AB40019134BF7E4DBA937A9F59
 #. SourceLocation:	/Game/Widgets/W_CrosshairHint.W_CrosshairHint_C:Get_keycardshit_Text_0 [Script Bytecode]
 #: /Game/Widgets/W_CrosshairHint.W_CrosshairHint_C:Get_keycardshit_Text_0 [Script Bytecode]
@@ -1747,7 +1710,7 @@ msgstr "va bene"
 #: /Game/Widgets/W_Respawn/W_Respawn.W_Respawn_C:ExecuteUbergraph_W_Respawn [Script Bytecode]
 msgctxt ",B4FBA8D94D28B0306D449EA6C5B8AE88"
 msgid "Skill Issue"
-msgstr ""
+msgstr "Skill Issue"
 
 #. Key:	B4FBD559491E45565B8590A8A74387D4
 #. SourceLocation:	/Game/Widgets/W_LevelSelector/W_LevelSelector.W_LevelSelector_C:WidgetTree.TextBlock_1.Text
@@ -1803,7 +1766,7 @@ msgstr "Entra in una Sessione"
 #: /Game/Widgets/W_Respawn/W_Respawn_LV0.W_Respawn_LV0_C:ExecuteUbergraph_W_Respawn_LV0 [Script Bytecode]
 msgctxt ",BC2EB9834EB7C5AB2DF289B480A73A2D"
 msgid "skill issue"
-msgstr ""
+msgstr "skill issue"
 
 #. Key:	BC66E6484FE66168C591E49F858ABD5C
 #. SourceLocation:	/Game/Widgets/Warnings/W_Disclaimer.W_Disclaimer_C:Get_tip_Text_0 [Script Bytecode]
@@ -1955,7 +1918,9 @@ msgctxt ",C00DF14941A15EBB05B7149B55068D78"
 msgid "FOR TESTERS:\r\n"
 "\r\n"
 "Clicking will create a LAN session for testing me myself and I, and or multiple instances of the game if I'm alone :("
-msgstr ""
+msgstr "FOR TESTERS:\r\n"
+"\r\n"
+"Clicking will create a LAN session for testing me myself and I, and or multiple instances of the game if I'm alone :("
 
 #. Key:	C08377274F042124625A1B8DFFC029D4
 #. SourceLocation:	/Game/Widgets/W_CrosshairHint.W_CrosshairHint_C:Get_keycardshit_Text_0 [Script Bytecode]
@@ -1969,7 +1934,7 @@ msgstr "[Da come sembra, questa porta non si sbloccherà senza una tessera.]"
 #: /Game/Widgets/Animations/W_LVRunAnim.W_LVRunAnim_C:WidgetTree.TextBlock_5.Text
 msgctxt ",C2B1069C47F19885F23E9C944819E6AF"
 msgid "OH NO"
-msgstr ""
+msgstr "OH NO"
 
 #. Key:	C2F8C9874EF16151BAE43DB6043D90C1
 #. SourceLocation:	/Game/Audio/dave_2.dave_2.Subtitles(17).Subtitles.Text
@@ -2033,13 +1998,6 @@ msgstr "Utilizzando le nuovissime tecnologie di networking di Budget Backrooms, 
 msgctxt ",C8FDFB4E47929EB174675D8F9623C62E"
 msgid "Heatmap Telemetry Opt-in"
 msgstr "Consenti telemetria per la Heatmap"
-
-#. Key:	C98AE9394ABD2A03FCCFCBBCDFE85292
-#. SourceLocation:	/Game/Widgets/W_RebindKeys/W_RebindEntry.W_RebindEntry_C:WidgetTree.label_text.Text
-#: /Game/Widgets/W_RebindKeys/W_RebindEntry.W_RebindEntry_C:WidgetTree.label_text.Text
-msgctxt ",C98AE9394ABD2A03FCCFCBBCDFE85292"
-msgid "ActionLabel"
-msgstr ""
 
 #. Key:	CA1F132B41B4C69B739112B6E56BEF96
 #. SourceLocation:	/Game/Widgets/W_Graphic_Menu/W_HDRMenu.W_HDRMenu_C:WidgetTree.TextBlock_0.Text
@@ -2323,7 +2281,7 @@ msgstr "Movimento"
 #: /Game/Widgets/W_RebindKeys/W_RebindKeys.W_RebindKeys_C:WidgetTree.W_RebindEntry_3.ActionLabel
 msgctxt ",E5A2E135440927DD63E86A901C23C014"
 msgid "Zoom"
-msgstr ""
+msgstr "Zoom"
 
 #. Key:	E6601E154D8C507FD08F22B0ED7E3BD1
 #. SourceLocation:	/Game/Widgets/Multiplayer/W_MPInit.W_MPInit_C:WidgetTree.status.Text
@@ -2374,16 +2332,9 @@ msgctxt ",EBA2280649DE145149C473A155CB5DCA"
 msgid "fucking hell"
 msgstr "e che cazzo"
 
-#. Key:	EC0AEB154E74817C3DC8F2A416DCE931
-#. SourceLocation:	/Game/Widgets/Enum_InputDevice.Enum_InputDevice.DisplayNameMap(0 - Value).DisplayNameMap
-#: /Game/Widgets/Enum_InputDevice.Enum_InputDevice.DisplayNameMap(0 - Value).DisplayNameMap
-msgctxt ",EC0AEB154E74817C3DC8F2A416DCE931"
-msgid "PS4"
-msgstr ""
-
 #. Key:	EC1EEF89400FD7017791B9A576C40873
-#. SourceLocation:	/Game/Widgets/Animations/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock_7.Text
-#: /Game/Widgets/Animations/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock_7.Text
+#. SourceLocation:	/Game/Widgets/Warnings/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock_7.Text
+#: /Game/Widgets/Warnings/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock_7.Text
 msgctxt ",EC1EEF89400FD7017791B9A576C40873"
 msgid "Slow Performance"
 msgstr "Prestazioni Basse"
@@ -2467,13 +2418,6 @@ msgctxt ",F295717741467DA02764AB867E6B814B"
 msgid "This game is open-source, and you can contribute right away!"
 msgstr "Questo gioco e open source, e puoi contribuire subito!"
 
-#. Key:	F2CB3F594C37C8424B58DA90BCDF95EC
-#. SourceLocation:	/Game/Widgets/Enum_InputDevice.Enum_InputDevice.DisplayNameMap(1 - Value).DisplayNameMap
-#: /Game/Widgets/Enum_InputDevice.Enum_InputDevice.DisplayNameMap(1 - Value).DisplayNameMap
-msgctxt ",F2CB3F594C37C8424B58DA90BCDF95EC"
-msgid "PS5"
-msgstr ""
-
 #. Key:	F3B36254424B8D6715CF0BBCC3F237DB
 #. SourceLocation:	/Game/Widgets/Warnings/W_ExperLevel.W_ExperLevel_C:WidgetTree.TextBlock_63.Text
 #: /Game/Widgets/Warnings/W_ExperLevel.W_ExperLevel_C:WidgetTree.TextBlock_63.Text
@@ -2535,7 +2479,7 @@ msgstr "Connessione a Steam non riuscita. Ritorno al Menu Principale..."
 #: /Game/Widgets/W_Saves/W_SaveWipe.W_SaveWipe_C:WidgetTree.TextBlock_63.Text
 msgctxt ",F804923B4DB5303B0F60E5A856CD204C"
 msgid "Cancel"
-msgstr ""
+msgstr "Annulla"
 
 #. Key:	F80D901F427C81C4CF268EBD49A5099B
 #. SourceLocation:	/Game/Widgets/Multiplayer/W_UnstableMP.W_UnstableMP_C:WidgetTree.TextBlock_63.Text
@@ -2687,8 +2631,8 @@ msgid "Quit to main menu"
 msgstr "Torna al menu"
 
 #. Key:	155F7E6C488B71EF11190F9715134915
-#. SourceLocation:	/Game/Widgets/Animations/FadeOut.FadeOut_C:WidgetTree.TextBlock_0.Text
-#: /Game/Widgets/Animations/FadeOut.FadeOut_C:WidgetTree.TextBlock_0.Text
+#. SourceLocation:	/Game/Widgets/Animations/FadeIn.FadeIn_C:WidgetTree.TextBlock_0.Text
+#: /Game/Widgets/Animations/FadeIn.FadeIn_C:WidgetTree.TextBlock_0.Text
 msgctxt "Game,155F7E6C488B71EF11190F9715134915"
 msgid "Loading..."
 msgstr "Caricamento..."
@@ -2762,7 +2706,7 @@ msgstr "No"
 #: /Game/Widgets/Multiplayer/W_MPMenu.W_MPMenu_C:WidgetTree.TextBlock_5.Text
 msgctxt "Game,2DBEBE9742B8C6B7219AC998615667F3"
 msgid "FAQ"
-msgstr ""
+msgstr "Domande frequenti"
 
 #. Key:	3143F271489310E79B1B6FB73A685A98
 #. SourceLocation:	/Game/Widgets/Animations/FadeIn_Edited.FadeIn_Edited_C:WidgetTree.TextBlock_2.Text
@@ -2786,13 +2730,6 @@ msgstr "Premi F per accendere la tua torcia"
 msgctxt "Game,46EAC7E347E087B36E30A8B2E18E5F74"
 msgid "Looks like you're done here. Would you like to contribute to the game & answer to a 5-minute survey? Come on, it's not gonna hurt, be honest as possible if you want :)"
 msgstr "Sembra che hai finito qui. Vorresti contribuire al gioco e rispondere a un survey di 5 minuti? Eddai, mica ti farà male, si il più onesto che puoi se vuoi :)"
-
-#. Key:	4921502945E5079A0867B59BBCB1C063
-#. SourceLocation:	/Game/Widgets/W_Achievement/W_AchPage.W_AchPage_C:WidgetTree.TextBlock_50.Text
-#: /Game/Widgets/W_Achievement/W_AchPage.W_AchPage_C:WidgetTree.TextBlock_50.Text
-msgctxt "Game,4921502945E5079A0867B59BBCB1C063"
-msgid "<< Back to Main Menu"
-msgstr "<< Torna al menu principale"
 
 #. Key:	4A7E3B4543B1E90E0F55B7B8C9EF6864
 #. SourceLocation:	/Game/Widgets/Animations/FadeIn.FadeIn_C:WidgetTree.TextBlock_1.Text
@@ -2871,7 +2808,7 @@ msgstr "Tutto qui, gente!"
 #: /Game/Widgets/W_GMSelect/W_GMSelect.W_GMSelect_C:WidgetTree.TextBlock.Text
 msgctxt "Game,606805C340EDA7C57DF31796C1F0897F"
 msgid "Hardcore"
-msgstr ""
+msgstr "Estrema"
 
 #. Key:	6366616F42DD42ACE70F62B1AA6F7905
 #. SourceLocation:	/Game/Widgets/W_PauseMenu/PauseMenuWidget.PauseMenuWidget_C:WidgetTree.title.Text
@@ -2992,7 +2929,7 @@ msgstr "Prova le Backrooms nella loro forma più autentica con la modalità Clas
 #: /Game/Widgets/W_GMSelect/W_GMSelect.W_GMSelect_C:WidgetTree.TextBlock_4.Text
 msgctxt "Game,A97DE58E4F1FA713A36D5195C77F7283"
 msgid "The Memerooms™"
-msgstr ""
+msgstr "Le Memeroom™"
 
 #. Key:	AD7DBA0043B70D71BC2B6083CD00F0DE
 #. SourceLocation:	/Game/Widgets/Settings/W_GeneralSettings.W_GeneralSettings_C:WidgetTree.TextBlock_192.Text
@@ -3088,8 +3025,8 @@ msgid "Hold C to zoom."
 msgstr "Tieni premuto C per zoomare."
 
 #. Key:	E98CC95C4741BD618971C5ACD6D3E040
-#. SourceLocation:	/Game/Widgets/W_Respawn/W_Respawn_LV0.W_Respawn_LV0_C:WidgetTree.TextBlock_0.Text
-#: /Game/Widgets/W_Respawn/W_Respawn_LV0.W_Respawn_LV0_C:WidgetTree.TextBlock_0.Text
+#. SourceLocation:	/Game/Widgets/W_Respawn/W_Respawn_LV2.W_Respawn_LV2_C:WidgetTree.TextBlock_0.Text
+#: /Game/Widgets/W_Respawn/W_Respawn_LV2.W_Respawn_LV2_C:WidgetTree.TextBlock_0.Text
 msgctxt "Game,E98CC95C4741BD618971C5ACD6D3E040"
 msgid "Go to main menu"
 msgstr "Vai al menu principale"

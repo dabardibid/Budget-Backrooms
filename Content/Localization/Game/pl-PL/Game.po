@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: budget-backrooms\n"
 "POT-Creation-Date: 2026-10-10 17:47\n"
-"PO-Revision-Date: 2026-10-10 17:51\n"
+"PO-Revision-Date: 2026-10-10 18:58\n"
 "Language-Team: Polish\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -51,7 +51,7 @@ msgstr "Ładowanie...?"
 #: /Game/Widgets/Warnings/W_NightlyWarn.W_NightlyWarn_C:WidgetTree.warn.Text
 msgctxt ",0457A0024D4DBC14FC9E18A7A61819CC"
 msgid "you better mark my words, next boot will disable light mode"
-msgstr ""
+msgstr "czytaj uważnie, przy następnym uruchomieniu tryb jasny zostanie wyłączony"
 
 #. Key:	0549CDDF4ABC01C9B2C64B94029E1717
 #. SourceLocation:	/Game/Audio/jake_lele.jake_lele.Subtitles(14).Subtitles.Text
@@ -65,14 +65,14 @@ msgstr "\"KONIECZNIE je podpisz.\""
 #: /Game/Widgets/W_Graphic_Menu/W_GraphicMenu.W_GraphicMenu_C:WidgetTree.hdr_text.Text
 msgctxt ",05627DDD4A2CF3CACFCD42BF63AEC342"
 msgid "Options"
-msgstr ""
+msgstr "Opcje"
 
 #. Key:	05E828A4455E38C6444CFEA78FDA32A8
 #. SourceLocation:	/Game/Audio/dave_2.dave_2.Subtitles(23).Subtitles.Text
 #: /Game/Audio/dave_2.dave_2.Subtitles(23).Subtitles.Text
 msgctxt ",05E828A4455E38C6444CFEA78FDA32A8"
 msgid "Browse cameras.. unlock. That's it."
-msgstr ""
+msgstr "Przejrzyj kamery.. odblokuj dzwi. I tyle."
 
 #. Key:	066AAD0F432400DE433D138705B00951
 #. SourceLocation:	/Game/Widgets/Warnings/W_ControllerWarn.W_ControllerWarn_C:WidgetTree.TextBlock_63.Text
@@ -288,7 +288,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(6).Subtitles.Text
 msgctxt ",1BE89557478F40A65EC9B6A1BDD6413A"
 msgid "Yes, hello, it's Dave from The Singularity. Now listen up,"
-msgstr ""
+msgstr "Halo, tu Dave z The Singularity. A teraz słuchaj,"
 
 #. Key:	1D3B4527451B7EFA194BA08E49122F86
 #. SourceLocation:	/Game/Widgets/Warnings/W_Disclaimer.W_Disclaimer_C:Get_tip_Text_0 [Script Bytecode]
@@ -394,7 +394,7 @@ msgstr "Jakość Cieni"
 #: /Game/Audio/dave_2.dave_2.Subtitles(0).Subtitles.Text
 msgctxt ",2784FC72442FA17E4E75328B10D55010"
 msgid "You have"
-msgstr ""
+msgstr "Masz"
 
 #. Key:	2797205C48DBDE95D152BAB7EF46D7A5
 #. SourceLocation:	/Game/Widgets/W_Errors/W_ConnDrivErr.W_ConnDrivErr_C:WidgetTree.TextBlock_132.Text
@@ -415,7 +415,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(12).Subtitles.Text
 msgctxt ",28D27CD447CAD830C098EEB458CAD332"
 msgid "we'd have to try it out potato potatoe-- Listen."
-msgstr ""
+msgstr "że trzeba to przetestować, bla bla bla-- Słuchaj."
 
 #. Key:	2B1098E743BFBEC7B25A9D8E7F6F1ED5
 #. SourceLocation:	/Game/Audio/jake_lele2.jake_lele2.Subtitles(23).Subtitles.Text
@@ -563,7 +563,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(24).Subtitles.Text
 msgctxt ",38AF16154C99E7B73DE3F3BDB93AE8AF"
 msgid "Alright?"
-msgstr ""
+msgstr "Tak?"
 
 #. Key:	39935905454494977EC65AB83FC09BDF
 #. SourceLocation:	/Game/Audio/jake_lele.jake_lele.Subtitles(23).Subtitles.Text
@@ -664,7 +664,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(9).Subtitles.Text
 msgctxt ",4162F7AF43EB38C10CDA7F95FF187490"
 msgid "basically the whole hotel."
-msgstr ""
+msgstr "no, właściwie gdzieś w całym hotelu."
 
 #. Key:	4458A33747AD473356797A8DDB61AE95
 #. SourceLocation:	/Game/Widgets/W_LevelSelector/W_LevelSelector.W_LevelSelector_C:WidgetTree.TextBlock_7.Text
@@ -874,7 +874,7 @@ msgstr "\"tajemniczo znika jedzenie.\""
 #: /Game/Audio/dave_2.dave_2.Subtitles(19).Subtitles.Text
 msgctxt ",5ABAE032431D6FAEEA8477B61905E51A"
 msgid "Thanks."
-msgstr ""
+msgstr "Dzięki."
 
 #. Key:	5AF6FE0244DBDA8C4254F49E06FCC48C
 #. SourceLocation:	/Game/Audio/jake_lele.jake_lele.Subtitles(9).Subtitles.Text
@@ -888,7 +888,7 @@ msgstr "\"Bez paniki, maszyny też potrzebują trochę snu.\""
 #: /Game/Audio/dave_2.dave_2.Subtitles(25).Subtitles.Text
 msgctxt ",5B0CFB614AAE57D557E54B9AF90AE2FC"
 msgid "And we'll be paying you extra if needed."
-msgstr ""
+msgstr "Jeśli będzie trzeba, zapłacimy ci ekstra."
 
 #. Key:	5D636B944CFE6074F271A0BF5DD8053E
 #. SourceLocation:	/Game/Widgets/W_LevelSelector/W_LevelSelector.W_LevelSelector_C:WidgetTree.TextBlock_9.Text
@@ -960,7 +960,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(7).Subtitles.Text
 msgctxt ",63233EF042AA0A196BF745B5CA6DFC10"
 msgid "I've left my keycard in one of those rooms..."
-msgstr ""
+msgstr "Zostawiłem swoją kartę dostępu w jednym z tych pokoi..."
 
 #. Key:	63295C394479C9CC0CD2C8A12C76B1E3
 #. SourceLocation:	/Game/Widgets/Warnings/W_Disclaimer.W_Disclaimer_C:WidgetTree.TextBlock_5.Text
@@ -1086,7 +1086,7 @@ msgstr "Zamierzasz zresetować grę. Zostaną zresetowane odblokowane poziomy, u
 #: /Game/Audio/dave_2.dave_2.Subtitles(1).Subtitles.Text
 msgctxt ",7684BEE242A019D532DECEB57328FC3F"
 msgid "one"
-msgstr ""
+msgstr "jedną"
 
 #. Key:	776CCCB9468E9C4AD3026A9C40A7C341
 #. SourceLocation:	/Game/Widgets/Multiplayer/W_MPMenu.W_MPMenu_C:WidgetTree.download_text.Text
@@ -1378,7 +1378,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(18).Subtitles.Text
 msgctxt ",8E1D8A7645278ACCE3A7CA995CC04B00"
 msgid "Alright."
-msgstr ""
+msgstr "Super."
 
 #. Key:	8E5797074539148476C001B7AC88E791
 #. SourceLocation:	/Game/Widgets/Warnings/W_ControllerWarn.W_ControllerWarn_C:WidgetTree.TextBlock.Text
@@ -1392,7 +1392,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(26).Subtitles.Text
 msgctxt ",905364A14453589E21DC52B3AE6A2C49"
 msgid "See ya."
-msgstr ""
+msgstr "Trzymaj się."
 
 #. Key:	90D2E00443A2DCA4DDB88082A4F8A4E6
 #. SourceLocation:	/Game/Widgets/W_Screeensaver/W_Screensaver_InitDIal.W_Screensaver_InitDIal_C:WidgetTree.TextBlock_3.Text
@@ -1464,7 +1464,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(20).Subtitles.Text
 msgctxt ",96FDF24242737C5C9777F1AD9E6C021D"
 msgid "Look-- it's not gonna take much time."
-msgstr ""
+msgstr "Nie powinno zająć Ci to dużo czasu to dużo czasu."
 
 #. Key:	97494E14468916A014D0CAA273B40A35
 #. SourceLocation:	/Game/Widgets/Warnings/W_ControllerWarn.W_ControllerWarn_C:WidgetTree.TextBlock_132.Text
@@ -1569,7 +1569,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(16).Subtitles.Text
 msgctxt ",A23891DA48D9221824463AB5473A7708"
 msgid "And... then maybe unlock that door, because we have not tested the new remote unlock system."
-msgstr ""
+msgstr "A potem może otwórz te drzwi, bo nadal nie przetestowaliśmy tego nowego systemu ochrony."
 
 #. Key:	A3AEDF9D4CE4CA889ED08795364C2D47
 #. SourceLocation:	/Game/Widgets/W_LevelSelector/W_LevelSelector.W_LevelSelector_C:WidgetTree.TextBlock.Text
@@ -1597,7 +1597,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(4).Subtitles.Text
 msgctxt ",A82BA4564863A802463BB3A8DDFD1A7A"
 msgid "First message."
-msgstr ""
+msgstr "Wiadomość pierwsza."
 
 #. Key:	A8DF3B32415DB3B4CB2342B271C89551
 #. SourceLocation:	/Game/Widgets/W_Graphic_Menu/W_HDRMenu.W_HDRMenu_C:WidgetTree.TextBlock.Text
@@ -1710,7 +1710,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(15).Subtitles.Text
 msgctxt ",B86A83AC4E4C28AB09ED7A91454C4705"
 msgid "Browse through the camera feed, see if there is anything peculiar."
-msgstr ""
+msgstr "Przejrzyj obraz z kamer i sprawdź, czy nie ma na nim czegoś podejrzanego."
 
 #. Key:	B8DBA6F942BE216F4D3214893BEABABA
 #. SourceLocation:	/Game/Widgets/Warnings/W_Disclaimer.W_Disclaimer_C:Get_tip_Text_0 [Script Bytecode]
@@ -1889,7 +1889,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(17).Subtitles.Text
 msgctxt ",C2F8C9874EF16151BAE43DB6043D90C1"
 msgid "Alright?"
-msgstr ""
+msgstr "Tak?"
 
 #. Key:	C3E31F8A477DC630D3DACF8B38E6F78F
 #. SourceLocation:	/Game/Audio/jake_lele.jake_lele.Subtitles(25).Subtitles.Text
@@ -1931,7 +1931,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(14).Subtitles.Text
 msgctxt ",C7475304420FE7A93DF9309E1251BD87"
 msgid "Just..."
-msgstr ""
+msgstr "Po prostu..."
 
 #. Key:	C74A162A46CE94F54CD3F48867E393A5
 #. SourceLocation:	/Game/Widgets/Multiplayer/W_JoinSession.W_JoinSession_C:WidgetTree.TextBlock.Text
@@ -2000,7 +2000,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(11).Subtitles.Text
 msgctxt ",CF5990CF4F7D73D699AA5FB9CEF6F794"
 msgid "What I'd want you to do would be to take the keycard, go into the security room, boot cmOS up, because people from Bloom said..."
-msgstr ""
+msgstr "Chciałbym, żebyś wziął kartę, poszedł do pokoju ochrony i uruchomił cmOS. Ludzie z Bloom mówili"
 
 #. Key:	CFA6B9244F09782E6EECE588D2693779
 #. SourceLocation:	/Game/Widgets/W_CrosshairHint.W_CrosshairHint_C:Get_keycardshit_Text_0 [Script Bytecode]
@@ -2313,7 +2313,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(2).Subtitles.Text
 msgctxt ",EFA5511C4EEFEC0E17217381EFEBF25F"
 msgid "new message."
-msgstr ""
+msgstr "nową wiadomość."
 
 #. Key:	F068C21641BE5946E6CD23824FF744F1
 #. SourceLocation:	/Game/Audio/jake_lele.jake_lele.Subtitles(4).Subtitles.Text
@@ -2390,7 +2390,7 @@ msgstr "Post-Processing"
 #: /Game/Audio/dave_2.dave_2.Subtitles(28).Subtitles.Text
 msgctxt ",F52E9A794E0F87FC2AD9539282507B9B"
 msgid "End of messages."
-msgstr ""
+msgstr "Brak kolejnych wiadomości."
 
 #. Key:	F5B9B92441455482E5C3F0BF57A40FFA
 #. SourceLocation:	/Game/Widgets/Multiplayer/W_Badges.W_Badges_C:WidgetTree.kofi.ToolTipText
@@ -2432,7 +2432,7 @@ msgstr ""
 #: /Game/Audio/dave_2.dave_2.Subtitles(22).Subtitles.Text
 msgctxt ",F850B59D49C11521BEB658983BB4971C"
 msgid "Take keycard, get in the room..."
-msgstr ""
+msgstr "Weź kartę, znajdź pokój ochrony..."
 
 #. Key:	F912874C4BF4F8E305532C8245A2F95D
 #. SourceLocation:	/Game/Widgets/W_Screeensaver/W_Screensaver_InitDIal.W_Screensaver_InitDIal_C:WidgetTree.TextBlock_2.Text

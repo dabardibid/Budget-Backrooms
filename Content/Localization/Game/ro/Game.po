@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: budget-backrooms\n"
-"POT-Creation-Date: 2026-10-10 01:00\n"
-"PO-Revision-Date: 2026-10-10 17:41\n"
+"POT-Creation-Date: 2026-10-10 17:47\n"
+"PO-Revision-Date: 2026-10-10 17:51\n"
 "Language-Team: Romanian\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
@@ -45,13 +45,6 @@ msgstr "\"o mica înștiințare...\""
 msgctxt ",0301D76E4F2A4E4849C05B8858D1090E"
 msgid "Loading...?"
 msgstr "Se încarcă...?"
-
-#. Key:	043CF175484A53E5E11AA4AD58345EE8
-#. SourceLocation:	/Game/Widgets/Enum_InputDevice.Enum_InputDevice.DisplayNameMap(2 - Value).DisplayNameMap
-#: /Game/Widgets/Enum_InputDevice.Enum_InputDevice.DisplayNameMap(2 - Value).DisplayNameMap
-msgctxt ",043CF175484A53E5E11AA4AD58345EE8"
-msgid "Xbox One"
-msgstr "Xbox One"
 
 #. Key:	0457A0024D4DBC14FC9E18A7A61819CC
 #. SourceLocation:	/Game/Widgets/Warnings/W_NightlyWarn.W_NightlyWarn_C:WidgetTree.warn.Text
@@ -148,13 +141,6 @@ msgid "Budget\r\n"
 msgstr "Budget\r\n"
 "Backrooms"
 
-#. Key:	0BD182C64C09EB8D62ACA7921E2075A0
-#. SourceLocation:	/Game/Widgets/W_RebindKeys/W_RebindEntry.W_RebindEntry_C:WidgetTree.kbmbutton.NoKeySpecifiedText
-#: /Game/Widgets/W_RebindKeys/W_RebindEntry.W_RebindEntry_C:WidgetTree.kbmbutton.NoKeySpecifiedText
-msgctxt ",0BD182C64C09EB8D62ACA7921E2075A0"
-msgid "Unbound"
-msgstr "Fără legătură"
-
 #. Key:	0BD5C3AA400CA31F93B89480456EA200
 #. SourceLocation:	/Game/Widgets/W_TextTip.Default__W_TextTip_C.PerLangContributedTextThing
 #: /Game/Widgets/W_TextTip.Default__W_TextTip_C.PerLangContributedTextThing
@@ -176,13 +162,6 @@ msgctxt ",0E5DE39F4FCB453AC020AAA0E32D0A9E"
 msgid "Couldn't get Steam profile information. Retrying..."
 msgstr "Nu s-au putut lua informații despre profilul Steam. Se reîncearcă..."
 
-#. Key:	0EDA056F4EFE3914DBFCF29C3636C17B
-#. SourceLocation:	/Game/Widgets/W_TextTip.W_TextTip_C:WidgetTree.TextBlock_1.Text
-#: /Game/Widgets/W_TextTip.W_TextTip_C:WidgetTree.TextBlock_1.Text
-msgctxt ",0EDA056F4EFE3914DBFCF29C3636C17B"
-msgid "Selecting this language will only set the language locale in the game file, but translations will not be applied as they are incomplete."
-msgstr ""
-
 #. Key:	103FC79D4420074F4D9EB88997EB5674
 #. SourceLocation:	/Game/Widgets/Warnings/W_GraphicsConflict.W_GraphicsConflict_C:WidgetTree.TextBlock.Text
 #: /Game/Widgets/Warnings/W_GraphicsConflict.W_GraphicsConflict_C:WidgetTree.TextBlock.Text
@@ -191,8 +170,8 @@ msgid "Looks like you've disabled Anti-Aliasing and having FidelityFX enabled at
 msgstr "Se pare că ai dezactivat Anti-Aliasing și ai FidelityFX activat în același timp. Nu vreau să te stresez prietene, dar graficile vor arăta oribil deci iți recomand să ai Anti-Aliasing activat MĂCAR pe low. Doar spun! ¯\\_(ツ)_/¯"
 
 #. Key:	10B56E324DD535C86DE171AA03A1DD95
-#. SourceLocation:	/Game/Widgets/Animations/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock.Text
-#: /Game/Widgets/Animations/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock.Text
+#. SourceLocation:	/Game/Widgets/Warnings/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock.Text
+#: /Game/Widgets/Warnings/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock.Text
 msgctxt ",10B56E324DD535C86DE171AA03A1DD95"
 msgid "The game is experiencing slow performance. To improve, adjust graphical settings in the Pause Menu."
 msgstr "Jocul are o performanță slabă. Pentru a o îmbunătăți, ajustează setările grafice din meniul de pauză."
@@ -209,7 +188,7 @@ msgstr "Ignoră avertismentul despre placa video la pornirea jocului."
 #: /Game/Widgets/W_LoadingScreen/W_Memerooms_Loading.W_Memerooms_Loading_C:WidgetTree.small_text.Text
 msgctxt ",11725C93458C388566C2158F453178A4"
 msgid "Now no-clipping to..."
-msgstr "Facem no-clipping la..."
+msgstr "Se face no-clipping la..."
 
 #. Key:	11F8752C4EC569899EC8649F20860474
 #. SourceLocation:	/Game/Widgets/W_LevelSelector/W_LevelSelector.W_LevelSelector_C:WidgetTree.TextBlock_6.Text
@@ -649,13 +628,6 @@ msgid "Miscellaneous\r\n"
 msgstr "Setări\r\n"
 "diverse"
 
-#. Key:	3FC1E8E946BCA793F695C790222C2BD0
-#. SourceLocation:	/Game/Widgets/W_TextTip.W_TextTip_C:WidgetTree.TextBlock_2.Text
-#: /Game/Widgets/W_TextTip.W_TextTip_C:WidgetTree.TextBlock_2.Text
-msgctxt ",3FC1E8E946BCA793F695C790222C2BD0"
-msgid "Translations for this language may be outdated due to the recency of your game version."
-msgstr ""
-
 #. Key:	4088789F4F09A439F7AAE489952E8E1D
 #. SourceLocation:	/Game/Widgets/Warnings/W_Disclaimer.W_Disclaimer_C:WidgetTree.TextBlock_1.Text
 #: /Game/Widgets/Warnings/W_Disclaimer.W_Disclaimer_C:WidgetTree.TextBlock_1.Text
@@ -853,13 +825,6 @@ msgstr "MAI REPEDE"
 msgctxt ",52E157914CE8B0F1AFA61E95E1CB0970"
 msgid "Apply & exit"
 msgstr "Aplică și ieși"
-
-#. Key:	539E48624D1E986B9D6C68BB1113AC80
-#. SourceLocation:	/Game/Widgets/W_Achievement/W_AchTotal.W_AchTotal_C:WidgetTree.Title.Text
-#: /Game/Widgets/W_Achievement/W_AchTotal.W_AchTotal_C:WidgetTree.Title.Text
-msgctxt ",539E48624D1E986B9D6C68BB1113AC80"
-msgid "Total Achievement Completion"
-msgstr "Totalul realizărilor complete"
 
 #. Key:	5447BA0F492F744FE7E235A02123CD2A
 #. SourceLocation:	/Game/Widgets/Warnings/W_NightlyWarn.W_NightlyWarn_C:ExecuteUbergraph_W_NightlyWarn [Script Bytecode]
@@ -1717,13 +1682,6 @@ msgctxt ",AFDDD1E64D3A7F5B5AFF47B18BAC5CFE"
 msgid "Running in Offline Mode, you can only play and host local sessions on the same (local) network as yours. A proper Steam connection could not be made, and you've been switched to this mode as a fallback."
 msgstr "Ruleazi în modul offline, poți doar găzdui sau joca sesiuni locale pe aceeași rețea ca a ta. O conexiune corespunzătoare cu Steam nu a putut fi realizată, așa că ai fost schimbat la acest mod ca o alternativă."
 
-#. Key:	B0AF2D6645AEAC0EAD5285893E190D69
-#. SourceLocation:	/Game/Widgets/Enum_InputDevice.Enum_InputDevice.DisplayNameMap(3 - Value).DisplayNameMap
-#: /Game/Widgets/Enum_InputDevice.Enum_InputDevice.DisplayNameMap(3 - Value).DisplayNameMap
-msgctxt ",B0AF2D6645AEAC0EAD5285893E190D69"
-msgid "Xbox Series"
-msgstr "Xbox Series"
-
 #. Key:	B1D300AB40019134BF7E4DBA937A9F59
 #. SourceLocation:	/Game/Widgets/W_CrosshairHint.W_CrosshairHint_C:Get_keycardshit_Text_0 [Script Bytecode]
 #: /Game/Widgets/W_CrosshairHint.W_CrosshairHint_C:Get_keycardshit_Text_0 [Script Bytecode]
@@ -2039,13 +1997,6 @@ msgstr "Folosing rețeaua rafinată a Budget Backrooms, acum te poți alătura s
 msgctxt ",C8FDFB4E47929EB174675D8F9623C62E"
 msgid "Heatmap Telemetry Opt-in"
 msgstr "Acord asupra trimiterii de date telemetrice"
-
-#. Key:	C98AE9394ABD2A03FCCFCBBCDFE85292
-#. SourceLocation:	/Game/Widgets/W_RebindKeys/W_RebindEntry.W_RebindEntry_C:WidgetTree.label_text.Text
-#: /Game/Widgets/W_RebindKeys/W_RebindEntry.W_RebindEntry_C:WidgetTree.label_text.Text
-msgctxt ",C98AE9394ABD2A03FCCFCBBCDFE85292"
-msgid "ActionLabel"
-msgstr ""
 
 #. Key:	CA1F132B41B4C69B739112B6E56BEF96
 #. SourceLocation:	/Game/Widgets/W_Graphic_Menu/W_HDRMenu.W_HDRMenu_C:WidgetTree.TextBlock_0.Text
@@ -2380,16 +2331,9 @@ msgctxt ",EBA2280649DE145149C473A155CB5DCA"
 msgid "fucking hell"
 msgstr "la naiba"
 
-#. Key:	EC0AEB154E74817C3DC8F2A416DCE931
-#. SourceLocation:	/Game/Widgets/Enum_InputDevice.Enum_InputDevice.DisplayNameMap(0 - Value).DisplayNameMap
-#: /Game/Widgets/Enum_InputDevice.Enum_InputDevice.DisplayNameMap(0 - Value).DisplayNameMap
-msgctxt ",EC0AEB154E74817C3DC8F2A416DCE931"
-msgid "PS4"
-msgstr "PS4"
-
 #. Key:	EC1EEF89400FD7017791B9A576C40873
-#. SourceLocation:	/Game/Widgets/Animations/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock_7.Text
-#: /Game/Widgets/Animations/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock_7.Text
+#. SourceLocation:	/Game/Widgets/Warnings/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock_7.Text
+#: /Game/Widgets/Warnings/W_LowFPSWarn.W_LowFPSWarn_C:WidgetTree.TextBlock_7.Text
 msgctxt ",EC1EEF89400FD7017791B9A576C40873"
 msgid "Slow Performance"
 msgstr "Performanță slabă"
@@ -2472,13 +2416,6 @@ msgstr "Blocat"
 msgctxt ",F295717741467DA02764AB867E6B814B"
 msgid "This game is open-source, and you can contribute right away!"
 msgstr "Codul sursă al acestui joc este public și poți contribui chiar acum!"
-
-#. Key:	F2CB3F594C37C8424B58DA90BCDF95EC
-#. SourceLocation:	/Game/Widgets/Enum_InputDevice.Enum_InputDevice.DisplayNameMap(1 - Value).DisplayNameMap
-#: /Game/Widgets/Enum_InputDevice.Enum_InputDevice.DisplayNameMap(1 - Value).DisplayNameMap
-msgctxt ",F2CB3F594C37C8424B58DA90BCDF95EC"
-msgid "PS5"
-msgstr "PS5"
 
 #. Key:	F3B36254424B8D6715CF0BBCC3F237DB
 #. SourceLocation:	/Game/Widgets/Warnings/W_ExperLevel.W_ExperLevel_C:WidgetTree.TextBlock_63.Text
@@ -2693,8 +2630,8 @@ msgid "Quit to main menu"
 msgstr "Ieși la ecranul principal"
 
 #. Key:	155F7E6C488B71EF11190F9715134915
-#. SourceLocation:	/Game/Widgets/Animations/FadeOut.FadeOut_C:WidgetTree.TextBlock_0.Text
-#: /Game/Widgets/Animations/FadeOut.FadeOut_C:WidgetTree.TextBlock_0.Text
+#. SourceLocation:	/Game/Widgets/Animations/FadeIn.FadeIn_C:WidgetTree.TextBlock_0.Text
+#: /Game/Widgets/Animations/FadeIn.FadeIn_C:WidgetTree.TextBlock_0.Text
 msgctxt "Game,155F7E6C488B71EF11190F9715134915"
 msgid "Loading..."
 msgstr "Se încarcă..."
@@ -2792,13 +2729,6 @@ msgstr "Apasă F pentru a-ți aprinde lanterna"
 msgctxt "Game,46EAC7E347E087B36E30A8B2E18E5F74"
 msgid "Looks like you're done here. Would you like to contribute to the game & answer to a 5-minute survey? Come on, it's not gonna hurt, be honest as possible if you want :)"
 msgstr "Se pare că am terminat aici. Ai vrea să contribui la joc și să răspunzi unui sondaj de 5 minute? Haide, nu va durea, fii cât de sincer poți dacă vrei :)"
-
-#. Key:	4921502945E5079A0867B59BBCB1C063
-#. SourceLocation:	/Game/Widgets/W_Achievement/W_AchPage.W_AchPage_C:WidgetTree.TextBlock_50.Text
-#: /Game/Widgets/W_Achievement/W_AchPage.W_AchPage_C:WidgetTree.TextBlock_50.Text
-msgctxt "Game,4921502945E5079A0867B59BBCB1C063"
-msgid "<< Back to Main Menu"
-msgstr "<< Înapoi la meniul principal"
 
 #. Key:	4A7E3B4543B1E90E0F55B7B8C9EF6864
 #. SourceLocation:	/Game/Widgets/Animations/FadeIn.FadeIn_C:WidgetTree.TextBlock_1.Text
@@ -3094,8 +3024,8 @@ msgid "Hold C to zoom."
 msgstr "Ține apăsat C pentru zoom."
 
 #. Key:	E98CC95C4741BD618971C5ACD6D3E040
-#. SourceLocation:	/Game/Widgets/W_Respawn/W_Respawn_LV0.W_Respawn_LV0_C:WidgetTree.TextBlock_0.Text
-#: /Game/Widgets/W_Respawn/W_Respawn_LV0.W_Respawn_LV0_C:WidgetTree.TextBlock_0.Text
+#. SourceLocation:	/Game/Widgets/W_Respawn/W_Respawn_LV2.W_Respawn_LV2_C:WidgetTree.TextBlock_0.Text
+#: /Game/Widgets/W_Respawn/W_Respawn_LV2.W_Respawn_LV2_C:WidgetTree.TextBlock_0.Text
 msgctxt "Game,E98CC95C4741BD618971C5ACD6D3E040"
 msgid "Go to main menu"
 msgstr "Du-te la meniul principal"

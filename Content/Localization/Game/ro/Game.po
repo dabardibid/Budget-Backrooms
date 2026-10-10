@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: budget-backrooms\n"
 "POT-Creation-Date: 2026-10-10 01:00\n"
-"PO-Revision-Date: 2026-10-10 08:54\n"
+"PO-Revision-Date: 2026-10-10 09:07\n"
 "Language-Team: Romanian\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
@@ -2948,7 +2948,7 @@ msgstr "Clasic"
 #: /Game/Widgets/W_GMSelect/W_GMSelect.W_GMSelect_C:WidgetTree.TextBlock_18.Text
 msgctxt "Game,8D9233084B8FE552469A8C819491A4D3"
 msgid "Enter Level 4 at least once to unlock this."
-msgstr ""
+msgstr "Intră în Nivelul 4 măcar o data pentru a debloca asta."
 
 #. Key:	8EF3511743B8A34842C79EBD1E11349F
 #. SourceLocation:	/Game/Widgets/Settings/W_GeneralSettings.W_GeneralSettings_C:WidgetTree.TextBlock_7.Text

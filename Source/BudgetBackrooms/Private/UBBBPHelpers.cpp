@@ -617,22 +617,33 @@ bool UUBB_BlueprintHelpers::IsMigrationNeeded(TSubclassOf<USaveGame> SaveClass, 
 
 int32 UUBB_BlueprintHelpers::DeleteLegacySaves(const TArray<FBBLegacySlot>& OlderSlots, bool bDryRun)
 {
+	const EBBSlotTarget Discard = EBBSlotTarget::Discard;
 	TArray<FString> Report;
 	int32 Count = 0;
 	if (bDryRun)
 	{
 		Report.Add(TEXT("[DRY RUN] nothing will be deleted"));
-		for (const FString& Name : ExistingLegacyNames(BuildSlotList(OlderSlots)))
+	}
+
+	for (const FString& Name : ExistingLegacyNames(BuildSlotList(OlderSlots), &Discard))
+	{
+		if (bDryRun)
 		{
 			Report.Add(FString::Printf(TEXT("[OK]  %s: would be deleted"), *Name));
 			++Count;
 		}
-		Report.Add(FString::Printf(TEXT("Would delete %d old save file(s)"), Count));
+		else if (UGameplayStatics::DeleteGameInSlot(Name, GUserIndex))
+		{
+			Report.Add(FString::Printf(TEXT("[OK]  %s: deleted"), *Name));
+			++Count;
+		}
+		else
+		{
+			Report.Add(FString::Printf(TEXT("[ERR] %s: delete failed"), *Name));
+		}
 	}
-	else
-	{
-		Count = DeleteLegacyFilesNow(OlderSlots, Report);
-	}
+
+	Report.Add(FString::Printf(TEXT("%s %d old save file(s)"), bDryRun ? TEXT("Would delete") : TEXT("Deleted"), Count));
 	PrintReportToScreen(Report);
 	return Count;
 }

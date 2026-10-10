@@ -104,6 +104,18 @@ public:
 	// Logs the report; also shown on screen in the editor
 	static void PrintReportToScreen(const TArray<FString>& Report, float Duration = 30.f);
 
+	// True if any legacy save file exists (built-in list + OlderSlots, discarded ones included)
+	UFUNCTION(BlueprintPure, Category = "Budget Savings")
+	static bool HasLegacySaves(const TArray<FBBLegacySlot>& OlderSlots);
+
+	// Names of the legacy save files that exist on disk
+	UFUNCTION(BlueprintCallable, Category = "Budget Savings")
+	static TArray<FString> GetLegacySaveNames(const TArray<FBBLegacySlot>& OlderSlots);
+
+	// True if there are legacy files and Migrate Saves would build Game.sav and/or Settings.sav from them
+	UFUNCTION(BlueprintCallable, Category = "Budget Savings")
+	static bool IsMigrationNeeded(TSubclassOf<USaveGame> SaveClass, const TArray<FBBLegacySlot>& OlderSlots);
+
 	// Destructive: deletes all legacy save files (and Game.sav / Settings.sav if bAlsoDeleteGameSav) without checks
 	// bDryRun only reports. Returns the number of files deleted
 	UFUNCTION(BlueprintCallable, Category = "Budget Savings")

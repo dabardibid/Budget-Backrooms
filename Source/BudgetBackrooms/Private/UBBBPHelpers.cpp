@@ -15,17 +15,13 @@ namespace
 	const TCHAR* const GSettingsSlot = TEXT("Settings");
 	constexpr int32 GUserIndex = 0;
 
-	// All legacy slot names, applied after OlderSlots
+	// Legacy slot names, applied after OlderSlots (GDiscardSlots are appended too, see BuildSlotList)
 	const TCHAR* const GCurrentGenSlots[] =
 	{
-		TEXT("AudioMaster"),
-		TEXT("AudioMusic"),
-		TEXT("BetterCallSaul"),
 		TEXT("DiscordRPC"),
 		TEXT("EarlyMPAcc"),
 		TEXT("Flashlight"),
 		TEXT("LVStatus"),
-		TEXT("Sensitivity"),
 		TEXT("Settings_DoF"),
 		TEXT("Settings_Audio"),
 		TEXT("Settings_AudioMusic"),
@@ -35,18 +31,18 @@ namespace
 		TEXT("Settings_RPC"),
 		TEXT("Settings_ShakeInt"),
 		TEXT("Settings_Sensitivity"),
-		TEXT("State_AccMP"),
-		TEXT("State_AchVars"),
 		TEXT("State_Classic"),
 		TEXT("State_Flashlight"),
 		TEXT("State_Interaction"),
 		TEXT("State_PlayerVar"),
-		TEXT("ViewSkVal"), // 2023 slot
 	};
 
 	// Not migrated (reset to defaults), but still removed by "delete old files"
 	const TCHAR* const GDiscardSlots[] =
 	{
+		TEXT("BudgetBackrooms_Achievements"),
+		TEXT("State_AccMP"),
+		TEXT("State_AchVars"),
 		TEXT("AudioMaster"),
 		TEXT("AudioMusic"),
 		TEXT("BetterCallSaul"),
@@ -96,6 +92,16 @@ namespace
 			FBBLegacySlot Slot;
 			Slot.SlotName = Name;
 			All.Add(Slot);
+		}
+		for (const TCHAR* Name : GDiscardSlots)
+		{
+			const bool bListed = All.ContainsByPredicate([Name](const FBBLegacySlot& S) { return S.SlotName.Equals(Name, ESearchCase::IgnoreCase); });
+			if (!bListed)
+			{
+				FBBLegacySlot Slot;
+				Slot.SlotName = Name;
+				All.Add(Slot);
+			}
 		}
 		return All;
 	}
@@ -587,6 +593,26 @@ int32 UUBB_BlueprintHelpers::WipeAllSaves(const TArray<FBBLegacySlot>& OlderSlot
 	Report.Add(FString::Printf(TEXT("%s %d save file(s)"), bDryRun ? TEXT("Would delete") : TEXT("Deleted"), Deleted));
 	PrintReportToScreen(Report);
 	return Deleted;
+}
+
+bool UUBB_BlueprintHelpers::HasLegacySaves(const TArray<FBBLegacySlot>& OlderSlots)
+{
+	return ExistingLegacyNames(BuildSlotList(OlderSlots)).Num() > 0;
+}
+
+TArray<FString> UUBB_BlueprintHelpers::GetLegacySaveNames(const TArray<FBBLegacySlot>& OlderSlots)
+{
+	return ExistingLegacyNames(BuildSlotList(OlderSlots));
+}
+
+bool UUBB_BlueprintHelpers::IsMigrationNeeded(TSubclassOf<USaveGame> SaveClass, const TArray<FBBLegacySlot>& OlderSlots)
+{
+	USaveGame* Game = nullptr;
+	USaveGame* Settings = nullptr;
+	bool bBuildGame = false;
+	bool bBuildSettings = false;
+	FString Reason;
+	return HasLegacySaves(OlderSlots) && NeedsMigration(SaveClass, OlderSlots, Game, Settings, bBuildGame, bBuildSettings, Reason);
 }
 
 UBBMigrateSavesAsync* UBBMigrateSavesAsync::MigrateSaves(UObject* WorldContextObject, TSubclassOf<USaveGame> SaveClass, const TArray<FBBLegacySlot>& OlderSlots, bool bDryRun, bool bDeleteOldFiles, float StepDelay)

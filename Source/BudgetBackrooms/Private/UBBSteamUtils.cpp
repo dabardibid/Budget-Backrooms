@@ -93,6 +93,48 @@ void UBBSteamUtils::OpenSteamOverlayWithURL(const FString& URL)
     }
 }
 
+void UBBSteamUtils::OpenSteamUserOverlay(ESteamUserOverlayDialog DialogType, bool& bSuccess, const FString& SteamID64)
+{
+    bSuccess = false;
+
+    if (IOnlineSubsystem::Get(FName(TEXT("STEAM"))) == nullptr || SteamFriends() == nullptr || SteamUser() == nullptr || SteamUtils() == nullptr)
+    {
+        UE_LOG(LogTemp, Warning, TEXT("[BUDGET STEAM NETWORKING] Steam OSS is not ready, can't open the overlay."));
+        return;
+    }
+
+    if (!SteamUtils()->IsOverlayEnabled())
+    {
+        UE_LOG(LogTemp, Warning, TEXT("[BUDGET STEAM NETWORKING] Steam Overlay is disabled or not hooked yet."));
+        return;
+    }
+
+    const char* DialogName = "steamid";
+    switch (DialogType)
+    {
+    case ESteamUserOverlayDialog::Achievements:         DialogName = "achievements"; break;
+    case ESteamUserOverlayDialog::Stats:                DialogName = "stats"; break;
+    case ESteamUserOverlayDialog::Profile:              DialogName = "steamid"; break;
+    case ESteamUserOverlayDialog::Chat:                 DialogName = "chat"; break;
+    case ESteamUserOverlayDialog::JoinTrade:            DialogName = "jointrade"; break;
+    case ESteamUserOverlayDialog::FriendAdd:            DialogName = "friendadd"; break;
+    case ESteamUserOverlayDialog::FriendRemove:         DialogName = "friendremove"; break;
+    case ESteamUserOverlayDialog::FriendRequestAccept:  DialogName = "friendrequestaccept"; break;
+    case ESteamUserOverlayDialog::FriendRequestIgnore:  DialogName = "friendrequestignore"; break;
+    }
+
+    // Empty SteamID = the local user, so no Unique Net Id wiring is needed for Achievements/Stats.
+    const CSteamID TargetID = SteamID64.IsEmpty() ? SteamUser()->GetSteamID() : CSteamID(static_cast<uint64>(FCString::Strtoui64(*SteamID64, nullptr, 10)));
+    if (!TargetID.IsValid())
+    {
+        UE_LOG(LogTemp, Warning, TEXT("[BUDGET STEAM NETWORKING] Invalid SteamID64 '%s'."), *SteamID64);
+        return;
+    }
+
+    SteamFriends()->ActivateGameOverlayToUser(DialogName, TargetID);
+    bSuccess = true;
+}
+
 // Notification Position stuff because yeah || Thanks to r0neko!! SpectralRift soon?
 void UBBSteamUtils::SetSteamOverlayNotificationPosition(ESteamNotificationPosition Position)
 {

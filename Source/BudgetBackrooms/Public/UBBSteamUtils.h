@@ -42,6 +42,20 @@ enum class ESteamNotificationPosition : uint8 {
     BottomRight UMETA(DisplayName = "Bottom Right")
 };
 
+// Maps to the dialog names accepted by ISteamFriends::ActivateGameOverlayToUser
+UENUM(BlueprintType)
+enum class ESteamUserOverlayDialog : uint8 {
+    Achievements UMETA(DisplayName = "Achievements"),
+    Stats UMETA(DisplayName = "Stats"),
+    Profile UMETA(DisplayName = "Profile (SteamID)"),
+    Chat UMETA(DisplayName = "Chat"),
+    JoinTrade UMETA(DisplayName = "Join Trade"),
+    FriendAdd UMETA(DisplayName = "Friend Add"),
+    FriendRemove UMETA(DisplayName = "Friend Remove"),
+    FriendRequestAccept UMETA(DisplayName = "Friend Request Accept"),
+    FriendRequestIgnore UMETA(DisplayName = "Friend Request Ignore")
+};
+
 UCLASS()
 class BUDGETBACKROOMS_API UBBSteamUtils : public UBlueprintFunctionLibrary
 {
@@ -64,6 +78,9 @@ public:
 
     UFUNCTION(BlueprintCallable, Category = "Budget Steam // Custom BP Expose", meta = (Keywords = "Steam Overlay", ToolTip = "Self-explanatory; Opens the user's Steam Overlay with a defined target link."))
     static void OpenSteamOverlayWithURL(const FString& URL);
+
+    UFUNCTION(BlueprintCallable, Category = "Budget Steam // Custom BP Expose", meta = (AdvancedDisplay = "SteamID64", Keywords = "Steam Overlay User Dialog Achievements Stats Open", ToolTip = "Opens a Steam Overlay dialog (Achievements, Stats, Chat, etc.) for the local user, or for another user if their SteamID64 is given. No Unique Net Id needed. Success is false if Steam/overlay is unavailable."))
+    static void OpenSteamUserOverlay(ESteamUserOverlayDialog DialogType, bool& bSuccess, const FString& SteamID64 = TEXT(""));
 
 	UFUNCTION(BlueprintCallable, Category = "Budget Steam // Custom BP Expose")
 	static void ClearSteamRichPresence();

@@ -193,4 +193,4 @@ private:
 
 	UPROPERTY()
 	USaveGame* PendingSettings = nullptr;
-};
+}; 

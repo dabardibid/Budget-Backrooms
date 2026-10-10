@@ -3,10 +3,10 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Game\n"
+"Project-Id-Version: budget-backrooms\n"
 "POT-Creation-Date: 2026-10-10 01:00\n"
-"PO-Revision-Date: 2026-10-10 01:00\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2026-10-10 01:04\n"
+"Language-Team: Russian\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1648,7 +1648,8 @@ msgstr ""
 #. SourceLocation:	/Game/Widgets/W_Interaction/W_InteractionHint.W_InteractionHint_C:WidgetTree.TextBlock_0.Text
 #: /Game/Widgets/W_Interaction/W_InteractionHint.W_InteractionHint_C:WidgetTree.TextBlock_0.Text
 msgctxt ",AE5CCB4242DCF6F2767D4FB1AF8BA62E"
-msgid "You can pick up the \r\nflashlight by pressing E"
+msgid "You can pick up the \r\n"
+"flashlight by pressing E"
 msgstr ""
 
 #. Key:	AFDDD1E64D3A7F5B5AFF47B18BAC5CFE

@@ -3,10 +3,10 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Game\n"
+"Project-Id-Version: budget-backrooms\n"
 "POT-Creation-Date: 2026-10-10 01:00\n"
-"PO-Revision-Date: 2026-10-10 01:00\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2026-10-10 01:04\n"
+"Language-Team: Romanian\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -661,8 +661,24 @@ msgstr "FUGI!"
 #. SourceLocation:	/Game/Widgets/W_TelemetryDialogue.W_TelemetryDialogue_C:WidgetTree.TextBlock.Text
 #: /Game/Widgets/W_TelemetryDialogue.W_TelemetryDialogue_C:WidgetTree.TextBlock.Text
 msgctxt ",41596F554AC689A4223BC2A3BC17DDDD"
-msgid "Budget Backrooms is now able to collect anonymized telemetry data of your in-game position on the levels you explore. This data is used to generate a heatmap of the most frequently walked areas or paths of the map.\r\n\r\nWhat the game sends:\r\n- Your SteamID to generate a hashed session token. Your SteamID is NOT stored anywhere. The session token cannot be traced back to you so you cannot be identified from the positions sent.\r\n- In-world position samples are sent every 60s.\r\n\r\nA new session token is generated when this option is enabled and at game startup.\r\n\r\nFor any concerns or questions, contact me at dabardev@dabar.dev or dabardibid@proton.me"
-msgstr "Budget Backrooms este acum capabil de a colecta telemetrie anonimizată în legătura cu poziția ta în joc în nivelele care le explorezi. Datele sunt folosite pentru a genera o harta cu cele mai frecventate locuri și căi pe respectiva hartă.\r\n\r\nCe date sunt trimise:\r\n- SteamID-ul tău este folosit pentru a genera un token de sesiune. SteamID-ul tau NU este stocat nicăieri. Token-ul de sesiune nu poate fi identificat înapoi spre tine deci nu poți fi identificat din pozițiile trimise.\r\n- Datele adunate în nivel sunt trimise o dată la 60s.\r\n\r\nUn token de sesiune este generat de fiecare dată când opțiunea asta este activă și la pornirea jocului.\r\n\r\nPentru nelămuriri, contactează-mă la dabardev@dabar.dev sau dabardibid@proton.me"
+msgid "Budget Backrooms is now able to collect anonymized telemetry data of your in-game position on the levels you explore. This data is used to generate a heatmap of the most frequently walked areas or paths of the map.\r\n"
+"\r\n"
+"What the game sends:\r\n"
+"- Your SteamID to generate a hashed session token. Your SteamID is NOT stored anywhere. The session token cannot be traced back to you so you cannot be identified from the positions sent.\r\n"
+"- In-world position samples are sent every 60s.\r\n"
+"\r\n"
+"A new session token is generated when this option is enabled and at game startup.\r\n"
+"\r\n"
+"For any concerns or questions, contact me at dabardev@dabar.dev or dabardibid@proton.me"
+msgstr "Budget Backrooms este acum capabil de a colecta telemetrie anonimizată în legătura cu poziția ta în joc în nivelele care le explorezi. Datele sunt folosite pentru a genera o harta cu cele mai frecventate locuri și căi pe respectiva hartă.\r\n"
+"\r\n"
+"Ce date sunt trimise:\r\n"
+"- SteamID-ul tău este folosit pentru a genera un token de sesiune. SteamID-ul tau NU este stocat nicăieri. Token-ul de sesiune nu poate fi identificat înapoi spre tine deci nu poți fi identificat din pozițiile trimise.\r\n"
+"- Datele adunate în nivel sunt trimise o dată la 60s.\r\n"
+"\r\n"
+"Un token de sesiune este generat de fiecare dată când opțiunea asta este activă și la pornirea jocului.\r\n"
+"\r\n"
+"Pentru nelămuriri, contactează-mă la dabardev@dabar.dev sau dabardibid@proton.me"
 
 #. Key:	4162F7AF43EB38C10CDA7F95FF187490
 #. SourceLocation:	/Game/Audio/dave_2.dave_2.Subtitles(9).Subtitles.Text
@@ -1949,8 +1965,12 @@ msgstr "Te joci versiune veche de Budget Backrooms comparativ cu gazda și o con
 #. SourceLocation:	/Game/Widgets/W_Saves/W_SaveMigrationNew.W_SaveMigrationNew_C:WidgetTree.TextBlock.Text
 #: /Game/Widgets/W_Saves/W_SaveMigrationNew.W_SaveMigrationNew_C:WidgetTree.TextBlock.Text
 msgctxt ",CD68D39E4585B1B005DD54A2BF73B23E"
-msgid "Due to internal changes starting 0.0.18 Alpha and later, the older formats used in 0.0.17 and prior are no longer supported to further ease development of the game and compensate for past mistakes made by the developer while making this game.\r\n\r\nYour existing savedata has been automatically migrated to the new format. Not everything might have been moved over due to internal restructuring. Achievements are not migrated. Should you have issues in game, please try proceeding with a save reset under Settings -> General Settings"
-msgstr "Din cauza schimbărilor începând cu 0.0.18 Alpha și după, formatele vechi folosite în 0.0.17 și mai devreme nu mai sunt suportate pentru a facilita dezvoltarea jocului și pentru a compensa greșelilor făcute de dezvoltator cât jocul ăsta a fost sub dezvoltare.\r\n\r\nDatele salvate existente au fost migrate la formatul nou. Nu totul a fost transferat din cauza restructurărilor interne. Realizările nu au fost migrate. Să fie cazul să ai probleme în joc, te rog să încerci o resetare a jocului din Setări -> Setări Generale"
+msgid "Due to internal changes starting 0.0.18 Alpha and later, the older formats used in 0.0.17 and prior are no longer supported to further ease development of the game and compensate for past mistakes made by the developer while making this game.\r\n"
+"\r\n"
+"Your existing savedata has been automatically migrated to the new format. Not everything might have been moved over due to internal restructuring. Achievements are not migrated. Should you have issues in game, please try proceeding with a save reset under Settings -> General Settings"
+msgstr "Din cauza schimbărilor începând cu 0.0.18 Alpha și după, formatele vechi folosite în 0.0.17 și mai devreme nu mai sunt suportate pentru a facilita dezvoltarea jocului și pentru a compensa greșelilor făcute de dezvoltator cât jocul ăsta a fost sub dezvoltare.\r\n"
+"\r\n"
+"Datele salvate existente au fost migrate la formatul nou. Nu totul a fost transferat din cauza restructurărilor interne. Realizările nu au fost migrate. Să fie cazul să ai probleme în joc, te rog să încerci o resetare a jocului din Setări -> Setări Generale"
 
 #. Key:	CDE46AA4452AAD65BCC94785448BD1CA
 #. SourceLocation:	/Game/Widgets/Multiplayer/W_UnstableMP.W_UnstableMP_C:WidgetTree.TextBlock.Text

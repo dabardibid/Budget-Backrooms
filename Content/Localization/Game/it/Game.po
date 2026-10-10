@@ -3,10 +3,10 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Game\n"
+"Project-Id-Version: budget-backrooms\n"
 "POT-Creation-Date: 2026-10-10 01:00\n"
-"PO-Revision-Date: 2026-10-10 01:00\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2026-10-10 01:04\n"
+"Language-Team: Italian\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -136,8 +136,10 @@ msgstr "E questo è praticamente tutto."
 #. SourceLocation:	/Game/Widgets/W_MainMenu/W_MainMenu.W_MainMenu_C:WidgetTree.TextBlock_1.Text
 #: /Game/Widgets/W_MainMenu/W_MainMenu.W_MainMenu_C:WidgetTree.TextBlock_1.Text
 msgctxt ",0B63AE0B4768A30314B307AB9675F418"
-msgid "Budget\r\nBackrooms"
-msgstr "Budget\r\nBackrooms"
+msgid "Budget\r\n"
+"Backrooms"
+msgstr "Budget\r\n"
+"Backrooms"
 
 #. Key:	0BD182C64C09EB8D62ACA7921E2075A0
 #. SourceLocation:	/Game/Widgets/W_RebindKeys/W_RebindEntry.W_RebindEntry_C:WidgetTree.kbmbutton.NoKeySpecifiedText
@@ -1949,8 +1951,12 @@ msgstr "Stai giocando a una versione di Budget Backrooms più vecchia di quella 
 #. SourceLocation:	/Game/Widgets/W_Saves/W_SaveMigrationNew.W_SaveMigrationNew_C:WidgetTree.TextBlock.Text
 #: /Game/Widgets/W_Saves/W_SaveMigrationNew.W_SaveMigrationNew_C:WidgetTree.TextBlock.Text
 msgctxt ",CD68D39E4585B1B005DD54A2BF73B23E"
-msgid "Due to internal changes starting 0.0.18 Alpha and later, the older formats used in 0.0.17 and prior are no longer supported to further ease development of the game and compensate for past mistakes made by the developer while making this game.\r\n\r\nYour existing savedata has been automatically migrated to the new format. Not everything might have been moved over due to internal restructuring. Achievements are not migrated. Should you have issues in game, please try proceeding with a save reset under Settings -> General Settings"
-msgstr "Per colpa di cambiamenti interni dall'Alpha 0.0.18 e oltre, i vecchi formati usati in 0.0.17 e gli aggiornamenti precedenti non sono più supportati per facilitare lo sviluppo del gioco di più e compensare per errori passati commessi dallo sviluppatore durante la creazione del gioco.\r\n\r\nI tuoi salvataggi preesistenti sono stati automaticamente migrati al nuovo formato. Non tutto potrebbe essere stato trasferito per colpa di una ristrutturazione interna. Gli achievement non sono migrati. Se hai problemi in gioco, per favore prova a eliminare il tuo salvataggio in Impostazioni -> Impostazioni generali"
+msgid "Due to internal changes starting 0.0.18 Alpha and later, the older formats used in 0.0.17 and prior are no longer supported to further ease development of the game and compensate for past mistakes made by the developer while making this game.\r\n"
+"\r\n"
+"Your existing savedata has been automatically migrated to the new format. Not everything might have been moved over due to internal restructuring. Achievements are not migrated. Should you have issues in game, please try proceeding with a save reset under Settings -> General Settings"
+msgstr "Per colpa di cambiamenti interni dall'Alpha 0.0.18 e oltre, i vecchi formati usati in 0.0.17 e gli aggiornamenti precedenti non sono più supportati per facilitare lo sviluppo del gioco di più e compensare per errori passati commessi dallo sviluppatore durante la creazione del gioco.\r\n"
+"\r\n"
+"I tuoi salvataggi preesistenti sono stati automaticamente migrati al nuovo formato. Non tutto potrebbe essere stato trasferito per colpa di una ristrutturazione interna. Gli achievement non sono migrati. Se hai problemi in gioco, per favore prova a eliminare il tuo salvataggio in Impostazioni -> Impostazioni generali"
 
 #. Key:	CDE46AA4452AAD65BCC94785448BD1CA
 #. SourceLocation:	/Game/Widgets/Multiplayer/W_UnstableMP.W_UnstableMP_C:WidgetTree.TextBlock.Text
@@ -2887,8 +2893,10 @@ msgstr "Le Memeroom"
 #. SourceLocation:	/Game/Widgets/Multiplayer/W_MPMenu.W_MPMenu_C:WidgetTree.TextBlock_1.Text
 #: /Game/Widgets/Multiplayer/W_MPMenu.W_MPMenu_C:WidgetTree.TextBlock_1.Text
 msgctxt "Game,D535479940C75A7CDD9589A29B3DDC1F"
-msgid "Budget\r\nMultiplayer"
-msgstr "Budget\r\nMultiplayer"
+msgid "Budget\r\n"
+"Multiplayer"
+msgstr "Budget\r\n"
+"Multiplayer"
 
 #. Key:	DBAF3F647996966C7B8E5BDBDDC097C
 #. SourceLocation:	/Game/Widgets/W_Respawn/W_Respawn_LV2.W_Respawn_LV2_C:WidgetTree.TextBlock.Text

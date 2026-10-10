@@ -116,6 +116,10 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Budget Savings")
 	static bool IsMigrationNeeded(TSubclassOf<USaveGame> SaveClass, const TArray<FBBLegacySlot>& OlderSlots);
 
+	// Deletes leftover legacy files only, keeps Game.sav / Settings.sav. bDryRun only reports. Returns the number deleted
+	UFUNCTION(BlueprintCallable, Category = "Budget Savings")
+	static int32 DeleteLegacySaves(const TArray<FBBLegacySlot>& OlderSlots, bool bDryRun = false);
+
 	// Destructive: deletes all legacy save files (and Game.sav / Settings.sav if bAlsoDeleteGameSav) without checks
 	// bDryRun only reports. Returns the number of files deleted
 	UFUNCTION(BlueprintCallable, Category = "Budget Savings")

@@ -615,6 +615,28 @@ bool UUBB_BlueprintHelpers::IsMigrationNeeded(TSubclassOf<USaveGame> SaveClass, 
 	return HasLegacySaves(OlderSlots) && NeedsMigration(SaveClass, OlderSlots, Game, Settings, bBuildGame, bBuildSettings, Reason);
 }
 
+int32 UUBB_BlueprintHelpers::DeleteLegacySaves(const TArray<FBBLegacySlot>& OlderSlots, bool bDryRun)
+{
+	TArray<FString> Report;
+	int32 Count = 0;
+	if (bDryRun)
+	{
+		Report.Add(TEXT("[DRY RUN] nothing will be deleted"));
+		for (const FString& Name : ExistingLegacyNames(BuildSlotList(OlderSlots)))
+		{
+			Report.Add(FString::Printf(TEXT("[OK]  %s: would be deleted"), *Name));
+			++Count;
+		}
+		Report.Add(FString::Printf(TEXT("Would delete %d old save file(s)"), Count));
+	}
+	else
+	{
+		Count = DeleteLegacyFilesNow(OlderSlots, Report);
+	}
+	PrintReportToScreen(Report);
+	return Count;
+}
+
 UBBMigrateSavesAsync* UBBMigrateSavesAsync::MigrateSaves(UObject* WorldContextObject, TSubclassOf<USaveGame> SaveClass, const TArray<FBBLegacySlot>& OlderSlots, bool bDryRun, bool bDeleteOldFiles, float StepDelay)
 {
 	UBBMigrateSavesAsync* Action = NewObject<UBBMigrateSavesAsync>();

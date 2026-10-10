@@ -1,11 +1,11 @@
-﻿# Game Swedish translation.
+# Game English translation.
 # Copyright Epic Games, Inc. All Rights Reserved.
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: budget-backrooms\n"
 "POT-Creation-Date: 2026-10-10 01:00\n"
-"PO-Revision-Date: 2026-10-10 01:04\n"
+"PO-Revision-Date: 2026-10-10 08:54\n"
 "Language-Team: Swedish\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
@@ -1106,7 +1106,10 @@ msgstr ""
 #. SourceLocation:	/Game/Widgets/W_Saves/W_SaveWipe.W_SaveWipe_C:WidgetTree.TextBlock.Text
 #: /Game/Widgets/W_Saves/W_SaveWipe.W_SaveWipe_C:WidgetTree.TextBlock.Text
 msgctxt ",7538550F4344618750E7468D3E0CCB58"
-msgid "You are about to reset your game. This includes unlocked levels, settings and some in-world states. Steam Achievements won't be re-locked.\r\n\r\n\r\nAre you sure?"
+msgid "You are about to reset your game. This includes unlocked levels, settings and some in-world states. Steam Achievements won't be re-locked.\r\n"
+"\r\n"
+"\r\n"
+"Are you sure?"
 msgstr ""
 
 #. Key:	7684BEE242A019D532DECEB57328FC3F
